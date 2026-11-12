@@ -1,177 +1,213 @@
 {
- "as_of": "2026-11-13",
+ "as_of": "2026-11-12",
  "funnel": [
   {
    "stage": "Universe (NSE EQ stocks traded today)",
-   "count": 54
+   "count": 2748
   },
   {
    "stage": "Not on ASM/GSM or a 2%/5% circuit band",
-   "count": 52
+   "count": 2500
   },
   {
    "stage": "Liquid (≥ ₹10 cr/day; 2× that below ₹50)",
-   "count": 50
+   "count": 843
   },
   {
    "stage": "Uptrend (price > 50 DMA > rising 200 DMA)",
-   "count": 24
+   "count": 226
   },
   {
    "stage": "Volume ≥ 1.5× 20-day average",
-   "count": 10
+   "count": 46
   },
   {
    "stage": "Valid setup (breakout or pullback bounce)",
-   "count": 7
+   "count": 37
   },
   {
    "stage": "Stop within 8% and ≥ 1 share fits risk budget",
-   "count": 6
+   "count": 2
   },
   {
    "stage": "No results due in next 7 days",
-   "count": 5
+   "count": 2
   },
   {
    "stage": "Fundamentals OK or unverified (failures dropped)",
-   "count": 4
+   "count": 2
   }
  ],
  "picks": [
   {
-   "symbol": "LOWPX",
-   "name": "Demo Low-Price Ltd",
-   "setup": "Breakout from base",
-   "low_priced": true,
-   "entry": 36.4,
-   "stop": 34.37,
-   "target": 40.45,
-   "qty": 172,
-   "capital": 6261.0,
-   "max_loss": 348.0,
-   "risk_pct": 5.56,
-   "vol_ratio": 3.0,
-   "ret63_pct": 18.3,
-   "sma50": 33.56,
-   "sma200": 28.53,
-   "turnover_cr": 31.0,
-   "score": 80.0,
-   "next_results": null,
-   "fund_status": "pass",
-   "fund_notes": [],
-   "roe_pct": 19.0,
-   "de": 0.6,
-   "mcap_cr": 1200,
-   "sector": "Industrials"
-  },
-  {
-   "symbol": "BRKOUT",
-   "name": "Demo Breakout Ltd",
-   "setup": "Breakout from base",
-   "low_priced": false,
-   "entry": 630.0,
-   "stop": 586.4,
-   "target": 717.21,
-   "qty": 8,
-   "capital": 5040.0,
-   "max_loss": 349.0,
-   "risk_pct": 6.92,
-   "vol_ratio": 3.0,
-   "ret63_pct": 15.5,
-   "sma50": 581.67,
-   "sma200": 516.46,
-   "turnover_cr": 19.9,
-   "score": 61.7,
-   "next_results": "2026-12-13",
-   "fund_status": "pass",
-   "fund_notes": [],
-   "roe_pct": 24.0,
-   "de": 0.35,
-   "mcap_cr": 12000,
-   "sector": "Industrials"
-  },
-  {
-   "symbol": "PULLBK",
-   "name": "Demo Pullback Bank Ltd",
+   "symbol": "APLAPOLLO",
+   "name": "APL Apollo Tubes Limited",
    "setup": "Pullback to support",
    "low_priced": false,
-   "entry": 1194.76,
-   "stop": 1153.83,
-   "target": 1276.64,
-   "qty": 7,
-   "capital": 8363.0,
-   "max_loss": 287.0,
-   "risk_pct": 3.43,
-   "vol_ratio": 2.2,
-   "ret63_pct": 10.4,
-   "sma50": 1152.71,
-   "sma200": 1030.04,
-   "turnover_cr": 18.7,
-   "score": 30.0,
+   "entry": 2225.7,
+   "stop": 2155.77,
+   "target": 2365.57,
+   "qty": 3,
+   "capital": 6677.0,
+   "max_loss": 210.0,
+   "risk_pct": 3.14,
+   "vol_ratio": 1.68,
+   "ret63_pct": 6.9,
+   "sma50": 2160.64,
+   "sma200": 2019.53,
+   "turnover_cr": 156.8,
+   "score": 90.0,
+   "next_results": "2027-01-21",
+   "fund_status": "pass",
+   "fund_notes": [],
+   "roe_pct": 25.3,
+   "de": 0.17,
+   "mcap_cr": 61798,
+   "sector": "Basic Materials"
+  },
+  {
+   "symbol": "MARKSANS",
+   "name": "Marksans Pharma Limited",
+   "setup": "Pullback to support",
+   "low_priced": false,
+   "entry": 320.0,
+   "stop": 301.53,
+   "target": 356.93,
+   "qty": 18,
+   "capital": 5760.0,
+   "max_loss": 332.0,
+   "risk_pct": 5.77,
+   "vol_ratio": 1.52,
+   "ret63_pct": -3.5,
+   "sma50": 317.84,
+   "sma200": 249.21,
+   "turnover_cr": 44.3,
+   "score": 40.0,
    "next_results": null,
    "fund_status": "pass",
    "fund_notes": [],
-   "roe_pct": 17.0,
-   "de": null,
-   "mcap_cr": 45000,
-   "sector": "Financial Services"
-  },
-  {
-   "symbol": "NODATA",
-   "name": "",
-   "setup": "Breakout from base",
-   "low_priced": false,
-   "entry": 395.2,
-   "stop": 372.51,
-   "target": 440.59,
-   "qty": 15,
-   "capital": 5928.0,
-   "max_loss": 340.0,
-   "risk_pct": 5.74,
-   "vol_ratio": 3.0,
-   "ret63_pct": 15.4,
-   "sma50": 368.01,
-   "sma200": 325.65,
-   "turnover_cr": 29.4,
-   "score": 56.7,
-   "next_results": null,
-   "fund_status": "unknown",
-   "fund_notes": [
-    "no fundamentals data"
-   ],
-   "roe_pct": null,
-   "de": null,
-   "mcap_cr": null,
-   "sector": null
+   "roe_pct": 18.6,
+   "de": 0.14,
+   "mcap_cr": 14503,
+   "sector": "Healthcare"
   }
  ],
  "market": {
   "ok": true,
-  "close": 26000.0,
-  "sma50": 25593.48,
+  "close": 25299.35,
+  "sma50": 23310.51,
   "note": "Nifty above its 50 DMA: new trades allowed."
  },
  "regime": {
-  "regime": "green",
-  "note": "Trend up, broad participation, calm volatility – breakouts and pullbacks allowed at full risk.",
-  "breadth": 0.566,
-  "nifty": 26000.0,
-  "nifty_sma50": 25593.475,
-  "nifty_sma200": 24400.72,
-  "vol_percentile": 0.304
+  "regime": "amber",
+  "note": "Mixed market – pullbacks only, in the strongest stocks, at half risk.",
+  "breadth": 0.47,
+  "nifty": 25299.35,
+  "nifty_sma50": 23267.105,
+  "nifty_sma200": 23884.961,
+  "vol_percentile": 0.738
  },
  "strategy": "baseline",
  "surveillance_checked": true,
  "circulars": [
   {
    "source": "SEBI",
-   "title": "Demo circular – real ones appear here after the first live scan",
-   "link": "https://www.sebi.gov.in/",
-   "date": "2026-11-13"
+   "title": "Niveshak Shivir to be held on November 17, 2026 at New Delhi",
+   "link": "https://www.sebi.gov.in/media-and-notifications/press-releases/nov-2026/niveshak-shivir-to-be-held-on-november-17-2026-at-new-delhi_105731.html",
+   "date": null
+  },
+  {
+   "source": "SEBI",
+   "title": "Appeal No. 7154 of 2026 filed by Imran",
+   "link": "https://www.sebi.gov.in/enforcement/orders/nov-2026/appeal-no-7154-of-2026-filed-by-imran_105726.html",
+   "date": null
+  },
+  {
+   "source": "SEBI",
+   "title": "Appeal No. 7153 of 2026 filed by Jamil Mian",
+   "link": "https://www.sebi.gov.in/enforcement/orders/nov-2026/appeal-no-7153-of-2026-filed-by-jamil-mian_105725.html",
+   "date": null
+  },
+  {
+   "source": "SEBI",
+   "title": "Appeal No. 7152 of 2026 filed by Amit Harlalka",
+   "link": "https://www.sebi.gov.in/enforcement/orders/nov-2026/appeal-no-7152-of-2026-filed-by-amit-harlalka_105723.html",
+   "date": null
+  },
+  {
+   "source": "SEBI",
+   "title": "Appeal No. 7151 of 2026 filed by Aakash Goel",
+   "link": "https://www.sebi.gov.in/enforcement/orders/nov-2026/appeal-no-7151-of-2026-filed-by-aakash-goel_105722.html",
+   "date": null
+  },
+  {
+   "source": "SEBI",
+   "title": "Appeal No. 7150 of 2026 filed by Nirvesh Devi",
+   "link": "https://www.sebi.gov.in/enforcement/orders/nov-2026/appeal-no-7150-of-2026-filed-by-nirvesh-devi_105720.html",
+   "date": null
+  },
+  {
+   "source": "SEBI",
+   "title": "Appeal No. 7149 of 2026 filed by Rajendra Kumar Izardar",
+   "link": "https://www.sebi.gov.in/enforcement/orders/nov-2026/appeal-no-7149-of-2026-filed-by-rajendra-kumar-izardar_105719.html",
+   "date": null
+  },
+  {
+   "source": "SEBI",
+   "title": "Appeal No. 7147 of 2026 filed by Vaibhav Bansal",
+   "link": "https://www.sebi.gov.in/enforcement/orders/nov-2026/appeal-no-7147-of-2026-filed-by-vaibhav-bansal_105717.html",
+   "date": null
+  },
+  {
+   "source": "NSE",
+   "title": "Listing of further issues of securities",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CML77413.pdf",
+   "date": "2026-11-12"
+  },
+  {
+   "source": "NSE",
+   "title": "Face Value Split and Change in ISIN - BN Agrochem Limited (BNAGROCHEM)",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CML77412.pdf",
+   "date": "2026-11-12"
+  },
+  {
+   "source": "NSE",
+   "title": "Launch of H-SIF Hybrid Long-Short Fund (SIF) on NSE MF Invest Platform",
+   "link": "https://nsearchives.nseindia.com/content/circulars/NMF77411.pdf",
+   "date": "2026-11-12"
+  },
+  {
+   "source": "NSE",
+   "title": "Algo Provider Empanelment for Providing Algorithmic Trading Solutions",
+   "link": "https://nsearchives.nseindia.com/content/circulars/INVG77410.pdf",
+   "date": "2026-11-12"
+  },
+  {
+   "source": "NSE",
+   "title": "Launch of DSP Fixed Maturity Plan (FMP) - Series 280 - 90 Days on NSE MF Invest Platform",
+   "link": "https://nsearchives.nseindia.com/content/circulars/NMF77409.pdf",
+   "date": "2026-11-12"
+  },
+  {
+   "source": "NSE",
+   "title": "Listing of privately placed securities on the debt market segment of the Exchange",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CML77408.pdf",
+   "date": "2026-11-12"
+  },
+  {
+   "source": "NSE",
+   "title": "Listing of privately placed securities on capital market segment",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CML77407.pdf",
+   "date": "2026-11-12"
+  },
+  {
+   "source": "NSE",
+   "title": "Suspension of partly paid-up equity shares of Party Cruisers Limited",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CML77406.pdf",
+   "date": "2026-11-12"
   }
  ],
- "generated_at": "2026-11-13T02:40+05:30",
+ "generated_at": "2026-11-13T03:09+05:30",
  "config": {
   "capital": 35000,
   "risk_pct": 0.01,
@@ -185,15 +221,12 @@
   "min_mcap_cr": 500,
   "results_window_days": 7
  },
- "demo": true,
- "warnings": [
-  "Fundamentals found for 5 of 6 candidates; picks marked ⚠ need a manual check on screener.in."
- ],
+ "demo": false,
  "checks": {
   "surveillance": true,
   "price_bands": true,
   "results_calendar": true,
-  "fundamentals_covered": 5,
-  "fundamentals_checked": 6
+  "fundamentals_covered": 2,
+  "fundamentals_checked": 2
  }
 }
