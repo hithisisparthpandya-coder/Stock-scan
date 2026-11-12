@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import io
 import json
+import re
 import time
 import zipfile
 import datetime as dt
@@ -140,6 +141,18 @@ class NSE:
         except Exception:
             return {}
 
+    def etf_symbols(self) -> set[str]:
+        """Symbols of exchange-traded funds (NSE lists them in the EQ series alongside stocks)."""
+        r = self.get(f"{ARCHIVES}/content/equities/eq_etfseclist.csv")
+        if r is None:
+            return set()
+        try:
+            df = pd.read_csv(io.BytesIO(r.content), skipinitialspace=True, encoding_errors="ignore")
+            col = next(c for c in df.columns if c.strip().lower().startswith("symbol"))
+            return {str(x).strip() for x in df[col]}
+        except Exception:
+            return set()
+
     def upcoming_results(self) -> dict[str, dt.date]:
         """Next board meeting for financial results per symbol, from NSE's event calendar."""
         self._warm_www()
@@ -230,6 +243,16 @@ def parse_udiff(content: bytes, d: dt.date) -> pd.DataFrame | None:
         "turnover_cr": pd.to_numeric(df["TtlTrfVal"], errors="coerce") / 1e7,
     })
     return out.dropna(subset=["close"])[COLS]
+
+
+# Funds that trade like shares: ETFs, liquid/cash funds, gold/silver, index and international trackers.
+ETF_PATTERN = re.compile(
+    r"(ETF\d*$|BEES$|IETF|^LIQUID|^CASH|^MON100$|^MAFANG|^HNGSNG|^NIFTY|^SETF|^GILT|BHARATBOND|^MOM\d|"
+    r"^MID150|^NEXT50|^SENSEX|^GOLD\d*$|^SILVER\d*$|^ABSLBANETF|^NASD|^MAKEINDIA|^CPSE|^EBBETF)")
+
+
+def is_fund(symbol: str) -> bool:
+    return bool(ETF_PATTERN.search(symbol))
 
 
 def parse_sec_list(content: bytes) -> dict[str, float]:

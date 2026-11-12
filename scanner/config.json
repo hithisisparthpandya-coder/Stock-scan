@@ -54,5 +54,6 @@
   "edge_min_avg_r": 0.1,
   "edge_min_pf_oos": 1.2,
   "edge_min_pf_is": 1.1,
-  "dd_cooloff_days": 20
+  "dd_cooloff_days": 20,
+  "min_stop_pct": 0.015
 }

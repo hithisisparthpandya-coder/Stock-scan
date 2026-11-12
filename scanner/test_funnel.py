@@ -125,6 +125,14 @@ def test_parsers():
     assert parse_event_calendar(ev) == {"AAA": dt.date(2026, 11, 18)}
 
 
+def test_funds_are_recognised():
+    from nse import is_fund
+    for f in ("LIQUIDBEES", "LIQUID1", "CASHIETF", "MON100", "SBILIQETF", "GOLDBEES", "NIFTYBEES", "SETFNIF50", "BHARATBOND"):
+        assert is_fund(f), f
+    for st in ("RELIANCE", "GOLDIAM", "CASTROLIND", "APLAPOLLO", "MARKSANS", "GILLETTE", "MIDHANI", "ABSLAMC", "CAMS"):
+        assert not is_fund(st), st
+
+
 def test_message_builds():
     res, nifty = _result()
     res["market"] = market_filter(nifty)

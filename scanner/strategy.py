@@ -174,8 +174,8 @@ def signals(f: dict, P: dict, i: int, cfg: dict, strategy: str, excluded: set | 
         stop = np.minimum(s["close"] - atr, np.maximum(struct, s["close"] - cfg["atr_stop_max"] * atr))
     s["stop"] = stop
     s["risk_pct"] = (s["close"] - s["stop"]) / s["close"]
-    m &= (s["risk_pct"] > 0) & (s["risk_pct"] <= cfg["max_stop_pct"])
-    counts.append(("Stop fits", int(m.sum())))
+    m &= (s["risk_pct"] >= cfg.get("min_stop_pct", 0)) & (s["risk_pct"] <= cfg["max_stop_pct"])
+    counts.append((f"Stop {cfg.get('min_stop_pct', 0)*100:.1f}–{cfg['max_stop_pct']*100:.0f}% away", int(m.sum())))
 
     c = s[m].copy()
     if len(c):

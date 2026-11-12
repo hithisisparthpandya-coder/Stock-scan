@@ -71,8 +71,11 @@ def verdict(rep: dict, cfg: dict) -> dict:
             "robust": robust, "summary": lines}
 
 
-def run(hist: pd.DataFrame, nifty: pd.Series, cfg: dict, demo: bool) -> dict:
+def run(hist: pd.DataFrame, nifty: pd.Series, cfg: dict, demo: bool, exclude: set | None = None) -> dict:
     t0 = time.time()
+    if exclude:
+        hist = hist[~hist["symbol"].isin(exclude)]
+        print(f"Excluded {len(exclude)} funds/ETFs from the universe")
     P = build_panel(hist)
     f = features(P, nifty, cfg)
     dates = P["C"].index
@@ -90,6 +93,9 @@ def run(hist: pd.DataFrame, nifty: pd.Series, cfg: dict, demo: bool) -> dict:
                f"Costs {cfg['cost_per_side']*100:.2f}% + slippage {cfg['slippage_per_side']*100:.2f}% per side, "
                f"plus ₹{cfg['dp_charge']} per sale.",
                "Prices adjusted for splits and bonuses; delisted stocks included (no survivorship bias).",
+               "ETFs and liquid/gold/index funds excluded – only company shares are traded.",
+               f"Stops must be {cfg.get('min_stop_pct', 0)*100:.1f}–{cfg['max_stop_pct']*100:.0f}% from entry "
+               "(tighter stops are eaten by charges).",
                "Fundamentals, results dates and ASM/GSM lists are NOT applied – no point-in-time history "
                "is freely available. Live picks get these extra filters, so live results may differ.",
                "Settings are fixed, textbook values – nothing was tuned to this data.",
@@ -152,7 +158,11 @@ def main():
         from nse import NSE
         hist, nifty = load_long(NSE(), cfg["bt_start_year"], LONG, dt.datetime.now(IST).date())
         hist = liquid_subset(hist, cfg["min_turnover_cr"])
-    rep = run(hist, nifty, cfg, args.demo)
+    exclude = None
+    if not args.demo:
+        from nse import NSE as _N, is_fund
+        exclude = {s for s in hist["symbol"].unique() if is_fund(s)} | _N().etf_symbols()
+    rep = run(hist, nifty, cfg, args.demo, exclude)
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(rep, indent=1, ensure_ascii=False, default=str))
     print(f"Wrote {OUT}")

@@ -112,8 +112,9 @@ def run_funnel(hist: pd.DataFrame, cfg: dict, excluded: set[str] | None = None,
         return int(min(math.floor(risk_amt / row["risk_ps"]), math.floor(max_pos / row["close"])))
 
     s["qty"] = s.apply(qty, axis=1)
-    m &= (s["risk_pct"] > 0) & (s["risk_pct"] <= cfg["max_stop_pct"]) & (s["qty"] >= 1)
-    counts.append((f"Stop within {int(cfg['max_stop_pct']*100)}% and ≥ 1 share fits risk budget", int(m.sum())))
+    m &= (s["risk_pct"] >= cfg.get("min_stop_pct", 0)) & (s["risk_pct"] <= cfg["max_stop_pct"]) & (s["qty"] >= 1)
+    counts.append((f"Stop {cfg.get('min_stop_pct', 0)*100:.1f}–{int(cfg['max_stop_pct']*100)}% away, ≥ 1 share fits",
+                   int(m.sum())))
 
     c = s[m].copy()
     if len(c):

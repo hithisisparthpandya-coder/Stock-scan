@@ -129,6 +129,9 @@ def main():
         circulars = nse.circulars()
         bands = nse.price_bands()
         results = nse.upcoming_results()
+        from nse import is_fund
+        funds_listed = nse.etf_symbols()
+        excluded = set(excluded) | funds_listed | {s for s in hist["symbol"].unique() if is_fund(s)}
 
     latest = hist["date"].max().date()
     if not args.demo and latest < now.date() and not os.environ.get("FORCE"):
