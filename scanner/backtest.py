@@ -19,7 +19,7 @@ Rules simulated (same as the live rules):
 from __future__ import annotations
 
 import math
-from dataclasses import dataclass, field
+from dataclasses import asdict, dataclass, field
 
 import numpy as np
 import pandas as pd
@@ -35,7 +35,8 @@ class Pos:
     stop: float
     R: float
     risk_amt: float
-    entry_i: int
+    entry_n: int
+    entry_date: str
     setup: str
     regime: str
     partial_R: float
@@ -46,7 +47,6 @@ class Pos:
     mfe: float = 0.0
     last_close: float = 0.0
     missing: int = 0
-    realized: float = 0.0
     sold_value: float = 0.0
     sold_qty: int = 0
     cost: float = 0.0
@@ -60,51 +60,77 @@ class Result:
     exposure: pd.Series = field(default=None)
 
 
-def run_backtest(P: dict, f: dict, cfg: dict, strategy: str, start=None, end=None,
-                 excluded_by_date=None) -> Result:
-    C, O, H, L = P["C"], P["O"], P["H"], P["L"]
-    dates = C.index
-    i0 = max(int(np.searchsorted(dates, pd.Timestamp(start))) if start is not None else 0, cfg["bt_warmup"])
-    i1 = int(np.searchsorted(dates, pd.Timestamp(end), side="right")) if end is not None else len(dates)
-    cost_side = cfg["cost_per_side"] + cfg["slippage_per_side"]
-    cash = float(cfg["bt_capital"])
-    peak = cash
-    halt_until = -1
-    pos: dict[str, Pos] = {}
-    pending: list[dict] = []
-    trades, eq, expo, regs = [], [], [], []
-    ll20, atr = f["ll20_prev"], f["atr14"]
+class PortfolioSim:
+    """One portfolio, stepped one trading day at a time. The backtest and the live paper ledger both
+    drive this class, so they follow exactly the same rules. State is JSON-serialisable."""
 
-    def close_pos(p: Pos, px: float, i: int, reason: str):
-        nonlocal cash
+    def __init__(self, cfg: dict, strategy: str, state: dict | None = None):
+        self.cfg, self.strategy = cfg, strategy
+        st = state or {}
+        self.cash = float(st.get("cash", cfg["bt_capital"]))
+        self.peak = float(st.get("peak", self.cash))
+        self.halt_until = int(st.get("halt_until", -1))
+        self.n = int(st.get("n", -1))                     # trading-day counter
+        self.pos = {k: Pos(**v) for k, v in st.get("positions", {}).items()}
+        self.pending = list(st.get("pending", []))
+        self.trades = list(st.get("trades", []))
+        self.events: list[str] = []                       # human-readable fills/exits of the latest day
+        self.cost_side = cfg["cost_per_side"] + cfg["slippage_per_side"]
+        self.equity = float(st.get("equity", self.cash))
+
+    def state(self) -> dict:
+        return {"cash": round(self.cash, 2), "peak": round(self.peak, 2), "halt_until": self.halt_until,
+                "n": self.n, "equity": round(self.equity, 2),
+                "positions": {k: asdict(v) for k, v in self.pos.items()},
+                "pending": self.pending, "trades": self.trades}
+
+    # -- helpers
+    def _close(self, p: Pos, px: float, date: str, reason: str):
         gross = p.qty * px
-        c = gross * cost_side + cfg["dp_charge"]
-        cash += gross - c
+        c = gross * self.cost_side + self.cfg["dp_charge"]
+        self.cash += gross - c
         p.cost += c
         total_qty = p.qty + p.sold_qty
         exit_value = p.sold_value + gross
         pnl = exit_value - total_qty * p.entry - p.cost
-        trades.append({
-            "symbol": p.sym, "entry_date": dates[p.entry_i].date().isoformat(),
-            "exit_date": dates[i].date().isoformat(), "entry": round(p.entry, 2),
-            "exit": round(exit_value / total_qty, 2), "qty": total_qty, "pnl": round(pnl, 2),
-            "r": round(pnl / p.risk_amt, 3) if p.risk_amt else 0.0, "reason": reason,
-            "setup": p.setup, "regime": p.regime, "days": i - p.entry_i,
+        r = round(pnl / p.risk_amt, 3) if p.risk_amt else 0.0
+        self.trades.append({
+            "symbol": p.sym, "entry_date": p.entry_date, "exit_date": date, "entry": round(p.entry, 2),
+            "exit": round(exit_value / total_qty, 2), "qty": total_qty, "pnl": round(pnl, 2), "r": r,
+            "reason": reason, "setup": p.setup, "regime": p.regime, "days": self.n - p.entry_n,
         })
+        self.events.append(f"SOLD {p.sym} {total_qty} @ ₹{exit_value / total_qty:,.2f} ({reason}) → "
+                           f"{'+' if pnl >= 0 else '−'}₹{abs(pnl):,.0f} ({r:+.2f}R)")
+        del self.pos[p.sym]
 
-    for i in range(i0, i1):
-        o_row, h_row, l_row, c_row = O.iloc[i], H.iloc[i], L.iloc[i], C.iloc[i]
+    # -- one trading day
+    def step(self, date: str, O, H, L, C, LL20, ATR, regime: str, factors=None):
+        """Process one day's bars (pandas Series indexed by symbol). `factors` (optional) maps symbol →
+        corporate-action factor for raw prices on an ex-date (split 1:2 → 0.5)."""
+        self.n += 1
+        self.events = []
+        cfg = self.cfg
+        if factors:
+            for sym, f in factors.items():
+                p = self.pos.get(sym)
+                if p and f and abs(f - 1) > 0.02:
+                    p.entry *= f; p.stop *= f; p.R *= f; p.last_close *= f
+                    p.qty = max(1, round(p.qty / f)); p.sold_qty = round(p.sold_qty / f)
+            for sig in self.pending:
+                f = factors.get(sig["symbol"])
+                if f and abs(f - 1) > 0.02:
+                    sig["stop"] *= f; sig["limit"] *= f
 
-        # 1) fills at today's open for yesterday's signals
-        equity_prev = eq[-1] if eq else cash
-        open_risk = sum(max(0.0, (p.entry - p.stop)) * p.qty for p in pos.values())
-        for sig in pending:
-            if len(pos) >= cfg["max_positions"]:
+        # 1) fills at the open
+        equity_prev = self.equity
+        open_risk = sum(max(0.0, p.entry - p.stop) * p.qty for p in self.pos.values())
+        for sig in self.pending:
+            if len(self.pos) >= cfg["max_positions"]:
                 break
             sym = sig["symbol"]
-            if sym in pos:
+            if sym in self.pos:
                 continue
-            o = o_row.get(sym, np.nan)
+            o = O.get(sym, np.nan)
             if not (o > 0) or o > sig["limit"] or o <= sig["stop"]:
                 continue
             R = o - sig["stop"]
@@ -112,106 +138,123 @@ def run_backtest(P: dict, f: dict, cfg: dict, strategy: str, start=None, end=Non
             if open_risk + risk_amt > cfg["heat_cap"] * equity_prev + 1e-9:
                 continue
             qty = math.floor(min(risk_amt / R, cfg["max_position_pct"] * equity_prev / o,
-                                 cash / (o * (1 + cost_side))))
+                                 self.cash / (o * (1 + self.cost_side))))
             if qty < 1:
                 continue
-            c = qty * o * cost_side
-            cash -= qty * o + c
+            c = qty * o * self.cost_side
+            self.cash -= qty * o + c
             open_risk += qty * R
-            pos[sym] = Pos(sym, qty, o, sig["stop"], R, qty * R, i, sig["setup"], sig["regime"],
-                           sig["partial_R"], cost=c, last_close=o)
-        pending = []
+            self.pos[sym] = Pos(sym, qty, o, sig["stop"], R, qty * R, self.n, date, sig["setup"],
+                                sig["regime"], sig["partial_R"], cost=c, last_close=o)
+            self.events.append(f"BOUGHT {sym} {qty} @ ₹{o:,.2f}, stop ₹{sig['stop']:,.2f}")
+        self.pending = []
 
         # 2) manage open positions with today's bar
-        reg_today = f["regime"].iloc[i]
-        for sym, p in list(pos.items()):
-            o, h, l, c = o_row.get(sym, np.nan), h_row.get(sym, np.nan), l_row.get(sym, np.nan), c_row.get(sym, np.nan)
+        for sym, p in list(self.pos.items()):
+            o, h, l, c = O.get(sym, np.nan), H.get(sym, np.nan), L.get(sym, np.nan), C.get(sym, np.nan)
             if not (c > 0):
                 p.missing += 1
-                if p.missing > 5:            # suspended / delisted: exit at last known price
-                    close_pos(p, p.last_close, i, "no data")
-                    del pos[sym]
+                if p.missing > 5:
+                    self._close(p, p.last_close, date, "no data")
                 continue
             p.missing = 0
+            if not (o > 0):
+                o = c
             if p.exit_next:
-                close_pos(p, o, i, p.exit_next); del pos[sym]; continue
+                self._close(p, o, date, p.exit_next); continue
             if p.be_next:
                 p.stop = max(p.stop, p.entry); p.be_next = False
             if o <= p.stop:
-                close_pos(p, o, i, "stop (gap)"); del pos[sym]; continue
+                self._close(p, o, date, "stop (gap)"); continue
             if l <= p.stop:
-                close_pos(p, p.stop, i, "stop" if p.stop < p.entry - 1e-9 else "breakeven/trail stop")
-                del pos[sym]; continue
+                self._close(p, p.stop, date, "stop" if p.stop < p.entry - 1e-9 else "breakeven/trail stop"); continue
             level = p.entry + p.partial_R * p.R
             if not p.partial_done and p.qty >= 2 and h >= level:
                 px = max(o, level)
                 q = p.qty // 2
                 gross = q * px
-                cc = gross * cost_side + cfg["dp_charge"]
-                cash += gross - cc
+                cc = gross * self.cost_side + cfg["dp_charge"]
+                self.cash += gross - cc
                 p.cost += cc; p.sold_value += gross; p.sold_qty += q; p.qty -= q
                 p.partial_done = True
+                self.events.append(f"PARTIAL {sym}: sold {q} @ ₹{px:,.2f} (+{p.partial_R:g}R)")
             if h >= p.entry + p.R:
                 p.be_next = True
                 p.trail_on = True
             p.mfe = max(p.mfe, (h - p.entry) / p.R)
             p.last_close = c
-            prior_low = ll20.iloc[i].get(sym, np.nan)
+            prior_low = LL20.get(sym, np.nan)
             if p.trail_on and c < prior_low:
                 p.exit_next = "trail"
-            elif i - p.entry_i >= cfg["time_stop_days"] and p.mfe < 0.5:
+            elif self.n - p.entry_n >= cfg["time_stop_days"] and p.mfe < 0.5:
                 p.exit_next = "time stop"
-            if strategy == "adaptive" and reg_today == "red":
-                a = atr.iloc[i].get(sym, np.nan)
+            if self.strategy == "adaptive" and regime == "red":
+                a = ATR.get(sym, np.nan)
                 if a > 0:
                     p.stop = max(p.stop, c - a)
 
         # 3) mark to market
-        equity = cash + sum(p.qty * p.last_close for p in pos.values())
-        eq.append(equity)
-        expo.append(len(pos))
-        regs.append(reg_today)
-        peak = max(peak, equity)
-        dd = equity / peak - 1
+        self.equity = self.cash + sum(p.qty * p.last_close for p in self.pos.values())
+        self.peak = max(self.peak, self.equity)
+        return self.equity
 
-        # 4) circuit breaker (adaptive): a 10% fall from peak pauses new trades for dd_cooloff_days;
-        #    trading then resumes with the peak reset, so the pause can't become permanent.
-        risk_mult = 1.0
-        if strategy == "adaptive":
-            if i < halt_until:
-                risk_mult = 0.0
-            elif dd <= -cfg["dd_halt"]:
-                halt_until = i + cfg["dd_cooloff_days"]
-                peak = equity
-                risk_mult = 0.0
-            elif dd <= -cfg["dd_half"]:
-                risk_mult = 0.5
+    def risk_multiplier(self) -> float:
+        """Adaptive circuit breaker: a 10% fall from peak pauses new trades for dd_cooloff_days, then
+        trading resumes with the peak reset (so the pause can never become permanent)."""
+        if self.strategy != "adaptive":
+            return 1.0
+        dd = self.equity / self.peak - 1
+        if self.n < self.halt_until:
+            return 0.0
+        if dd <= -self.cfg["dd_halt"]:
+            self.halt_until = self.n + self.cfg["dd_cooloff_days"]
+            self.peak = self.equity
+            return 0.0
+        return 0.5 if dd <= -self.cfg["dd_half"] else 1.0
 
-        # 5) signals at today's close for tomorrow's open
-        if i + 1 >= i1 or len(pos) >= cfg["max_positions"] or risk_mult == 0:
+    def queue(self, cands: list[dict], risk: float, regime: str):
+        """Signals from today's close become limit orders for the next open."""
+        if risk <= 0:
+            return
+        cfg = self.cfg
+        partial_R = cfg["partial_R_amber"] if (self.strategy == "adaptive" and regime == "amber") else cfg["partial_R"]
+        for c in cands[: cfg["max_positions"] * 3]:
+            if c["symbol"] in self.pos:
+                continue
+            self.pending.append({"symbol": c["symbol"], "stop": c["stop"], "setup": c["setup"],
+                                 "limit": c["close"] * (1 + cfg["gap_tolerance"]), "risk": risk,
+                                 "regime": regime, "partial_R": partial_R})
+
+    def close_all(self, date: str):
+        for p in list(self.pos.values()):
+            self._close(p, p.last_close, date, "end of test")
+        self.equity = self.cash
+
+
+def run_backtest(P: dict, f: dict, cfg: dict, strategy: str, start=None, end=None,
+                 excluded_by_date=None) -> Result:
+    C, O, H, L = P["C"], P["O"], P["H"], P["L"]
+    dates = C.index
+    i0 = max(int(np.searchsorted(dates, pd.Timestamp(start))) if start is not None else 0, cfg["bt_warmup"])
+    i1 = int(np.searchsorted(dates, pd.Timestamp(end), side="right")) if end is not None else len(dates)
+    sim = PortfolioSim(cfg, strategy)
+    eq, expo, regs = [], [], []
+    for i in range(i0, i1):
+        d = dates[i].date().isoformat()
+        reg = f["regime"].iloc[i]
+        sim.step(d, O.iloc[i], H.iloc[i], L.iloc[i], C.iloc[i], f["ll20_prev"].iloc[i], f["atr14"].iloc[i], reg)
+        eq.append(sim.equity); expo.append(len(sim.pos)); regs.append(reg)
+        mult = sim.risk_multiplier()
+        if i + 1 >= i1 or len(sim.pos) >= cfg["max_positions"] or mult == 0:
             continue
         excl = excluded_by_date(dates[i]) if excluded_by_date else set()
         cands, _, risk = signals(f, P, i, cfg, strategy, excl)
-        risk *= risk_mult
-        if risk <= 0:
-            continue
-        partial_R = cfg["partial_R_amber"] if (strategy == "adaptive" and reg_today == "amber") else cfg["partial_R"]
-        for cnd in cands[: cfg["max_positions"] * 3]:
-            if cnd["symbol"] in pos:
-                continue
-            pending.append({"symbol": cnd["symbol"], "stop": cnd["stop"], "setup": cnd["setup"],
-                            "limit": cnd["close"] * (1 + cfg["gap_tolerance"]), "risk": risk,
-                            "regime": reg_today, "partial_R": partial_R})
-
-    # close anything still open at the last close
-    last = i1 - 1
-    for sym, p in list(pos.items()):
-        close_pos(p, p.last_close, last, "end of test")
-        del pos[sym]
+        sim.queue(cands, risk * mult, reg)
     if eq:
-        eq[-1] = cash
+        sim.close_all(dates[i1 - 1].date().isoformat())
+        eq[-1] = sim.equity
     idx = dates[i0:i1]
-    return Result(pd.Series(eq, index=idx, dtype=float), pd.DataFrame(trades),
+    return Result(pd.Series(eq, index=idx, dtype=float), pd.DataFrame(sim.trades),
                   pd.Series(regs, index=idx), pd.Series(expo, index=idx))
 
 

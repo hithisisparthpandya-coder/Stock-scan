@@ -168,6 +168,10 @@ def main():
     result["strategy"] = strategy
     result["surveillance_checked"] = bool(surv_ok)
     result["circulars"] = circulars
+    from ledger import summary_line, update as update_ledger
+    led = update_ledger(OUT.parent / "ledger.json", hist, feat, picks, cfg, strategy, demo=args.demo)
+    result["paper"] = {"summary": summary_line(led), "events": led["events_latest"][-10:],
+                       "queued": led["queued"]}
     result["generated_at"] = now.isoformat(timespec="minutes")
     result["config"] = {k: cfg[k] for k in ("capital", "risk_pct", "max_position_pct", "reward_risk",
                                             "min_turnover_cr", "vol_mult", "max_stop_pct", "min_roe",

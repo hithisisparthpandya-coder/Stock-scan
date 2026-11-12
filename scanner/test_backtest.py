@@ -159,7 +159,35 @@ def test_report_runs_on_demo():
     json.dumps(rep, default=str)
 
 
-if __name__ == "__main__":
+
+
+def test_paper_ledger_matches_backtest():
+    """The live ledger, stepped one day at a time, must make exactly the trades the backtest makes."""
+    import tempfile
+    import ledger
+    hist, nifty = make_long_history(years=2.2, n_stocks=40)
+    hist = hist[hist.symbol != "SPLITCO"]
+    P = build_panel(hist); f = features(P, nifty, CFG)
+    dates = P["C"].index
+    s0 = len(dates) - 140
+    cfg = dict(CFG, capital=CFG["bt_capital"])
+    for strategy in ("baseline", "adaptive"):
+        path = Path(tempfile.mkdtemp()) / "ledger.json"
+        for i in range(s0, len(dates)):
+            d = dates[i]
+            cands, _, _ = signals(f, P, i, cfg, strategy, set())
+            picks = [{"symbol": c["symbol"], "stop": c["stop"], "setup": c["setup"], "entry": c["close"]} for c in cands]
+            fd = {k: (v.loc[:d] if hasattr(v, "loc") else v) for k, v in f.items()}
+            led = ledger.update(path, hist[hist.date <= d], fd, picks, cfg, strategy)
+        res = bt.run_backtest(P, f, dict(cfg, bt_warmup=0), strategy, start=dates[s0])
+        bt_tr = res.trades[res.trades.reason != "end of test"].reset_index(drop=True)
+        led_tr = pd.DataFrame(led["sim"]["trades"])
+        cols = ["symbol", "entry_date", "exit_date", "qty", "pnl", "reason"]
+        assert len(bt_tr) > 3, strategy
+        pd.testing.assert_frame_equal(bt_tr[cols], led_tr[cols], check_dtype=False)
+
+
+if __name__ == "__main__":  # noqa
     for name, fn in list(globals().items()):
         if name.startswith("test_"):
             fn()

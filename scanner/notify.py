@@ -47,6 +47,13 @@ def build_message(result: dict, cfg: dict) -> str:
             f"   Entry {_inr(p['entry'])} · Stop {_inr(p['stop'])} · Target {_inr(p['target'])}\n"
             f"   Qty {p['qty']} · Max loss {_inr(p['max_loss'], 0)} · Vol {p['vol_ratio']}×"
         )
+    paper = result.get("paper") or {}
+    if paper.get("summary"):
+        lines.append("\n" + html.escape(paper["summary"]))
+        for e in paper.get("events", [])[-6:]:
+            lines.append("   • " + html.escape(e))
+        if paper.get("queued"):
+            lines.append("   Paper orders for next open: " + ", ".join(html.escape(q["symbol"]) for q in paper["queued"]))
     if result.get("circulars"):
         lines.append(f"\n📰 {len(result['circulars'])} new SEBI/NSE circulars – see app.")
     lines.append(

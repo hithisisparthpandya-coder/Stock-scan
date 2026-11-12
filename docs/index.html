@@ -126,7 +126,7 @@
       <button id="refresh" class="primary">↻ Refresh</button>
     </div>
   </header>
-  <nav class="tabs"><button id="tab-today" class="on">Today's picks</button><button id="tab-lab">Strategy lab</button></nav>
+  <nav class="tabs"><button id="tab-today" class="on">Today's picks</button><button id="tab-paper">Paper record</button><button id="tab-lab">Strategy lab</button></nav>
   <div class="sub" id="asof">Loading…</div>
   <div id="app"></div>
   <footer>
@@ -139,7 +139,7 @@
 <script>
 const $ = (s, el=document) => el.querySelector(s);
 const desktop = window.atmDesktop || null;   // provided by the Windows app
-const inr = (x, d=2) => x == null ? "–" : "₹" + Number(x).toLocaleString("en-IN",{minimumFractionDigits:d,maximumFractionDigits:d});
+const inr = (x, d=2) => x == null ? "–" : (Number(x) < 0 ? "−₹" : "₹") + Math.abs(Number(x)).toLocaleString("en-IN",{minimumFractionDigits:d,maximumFractionDigits:d});
 const fmtDate = s => new Date(s + "T00:00:00").toLocaleDateString("en-IN",{day:"numeric",month:"short"});
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 function toast(msg){ const t=$("#toast"); t.textContent=msg; t.classList.add("on"); setTimeout(()=>t.classList.remove("on"),1800); }
@@ -171,8 +171,9 @@ async function getData(){
 
 async function load(){
   $("#asof").textContent = "Loading…";
-  $("#tab-today").classList.toggle("on", TAB==="today"); $("#tab-lab").classList.toggle("on", TAB==="lab");
+  for(const t of ["today","paper","lab"]) $("#tab-"+t).classList.toggle("on", TAB===t);
   if(TAB === "lab") return loadLab();
+  if(TAB === "paper") return loadPaper();
   try{
     const d = await getData();
     if(d.setup) return renderSetup();
@@ -279,6 +280,45 @@ function render(d){
   $("#app").innerHTML = top + `<div class="layout"><div>${left}</div><div>${right}</div></div>`;
 }
 
+// ---------------- Paper record ----------------
+async function loadPaper(){
+  try{ renderPaper(await getJSON("ledger.json")); }
+  catch(e){
+    $("#asof").textContent = "Paper record";
+    $("#app").innerHTML = `<div class="card empty">The paper record starts with the next scan. Each pick is bought on paper at the next open and managed with the backtest rules.</div>`;
+  }
+}
+function gateRow(label, ok, detail){ return `<tr><td>${label}</td><td>${detail}</td><td>${ok ? '<span class="pos">✓</span>' : '<span class="neg">✗</span>'}</td></tr>`; }
+function renderPaper(L){
+  const m = L.metrics || {};
+  $("#asof").textContent = `Paper account since ${L.started} · last update ${L.last_date} · strategy: ${L.strategy === "adaptive" ? "regime-adaptive" : "baseline funnel"}`;
+  let h = L.demo ? `<div class="banner warn">Demo record on made-up data – your real paper record starts with the next scan.</div>` : "";
+  const days = L.started ? Math.round((Date.parse(L.last_date) - Date.parse(L.started)) / 864e5) : 0;
+  h += `<div class="banner ${L.return_pct >= 0 ? "ok" : "bad"}">Paper equity ₹${Math.round(L.equity).toLocaleString("en-IN")} · ${L.return_pct >= 0 ? "+" : ""}${L.return_pct}% on ₹${L.capital.toLocaleString("en-IN")} · ${(L.open_positions||[]).length} open · ${m.trades || 0} closed</div>`;
+  h += `<div class="layout"><div>`;
+  h += `<h2>Paper equity</h2><div class="card">${equityChart([{label:"Paper account", data:L.equity_curve || {}, color:"#0B4D2E"}], null)}</div>`;
+  const op = L.open_positions || [];
+  h += `<h2>Open paper positions</h2><div class="card scroll">` + (op.length ? `<table class="mt"><tr><th>Stock</th><th>Qty</th><th>Entry</th><th>Stop</th><th>Last</th><th>P&amp;L</th></tr>` +
+    op.map(p => `<tr><td>${esc(p.symbol)}</td><td>${p.qty}</td><td>${inr(p.entry)}</td><td>${inr(p.stop)}</td><td>${inr(p.last)}</td><td><span class="${p.unrealized>=0?"pos":"neg"}">${inr(p.unrealized,0)} (${p.r}R)</span></td></tr>`).join("") + `</table>` : `<div class="empty" style="padding:8px">No open positions.</div>`) + `</div>`;
+  const q = L.queued || [];
+  if(q.length) h += `<div class="card"><b>Paper orders for the next open:</b> ${q.map(x => `${esc(x.symbol)} (limit ${inr(x.limit)}, stop ${inr(x.stop)})`).join(" · ")}</div>`;
+  const rt = L.recent_trades || [];
+  h += `<h2>Closed paper trades</h2><div class="card scroll">` + (rt.length ? `<table class="mt"><tr><th>Stock</th><th>In → out</th><th>Exit</th><th>P&amp;L</th><th>R</th></tr>` +
+    rt.map(t => `<tr><td>${esc(t.symbol)}</td><td>${fmtDate(t.entry_date)} → ${fmtDate(t.exit_date)}</td><td>${esc(t.reason)}</td><td><span class="${t.pnl>=0?"pos":"neg"}">${inr(t.pnl,0)}</span></td><td>${t.r}</td></tr>`).join("") + `</table>` : `<div class="empty" style="padding:8px">No closed trades yet.</div>`) + `</div>`;
+  h += `</div><div>`;
+  h += `<h2>Real-money gate</h2><div class="card scroll"><table class="mt"><tr><th>Condition</th><th>Now</th><th></th></tr>` +
+    gateRow("3+ months of paper trading", days >= 90, `${days} days`) +
+    gateRow("30+ closed trades", (m.trades||0) >= 30, `${m.trades || 0}`) +
+    gateRow("Avg profit per trade ≥ 0.1R", (m.avg_r||0) >= 0.1, `${m.avg_r ?? "–"}R`) +
+    gateRow("Worst fall from peak better than −10%", (m.max_drawdown_pct ?? 0) > -10, `${m.max_drawdown_pct ?? 0}%`) +
+    `</table><p class="sub" style="margin:8px 0 0">All four, plus a backtest verdict that isn't "no proven edge", before any real money.</p></div>`;
+  h += `<h2>Paper stats</h2><div class="card">${mtable([["Paper", m]])}</div>`;
+  const ev = L.events_log || L.events_latest || [];
+  h += `<h2>Latest activity</h2><div class="card rules">${ev.length ? `<ul style="margin:0;padding-left:18px">${ev.slice().reverse().map(e => `<li>${esc(e)}</li>`).join("")}</ul>` : "No fills or exits yet."}</div>`;
+  h += `</div></div>`;
+  $("#app").innerHTML = h;
+}
+
 // ---------------- Strategy lab ----------------
 async function loadLab(){
   try{ renderLab(await getJSON("backtest.json")); }
@@ -365,6 +405,7 @@ document.addEventListener("click", async e => {
 $("#refresh").onclick = load;
 $("#tab-today").onclick = () => { TAB = "today"; load(); };
 $("#tab-lab").onclick = () => { TAB = "lab"; load(); };
+$("#tab-paper").onclick = () => { TAB = "paper"; load(); };
 if(desktop){ const b=$("#settings"); b.hidden=false; b.onclick=renderSetup; desktop.onScanUpdated(() => load()); }
 document.addEventListener("visibilitychange", () => { if(document.visibilityState === "visible") load(); });
 if(!desktop && "serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");
