@@ -59,8 +59,13 @@ def build_message(result: dict, cfg: dict) -> str:
 
 
 def send_telegram(text: str) -> bool:
-    token = os.environ.get("TELEGRAM_BOT_TOKEN")
-    chat = os.environ.get("TELEGRAM_CHAT_ID")
+    # Tolerate copy-paste slips: spaces/new lines, quotes, a leading "bot", or the full API URL.
+    token = (os.environ.get("TELEGRAM_BOT_TOKEN") or "").strip().strip('"\'').strip()
+    if "api.telegram.org/bot" in token:
+        token = token.split("api.telegram.org/bot", 1)[1].split("/", 1)[0]
+    if token.lower().startswith("bot") and ":" in token:
+        token = token[3:]
+    chat = (os.environ.get("TELEGRAM_CHAT_ID") or "").strip().strip('"\'').strip()
     if not token or not chat:
         print("Telegram not configured; skipping alert.")
         return False
@@ -82,5 +87,8 @@ def send_telegram(text: str) -> bool:
         )
         if r.status_code != 200:
             print("Telegram error:", r.status_code, r.text[:300])
+            if r.status_code in (401, 404):
+                looks = bool(__import__("re").fullmatch(r"\d{6,12}:[A-Za-z0-9_-]{30,50}", token))
+                print(f"  token looks like a BotFather token: {looks} (length {len(token)}, contains ':' {':' in token})")
             ok = False
     return ok
