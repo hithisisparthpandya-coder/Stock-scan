@@ -42,6 +42,12 @@ Picks go to Telegram and to the web app on your iPhone. Free to run.
 3. To switch the live scanner, set `"live_strategy": "adaptive"` in `scanner/config.json`
    (only if the verdict recommends it). The app shows today's market regime either way.
 
+### Research queue (test-only — never switched live without your approval)
+One idea a week is added to the backtest report under `research` in `docs/data/backtest.json`.
+- [x] (a) Monthly-rebalanced top-15 volatility-adjusted momentum portfolio (Nifty200 Momentum 30 style) vs Nifty buy-and-hold — added 2026-11-12
+- [ ] (b) Breakouts only, no pullbacks
+- [ ] (c) Wider trailing exit (close below the 50-day average) to let winners run
+
 ## Your settings
 Edit `scanner/config.json`: `capital` (update as your account grows), `risk_pct` (0.01 = 1%),
 `max_position_pct`, `min_turnover_cr`, `vol_mult`, `max_stop_pct`, `top_n`.

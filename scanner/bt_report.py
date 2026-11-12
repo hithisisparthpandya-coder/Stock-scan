@@ -19,7 +19,8 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from backtest import group_stats, metrics, run_backtest, slice_metrics, yearly_returns  # noqa: E402
+from backtest import (group_stats, metrics, portfolio_metrics, run_backtest,  # noqa: E402
+                      run_momentum_portfolio, slice_metrics, yearly_returns)
 from strategy import build_panel, features  # noqa: E402
 
 OUT = ROOT / "docs" / "data" / "backtest.json"
@@ -69,6 +70,46 @@ def verdict(rep: dict, cfg: dict) -> dict:
                  f"≥ {cfg['edge_min_pf_is']}.")
     return {"recommended": choice, "baseline_has_edge": eb, "adaptive_has_edge": ea,
             "robust": robust, "summary": lines}
+
+
+# Research queue item (a). Fixed, textbook settings – the midpoint of the 10–20 range asked for and
+# the index's 200-stock universe. Not tuned. Never used by the live scanner.
+MOMPORT = {"n_hold": 15, "universe": 200}
+
+
+def research_momentum_portfolio(P: dict, f: dict, cfg: dict, n: pd.Series, split) -> dict:
+    t1 = time.time()
+    res = run_momentum_portfolio(P, f, cfg, **MOMPORT)
+    e = res.equity
+    ne = n.reindex(e.index).ffill() / n.reindex(e.index).ffill().iloc[0] * cfg["bt_capital"]
+    def side(s, t, a=None, b=None):
+        m = pd.Series(True, index=ne.index)
+        if a is not None:
+            m &= ne.index >= pd.Timestamp(a)
+        if b is not None:
+            m &= ne.index < pd.Timestamp(b)
+        nm = metrics(ne[m], None)
+        nm.pop("trades", None)
+        return {"strategy": portfolio_metrics(s, t, a, b), "nifty": nm}
+
+    ins, oos = side(e, res.trades, None, split), side(e, res.trades, split, None)
+    beat = lambda x: (x["strategy"].get("cagr_pct") or -99) > (x["nifty"].get("cagr_pct") or 99)
+    out = {
+        "id": "a_momentum_portfolio",
+        "label": f"Monthly top-{MOMPORT['n_hold']} momentum portfolio (Nifty200 Momentum style)",
+        "status": "test only – not used live",
+        "settings": {**MOMPORT, "rebalance": "monthly", "weighting": "equal at entry",
+                     "universe_note": "200 most-traded stocks (no point-in-time market caps available)"},
+        "all": side(e, res.trades),
+        "in_sample": ins, "out_of_sample": oos,
+        "beats_nifty_in_sample": beat(ins), "beats_nifty_out_of_sample": beat(oos),
+        "yearly": yearly_returns(e), "nifty_yearly": yearly_returns(ne),
+        "equity": {d.date().isoformat(): round(v) for d, v in e.resample("W").last().dropna().items()},
+        "notes": ["Nifty here is the price index (no dividends), which understates buy-and-hold by about 1–1.5% a year.",
+                  "Always invested: no market filter and no stop-losses, so drawdowns follow the market."],
+    }
+    print(f"research momentum portfolio: IS {ins} | OOS {oos} ({time.time() - t1:.0f}s)")
+    return out
 
 
 def run(hist: pd.DataFrame, nifty: pd.Series, cfg: dict, demo: bool, exclude: set | None = None) -> dict:
@@ -130,6 +171,8 @@ def run(hist: pd.DataFrame, nifty: pd.Series, cfg: dict, demo: bool, exclude: se
         "all": {**metrics(n / n.iloc[0] * cfg["bt_capital"], None), "trades": None},
         "yearly": yearly_returns(n),
     }
+
+    rep["research"] = research_momentum_portfolio(P, f, cfg, n, split)
 
     rob = []
     for label, over in ROBUSTNESS:

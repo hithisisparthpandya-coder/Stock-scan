@@ -187,6 +187,48 @@ def test_paper_ledger_matches_backtest():
         pd.testing.assert_frame_equal(bt_tr[cols], led_tr[cols], check_dtype=False)
 
 
+def test_momentum_portfolio_accounting_and_schedule():
+    hist, nifty = make_long_history(years=3, n_stocks=40)
+    P = build_panel(hist); f = features(P, nifty, CFG)
+    res = bt.run_momentum_portfolio(P, f, CFG, n_hold=10, universe=30)
+    t = res.trades
+    assert len(t) > 10
+    assert abs(res.equity.iloc[-1] - (CFG["bt_capital"] + t["pnl"].sum())) < 1.0
+    assert res.exposure.max() <= 10
+    dates = P["C"].index
+    first_of_month = {d for k, d in enumerate(dates[1:], 1) if d.month != dates[k - 1].month}
+    assert set(pd.to_datetime(t["entry_date"])) <= first_of_month, "buys must happen only at a month's first open"
+
+
+def test_momentum_portfolio_no_lookahead():
+    hist, nifty = make_long_history(years=3, n_stocks=40)
+    P = build_panel(hist); f = features(P, nifty, CFG)
+    a = bt.run_momentum_portfolio(P, f, CFG, n_hold=10, universe=30)
+    cut = P["C"].index[-120]
+    h2 = hist.copy()
+    later = h2["date"] > cut
+    rng = np.random.default_rng(2)
+    for col in ("open", "high", "low", "close"):
+        h2.loc[later, col] = h2.loc[later, col] * rng.uniform(0.6, 1.6, later.sum())
+    h2.loc[later, "prev_close"] = np.nan
+    P2 = build_panel(h2); f2 = features(P2, nifty, CFG)
+    b = bt.run_momentum_portfolio(P2, f2, CFG, n_hold=10, universe=30)
+    done = lambda r: r.trades[pd.to_datetime(r.trades["exit_date"]) <= cut].reset_index(drop=True)
+    pd.testing.assert_frame_equal(done(a), done(b))
+    assert len(done(a)) > 0
+    pd.testing.assert_series_equal(a.equity[a.equity.index <= cut], b.equity[b.equity.index <= cut])
+
+
+def test_report_has_research_section():
+    import bt_report
+    hist, nifty = make_long_history(years=3, n_stocks=40)
+    rep = bt_report.run(hist, nifty, CFG, demo=True)
+    r = rep["research"]
+    assert r["in_sample"]["strategy"]["cagr_pct"] is not None and "cagr_pct" in r["out_of_sample"]["nifty"]
+    s = json.dumps(rep, default=str)
+    assert "NaN" not in s
+
+
 if __name__ == "__main__":  # noqa
     for name, fn in list(globals().items()):
         if name.startswith("test_"):

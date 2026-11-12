@@ -258,6 +258,116 @@ def run_backtest(P: dict, f: dict, cfg: dict, strategy: str, start=None, end=Non
                   pd.Series(regs, index=idx), pd.Series(expo, index=idx))
 
 
+def run_momentum_portfolio(P: dict, f: dict, cfg: dict, start=None, end=None,
+                           n_hold: int = 15, universe: int = 200) -> Result:
+    """Research variant (not live): monthly-rebalanced, equal-weight portfolio of the top `n_hold`
+    volatility-adjusted momentum stocks, always invested (no market filter, no stops).
+      • Ranked on the last trading day of each month's close; trades at the next day's open.
+      • Stocks that drop out of the top `n_hold` are sold; new entrants are bought with a slot of
+        equity / n_hold each (whole shares; a stock whose one share costs more than a slot is skipped).
+        Holdings that stay in the list are not resized (saves charges).
+      • Same costs as the swing backtest. A stock with no price for 6 days exits at its last close."""
+    from strategy import momentum_ranking
+    C, O = P["C"], P["O"]
+    dates = C.index
+    i0 = max(int(np.searchsorted(dates, pd.Timestamp(start))) if start is not None else 0, cfg["bt_warmup"])
+    i1 = int(np.searchsorted(dates, pd.Timestamp(end), side="right")) if end is not None else len(dates)
+    cost_side = cfg["cost_per_side"] + cfg["slippage_per_side"]
+    cash = float(cfg["bt_capital"])
+    pos: dict[str, dict] = {}
+    trades, eq, expo = [], [], []
+    target = None
+
+    def sell(sym, px, date, n, reason):
+        nonlocal cash
+        p = pos.pop(sym)
+        gross = p["qty"] * px
+        c = gross * cost_side + cfg["dp_charge"]
+        cash += gross - c
+        pnl = gross - p["qty"] * p["entry"] - p["cost"] - c
+        trades.append({"symbol": sym, "entry_date": p["entry_date"], "exit_date": date,
+                       "entry": round(p["entry"], 2), "exit": round(px, 2), "qty": p["qty"],
+                       "pnl": round(pnl, 2), "ret_pct": round(pnl / (p["qty"] * p["entry"]) * 100, 2),
+                       "reason": reason, "days": n - p["entry_n"]})
+
+    for i in range(i0, i1):
+        d = dates[i].date().isoformat()
+        o_row, c_row = O.iloc[i], C.iloc[i]
+        if target is not None:                                     # rebalance at today's open
+            for sym in [s for s in pos if s not in target]:
+                o = o_row.get(sym, np.nan)
+                sell(sym, o if o > 0 else pos[sym]["last"], d, i, "rebalance")
+            eq_now = cash + sum(p["qty"] * (o_row.get(s, np.nan) if o_row.get(s, np.nan) > 0 else p["last"])
+                                for s, p in pos.items())
+            slot = eq_now / n_hold
+            for sym in target:
+                if len(pos) >= n_hold:
+                    break
+                o = o_row.get(sym, np.nan)
+                if sym in pos or not (o > 0):
+                    continue
+                qty = math.floor(min(slot, cash / (1 + cost_side)) / o)
+                if qty < 1:
+                    continue
+                c = qty * o * cost_side
+                cash -= qty * o + c
+                pos[sym] = {"qty": qty, "entry": o, "entry_date": d, "entry_n": i, "cost": c, "last": o, "missing": 0}
+            target = None
+        for sym, p in list(pos.items()):
+            c = c_row.get(sym, np.nan)
+            if c > 0:
+                p["last"], p["missing"] = c, 0
+            else:
+                p["missing"] += 1
+                if p["missing"] > 5:
+                    sell(sym, p["last"], d, i, "no data")
+        equity = cash + sum(p["qty"] * p["last"] for p in pos.values())
+        eq.append(equity); expo.append(len(pos))
+        if i + 1 < i1 and dates[i + 1].month != dates[i].month:   # month end → pick next month's list
+            slot = equity / n_hold
+            r = momentum_ranking(f, P, i, cfg, universe)
+            r = r[r["close"] <= slot * 0.95]
+            target = list(r.index[:n_hold])
+    if eq:
+        last_d = dates[i1 - 1].date().isoformat()
+        for sym in list(pos):
+            sell(sym, pos[sym]["last"], last_d, i1 - 1, "end of test")
+        eq[-1] = cash
+    idx = dates[i0:i1]
+    return Result(pd.Series(eq, index=idx, dtype=float), pd.DataFrame(trades),
+                  pd.Series("n/a", index=idx), pd.Series(expo, index=idx))
+
+
+def portfolio_metrics(equity: pd.Series, trades: pd.DataFrame, start=None, end=None) -> dict:
+    """Metrics for the momentum portfolio. R-multiples don't apply (no stops), so trade stats are
+    in % return per holding instead."""
+    e = equity
+    if start is not None:
+        e = e[e.index >= pd.Timestamp(start)]
+    if end is not None:
+        e = e[e.index < pd.Timestamp(end)]
+    out = metrics(e, None)
+    out.pop("trades", None)
+    t = trades
+    if len(t):
+        d = pd.to_datetime(t["exit_date"])
+        m = pd.Series(True, index=t.index)
+        if start is not None:
+            m &= d >= pd.Timestamp(start)
+        if end is not None:
+            m &= d < pd.Timestamp(end)
+        t = t[m]
+    if len(t):
+        gl = -t.loc[t["pnl"] <= 0, "pnl"].sum()
+        years = max((e.index[-1] - e.index[0]).days / 365.25, 1e-9)
+        out.update({"holdings_closed": int(len(t)), "closed_per_year": round(len(t) / years, 1),
+                    "win_rate_pct": round(float((t["pnl"] > 0).mean() * 100), 1),
+                    "avg_ret_pct": round(float(t["ret_pct"].mean()), 2),
+                    "profit_factor": round(float(t.loc[t["pnl"] > 0, "pnl"].sum() / gl), 2) if gl > 0 else None,
+                    "avg_days_held": round(float(t["days"].mean()), 1)})
+    return out
+
+
 # ---------------------------------------------------------------- metrics
 def metrics(equity: pd.Series, trades: pd.DataFrame) -> dict:
     if len(equity) < 2:

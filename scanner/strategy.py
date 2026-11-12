@@ -194,3 +194,16 @@ def signals(f: dict, P: dict, i: int, cfg: dict, strategy: str, excluded: set | 
             "low_priced": bool(r["close"] < cfg["low_price_threshold"])}
            for sym, r in c.iterrows()]
     return out, counts, risk
+
+
+# ---------------------------------------------------------------- research: momentum portfolio
+def momentum_ranking(f: dict, P: dict, i: int, cfg: dict, universe: int = 200) -> pd.DataFrame:
+    """Research only (not used live). Ranks stocks by volatility-adjusted 6+12-month momentum, in the
+    spirit of NSE's Nifty200 Momentum 30 method. With no free point-in-time market-cap history, the
+    'top 200' universe is the 200 most-traded stocks (20-day average turnover) on day i. Uses only data
+    up to and including day i. Returns a frame with close and mom, best first."""
+    s = pd.DataFrame({"close": P["C"].iloc[i], "turn": f["avgturn20"].iloc[i],
+                      "mom": f["mom"].iloc[i], "days": f["days"].iloc[i]})
+    s = s[(s["close"] >= cfg["min_price"]) & (s["days"] >= 252) & s["mom"].notna() & s["turn"].notna()]
+    s = s.nlargest(universe, "turn")
+    return s.sort_values("mom", ascending=False)
