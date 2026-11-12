@@ -7,4 +7,5 @@ for (const f of ["index.html", "atm-mark.svg", "fonts"]) fs.cpSync(path.join(src
 // Bundled demo data (used only when "Try with demo data" is chosen)
 fs.copyFileSync(path.join(__dirname, "demo-picks.json"), path.join(dst, "data", "picks.json"));
 fs.copyFileSync(path.join(__dirname, "demo-backtest.json"), path.join(dst, "data", "backtest.json"));
+fs.copyFileSync(path.join(__dirname, "demo-ledger.json"), path.join(dst, "data", "ledger.json"));
 console.log("UI synced from docs/");

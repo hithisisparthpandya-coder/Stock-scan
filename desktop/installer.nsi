@@ -3,7 +3,7 @@ Unicode true
 !include "MUI2.nsh"
 !define APPNAME "ATM Stock Scan"
 !define COMPANY "Absolute Tech Management LLP"
-!define VERSION "1.2.0"
+!define VERSION "1.3.0"
 !define EXE "ATM Stock Scan.exe"
 !define UNINSTKEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\ATMStockScan"
 

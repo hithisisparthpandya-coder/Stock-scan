@@ -171,7 +171,33 @@
    "date": "2026-11-13"
   }
  ],
- "generated_at": "2026-11-13T02:40+05:30",
+ "paper": {
+  "summary": "📒 Paper account: ₹35,000 (+0.00% since 2026-11-13) · 0 open · 0 closed",
+  "events": [],
+  "queued": [
+   {
+    "symbol": "LOWPX",
+    "limit": 36.76,
+    "stop": 34.37
+   },
+   {
+    "symbol": "BRKOUT",
+    "limit": 636.3,
+    "stop": 586.4
+   },
+   {
+    "symbol": "PULLBK",
+    "limit": 1206.71,
+    "stop": 1153.83
+   },
+   {
+    "symbol": "NODATA",
+    "limit": 399.15,
+    "stop": 372.51
+   }
+  ]
+ },
+ "generated_at": "2026-11-13T04:23+05:30",
  "config": {
   "capital": 35000,
   "risk_pct": 0.01,

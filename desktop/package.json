@@ -1,6 +1,6 @@
 {
   "name": "atm-stock-scan",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "ATM Stock Scan – daily NSE screen for personal use",
   "main": "main.js",
   "scripts": {
