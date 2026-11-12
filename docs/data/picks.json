@@ -7,7 +7,7 @@
   },
   {
    "stage": "Not on ASM/GSM or a 2%/5% circuit band",
-   "count": 2500
+   "count": 2499
   },
   {
    "stage": "Liquid (≥ ₹10 cr/day; 2× that below ₹50)",
@@ -114,49 +114,49 @@
    "source": "SEBI",
    "title": "Niveshak Shivir to be held on November 17, 2026 at New Delhi",
    "link": "https://www.sebi.gov.in/media-and-notifications/press-releases/nov-2026/niveshak-shivir-to-be-held-on-november-17-2026-at-new-delhi_105731.html",
-   "date": null
+   "date": "2026-11-12"
   },
   {
    "source": "SEBI",
    "title": "Appeal No. 7154 of 2026 filed by Imran",
    "link": "https://www.sebi.gov.in/enforcement/orders/nov-2026/appeal-no-7154-of-2026-filed-by-imran_105726.html",
-   "date": null
+   "date": "2026-11-12"
   },
   {
    "source": "SEBI",
    "title": "Appeal No. 7153 of 2026 filed by Jamil Mian",
    "link": "https://www.sebi.gov.in/enforcement/orders/nov-2026/appeal-no-7153-of-2026-filed-by-jamil-mian_105725.html",
-   "date": null
+   "date": "2026-11-12"
   },
   {
    "source": "SEBI",
    "title": "Appeal No. 7152 of 2026 filed by Amit Harlalka",
    "link": "https://www.sebi.gov.in/enforcement/orders/nov-2026/appeal-no-7152-of-2026-filed-by-amit-harlalka_105723.html",
-   "date": null
+   "date": "2026-11-12"
   },
   {
    "source": "SEBI",
    "title": "Appeal No. 7151 of 2026 filed by Aakash Goel",
    "link": "https://www.sebi.gov.in/enforcement/orders/nov-2026/appeal-no-7151-of-2026-filed-by-aakash-goel_105722.html",
-   "date": null
+   "date": "2026-11-12"
   },
   {
    "source": "SEBI",
    "title": "Appeal No. 7150 of 2026 filed by Nirvesh Devi",
    "link": "https://www.sebi.gov.in/enforcement/orders/nov-2026/appeal-no-7150-of-2026-filed-by-nirvesh-devi_105720.html",
-   "date": null
+   "date": "2026-11-12"
   },
   {
    "source": "SEBI",
    "title": "Appeal No. 7149 of 2026 filed by Rajendra Kumar Izardar",
    "link": "https://www.sebi.gov.in/enforcement/orders/nov-2026/appeal-no-7149-of-2026-filed-by-rajendra-kumar-izardar_105719.html",
-   "date": null
+   "date": "2026-11-12"
   },
   {
    "source": "SEBI",
    "title": "Appeal No. 7147 of 2026 filed by Vaibhav Bansal",
    "link": "https://www.sebi.gov.in/enforcement/orders/nov-2026/appeal-no-7147-of-2026-filed-by-vaibhav-bansal_105717.html",
-   "date": null
+   "date": "2026-11-12"
   },
   {
    "source": "NSE",
@@ -207,7 +207,7 @@
    "date": "2026-11-12"
   }
  ],
- "generated_at": "2026-11-13T03:09+05:30",
+ "generated_at": "2026-11-13T03:59+05:30",
  "config": {
   "capital": 35000,
   "risk_pct": 0.01,
