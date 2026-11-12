@@ -306,6 +306,26 @@ def _collect_symbols(obj) -> set[str]:
     return found
 
 
+def _parse_pub(raw: str):
+    """RSS dates: RFC 822 (NSE) or SEBI's looser formats such as '13 Nov, 2026 +0530'."""
+    from email.utils import parsedate_to_datetime
+    try:
+        when = parsedate_to_datetime(raw)
+    except (TypeError, ValueError):
+        when = None
+    if when is None:
+        for fmt in ("%d %b, %Y %z", "%d %b, %Y", "%d %b %Y %H:%M:%S %z", "%d %b %Y", "%d-%m-%Y", "%Y-%m-%d",
+                    "%b %d, %Y"):
+            try:
+                when = dt.datetime.strptime(raw, fmt)
+                break
+            except ValueError:
+                continue
+    if when is not None and when.tzinfo is None:
+        when = when.replace(tzinfo=dt.timezone.utc)
+    return when
+
+
 def parse_rss(content: bytes) -> list[dict]:
     from email.utils import parsedate_to_datetime
 
@@ -317,12 +337,7 @@ def parse_rss(content: bytes) -> list[dict]:
         pub = item.findtext("pubDate")
         when = None
         if pub:
-            try:
-                when = parsedate_to_datetime(pub.strip())
-                if when.tzinfo is None:
-                    when = when.replace(tzinfo=dt.timezone.utc)
-            except (TypeError, ValueError):
-                when = None
+            when = _parse_pub(pub.strip())
         if title:
             items.append({"title": title, "link": link, "published": when})
     return items
