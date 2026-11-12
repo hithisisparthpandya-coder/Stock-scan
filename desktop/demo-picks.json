@@ -1,0 +1,199 @@
+{
+ "as_of": "2026-11-13",
+ "funnel": [
+  {
+   "stage": "Universe (NSE EQ stocks traded today)",
+   "count": 54
+  },
+  {
+   "stage": "Not on ASM/GSM or a 2%/5% circuit band",
+   "count": 52
+  },
+  {
+   "stage": "Liquid (≥ ₹10 cr/day; 2× that below ₹50)",
+   "count": 50
+  },
+  {
+   "stage": "Uptrend (price > 50 DMA > rising 200 DMA)",
+   "count": 24
+  },
+  {
+   "stage": "Volume ≥ 1.5× 20-day average",
+   "count": 10
+  },
+  {
+   "stage": "Valid setup (breakout or pullback bounce)",
+   "count": 7
+  },
+  {
+   "stage": "Stop within 8% and ≥ 1 share fits risk budget",
+   "count": 6
+  },
+  {
+   "stage": "No results due in next 7 days",
+   "count": 5
+  },
+  {
+   "stage": "Fundamentals OK or unverified (failures dropped)",
+   "count": 4
+  }
+ ],
+ "picks": [
+  {
+   "symbol": "LOWPX",
+   "name": "Demo Low-Price Ltd",
+   "setup": "Breakout from base",
+   "low_priced": true,
+   "entry": 36.4,
+   "stop": 34.37,
+   "target": 40.45,
+   "qty": 172,
+   "capital": 6261.0,
+   "max_loss": 348.0,
+   "risk_pct": 5.56,
+   "vol_ratio": 3.0,
+   "ret63_pct": 18.3,
+   "sma50": 33.56,
+   "sma200": 28.53,
+   "turnover_cr": 31.0,
+   "score": 80.0,
+   "next_results": null,
+   "fund_status": "pass",
+   "fund_notes": [],
+   "roe_pct": 19.0,
+   "de": 0.6,
+   "mcap_cr": 1200,
+   "sector": "Industrials"
+  },
+  {
+   "symbol": "BRKOUT",
+   "name": "Demo Breakout Ltd",
+   "setup": "Breakout from base",
+   "low_priced": false,
+   "entry": 630.0,
+   "stop": 586.4,
+   "target": 717.21,
+   "qty": 8,
+   "capital": 5040.0,
+   "max_loss": 349.0,
+   "risk_pct": 6.92,
+   "vol_ratio": 3.0,
+   "ret63_pct": 15.5,
+   "sma50": 581.67,
+   "sma200": 516.46,
+   "turnover_cr": 19.9,
+   "score": 61.7,
+   "next_results": "2026-12-13",
+   "fund_status": "pass",
+   "fund_notes": [],
+   "roe_pct": 24.0,
+   "de": 0.35,
+   "mcap_cr": 12000,
+   "sector": "Industrials"
+  },
+  {
+   "symbol": "PULLBK",
+   "name": "Demo Pullback Bank Ltd",
+   "setup": "Pullback to support",
+   "low_priced": false,
+   "entry": 1194.76,
+   "stop": 1153.83,
+   "target": 1276.64,
+   "qty": 7,
+   "capital": 8363.0,
+   "max_loss": 287.0,
+   "risk_pct": 3.43,
+   "vol_ratio": 2.2,
+   "ret63_pct": 10.4,
+   "sma50": 1152.71,
+   "sma200": 1030.04,
+   "turnover_cr": 18.7,
+   "score": 30.0,
+   "next_results": null,
+   "fund_status": "pass",
+   "fund_notes": [],
+   "roe_pct": 17.0,
+   "de": null,
+   "mcap_cr": 45000,
+   "sector": "Financial Services"
+  },
+  {
+   "symbol": "NODATA",
+   "name": "",
+   "setup": "Breakout from base",
+   "low_priced": false,
+   "entry": 395.2,
+   "stop": 372.51,
+   "target": 440.59,
+   "qty": 15,
+   "capital": 5928.0,
+   "max_loss": 340.0,
+   "risk_pct": 5.74,
+   "vol_ratio": 3.0,
+   "ret63_pct": 15.4,
+   "sma50": 368.01,
+   "sma200": 325.65,
+   "turnover_cr": 29.4,
+   "score": 56.7,
+   "next_results": null,
+   "fund_status": "unknown",
+   "fund_notes": [
+    "no fundamentals data"
+   ],
+   "roe_pct": null,
+   "de": null,
+   "mcap_cr": null,
+   "sector": null
+  }
+ ],
+ "market": {
+  "ok": true,
+  "close": 26000.0,
+  "sma50": 25593.48,
+  "note": "Nifty above its 50 DMA: new trades allowed."
+ },
+ "regime": {
+  "regime": "green",
+  "note": "Trend up, broad participation, calm volatility – breakouts and pullbacks allowed at full risk.",
+  "breadth": 0.566,
+  "nifty": 26000.0,
+  "nifty_sma50": 25593.475,
+  "nifty_sma200": 24400.72,
+  "vol_percentile": 0.304
+ },
+ "strategy": "baseline",
+ "surveillance_checked": true,
+ "circulars": [
+  {
+   "source": "SEBI",
+   "title": "Demo circular – real ones appear here after the first live scan",
+   "link": "https://www.sebi.gov.in/",
+   "date": "2026-11-13"
+  }
+ ],
+ "generated_at": "2026-11-13T02:40+05:30",
+ "config": {
+  "capital": 35000,
+  "risk_pct": 0.01,
+  "max_position_pct": 0.25,
+  "reward_risk": 2,
+  "min_turnover_cr": 10,
+  "vol_mult": 1.5,
+  "max_stop_pct": 0.08,
+  "min_roe": 0.15,
+  "max_de": 1.0,
+  "min_mcap_cr": 500,
+  "results_window_days": 7
+ },
+ "demo": true,
+ "warnings": [
+  "Fundamentals found for 5 of 6 candidates; picks marked ⚠ need a manual check on screener.in."
+ ],
+ "checks": {
+  "surveillance": true,
+  "price_bands": true,
+  "results_calendar": true,
+  "fundamentals_covered": 5,
+  "fundamentals_checked": 6
+ }
+}

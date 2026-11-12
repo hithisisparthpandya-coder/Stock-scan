@@ -1,0 +1,64 @@
+{
+  "name": "atm-stock-scan",
+  "version": "1.2.0",
+  "description": "ATM Stock Scan – daily NSE screen for personal use",
+  "main": "main.js",
+  "scripts": {
+    "sync-ui": "node sync-ui.js",
+    "start": "npm run sync-ui && electron .",
+    "dist": "npm run sync-ui && electron-builder --win dir --x64 && makensis -V2 installer.nsi",
+    "dist:ci": "npm run sync-ui && electron-builder --win nsis --x64"
+  },
+  "author": "Absolute Tech Management LLP",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@fontsource/archivo": "^5.3.0",
+    "@fontsource/oswald": "^5.3.0",
+    "electron": "^33.4.11",
+    "electron-builder": "^25.1.8",
+    "resedit": "^2.0.3"
+  },
+  "productName": "ATM Stock Scan",
+  "private": true,
+  "build": {
+    "appId": "in.absolutetechno.stockscan",
+    "productName": "ATM Stock Scan",
+    "copyright": "© 2026 Absolute Tech Management LLP",
+    "files": [
+      "main.js",
+      "preload.js",
+      "ui/**/*",
+      "build/icon.ico",
+      "build/icon.png",
+      "build/tray.png"
+    ],
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "afterPack": "./set-exe-meta.js",
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico",
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "ATM Stock Scan",
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "artifactName": "ATM-Stock-Scan-Setup-${version}.exe"
+    }
+  }
+}

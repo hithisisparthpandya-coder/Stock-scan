@@ -1,0 +1,54 @@
+name: Strategy backtest
+
+# Run manually the first time (Actions → Strategy backtest → Run workflow).
+# The first run downloads ~10 years of NSE bhavcopies (1.5–3 hours); later runs reuse the cache.
+# It also refreshes itself on the first Sunday of each month.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 4 1-7 * 0"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: backtest
+  cancel-in-progress: false
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Tests
+        run: |
+          python scanner/test_funnel.py
+          python scanner/test_backtest.py
+      - name: Restore long history
+        uses: actions/cache/restore@v4
+        with:
+          path: data_cache/long
+          key: nse-long-${{ github.run_id }}
+          restore-keys: nse-long-
+      - name: Backtest
+        run: python scanner/bt_report.py
+      - name: Save long history
+        if: always() && hashFiles('data_cache/long/*.parquet') != ''
+        uses: actions/cache/save@v4
+        with:
+          path: data_cache/long
+          key: nse-long-${{ github.run_id }}
+      - name: Publish report to the app
+        run: |
+          git config user.name "scan-bot"
+          git config user.email "scan-bot@users.noreply.github.com"
+          git add docs/data/backtest.json
+          git diff --cached --quiet || git commit -m "Backtest $(date -u +%F)"
+          git pull --rebase
+          git push
