@@ -1,0 +1,60 @@
+{
+ "demo": false,
+ "strategy": "baseline",
+ "started": "2026-11-12",
+ "last_date": "2026-11-12",
+ "capital": 35000,
+ "equity": 35000.0,
+ "return_pct": 0.0,
+ "metrics": {
+  "trades": 0
+ },
+ "open_positions": [],
+ "queued": [
+  {
+   "symbol": "APLAPOLLO",
+   "limit": 2247.96,
+   "stop": 2155.77
+  },
+  {
+   "symbol": "MARKSANS",
+   "limit": 323.2,
+   "stop": 301.53
+  }
+ ],
+ "recent_trades": [],
+ "events_latest": [],
+ "events_log": [],
+ "equity_curve": {
+  "2026-11-12": 35000.0
+ },
+ "sim": {
+  "cash": 35000.0,
+  "peak": 35000.0,
+  "halt_until": -1,
+  "n": -1,
+  "equity": 35000.0,
+  "positions": {},
+  "pending": [
+   {
+    "symbol": "APLAPOLLO",
+    "stop": 2155.77,
+    "setup": "Pullback to support",
+    "limit": 2247.957,
+    "risk": 0.01,
+    "regime": "amber",
+    "partial_R": 2.0
+   },
+   {
+    "symbol": "MARKSANS",
+    "stop": 301.53,
+    "setup": "Pullback to support",
+    "limit": 323.2,
+    "risk": 0.01,
+    "regime": "amber",
+    "partial_R": 2.0
+   }
+  ],
+  "trades": []
+ }
+}

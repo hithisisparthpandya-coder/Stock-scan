@@ -7,15 +7,15 @@
   },
   {
    "stage": "Not on ASM/GSM or a 2%/5% circuit band",
-   "count": 2499
+   "count": 2161
   },
   {
    "stage": "Liquid (≥ ₹10 cr/day; 2× that below ₹50)",
-   "count": 843
+   "count": 815
   },
   {
    "stage": "Uptrend (price > 50 DMA > rising 200 DMA)",
-   "count": 226
+   "count": 223
   },
   {
    "stage": "Volume ≥ 1.5× 20-day average",
@@ -26,7 +26,7 @@
    "count": 37
   },
   {
-   "stage": "Stop within 8% and ≥ 1 share fits risk budget",
+   "stage": "Stop 1.5–8% away, ≥ 1 share fits",
    "count": 2
   },
   {
@@ -207,7 +207,23 @@
    "date": "2026-11-12"
   }
  ],
- "generated_at": "2026-11-13T04:16+05:30",
+ "paper": {
+  "summary": "📒 Paper account: ₹35,000 (+0.00% since 2026-11-12) · 0 open · 0 closed",
+  "events": [],
+  "queued": [
+   {
+    "symbol": "APLAPOLLO",
+    "limit": 2247.96,
+    "stop": 2155.77
+   },
+   {
+    "symbol": "MARKSANS",
+    "limit": 323.2,
+    "stop": 301.53
+   }
+  ]
+ },
+ "generated_at": "2026-11-13T04:38+05:30",
  "config": {
   "capital": 35000,
   "risk_pct": 0.01,
