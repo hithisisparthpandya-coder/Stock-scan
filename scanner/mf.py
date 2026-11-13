@@ -134,14 +134,16 @@ def load_universe(db: Path, amfi: dict) -> tuple[pd.DataFrame, dict, bool]:
         if amfi and a is None:
             continue                                  # not in AMFI's live list
         diag["in_amfi"] += 1
+        # AMFI's current file drops "Direct Plan - Growth" from names, so the plan/option test uses the
+        # NAV database's full scheme name; AMFI supplies only the category.
+        nm = name.strip()
         if a and a["category"] in known:
             diag["our_category"] += 1
             from mf_classify import is_direct_growth
-            if is_direct_growth(a["name"]):
+            if is_direct_growth(nm):
                 diag["direct_growth"] += 1
-            elif len(samples) < 5:
-                samples.append(a["name"])
-        nm = (a["name"] if a else name).strip()
+            elif len(samples) < 3:
+                samples.append(nm)
         cat = a["category"] if a else None
         # AMFI category known to us → use it; another AMFI category (sectoral, overseas…) → skip; none → name
         b = bucket_for(nm, cat) if cat in known else (bucket_for(nm, None) if cat is None else None)
