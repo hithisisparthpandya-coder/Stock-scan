@@ -1,16 +1,16 @@
 {
- "generated_at": "2026-11-13T11:13+05:30",
+ "generated_at": "2026-11-13T11:20+05:30",
  "nav_date": "2026-11-12",
  "universe": {
-  "schemes": 401,
+  "schemes": 399,
   "source": "AMFI NAV history (captn3m0/historical-mf-data)",
-  "categories": "scheme names (AMFI list unavailable)"
+  "categories": "AMFI scheme categories"
  },
  "buckets": {
   "idx_n50": {
    "label": "Nifty 50 index fund",
    "kind": "index",
-   "funds_considered": 22,
+   "funds_considered": 21,
    "top": [
     {
      "code": 118741,
@@ -46,7 +46,7 @@
      "worst_r3": 5.86,
      "median_r3": 11.81,
      "sip_xirr_5y": 8.53,
-     "score": 95.5,
+     "score": 95.2,
      "consistency": null,
      "why": "Top 3y return for this index (ties go to the longer record)"
     },
@@ -65,7 +65,7 @@
      "worst_r3": 5.88,
      "median_r3": 11.88,
      "sip_xirr_5y": 8.55,
-     "score": 90.9,
+     "score": 90.5,
      "consistency": null,
      "why": "Top 3y return for this index (ties go to the longer record)"
     },
@@ -84,7 +84,7 @@
      "worst_r3": 5.88,
      "median_r3": 11.84,
      "sip_xirr_5y": 8.57,
-     "score": 86.4,
+     "score": 85.7,
      "consistency": null,
      "why": "Top 3y return for this index (ties go to the longer record)"
     },
@@ -103,7 +103,7 @@
      "worst_r3": 5.85,
      "median_r3": 11.66,
      "sip_xirr_5y": 8.54,
-     "score": 81.8,
+     "score": 81.0,
      "consistency": null,
      "why": "Top 3y return for this index (ties go to the longer record)"
     }
@@ -724,7 +724,7 @@
   "flexi": {
    "label": "Flexi cap (active)",
    "kind": "active",
-   "funds_considered": 43,
+   "funds_considered": 42,
    "top": [
     {
      "code": 118955,
@@ -826,7 +826,7 @@
   "mid": {
    "label": "Mid cap (active)",
    "kind": "active",
-   "funds_considered": 33,
+   "funds_considered": 31,
    "top": [
     {
      "code": 120403,
@@ -843,26 +843,7 @@
      "worst_r3": 21.33,
      "median_r3": 26.33,
      "sip_xirr_5y": 21.89,
-     "score": 91.3,
-     "consistency": 100.0,
-     "why": "Most consistent, best return per unit of risk, smaller falls"
-    },
-    {
-     "code": 118989,
-     "name": "HDFC Mid Cap Fund - Growth Option - Direct Plan",
-     "age_years": 13.9,
-     "nav": 230.66,
-     "nav_date": "2026-11-12",
-     "cagr_1y": 2.7,
-     "cagr_3y": 16.49,
-     "cagr_5y": 17.65,
-     "cagr_10y": 17.63,
-     "max_dd": -16.76,
-     "vol": 15.39,
-     "worst_r3": 15.09,
-     "median_r3": 25.3,
-     "sip_xirr_5y": 17.12,
-     "score": 90.3,
+     "score": 91.1,
      "consistency": 100.0,
      "why": "Most consistent, best return per unit of risk, smaller falls"
     },
@@ -881,8 +862,27 @@
      "worst_r3": 17.91,
      "median_r3": 25.12,
      "sip_xirr_5y": 18.01,
-     "score": 87.5,
+     "score": 87.0,
      "consistency": 100.0,
+     "why": "Most consistent, best return per unit of risk, smaller falls"
+    },
+    {
+     "code": 118989,
+     "name": "HDFC Mid Cap Fund - Growth Option - Direct Plan",
+     "age_years": 13.9,
+     "nav": 230.66,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 2.7,
+     "cagr_3y": 16.49,
+     "cagr_5y": 17.65,
+     "cagr_10y": 17.63,
+     "max_dd": -16.76,
+     "vol": 15.39,
+     "worst_r3": 15.09,
+     "median_r3": 25.3,
+     "sip_xirr_5y": 17.12,
+     "score": 85.3,
+     "consistency": 91.67,
      "why": "Most consistent, best return per unit of risk, smaller falls"
     },
     {
@@ -900,7 +900,7 @@
      "worst_r3": 15.41,
      "median_r3": 24.57,
      "sip_xirr_5y": 17.42,
-     "score": 84.1,
+     "score": 83.3,
      "consistency": 100.0,
      "why": "Most consistent, best return per unit of risk, smaller falls"
     },
@@ -919,7 +919,7 @@
      "worst_r3": 15.7,
      "median_r3": 23.43,
      "sip_xirr_5y": 16.6,
-     "score": 80.0,
+     "score": 78.9,
      "consistency": 100.0,
      "why": "Most consistent, best return per unit of risk, smaller falls"
     }
@@ -1030,7 +1030,7 @@
   "elss": {
    "label": "ELSS tax saver (active)",
    "kind": "active",
-   "funds_considered": 37,
+   "funds_considered": 38,
    "top": [
     {
      "code": 119060,
@@ -1336,8 +1336,27 @@
   "corp_bond": {
    "label": "Corporate bond fund",
    "kind": "debt",
-   "funds_considered": 20,
+   "funds_considered": 21,
    "top": [
+    {
+     "code": 118569,
+     "name": "Franklin India Corporate Debt Fund - Direct - GROWTH",
+     "age_years": 13.9,
+     "nav": 116.87,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 5.43,
+     "cagr_3y": 7.87,
+     "cagr_5y": 6.75,
+     "cagr_10y": 7.48,
+     "max_dd": -0.84,
+     "vol": 1.43,
+     "worst_r3": 6.34,
+     "median_r3": 8.05,
+     "sip_xirr_5y": 7.22,
+     "score": 92.4,
+     "consistency": null,
+     "why": "Best 3-year return with the smallest drawdown"
+    },
     {
      "code": 141588,
      "name": "Axis Corporate Bond Fund - Direct Plan Growth",
@@ -1353,7 +1372,7 @@
      "worst_r3": 6.85,
      "median_r3": 7.91,
      "sip_xirr_5y": 6.97,
-     "score": 89.0,
+     "score": 84.8,
      "consistency": null,
      "why": "Best 3-year return with the smallest drawdown"
     },
@@ -1372,7 +1391,7 @@
      "worst_r3": 6.87,
      "median_r3": 7.45,
      "sip_xirr_5y": null,
-     "score": 83.0,
+     "score": 81.0,
      "consistency": null,
      "why": "Best 3-year return with the smallest drawdown"
     },
@@ -1391,7 +1410,7 @@
      "worst_r3": 7.0,
      "median_r3": 7.78,
      "sip_xirr_5y": 6.8,
-     "score": 79.0,
+     "score": 75.2,
      "consistency": null,
      "why": "Best 3-year return with the smallest drawdown"
     },
@@ -1410,26 +1429,7 @@
      "worst_r3": 6.62,
      "median_r3": 7.62,
      "sip_xirr_5y": 6.66,
-     "score": 68.0,
-     "consistency": null,
-     "why": "Best 3-year return with the smallest drawdown"
-    },
-    {
-     "code": 150237,
-     "name": "BARODA BNP PARIBAS Corporate Bond Fund - Direct Plan - Growth Option",
-     "age_years": 4.7,
-     "nav": 31.6,
-     "nav_date": "2026-11-12",
-     "cagr_1y": 5.2,
-     "cagr_3y": 7.75,
-     "cagr_5y": null,
-     "cagr_10y": null,
-     "max_dd": -2.33,
-     "vol": 1.75,
-     "worst_r3": 6.57,
-     "median_r3": 7.87,
-     "sip_xirr_5y": null,
-     "score": 64.0,
+     "score": 64.8,
      "consistency": null,
      "why": "Best 3-year return with the smallest drawdown"
     }
@@ -1562,9 +1562,9 @@
    "years": 5,
    "index_fund": "Aditya Birla Sun Life Nifty Midcap 150 Index Fund-Direct Growth",
    "index_cagr": 14.18,
-   "active_funds": 24,
+   "active_funds": 22,
    "beat_index": 12,
-   "median_active_cagr": 14.24
+   "median_active_cagr": 14.38
   },
   {
    "category": "Small cap (active)",
@@ -1620,15 +1620,15 @@
      "label": "Corporate bond fund",
      "weight": 30,
      "fund": {
-      "code": 141588,
-      "name": "Axis Corporate Bond Fund - Direct Plan Growth",
-      "cagr_3y": 7.58,
-      "cagr_5y": 6.78,
-      "max_dd": -0.91
+      "code": 118569,
+      "name": "Franklin India Corporate Debt Fund - Direct - GROWTH",
+      "cagr_3y": 7.87,
+      "cagr_5y": 6.75,
+      "max_dd": -0.84
      },
      "alternative": {
-      "code": 150996,
-      "name": "HSBC Corporate Bond Fund - Direct Growth"
+      "code": 141588,
+      "name": "Axis Corporate Bond Fund - Direct Plan Growth"
      }
     },
     {
@@ -1679,8 +1679,8 @@
      "label": "Corporate bond fund",
      "weight": 45,
      "fund": {
-      "code": 141588,
-      "name": "Axis Corporate Bond Fund - Direct Plan Growth"
+      "code": 118569,
+      "name": "Franklin India Corporate Debt Fund - Direct - GROWTH"
      }
     },
     {
@@ -1699,69 +1699,69 @@
     "notes": [],
     "lump": {
      "3": {
-      "p10": 1.261,
-      "p50": 1.37,
-      "p90": 1.45,
-      "worst": 1.147,
+      "p10": 1.267,
+      "p50": 1.366,
+      "p90": 1.452,
+      "worst": 1.15,
       "windows": 131
      },
      "5": {
-      "p10": 1.489,
-      "p50": 1.651,
-      "p90": 1.827,
-      "worst": 1.319,
+      "p10": 1.499,
+      "p50": 1.66,
+      "p90": 1.833,
+      "worst": 1.32,
       "windows": 107
      },
      "7": {
-      "p10": 1.875,
-      "p50": 2.025,
-      "p90": 2.166,
-      "worst": 1.712,
+      "p10": 1.882,
+      "p50": 2.024,
+      "p90": 2.163,
+      "worst": 1.736,
       "windows": 83
      },
      "10": {
-      "p10": 2.627,
-      "p50": 2.748,
-      "p90": 2.865,
-      "worst": 2.536,
+      "p10": 2.632,
+      "p50": 2.758,
+      "p90": 2.882,
+      "worst": 2.524,
       "windows": 47
      }
     },
     "sip": {
      "3": {
-      "p10": 40.462,
-      "p50": 42.097,
-      "p90": 44.495,
-      "worst": 36.424,
+      "p10": 40.606,
+      "p50": 42.083,
+      "p90": 44.424,
+      "worst": 36.357,
       "windows": 131,
       "invested": 36
      },
      "5": {
-      "p10": 74.065,
-      "p50": 79.094,
-      "p90": 83.157,
-      "worst": 66.883,
+      "p10": 74.558,
+      "p50": 79.036,
+      "p90": 83.151,
+      "worst": 66.924,
       "windows": 107,
       "invested": 60
      },
      "7": {
-      "p10": 115.717,
+      "p10": 115.781,
       "p50": 124.577,
-      "p90": 132.146,
-      "worst": 103.504,
+      "p90": 132.166,
+      "worst": 103.825,
       "windows": 83,
       "invested": 84
      },
      "10": {
-      "p10": 203.943,
-      "p50": 214.174,
-      "p90": 224.29,
-      "worst": 199.822,
+      "p10": 203.994,
+      "p50": 214.516,
+      "p90": 224.515,
+      "worst": 199.899,
       "windows": 47,
       "invested": 120
      }
     },
-    "max_drawdown_pct": -10.2
+    "max_drawdown_pct": -10.6
    },
    "simple_projections": {
     "start": "2013-02-28",
@@ -1769,69 +1769,69 @@
     "notes": [],
     "lump": {
      "3": {
-      "p10": 1.262,
-      "p50": 1.359,
-      "p90": 1.458,
-      "worst": 1.178,
+      "p10": 1.27,
+      "p50": 1.358,
+      "p90": 1.454,
+      "worst": 1.182,
       "windows": 131
      },
      "5": {
-      "p10": 1.501,
-      "p50": 1.668,
-      "p90": 1.798,
-      "worst": 1.349,
+      "p10": 1.523,
+      "p50": 1.669,
+      "p90": 1.8,
+      "worst": 1.352,
       "windows": 107
      },
      "7": {
-      "p10": 1.895,
-      "p50": 2.044,
-      "p90": 2.2,
-      "worst": 1.7,
+      "p10": 1.905,
+      "p50": 2.042,
+      "p90": 2.194,
+      "worst": 1.736,
       "windows": 83
      },
      "10": {
-      "p10": 2.583,
-      "p50": 2.745,
-      "p90": 2.92,
-      "worst": 2.512,
+      "p10": 2.607,
+      "p50": 2.766,
+      "p90": 2.945,
+      "worst": 2.52,
       "windows": 47
      }
     },
     "sip": {
      "3": {
-      "p10": 40.522,
-      "p50": 41.93,
-      "p90": 44.829,
-      "worst": 37.334,
+      "p10": 40.623,
+      "p50": 42.059,
+      "p90": 44.719,
+      "worst": 37.231,
       "windows": 131,
       "invested": 36
      },
      "5": {
-      "p10": 74.72,
-      "p50": 79.051,
-      "p90": 83.404,
-      "worst": 68.476,
+      "p10": 75.088,
+      "p50": 78.971,
+      "p90": 83.19,
+      "worst": 68.54,
       "windows": 107,
       "invested": 60
      },
      "7": {
-      "p10": 119.094,
-      "p50": 125.744,
-      "p90": 131.751,
-      "worst": 105.256,
+      "p10": 119.046,
+      "p50": 125.619,
+      "p90": 131.393,
+      "worst": 105.743,
       "windows": 83,
       "invested": 84
      },
      "10": {
-      "p10": 204.504,
-      "p50": 215.508,
-      "p90": 225.89,
-      "worst": 199.744,
+      "p10": 204.135,
+      "p50": 214.707,
+      "p90": 225.403,
+      "worst": 199.868,
       "windows": 47,
       "invested": 120
      }
     },
-    "max_drawdown_pct": -9.4
+    "max_drawdown_pct": -10.0
    }
   },
   "balanced": {
@@ -1909,15 +1909,15 @@
      "label": "Corporate bond fund",
      "weight": 25,
      "fund": {
-      "code": 141588,
-      "name": "Axis Corporate Bond Fund - Direct Plan Growth",
-      "cagr_3y": 7.58,
-      "cagr_5y": 6.78,
-      "max_dd": -0.91
+      "code": 118569,
+      "name": "Franklin India Corporate Debt Fund - Direct - GROWTH",
+      "cagr_3y": 7.87,
+      "cagr_5y": 6.75,
+      "max_dd": -0.84
      },
      "alternative": {
-      "code": 150996,
-      "name": "HSBC Corporate Bond Fund - Direct Growth"
+      "code": 141588,
+      "name": "Axis Corporate Bond Fund - Direct Plan Growth"
      }
     },
     {
@@ -1961,8 +1961,8 @@
      "label": "Corporate bond fund",
      "weight": 30,
      "fund": {
-      "code": 141588,
-      "name": "Axis Corporate Bond Fund - Direct Plan Growth"
+      "code": 118569,
+      "name": "Franklin India Corporate Debt Fund - Direct - GROWTH"
      }
     }
    ],
@@ -1974,69 +1974,69 @@
     ],
     "lump": {
      "3": {
-      "p10": 1.286,
-      "p50": 1.475,
-      "p90": 1.611,
-      "worst": 1.051,
+      "p10": 1.292,
+      "p50": 1.477,
+      "p90": 1.609,
+      "worst": 1.052,
       "windows": 131
      },
      "5": {
-      "p10": 1.539,
-      "p50": 1.83,
-      "p90": 2.175,
-      "worst": 1.243,
+      "p10": 1.54,
+      "p50": 1.843,
+      "p90": 2.18,
+      "worst": 1.244,
       "windows": 107
      },
      "7": {
-      "p10": 2.086,
-      "p50": 2.306,
-      "p90": 2.586,
-      "worst": 1.804,
+      "p10": 2.094,
+      "p50": 2.298,
+      "p90": 2.576,
+      "worst": 1.824,
       "windows": 83
      },
      "10": {
-      "p10": 3.165,
-      "p50": 3.41,
-      "p90": 3.667,
-      "worst": 2.968,
+      "p10": 3.166,
+      "p50": 3.422,
+      "p90": 3.673,
+      "worst": 2.956,
       "windows": 47
      }
     },
     "sip": {
      "3": {
-      "p10": 40.205,
-      "p50": 43.938,
-      "p90": 47.682,
-      "worst": 33.11,
+      "p10": 40.013,
+      "p50": 44.0,
+      "p90": 47.536,
+      "worst": 33.047,
       "windows": 131,
       "invested": 36
      },
      "5": {
-      "p10": 74.545,
-      "p50": 83.665,
-      "p90": 92.026,
-      "worst": 61.978,
+      "p10": 74.649,
+      "p50": 83.883,
+      "p90": 91.811,
+      "worst": 61.988,
       "windows": 107,
       "invested": 60
      },
      "7": {
-      "p10": 118.261,
-      "p50": 135.877,
-      "p90": 149.993,
-      "worst": 99.045,
+      "p10": 119.141,
+      "p50": 136.084,
+      "p90": 149.683,
+      "worst": 99.275,
       "windows": 83,
       "invested": 84
      },
      "10": {
-      "p10": 226.946,
-      "p50": 247.778,
-      "p90": 260.793,
-      "worst": 219.758,
+      "p10": 227.481,
+      "p50": 246.869,
+      "p90": 260.656,
+      "worst": 219.795,
       "windows": 47,
       "invested": 120
      }
     },
-    "max_drawdown_pct": -17.4
+    "max_drawdown_pct": -17.8
    },
    "simple_projections": {
     "start": "2013-02-28",
@@ -2046,69 +2046,69 @@
     ],
     "lump": {
      "3": {
-      "p10": 1.284,
-      "p50": 1.439,
-      "p90": 1.581,
-      "worst": 1.029,
+      "p10": 1.29,
+      "p50": 1.443,
+      "p90": 1.575,
+      "worst": 1.03,
       "windows": 131
      },
      "5": {
-      "p10": 1.516,
-      "p50": 1.817,
-      "p90": 2.111,
-      "worst": 1.203,
+      "p10": 1.517,
+      "p50": 1.832,
+      "p90": 2.118,
+      "worst": 1.204,
       "windows": 107
      },
      "7": {
-      "p10": 2.083,
-      "p50": 2.271,
+      "p10": 2.078,
+      "p50": 2.274,
       "p90": 2.438,
-      "worst": 1.795,
+      "worst": 1.818,
       "windows": 83
      },
      "10": {
-      "p10": 2.983,
-      "p50": 3.274,
-      "p90": 3.638,
-      "worst": 2.814,
+      "p10": 2.979,
+      "p50": 3.299,
+      "p90": 3.649,
+      "worst": 2.799,
       "windows": 47
      }
     },
     "sip": {
      "3": {
-      "p10": 39.405,
-      "p50": 43.495,
-      "p90": 47.221,
-      "worst": 32.214,
+      "p10": 39.494,
+      "p50": 43.513,
+      "p90": 47.117,
+      "worst": 32.137,
       "windows": 131,
       "invested": 36
      },
      "5": {
-      "p10": 73.343,
-      "p50": 83.179,
-      "p90": 91.036,
-      "worst": 60.399,
+      "p10": 73.37,
+      "p50": 83.433,
+      "p90": 90.769,
+      "worst": 60.405,
       "windows": 107,
       "invested": 60
      },
      "7": {
-      "p10": 117.467,
-      "p50": 134.403,
-      "p90": 142.94,
-      "worst": 96.845,
+      "p10": 118.53,
+      "p50": 134.116,
+      "p90": 142.271,
+      "worst": 97.103,
       "windows": 83,
       "invested": 84
      },
      "10": {
-      "p10": 218.1,
-      "p50": 236.685,
-      "p90": 248.886,
-      "worst": 206.028,
+      "p10": 219.157,
+      "p50": 236.306,
+      "p90": 248.36,
+      "worst": 207.537,
       "windows": 47,
       "invested": 120
      }
     },
-    "max_drawdown_pct": -19.5
+    "max_drawdown_pct": -19.9
    }
   },
   "aggressive": {
