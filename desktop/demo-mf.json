@@ -1,0 +1,2435 @@
+{
+ "generated_at": "2026-11-13T10:59+05:30",
+ "nav_date": "2026-11-12",
+ "universe": {
+  "schemes": 401,
+  "source": "AMFI NAV history (captn3m0/historical-mf-data)",
+  "categories": "scheme names (AMFI list unavailable)"
+ },
+ "buckets": {
+  "idx_n50": {
+   "label": "Nifty 50 index fund",
+   "kind": "index",
+   "funds_considered": 22,
+   "top": [
+    {
+     "code": 118741,
+     "name": "Nippon India Index Fund - Nifty 50 Plan - Direct Plan Growth Plan - Growth Option",
+     "age_years": 13.9,
+     "nav": 46.77,
+     "nav_date": "2026-11-12",
+     "cagr_1y": -1.34,
+     "cagr_3y": 10.27,
+     "cagr_5y": 7.95,
+     "cagr_10y": 12.78,
+     "max_dd": -15.92,
+     "vol": 13.87,
+     "worst_r3": 5.87,
+     "median_r3": 11.8,
+     "sip_xirr_5y": 8.54,
+     "score": 100.0,
+     "consistency": null,
+     "why": "Top 3y return for this index (ties go to the longer record)"
+    },
+    {
+     "code": 146376,
+     "name": "DSP Nifty 50 Index Fund - Direct Plan - Growth",
+     "age_years": 7.7,
+     "nav": 25.02,
+     "nav_date": "2026-11-12",
+     "cagr_1y": -1.35,
+     "cagr_3y": 10.25,
+     "cagr_5y": 7.94,
+     "cagr_10y": null,
+     "max_dd": -15.91,
+     "vol": 13.88,
+     "worst_r3": 5.86,
+     "median_r3": 11.81,
+     "sip_xirr_5y": 8.53,
+     "score": 95.5,
+     "consistency": null,
+     "why": "Top 3y return for this index (ties go to the longer record)"
+    },
+    {
+     "code": 147794,
+     "name": "Motilal Oswal Nifty 50 Index Fund - Direct plan - Growth",
+     "age_years": 6.9,
+     "nav": 22.1,
+     "nav_date": "2026-11-12",
+     "cagr_1y": -1.35,
+     "cagr_3y": 10.27,
+     "cagr_5y": 7.98,
+     "cagr_10y": null,
+     "max_dd": -15.89,
+     "vol": 13.89,
+     "worst_r3": 5.88,
+     "median_r3": 11.88,
+     "sip_xirr_5y": 8.55,
+     "score": 90.9,
+     "consistency": null,
+     "why": "Top 3y return for this index (ties go to the longer record)"
+    },
+    {
+     "code": 149039,
+     "name": "Navi Nifty 50 Index Fund-Direct Plan-Growth",
+     "age_years": 5.3,
+     "nav": 16.73,
+     "nav_date": "2026-11-12",
+     "cagr_1y": -1.32,
+     "cagr_3y": 10.28,
+     "cagr_5y": 7.98,
+     "cagr_10y": null,
+     "max_dd": -15.94,
+     "vol": 13.88,
+     "worst_r3": 5.88,
+     "median_r3": 11.84,
+     "sip_xirr_5y": 8.57,
+     "score": 86.4,
+     "consistency": null,
+     "why": "Top 3y return for this index (ties go to the longer record)"
+    },
+    {
+     "code": 149250,
+     "name": "Edelweiss Nifty 50 Index Fund Direct Plan Growth",
+     "age_years": 5.1,
+     "nav": 15.04,
+     "nav_date": "2026-11-12",
+     "cagr_1y": -1.2,
+     "cagr_3y": 10.27,
+     "cagr_5y": 7.9,
+     "cagr_10y": null,
+     "max_dd": -15.93,
+     "vol": 13.87,
+     "worst_r3": 5.85,
+     "median_r3": 11.66,
+     "sip_xirr_5y": 8.54,
+     "score": 81.8,
+     "consistency": null,
+     "why": "Top 3y return for this index (ties go to the longer record)"
+    }
+   ]
+  },
+  "idx_next50": {
+   "label": "Nifty Next 50 index fund",
+   "kind": "index",
+   "funds_considered": 18,
+   "top": [
+    {
+     "code": 148745,
+     "name": "Kotak Nifty Next 50 Index Fund - Direct Plan - Growth Option",
+     "age_years": 5.7,
+     "nav": 21.58,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 5.99,
+     "cagr_3y": 17.76,
+     "cagr_5y": 11.41,
+     "cagr_10y": null,
+     "max_dd": -26.34,
+     "vol": 19.25,
+     "worst_r3": 13.26,
+     "median_r3": 18.08,
+     "sip_xirr_5y": 13.38,
+     "score": 100.0,
+     "consistency": null,
+     "why": "Top 3y return for this index (ties go to the longer record)"
+    },
+    {
+     "code": 150899,
+     "name": "Edelweiss Nifty Next 50 Index Fund - Direct Plan - Growth",
+     "age_years": 3.9,
+     "nav": 17.21,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 6.14,
+     "cagr_3y": 17.8,
+     "cagr_5y": null,
+     "cagr_10y": null,
+     "max_dd": -26.43,
+     "vol": 19.43,
+     "worst_r3": 15.89,
+     "median_r3": 18.43,
+     "sip_xirr_5y": null,
+     "score": 94.4,
+     "consistency": null,
+     "why": "Top 3y return for this index (ties go to the longer record)"
+    },
+    {
+     "code": 143341,
+     "name": "UTI Nifty Next 50 Index Fund - Direct Plan - Growth Option",
+     "age_years": 8.4,
+     "nav": 27.33,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 5.92,
+     "cagr_3y": 17.73,
+     "cagr_5y": 11.26,
+     "cagr_10y": null,
+     "max_dd": -26.45,
+     "vol": 19.32,
+     "worst_r3": 13.02,
+     "median_r3": 17.94,
+     "sip_xirr_5y": 13.31,
+     "score": 88.9,
+     "consistency": null,
+     "why": "Top 3y return for this index (ties go to the longer record)"
+    },
+    {
+     "code": 151937,
+     "name": "LIC MF Nifty Next 50 Index Fund-Direct Plan-Growth",
+     "age_years": 3.3,
+     "nav": 60.41,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 6.2,
+     "cagr_3y": 17.73,
+     "cagr_5y": null,
+     "cagr_10y": null,
+     "max_dd": -26.43,
+     "vol": 19.9,
+     "worst_r3": 15.83,
+     "median_r3": 16.31,
+     "sip_xirr_5y": null,
+     "score": 83.3,
+     "consistency": null,
+     "why": "Top 3y return for this index (ties go to the longer record)"
+    },
+    {
+     "code": 146381,
+     "name": "DSP Nifty Next 50 Index Fund - Direct Plan - Growth",
+     "age_years": 7.7,
+     "nav": 29.18,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 5.91,
+     "cagr_3y": 17.66,
+     "cagr_5y": 11.3,
+     "cagr_10y": null,
+     "max_dd": -26.61,
+     "vol": 19.32,
+     "worst_r3": 13.07,
+     "median_r3": 17.92,
+     "sip_xirr_5y": 13.31,
+     "score": 77.8,
+     "consistency": null,
+     "why": "Top 3y return for this index (ties go to the longer record)"
+    }
+   ]
+  },
+  "idx_n500": {
+   "label": "Nifty 500 / total market index fund",
+   "kind": "index",
+   "funds_considered": 7,
+   "top": [
+    {
+     "code": 152092,
+     "name": "Groww Nifty Total Market Index Fund - Direct Plan - Growth",
+     "age_years": 3.0,
+     "nav": 14.38,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 0.83,
+     "cagr_3y": 11.95,
+     "cagr_5y": null,
+     "cagr_10y": null,
+     "max_dd": -18.89,
+     "vol": 16.21,
+     "worst_r3": 9.76,
+     "median_r3": 10.08,
+     "sip_xirr_5y": null,
+     "score": 100.0,
+     "consistency": null,
+     "why": "Top 3y return for this index (ties go to the longer record)"
+    },
+    {
+     "code": 152716,
+     "name": "Bandhan Nifty Total Market Index Fund - Direct Plan - Growth",
+     "age_years": 2.3,
+     "nav": 10.51,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 0.81,
+     "cagr_3y": null,
+     "cagr_5y": null,
+     "cagr_10y": null,
+     "max_dd": -18.95,
+     "vol": 16.73,
+     "worst_r3": null,
+     "median_r3": null,
+     "sip_xirr_5y": null,
+     "score": 85.7,
+     "consistency": null,
+     "why": "Too young to judge tracking yet"
+    },
+    {
+     "code": 152731,
+     "name": "Axis Nifty 500 Index Fund - Direct Plan - Growth Option",
+     "age_years": 2.3,
+     "nav": 10.5,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 0.67,
+     "cagr_3y": null,
+     "cagr_5y": null,
+     "cagr_10y": null,
+     "max_dd": -18.57,
+     "vol": 16.62,
+     "worst_r3": null,
+     "median_r3": null,
+     "sip_xirr_5y": null,
+     "score": 71.4,
+     "consistency": null,
+     "why": "Too young to judge tracking yet"
+    },
+    {
+     "code": 152908,
+     "name": "SBI Nifty 500 Index Fund- Direct Plan- Growth",
+     "age_years": 2.1,
+     "nav": 9.96,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 0.61,
+     "cagr_3y": null,
+     "cagr_5y": null,
+     "cagr_10y": null,
+     "max_dd": -16.1,
+     "vol": 16.89,
+     "worst_r3": null,
+     "median_r3": null,
+     "sip_xirr_5y": null,
+     "score": 57.1,
+     "consistency": null,
+     "why": "Too young to judge tracking yet"
+    },
+    {
+     "code": 152968,
+     "name": "Mirae Asset Nifty Total Market Index Fund - Direct Plan - Growth",
+     "age_years": 2.0,
+     "nav": 10.75,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 1.46,
+     "cagr_3y": null,
+     "cagr_5y": null,
+     "cagr_10y": null,
+     "max_dd": -15.17,
+     "vol": 17.01,
+     "worst_r3": null,
+     "median_r3": null,
+     "sip_xirr_5y": null,
+     "score": 42.9,
+     "consistency": null,
+     "why": "Too young to judge tracking yet"
+    }
+   ]
+  },
+  "idx_mid150": {
+   "label": "Nifty Midcap 150 index fund",
+   "kind": "index",
+   "funds_considered": 12,
+   "top": [
+    {
+     "code": 148807,
+     "name": "Aditya Birla Sun Life Nifty Midcap 150 Index Fund-Direct Growth",
+     "age_years": 5.6,
+     "nav": 25.77,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 1.92,
+     "cagr_3y": 14.76,
+     "cagr_5y": 14.18,
+     "cagr_10y": null,
+     "max_dd": -21.09,
+     "vol": 17.55,
+     "worst_r3": 12.88,
+     "median_r3": 21.61,
+     "sip_xirr_5y": 14.63,
+     "score": 100.0,
+     "consistency": null,
+     "why": "Top 3y return for this index (ties go to the longer record)"
+    },
+    {
+     "code": 148726,
+     "name": "Nippon India Nifty Midcap 150 Index Fund - Direct Plan - Growth Option",
+     "age_years": 5.7,
+     "nav": 26.4,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 2.06,
+     "cagr_3y": 14.68,
+     "cagr_5y": 14.08,
+     "cagr_10y": null,
+     "max_dd": -21.07,
+     "vol": 17.51,
+     "worst_r3": 12.79,
+     "median_r3": 21.49,
+     "sip_xirr_5y": 14.6,
+     "score": 91.7,
+     "consistency": null,
+     "why": "Top 3y return for this index (ties go to the longer record)"
+    },
+    {
+     "code": 149389,
+     "name": "ICICI Prudential Nifty Midcap 150 Index Fund - Direct Plan - Growth",
+     "age_years": 4.9,
+     "nav": 20.39,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 2.01,
+     "cagr_3y": 14.62,
+     "cagr_5y": null,
+     "cagr_10y": null,
+     "max_dd": -21.09,
+     "vol": 17.65,
+     "worst_r3": 12.74,
+     "median_r3": 21.38,
+     "sip_xirr_5y": null,
+     "score": 83.3,
+     "consistency": null,
+     "why": "Top 3y return for this index (ties go to the longer record)"
+    },
+    {
+     "code": 150673,
+     "name": "SBI Nifty Midcap 150 Index Fund - Direct Plan - Growth",
+     "age_years": 4.1,
+     "nav": 19.86,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 2.02,
+     "cagr_3y": 14.64,
+     "cagr_5y": null,
+     "cagr_10y": null,
+     "max_dd": -21.1,
+     "vol": 17.32,
+     "worst_r3": 12.76,
+     "median_r3": 20.7,
+     "sip_xirr_5y": null,
+     "score": 75.0,
+     "consistency": null,
+     "why": "Top 3y return for this index (ties go to the longer record)"
+    },
+    {
+     "code": 151724,
+     "name": "HDFC NIFTY Midcap 150 Index Fund - Growth Option - Direct Plan",
+     "age_years": 3.6,
+     "nav": 19.46,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 1.89,
+     "cagr_3y": 14.56,
+     "cagr_5y": null,
+     "cagr_10y": null,
+     "max_dd": -21.08,
+     "vol": 18.04,
+     "worst_r3": 12.69,
+     "median_r3": 17.53,
+     "sip_xirr_5y": null,
+     "score": 66.7,
+     "consistency": null,
+     "why": "Top 3y return for this index (ties go to the longer record)"
+    }
+   ]
+  },
+  "idx_small250": {
+   "label": "Nifty Smallcap 250 index fund",
+   "kind": "index",
+   "funds_considered": 9,
+   "top": [
+    {
+     "code": 150892,
+     "name": "Edelweiss Nifty Smallcap 250 Index Fund - Direct Plan - Growth",
+     "age_years": 3.9,
+     "nav": 18.78,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 5.51,
+     "cagr_3y": 13.08,
+     "cagr_5y": null,
+     "cagr_10y": null,
+     "max_dd": -26.12,
+     "vol": 20.77,
+     "worst_r3": 11.05,
+     "median_r3": 18.49,
+     "sip_xirr_5y": null,
+     "score": 100.0,
+     "consistency": null,
+     "why": "Top 3y return for this index (ties go to the longer record)"
+    },
+    {
+     "code": 150677,
+     "name": "SBI Nifty Smallcap 250 Index Fund - Direct Plan - Growth",
+     "age_years": 4.1,
+     "nav": 19.61,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 5.05,
+     "cagr_3y": 12.71,
+     "cagr_5y": null,
+     "cagr_10y": null,
+     "max_dd": -26.19,
+     "vol": 20.47,
+     "worst_r3": 10.68,
+     "median_r3": 19.14,
+     "sip_xirr_5y": null,
+     "score": 88.9,
+     "consistency": null,
+     "why": "Top 3y return for this index (ties go to the longer record)"
+    },
+    {
+     "code": 151727,
+     "name": "HDFC NIFTY Smallcap 250 Index Fund - Growth Option - Direct Plan",
+     "age_years": 3.6,
+     "nav": 19.6,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 5.08,
+     "cagr_3y": 12.7,
+     "cagr_5y": null,
+     "cagr_10y": null,
+     "max_dd": -26.19,
+     "vol": 21.23,
+     "worst_r3": 10.67,
+     "median_r3": 15.93,
+     "sip_xirr_5y": null,
+     "score": 77.8,
+     "consistency": null,
+     "why": "Top 3y return for this index (ties go to the longer record)"
+    },
+    {
+     "code": 149283,
+     "name": "ICICI Prudential Nifty Smallcap 250 Index Fund - Direct Plan - Growth",
+     "age_years": 5.0,
+     "nav": 18.45,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 5.02,
+     "cagr_3y": 12.68,
+     "cagr_5y": 13.01,
+     "cagr_10y": null,
+     "max_dd": -26.89,
+     "vol": 20.52,
+     "worst_r3": 10.64,
+     "median_r3": 19.45,
+     "sip_xirr_5y": 13.64,
+     "score": 66.7,
+     "consistency": null,
+     "why": "Top 3y return for this index (ties go to the longer record)"
+    },
+    {
+     "code": 148519,
+     "name": "Nippon India Nifty Smallcap 250 Index Fund - Direct Plan - Growth Option",
+     "age_years": 6.1,
+     "nav": 35.69,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 5.27,
+     "cagr_3y": 12.58,
+     "cagr_5y": 12.89,
+     "cagr_10y": null,
+     "max_dd": -26.95,
+     "vol": 20.48,
+     "worst_r3": 10.54,
+     "median_r3": 19.28,
+     "sip_xirr_5y": 13.57,
+     "score": 55.6,
+     "consistency": null,
+     "why": "Top 3y return for this index (ties go to the longer record)"
+    }
+   ]
+  },
+  "idx_mom30": {
+   "label": "Nifty200 Momentum 30 index fund",
+   "kind": "index",
+   "funds_considered": 6,
+   "top": [
+    {
+     "code": 148703,
+     "name": "UTI Nifty 200 Momentum 30 Index Fund - Direct Plan - Growth Option",
+     "age_years": 5.7,
+     "nav": 21.31,
+     "nav_date": "2026-11-12",
+     "cagr_1y": -3.28,
+     "cagr_3y": 9.7,
+     "cagr_5y": 8.13,
+     "cagr_10y": null,
+     "max_dd": -31.5,
+     "vol": 19.25,
+     "worst_r3": 7.52,
+     "median_r3": 15.72,
+     "sip_xirr_5y": 8.46,
+     "score": 100.0,
+     "consistency": null,
+     "why": "Top 3y return for this index (ties go to the longer record)"
+    },
+    {
+     "code": 151781,
+     "name": "Kotak Nifty 200 Momentum 30 Index Fund - Direct Plan - Growth Option",
+     "age_years": 3.4,
+     "nav": 14.69,
+     "nav_date": "2026-11-12",
+     "cagr_1y": -3.25,
+     "cagr_3y": 9.56,
+     "cagr_5y": null,
+     "cagr_10y": null,
+     "max_dd": -31.6,
+     "vol": 19.46,
+     "worst_r3": 7.4,
+     "median_r3": 10.15,
+     "sip_xirr_5y": null,
+     "score": 83.3,
+     "consistency": null,
+     "why": "Top 3y return for this index (ties go to the longer record)"
+    },
+    {
+     "code": 150452,
+     "name": "ICICI Prudential Nifty 200 Momentum 30 Index Fund - Direct Plan - Growth",
+     "age_years": 4.3,
+     "nav": 16.72,
+     "nav_date": "2026-11-12",
+     "cagr_1y": -3.38,
+     "cagr_3y": 9.25,
+     "cagr_5y": null,
+     "cagr_10y": null,
+     "max_dd": -31.82,
+     "vol": 18.45,
+     "worst_r3": 7.08,
+     "median_r3": 14.65,
+     "sip_xirr_5y": null,
+     "score": 66.7,
+     "consistency": null,
+     "why": "Top 3y return for this index (ties go to the longer record)"
+    },
+    {
+     "code": 150591,
+     "name": "BANDHAN NIFTY200 MOMENTUM 30 INDEX FUND - GROWTH - DIRECT PLAN",
+     "age_years": 4.2,
+     "nav": 15.69,
+     "nav_date": "2026-11-12",
+     "cagr_1y": -3.54,
+     "cagr_3y": 9.08,
+     "cagr_5y": null,
+     "cagr_10y": null,
+     "max_dd": -31.73,
+     "vol": 18.6,
+     "worst_r3": 6.9,
+     "median_r3": 14.02,
+     "sip_xirr_5y": null,
+     "score": 50.0,
+     "consistency": null,
+     "why": "Top 3y return for this index (ties go to the longer record)"
+    },
+    {
+     "code": 152931,
+     "name": "Baroda BNP Paribas Nifty200 Momentum 30 Index Fund - Direct Plan - Growth Option",
+     "age_years": 2.1,
+     "nav": 8.12,
+     "nav_date": "2026-11-12",
+     "cagr_1y": -3.81,
+     "cagr_3y": null,
+     "cagr_5y": null,
+     "cagr_10y": null,
+     "max_dd": -30.37,
+     "vol": 20.13,
+     "worst_r3": null,
+     "median_r3": null,
+     "sip_xirr_5y": null,
+     "score": 33.3,
+     "consistency": null,
+     "why": "Too young to judge tracking yet"
+    }
+   ]
+  },
+  "large": {
+   "label": "Large cap (active)",
+   "kind": "active",
+   "funds_considered": 33,
+   "top": [
+    {
+     "code": 118632,
+     "name": "Nippon India Large Cap Fund - Direct Plan Growth Plan - Growth Option",
+     "age_years": 13.9,
+     "nav": 104.6,
+     "nav_date": "2026-11-12",
+     "cagr_1y": -0.08,
+     "cagr_3y": 13.42,
+     "cagr_5y": 13.05,
+     "cagr_10y": 15.08,
+     "max_dd": -15.37,
+     "vol": 14.04,
+     "worst_r3": 9.78,
+     "median_r3": 19.36,
+     "sip_xirr_5y": 12.47,
+     "score": 94.4,
+     "consistency": 100.0,
+     "why": "Most consistent, best return per unit of risk, smaller falls"
+    },
+    {
+     "code": 120586,
+     "name": "ICICI Prudential Large Cap Fund (erstwhile Bluechip Fund) - Direct Plan - Growth",
+     "age_years": 13.9,
+     "nav": 124.17,
+     "nav_date": "2026-11-12",
+     "cagr_1y": -1.52,
+     "cagr_3y": 12.89,
+     "cagr_5y": 11.22,
+     "cagr_10y": 14.39,
+     "max_dd": -15.39,
+     "vol": 13.22,
+     "worst_r3": 9.53,
+     "median_r3": 17.17,
+     "sip_xirr_5y": 11.15,
+     "score": 89.7,
+     "consistency": 100.0,
+     "why": "Most consistent, best return per unit of risk, smaller falls"
+    },
+    {
+     "code": 120392,
+     "name": "Invesco India Large Cap Fund - Direct Plan - Growth",
+     "age_years": 13.9,
+     "nav": 92.51,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 7.2,
+     "cagr_3y": 16.7,
+     "cagr_5y": 11.6,
+     "cagr_10y": 15.05,
+     "max_dd": -19.73,
+     "vol": 15.33,
+     "worst_r3": 12.63,
+     "median_r3": 16.58,
+     "sip_xirr_5y": 14.26,
+     "score": 79.9,
+     "consistency": 100.0,
+     "why": "Most consistent, best return per unit of risk, smaller falls"
+    },
+    {
+     "code": 119250,
+     "name": "DSP Large Cap Fund - Direct Plan - Growth",
+     "age_years": 13.9,
+     "nav": 532.18,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 0.18,
+     "cagr_3y": 13.49,
+     "cagr_5y": 10.51,
+     "cagr_10y": 11.96,
+     "max_dd": -18.43,
+     "vol": 13.57,
+     "worst_r3": 9.59,
+     "median_r3": 17.12,
+     "sip_xirr_5y": 11.68,
+     "score": 78.1,
+     "consistency": 100.0,
+     "why": "Most consistent, best return per unit of risk, smaller falls"
+    },
+    {
+     "code": 118479,
+     "name": "BANDHAN Large Cap Fund-Direct Plan-Growth",
+     "age_years": 13.9,
+     "nav": 96.23,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 4.43,
+     "cagr_3y": 15.76,
+     "cagr_5y": 10.83,
+     "cagr_10y": 14.18,
+     "max_dd": -19.42,
+     "vol": 14.59,
+     "worst_r3": 11.79,
+     "median_r3": 15.59,
+     "sip_xirr_5y": 12.96,
+     "score": 76.6,
+     "consistency": 100.0,
+     "why": "Most consistent, best return per unit of risk, smaller falls"
+    }
+   ]
+  },
+  "flexi": {
+   "label": "Flexi cap (active)",
+   "kind": "active",
+   "funds_considered": 43,
+   "top": [
+    {
+     "code": 118955,
+     "name": "HDFC Flexi Cap Fund - Growth Option - Direct Plan",
+     "age_years": 13.9,
+     "nav": 2374.13,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 4.97,
+     "cagr_3y": 17.89,
+     "cagr_5y": 16.8,
+     "cagr_10y": 16.61,
+     "max_dd": -13.32,
+     "vol": 13.35,
+     "worst_r3": 14.57,
+     "median_r3": 22.3,
+     "sip_xirr_5y": 16.31,
+     "score": 94.7,
+     "consistency": 100.0,
+     "why": "Most consistent, best return per unit of risk, smaller falls"
+    },
+    {
+     "code": 148990,
+     "name": "ICICI Prudential Flexi Cap Fund - Direct Plan - Growth",
+     "age_years": 5.3,
+     "nav": 22.4,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 7.64,
+     "cagr_3y": 17.21,
+     "cagr_5y": 14.97,
+     "cagr_10y": null,
+     "max_dd": -19.71,
+     "vol": 14.35,
+     "worst_r3": 15.16,
+     "median_r3": 18.67,
+     "sip_xirr_5y": 15.75,
+     "score": 85.7,
+     "consistency": 100.0,
+     "why": "Most consistent, best return per unit of risk, smaller falls"
+    },
+    {
+     "code": 122639,
+     "name": "Parag Parikh Flexi Cap Fund - Direct Plan - Growth",
+     "age_years": 13.5,
+     "nav": 94.88,
+     "nav_date": "2026-11-11",
+     "cagr_1y": 0.74,
+     "cagr_3y": 13.49,
+     "cagr_5y": 11.79,
+     "cagr_10y": 17.67,
+     "max_dd": -17.75,
+     "vol": 10.85,
+     "worst_r3": 12.23,
+     "median_r3": 18.46,
+     "sip_xirr_5y": 12.61,
+     "score": 83.5,
+     "consistency": 100.0,
+     "why": "Most consistent, best return per unit of risk, smaller falls"
+    },
+    {
+     "code": 129046,
+     "name": "Motilal Oswal Flexi cap Fund Direct Plan-Growth Option",
+     "age_years": 12.5,
+     "nav": 74.05,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 6.6,
+     "cagr_3y": 18.84,
+     "cagr_5y": 14.02,
+     "cagr_10y": 13.78,
+     "max_dd": -21.55,
+     "vol": 16.45,
+     "worst_r3": 16.77,
+     "median_r3": 21.94,
+     "sip_xirr_5y": 16.97,
+     "score": 80.4,
+     "consistency": 100.0,
+     "why": "Most consistent, best return per unit of risk, smaller falls"
+    },
+    {
+     "code": 148404,
+     "name": "BANK OF INDIA Flexi Cap Fund Direct Plan -Growth",
+     "age_years": 6.4,
+     "nav": 43.48,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 11.23,
+     "cagr_3y": 19.41,
+     "cagr_5y": 16.14,
+     "cagr_10y": null,
+     "max_dd": -23.73,
+     "vol": 17.51,
+     "worst_r3": 16.55,
+     "median_r3": 22.14,
+     "sip_xirr_5y": 17.8,
+     "score": 80.0,
+     "consistency": 100.0,
+     "why": "Most consistent, best return per unit of risk, smaller falls"
+    }
+   ]
+  },
+  "mid": {
+   "label": "Mid cap (active)",
+   "kind": "active",
+   "funds_considered": 33,
+   "top": [
+    {
+     "code": 120403,
+     "name": "Invesco India Mid Cap Fund - Direct Plan - Growth Option",
+     "age_years": 13.9,
+     "nav": 247.9,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 11.09,
+     "cagr_3y": 24.25,
+     "cagr_5y": 18.85,
+     "cagr_10y": 20.23,
+     "max_dd": -20.07,
+     "vol": 18.26,
+     "worst_r3": 21.33,
+     "median_r3": 26.33,
+     "sip_xirr_5y": 21.89,
+     "score": 91.3,
+     "consistency": 100.0,
+     "why": "Most consistent, best return per unit of risk, smaller falls"
+    },
+    {
+     "code": 118989,
+     "name": "HDFC Mid Cap Fund - Growth Option - Direct Plan",
+     "age_years": 13.9,
+     "nav": 230.66,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 2.7,
+     "cagr_3y": 16.49,
+     "cagr_5y": 17.65,
+     "cagr_10y": 17.63,
+     "max_dd": -16.76,
+     "vol": 15.39,
+     "worst_r3": 15.09,
+     "median_r3": 25.3,
+     "sip_xirr_5y": 17.12,
+     "score": 90.3,
+     "consistency": 100.0,
+     "why": "Most consistent, best return per unit of risk, smaller falls"
+    },
+    {
+     "code": 140228,
+     "name": "Edelweiss Mid Cap Fund - Direct Plan - Growth Option",
+     "age_years": 10.0,
+     "nav": 127.84,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 4.6,
+     "cagr_3y": 19.86,
+     "cagr_5y": 17.08,
+     "cagr_10y": null,
+     "max_dd": -20.06,
+     "vol": 16.86,
+     "worst_r3": 17.91,
+     "median_r3": 25.12,
+     "sip_xirr_5y": 18.01,
+     "score": 87.5,
+     "consistency": 100.0,
+     "why": "Most consistent, best return per unit of risk, smaller falls"
+    },
+    {
+     "code": 118668,
+     "name": "Nippon India Growth Mid Cap Fund - Direct Plan Growth Plan - Growth Option",
+     "age_years": 13.9,
+     "nav": 4949.06,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 5.31,
+     "cagr_3y": 17.37,
+     "cagr_5y": 16.58,
+     "cagr_10y": 18.51,
+     "max_dd": -19.87,
+     "vol": 16.65,
+     "worst_r3": 15.41,
+     "median_r3": 24.57,
+     "sip_xirr_5y": 17.42,
+     "score": 84.1,
+     "consistency": 100.0,
+     "why": "Most consistent, best return per unit of risk, smaller falls"
+    },
+    {
+     "code": 119581,
+     "name": "Sundaram Mid Cap Fund Direct Plan - Growth",
+     "age_years": 13.9,
+     "nav": 1632.0,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 3.38,
+     "cagr_3y": 17.47,
+     "cagr_5y": 15.81,
+     "cagr_10y": 14.86,
+     "max_dd": -20.69,
+     "vol": 16.63,
+     "worst_r3": 15.7,
+     "median_r3": 23.43,
+     "sip_xirr_5y": 16.6,
+     "score": 80.0,
+     "consistency": 100.0,
+     "why": "Most consistent, best return per unit of risk, smaller falls"
+    }
+   ]
+  },
+  "small": {
+   "label": "Small cap (active)",
+   "kind": "active",
+   "funds_considered": 31,
+   "top": [
+    {
+     "code": 145137,
+     "name": "Invesco India Small Cap Fund - Direct Plan - Growth",
+     "age_years": 8.0,
+     "nav": 56.37,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 19.28,
+     "cagr_3y": 21.95,
+     "cagr_5y": 19.64,
+     "cagr_10y": null,
+     "max_dd": -23.41,
+     "vol": 18.26,
+     "worst_r3": 19.94,
+     "median_r3": 24.8,
+     "sip_xirr_5y": 22.4,
+     "score": 92.5,
+     "consistency": 100.0,
+     "why": "Most consistent, best return per unit of risk, smaller falls"
+    },
+    {
+     "code": 147946,
+     "name": "BANDHAN SMALL CAP FUND - DIRECT PLAN GROWTH",
+     "age_years": 6.7,
+     "nav": 57.38,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 9.62,
+     "cagr_3y": 23.22,
+     "cagr_5y": 19.41,
+     "cagr_10y": null,
+     "max_dd": -23.26,
+     "vol": 19.01,
+     "worst_r3": 20.93,
+     "median_r3": 29.53,
+     "sip_xirr_5y": 22.07,
+     "score": 92.1,
+     "consistency": 100.0,
+     "why": "Most consistent, best return per unit of risk, smaller falls"
+    },
+    {
+     "code": 145678,
+     "name": "BANK OF INDIA Small Cap Fund Direct Plan Growth",
+     "age_years": 7.9,
+     "nav": 66.33,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 25.82,
+     "cagr_3y": 19.8,
+     "cagr_5y": 18.77,
+     "cagr_10y": null,
+     "max_dd": -27.08,
+     "vol": 19.81,
+     "worst_r3": 16.95,
+     "median_r3": 21.03,
+     "sip_xirr_5y": 21.4,
+     "score": 78.2,
+     "consistency": 100.0,
+     "why": "Most consistent, best return per unit of risk, smaller falls"
+    },
+    {
+     "code": 147919,
+     "name": "ITI Small Cap Fund - Direct Plan - Growth Option",
+     "age_years": 6.7,
+     "nav": 38.19,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 18.66,
+     "cagr_3y": 22.33,
+     "cagr_5y": 17.21,
+     "cagr_10y": null,
+     "max_dd": -28.88,
+     "vol": 18.22,
+     "worst_r3": 20.06,
+     "median_r3": 26.44,
+     "sip_xirr_5y": 22.4,
+     "score": 76.0,
+     "consistency": 100.0,
+     "why": "Most consistent, best return per unit of risk, smaller falls"
+    },
+    {
+     "code": 120828,
+     "name": "quant Small Cap Fund - Growth Option - Direct Plan",
+     "age_years": 13.8,
+     "nav": 315.78,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 11.17,
+     "cagr_3y": 16.93,
+     "cagr_5y": 17.24,
+     "cagr_10y": 20.6,
+     "max_dd": -25.17,
+     "vol": 19.05,
+     "worst_r3": 14.51,
+     "median_r3": 21.76,
+     "sip_xirr_5y": 17.51,
+     "score": 72.3,
+     "consistency": 95.83,
+     "why": "Most consistent, best return per unit of risk, smaller falls"
+    }
+   ]
+  },
+  "elss": {
+   "label": "ELSS tax saver (active)",
+   "kind": "active",
+   "funds_considered": 37,
+   "top": [
+    {
+     "code": 119060,
+     "name": "HDFC ELSS - Tax Saver Fund - Growth Option - Direct Plan",
+     "age_years": 13.9,
+     "nav": 1555.59,
+     "nav_date": "2026-11-12",
+     "cagr_1y": -1.05,
+     "cagr_3y": 14.65,
+     "cagr_5y": 14.12,
+     "cagr_10y": 13.76,
+     "max_dd": -14.81,
+     "vol": 13.43,
+     "worst_r3": 11.63,
+     "median_r3": 21.47,
+     "sip_xirr_5y": 13.26,
+     "score": 92.7,
+     "consistency": 100.0,
+     "why": "Most consistent, best return per unit of risk, smaller falls"
+    },
+    {
+     "code": 119723,
+     "name": "SBI ELSS Tax Saver FUND - DIRECT PLAN -GROWTH",
+     "age_years": 13.9,
+     "nav": 479.79,
+     "nav_date": "2026-11-12",
+     "cagr_1y": -0.97,
+     "cagr_3y": 15.13,
+     "cagr_5y": 14.09,
+     "cagr_10y": 14.96,
+     "max_dd": -16.67,
+     "vol": 14.99,
+     "worst_r3": 12.16,
+     "median_r3": 23.46,
+     "sip_xirr_5y": 13.76,
+     "score": 90.2,
+     "consistency": 100.0,
+     "why": "Most consistent, best return per unit of risk, smaller falls"
+    },
+    {
+     "code": 119242,
+     "name": "DSP ELSS Tax Saver Fund - Direct Plan - Growth",
+     "age_years": 13.9,
+     "nav": 162.19,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 1.56,
+     "cagr_3y": 15.55,
+     "cagr_5y": 12.36,
+     "cagr_10y": 15.63,
+     "max_dd": -16.88,
+     "vol": 15.0,
+     "worst_r3": 11.68,
+     "median_r3": 19.06,
+     "sip_xirr_5y": 13.18,
+     "score": 85.4,
+     "consistency": 100.0,
+     "why": "Most consistent, best return per unit of risk, smaller falls"
+    },
+    {
+     "code": 133386,
+     "name": "Motilal Oswal ELSS Tax Saver Fund - Direct Plan - Growth Option",
+     "age_years": 11.8,
+     "nav": 65.94,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 9.07,
+     "cagr_3y": 20.22,
+     "cagr_5y": 16.43,
+     "cagr_10y": 17.53,
+     "max_dd": -27.71,
+     "vol": 19.27,
+     "worst_r3": 18.46,
+     "median_r3": 23.8,
+     "sip_xirr_5y": 18.54,
+     "score": 81.9,
+     "consistency": 100.0,
+     "why": "Most consistent, best return per unit of risk, smaller falls"
+    },
+    {
+     "code": 120494,
+     "name": "JM ELSS - Tax Saver Fund (Direct) - Growth Option",
+     "age_years": 13.9,
+     "nav": 61.56,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 6.15,
+     "cagr_3y": 16.89,
+     "cagr_5y": 12.96,
+     "cagr_10y": 16.94,
+     "max_dd": -20.85,
+     "vol": 15.91,
+     "worst_r3": 15.34,
+     "median_r3": 19.62,
+     "sip_xirr_5y": 15.22,
+     "score": 78.8,
+     "consistency": 100.0,
+     "why": "Most consistent, best return per unit of risk, smaller falls"
+    }
+   ]
+  },
+  "liquid": {
+   "label": "Liquid fund",
+   "kind": "debt",
+   "funds_considered": 41,
+   "top": [
+    {
+     "code": 149664,
+     "name": "Sundaram Liquid Fund (Formerly Known as Principal Cash Management Fund) - Direct Plan - Growth Option",
+     "age_years": 4.9,
+     "nav": 2537.46,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 6.61,
+     "cagr_3y": 6.96,
+     "cagr_5y": null,
+     "cagr_10y": null,
+     "max_dd": -0.02,
+     "vol": 0.33,
+     "worst_r3": 6.61,
+     "median_r3": 7.02,
+     "sip_xirr_5y": null,
+     "score": 83.1,
+     "consistency": null,
+     "why": "Best 3-year return with the smallest drawdown"
+    },
+    {
+     "code": 120389,
+     "name": "Axis Liquid Fund - Direct Plan - Growth Option",
+     "age_years": 13.9,
+     "nav": 3194.17,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 6.63,
+     "cagr_3y": 6.98,
+     "cagr_5y": 6.49,
+     "cagr_10y": 6.15,
+     "max_dd": -0.03,
+     "vol": 0.36,
+     "worst_r3": 6.51,
+     "median_r3": 7.03,
+     "sip_xirr_5y": 6.7,
+     "score": 79.7,
+     "consistency": null,
+     "why": "Best 3-year return with the smallest drawdown"
+    },
+    {
+     "code": 151833,
+     "name": "Bajaj Finserv Liquid Fund - Direct Plan - Growth",
+     "age_years": 3.4,
+     "nav": 1252.8,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 6.56,
+     "cagr_3y": 6.94,
+     "cagr_5y": null,
+     "cagr_10y": null,
+     "max_dd": -0.01,
+     "vol": 0.26,
+     "worst_r3": 6.81,
+     "median_r3": 6.96,
+     "sip_xirr_5y": null,
+     "score": 79.2,
+     "consistency": null,
+     "why": "Best 3-year return with the smallest drawdown"
+    },
+    {
+     "code": 119125,
+     "name": "DSP Liquid Fund - Direct Plan - Growth",
+     "age_years": 13.9,
+     "nav": 4105.53,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 6.59,
+     "cagr_3y": 6.95,
+     "cagr_5y": 6.46,
+     "cagr_10y": 6.12,
+     "max_dd": -0.03,
+     "vol": 0.35,
+     "worst_r3": 6.48,
+     "median_r3": 7.01,
+     "sip_xirr_5y": 6.67,
+     "score": 70.9,
+     "consistency": null,
+     "why": "Best 3-year return with the smallest drawdown"
+    },
+    {
+     "code": 139538,
+     "name": "Mahindra Manulife Liquid Fund - Direct Plan -Growth",
+     "age_years": 10.4,
+     "nav": 1869.9,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 6.58,
+     "cagr_3y": 6.95,
+     "cagr_5y": 6.49,
+     "cagr_10y": 6.19,
+     "max_dd": -0.03,
+     "vol": 0.35,
+     "worst_r3": 6.54,
+     "median_r3": 7.02,
+     "sip_xirr_5y": 6.68,
+     "score": 70.7,
+     "consistency": null,
+     "why": "Best 3-year return with the smallest drawdown"
+    }
+   ]
+  },
+  "arbitrage": {
+   "label": "Arbitrage fund",
+   "kind": "debt",
+   "funds_considered": 33,
+   "top": [
+    {
+     "code": 120401,
+     "name": "Invesco India Arbitrage Fund - Direct Plan - Growth Option",
+     "age_years": 13.9,
+     "nav": 37.75,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 7.0,
+     "cagr_3y": 7.47,
+     "cagr_5y": 7.18,
+     "cagr_10y": 6.47,
+     "max_dd": -0.4,
+     "vol": 0.57,
+     "worst_r3": 7.38,
+     "median_r3": 7.7,
+     "sip_xirr_5y": 7.23,
+     "score": 93.9,
+     "consistency": null,
+     "why": "Best 3-year return with the smallest drawdown"
+    },
+    {
+     "code": 145724,
+     "name": "Tata Arbitrage Fund-Direct Plan-Growth",
+     "age_years": 7.9,
+     "nav": 16.51,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 6.9,
+     "cagr_3y": 7.45,
+     "cagr_5y": 6.94,
+     "cagr_10y": null,
+     "max_dd": -0.41,
+     "vol": 0.6,
+     "worst_r3": 7.04,
+     "median_r3": 7.62,
+     "sip_xirr_5y": 7.14,
+     "score": 88.0,
+     "consistency": null,
+     "why": "Best 3-year return with the smallest drawdown"
+    },
+    {
+     "code": 120795,
+     "name": "UTI Arbitrage Fund - Direct Plan - Growth Option",
+     "age_years": 13.8,
+     "nav": 40.67,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 6.73,
+     "cagr_3y": 7.31,
+     "cagr_5y": 6.79,
+     "cagr_10y": 6.33,
+     "max_dd": -0.37,
+     "vol": 0.62,
+     "worst_r3": 6.88,
+     "median_r3": 7.46,
+     "sip_xirr_5y": 7.0,
+     "score": 81.4,
+     "consistency": null,
+     "why": "Best 3-year return with the smallest drawdown"
+    },
+    {
+     "code": 130206,
+     "name": "Edelweiss Arbitrage Fund- Direct Plan- Growth Option",
+     "age_years": 12.4,
+     "nav": 22.69,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 6.77,
+     "cagr_3y": 7.39,
+     "cagr_5y": 6.95,
+     "cagr_10y": 6.53,
+     "max_dd": -0.42,
+     "vol": 0.62,
+     "worst_r3": 7.14,
+     "median_r3": 7.59,
+     "sip_xirr_5y": 7.09,
+     "score": 77.4,
+     "consistency": null,
+     "why": "Best 3-year return with the smallest drawdown"
+    },
+    {
+     "code": 119771,
+     "name": "Kotak Arbitrage Fund - Direct Plan - Growth",
+     "age_years": 13.8,
+     "nav": 43.72,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 6.88,
+     "cagr_3y": 7.44,
+     "cagr_5y": 7.0,
+     "cagr_10y": 6.46,
+     "max_dd": -0.46,
+     "vol": 0.64,
+     "worst_r3": 7.2,
+     "median_r3": 7.64,
+     "sip_xirr_5y": 7.15,
+     "score": 71.1,
+     "consistency": null,
+     "why": "Best 3-year return with the smallest drawdown"
+    }
+   ]
+  },
+  "corp_bond": {
+   "label": "Corporate bond fund",
+   "kind": "debt",
+   "funds_considered": 20,
+   "top": [
+    {
+     "code": 141588,
+     "name": "Axis Corporate Bond Fund - Direct Plan Growth",
+     "age_years": 9.3,
+     "nav": 19.47,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 4.7,
+     "cagr_3y": 7.58,
+     "cagr_5y": 6.78,
+     "cagr_10y": null,
+     "max_dd": -0.91,
+     "vol": 1.47,
+     "worst_r3": 6.85,
+     "median_r3": 7.91,
+     "sip_xirr_5y": 6.97,
+     "score": 89.0,
+     "consistency": null,
+     "why": "Best 3-year return with the smallest drawdown"
+    },
+    {
+     "code": 150996,
+     "name": "HSBC Corporate Bond Fund - Direct Growth",
+     "age_years": 4.0,
+     "nav": 83.58,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 4.36,
+     "cagr_3y": 7.26,
+     "cagr_5y": null,
+     "cagr_10y": null,
+     "max_dd": -0.71,
+     "vol": 1.56,
+     "worst_r3": 6.87,
+     "median_r3": 7.45,
+     "sip_xirr_5y": null,
+     "score": 83.0,
+     "consistency": null,
+     "why": "Best 3-year return with the smallest drawdown"
+    },
+    {
+     "code": 118814,
+     "name": "Nippon India Corporate Bond Fund - Direct Plan Growth Plan - Growth Option",
+     "age_years": 13.9,
+     "nav": 67.49,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 4.31,
+     "cagr_3y": 7.4,
+     "cagr_5y": 6.74,
+     "cagr_10y": 7.19,
+     "max_dd": -0.92,
+     "vol": 1.54,
+     "worst_r3": 7.0,
+     "median_r3": 7.78,
+     "sip_xirr_5y": 6.8,
+     "score": 79.0,
+     "consistency": null,
+     "why": "Best 3-year return with the smallest drawdown"
+    },
+    {
+     "code": 133791,
+     "name": "Kotak Corporate Bond Fund- Direct Plan- Growth Option",
+     "age_years": 11.8,
+     "nav": 4224.54,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 4.32,
+     "cagr_3y": 7.28,
+     "cagr_5y": 6.45,
+     "cagr_10y": 7.18,
+     "max_dd": -1.03,
+     "vol": 1.46,
+     "worst_r3": 6.62,
+     "median_r3": 7.62,
+     "sip_xirr_5y": 6.66,
+     "score": 68.0,
+     "consistency": null,
+     "why": "Best 3-year return with the smallest drawdown"
+    },
+    {
+     "code": 150237,
+     "name": "BARODA BNP PARIBAS Corporate Bond Fund - Direct Plan - Growth Option",
+     "age_years": 4.7,
+     "nav": 31.6,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 5.2,
+     "cagr_3y": 7.75,
+     "cagr_5y": null,
+     "cagr_10y": null,
+     "max_dd": -2.33,
+     "vol": 1.75,
+     "worst_r3": 6.57,
+     "median_r3": 7.87,
+     "sip_xirr_5y": null,
+     "score": 64.0,
+     "consistency": null,
+     "why": "Best 3-year return with the smallest drawdown"
+    }
+   ]
+  },
+  "gold": {
+   "label": "Gold fund (FoF)",
+   "kind": "gold",
+   "funds_considered": 17,
+   "top": [
+    {
+     "code": 150714,
+     "name": "UTI Gold ETF Fund of Fund - Direct Plan - Growth Option",
+     "age_years": 4.0,
+     "nav": 26.25,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 9.8,
+     "cagr_3y": 30.43,
+     "cagr_5y": null,
+     "cagr_10y": null,
+     "max_dd": -23.57,
+     "vol": 16.83,
+     "worst_r3": 28.83,
+     "median_r3": 34.09,
+     "sip_xirr_5y": null,
+     "score": 97.6,
+     "consistency": null,
+     "why": "Best 3-year return with the smallest drawdown"
+    },
+    {
+     "code": 120546,
+     "name": "Aditya Birla Sun Life Gold Fund - Growth - Direct Plan",
+     "age_years": 13.9,
+     "nav": 41.21,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 10.03,
+     "cagr_3y": 30.05,
+     "cagr_5y": 21.77,
+     "cagr_10y": 15.01,
+     "max_dd": -23.25,
+     "vol": 17.16,
+     "worst_r3": 15.54,
+     "median_r3": 31.4,
+     "sip_xirr_5y": 24.91,
+     "score": 76.0,
+     "consistency": null,
+     "why": "Best 3-year return with the smallest drawdown"
+    },
+    {
+     "code": 115132,
+     "name": "Quantum Gold ETF FOF - Direct Plan Growth Option",
+     "age_years": 15.5,
+     "nav": 52.23,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 10.07,
+     "cagr_3y": 30.2,
+     "cagr_5y": 21.65,
+     "cagr_10y": 15.0,
+     "max_dd": -24.53,
+     "vol": 16.16,
+     "worst_r3": 15.54,
+     "median_r3": 31.49,
+     "sip_xirr_5y": 24.94,
+     "score": 72.8,
+     "consistency": null,
+     "why": "Best 3-year return with the smallest drawdown"
+    },
+    {
+     "code": 119781,
+     "name": "Kotak Gold Fund Growth - Direct",
+     "age_years": 13.9,
+     "nav": 54.99,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 9.58,
+     "cagr_3y": 29.84,
+     "cagr_5y": 21.35,
+     "cagr_10y": 15.21,
+     "max_dd": -24.13,
+     "vol": 15.75,
+     "worst_r3": 15.2,
+     "median_r3": 31.09,
+     "sip_xirr_5y": 24.62,
+     "score": 59.3,
+     "consistency": null,
+     "why": "Best 3-year return with the smallest drawdown"
+    },
+    {
+     "code": 119788,
+     "name": "SBI GOLD FUND- DIRECT PLAN - GROWTH",
+     "age_years": 13.9,
+     "nav": 41.65,
+     "nav_date": "2026-11-12",
+     "cagr_1y": 9.84,
+     "cagr_3y": 30.07,
+     "cagr_5y": 21.68,
+     "cagr_10y": 15.39,
+     "max_dd": -24.71,
+     "vol": 16.48,
+     "worst_r3": 15.73,
+     "median_r3": 31.51,
+     "sip_xirr_5y": 24.82,
+     "score": 56.1,
+     "consistency": null,
+     "why": "Best 3-year return with the smallest drawdown"
+    }
+   ]
+  }
+ },
+ "evidence": [
+  {
+   "category": "Large cap (active)",
+   "years": 5,
+   "index_fund": "BANDHAN Nifty 50 Index Fund-Direct Plan-Growth",
+   "index_cagr": 8.03,
+   "active_funds": 27,
+   "beat_index": 23,
+   "median_active_cagr": 9.6
+  },
+  {
+   "category": "Large cap (active)",
+   "years": 10,
+   "index_fund": "BANDHAN Nifty 50 Index Fund-Direct Plan-Growth",
+   "index_cagr": 12.93,
+   "active_funds": 22,
+   "beat_index": 13,
+   "median_active_cagr": 13.12
+  },
+  {
+   "category": "Mid cap (active)",
+   "years": 5,
+   "index_fund": "Aditya Birla Sun Life Nifty Midcap 150 Index Fund-Direct Growth",
+   "index_cagr": 14.18,
+   "active_funds": 24,
+   "beat_index": 12,
+   "median_active_cagr": 14.24
+  },
+  {
+   "category": "Small cap (active)",
+   "years": 5,
+   "index_fund": "ICICI Prudential Nifty Smallcap 250 Index Fund - Direct Plan - Growth",
+   "index_cagr": 13.01,
+   "active_funds": 21,
+   "beat_index": 15,
+   "median_active_cagr": 14.73
+  }
+ ],
+ "profiles": {
+  "conservative": {
+   "label": "Conservative",
+   "horizon": "3–5 years",
+   "equity_pct": 40,
+   "about": "Capital protection first; equity for some growth, debt and gold to cushion falls.",
+   "allocation": [
+    {
+     "bucket": "idx_n50",
+     "label": "Nifty 50 index fund",
+     "weight": 30,
+     "fund": {
+      "code": 118741,
+      "name": "Nippon India Index Fund - Nifty 50 Plan - Direct Plan Growth Plan - Growth Option",
+      "cagr_3y": 10.27,
+      "cagr_5y": 7.95,
+      "max_dd": -15.92
+     },
+     "alternative": {
+      "code": 146376,
+      "name": "DSP Nifty 50 Index Fund - Direct Plan - Growth"
+     }
+    },
+    {
+     "bucket": "flexi",
+     "label": "Flexi cap (active)",
+     "weight": 10,
+     "fund": {
+      "code": 118955,
+      "name": "HDFC Flexi Cap Fund - Growth Option - Direct Plan",
+      "cagr_3y": 17.89,
+      "cagr_5y": 16.8,
+      "max_dd": -13.32
+     },
+     "alternative": {
+      "code": 148990,
+      "name": "ICICI Prudential Flexi Cap Fund - Direct Plan - Growth"
+     }
+    },
+    {
+     "bucket": "corp_bond",
+     "label": "Corporate bond fund",
+     "weight": 30,
+     "fund": {
+      "code": 141588,
+      "name": "Axis Corporate Bond Fund - Direct Plan Growth",
+      "cagr_3y": 7.58,
+      "cagr_5y": 6.78,
+      "max_dd": -0.91
+     },
+     "alternative": {
+      "code": 150996,
+      "name": "HSBC Corporate Bond Fund - Direct Growth"
+     }
+    },
+    {
+     "bucket": "arbitrage",
+     "label": "Arbitrage fund",
+     "weight": 20,
+     "fund": {
+      "code": 120401,
+      "name": "Invesco India Arbitrage Fund - Direct Plan - Growth Option",
+      "cagr_3y": 7.47,
+      "cagr_5y": 7.18,
+      "max_dd": -0.4
+     },
+     "alternative": {
+      "code": 145724,
+      "name": "Tata Arbitrage Fund-Direct Plan-Growth"
+     }
+    },
+    {
+     "bucket": "gold",
+     "label": "Gold fund (FoF)",
+     "weight": 10,
+     "fund": {
+      "code": 150714,
+      "name": "UTI Gold ETF Fund of Fund - Direct Plan - Growth Option",
+      "cagr_3y": 30.43,
+      "cagr_5y": null,
+      "max_dd": -23.57
+     },
+     "alternative": {
+      "code": 120546,
+      "name": "Aditya Birla Sun Life Gold Fund - Growth - Direct Plan"
+     }
+    }
+   ],
+   "simple": [
+    {
+     "bucket": "idx_n50",
+     "label": "Nifty 50 index fund",
+     "weight": 40,
+     "fund": {
+      "code": 118741,
+      "name": "Nippon India Index Fund - Nifty 50 Plan - Direct Plan Growth Plan - Growth Option"
+     }
+    },
+    {
+     "bucket": "corp_bond",
+     "label": "Corporate bond fund",
+     "weight": 45,
+     "fund": {
+      "code": 141588,
+      "name": "Axis Corporate Bond Fund - Direct Plan Growth"
+     }
+    },
+    {
+     "bucket": "gold",
+     "label": "Gold fund (FoF)",
+     "weight": 15,
+     "fund": {
+      "code": 150714,
+      "name": "UTI Gold ETF Fund of Fund - Direct Plan - Growth Option"
+     }
+    }
+   ],
+   "projections": {
+    "start": "2013-02-28",
+    "end": "2026-11-30",
+    "notes": [],
+    "lump": {
+     "3": {
+      "p10": 1.261,
+      "p50": 1.37,
+      "p90": 1.45,
+      "worst": 1.147,
+      "windows": 131
+     },
+     "5": {
+      "p10": 1.489,
+      "p50": 1.651,
+      "p90": 1.827,
+      "worst": 1.319,
+      "windows": 107
+     },
+     "7": {
+      "p10": 1.875,
+      "p50": 2.025,
+      "p90": 2.166,
+      "worst": 1.712,
+      "windows": 83
+     },
+     "10": {
+      "p10": 2.627,
+      "p50": 2.748,
+      "p90": 2.865,
+      "worst": 2.536,
+      "windows": 47
+     }
+    },
+    "sip": {
+     "3": {
+      "p10": 40.462,
+      "p50": 42.097,
+      "p90": 44.495,
+      "worst": 36.424,
+      "windows": 131,
+      "invested": 36
+     },
+     "5": {
+      "p10": 74.065,
+      "p50": 79.094,
+      "p90": 83.157,
+      "worst": 66.883,
+      "windows": 107,
+      "invested": 60
+     },
+     "7": {
+      "p10": 115.717,
+      "p50": 124.577,
+      "p90": 132.146,
+      "worst": 103.504,
+      "windows": 83,
+      "invested": 84
+     },
+     "10": {
+      "p10": 203.943,
+      "p50": 214.174,
+      "p90": 224.29,
+      "worst": 199.822,
+      "windows": 47,
+      "invested": 120
+     }
+    },
+    "max_drawdown_pct": -10.2
+   },
+   "simple_projections": {
+    "start": "2013-02-28",
+    "end": "2026-11-30",
+    "notes": [],
+    "lump": {
+     "3": {
+      "p10": 1.262,
+      "p50": 1.359,
+      "p90": 1.458,
+      "worst": 1.178,
+      "windows": 131
+     },
+     "5": {
+      "p10": 1.501,
+      "p50": 1.668,
+      "p90": 1.798,
+      "worst": 1.349,
+      "windows": 107
+     },
+     "7": {
+      "p10": 1.895,
+      "p50": 2.044,
+      "p90": 2.2,
+      "worst": 1.7,
+      "windows": 83
+     },
+     "10": {
+      "p10": 2.583,
+      "p50": 2.745,
+      "p90": 2.92,
+      "worst": 2.512,
+      "windows": 47
+     }
+    },
+    "sip": {
+     "3": {
+      "p10": 40.522,
+      "p50": 41.93,
+      "p90": 44.829,
+      "worst": 37.334,
+      "windows": 131,
+      "invested": 36
+     },
+     "5": {
+      "p10": 74.72,
+      "p50": 79.051,
+      "p90": 83.404,
+      "worst": 68.476,
+      "windows": 107,
+      "invested": 60
+     },
+     "7": {
+      "p10": 119.094,
+      "p50": 125.744,
+      "p90": 131.751,
+      "worst": 105.256,
+      "windows": 83,
+      "invested": 84
+     },
+     "10": {
+      "p10": 204.504,
+      "p50": 215.508,
+      "p90": 225.89,
+      "worst": 199.744,
+      "windows": 47,
+      "invested": 120
+     }
+    },
+    "max_drawdown_pct": -9.4
+   }
+  },
+  "balanced": {
+   "label": "Balanced",
+   "horizon": "5–7 years",
+   "equity_pct": 65,
+   "about": "Growth with a debt and gold cushion; mostly low-cost index funds.",
+   "allocation": [
+    {
+     "bucket": "idx_n50",
+     "label": "Nifty 50 index fund",
+     "weight": 35,
+     "fund": {
+      "code": 118741,
+      "name": "Nippon India Index Fund - Nifty 50 Plan - Direct Plan Growth Plan - Growth Option",
+      "cagr_3y": 10.27,
+      "cagr_5y": 7.95,
+      "max_dd": -15.92
+     },
+     "alternative": {
+      "code": 146376,
+      "name": "DSP Nifty 50 Index Fund - Direct Plan - Growth"
+     }
+    },
+    {
+     "bucket": "idx_next50",
+     "label": "Nifty Next 50 index fund",
+     "weight": 10,
+     "fund": {
+      "code": 148745,
+      "name": "Kotak Nifty Next 50 Index Fund - Direct Plan - Growth Option",
+      "cagr_3y": 17.76,
+      "cagr_5y": 11.41,
+      "max_dd": -26.34
+     },
+     "alternative": {
+      "code": 150899,
+      "name": "Edelweiss Nifty Next 50 Index Fund - Direct Plan - Growth"
+     }
+    },
+    {
+     "bucket": "idx_mid150",
+     "label": "Nifty Midcap 150 index fund",
+     "weight": 10,
+     "fund": {
+      "code": 148807,
+      "name": "Aditya Birla Sun Life Nifty Midcap 150 Index Fund-Direct Growth",
+      "cagr_3y": 14.76,
+      "cagr_5y": 14.18,
+      "max_dd": -21.09
+     },
+     "alternative": {
+      "code": 148726,
+      "name": "Nippon India Nifty Midcap 150 Index Fund - Direct Plan - Growth Option"
+     }
+    },
+    {
+     "bucket": "flexi",
+     "label": "Flexi cap (active)",
+     "weight": 10,
+     "fund": {
+      "code": 118955,
+      "name": "HDFC Flexi Cap Fund - Growth Option - Direct Plan",
+      "cagr_3y": 17.89,
+      "cagr_5y": 16.8,
+      "max_dd": -13.32
+     },
+     "alternative": {
+      "code": 148990,
+      "name": "ICICI Prudential Flexi Cap Fund - Direct Plan - Growth"
+     }
+    },
+    {
+     "bucket": "corp_bond",
+     "label": "Corporate bond fund",
+     "weight": 25,
+     "fund": {
+      "code": 141588,
+      "name": "Axis Corporate Bond Fund - Direct Plan Growth",
+      "cagr_3y": 7.58,
+      "cagr_5y": 6.78,
+      "max_dd": -0.91
+     },
+     "alternative": {
+      "code": 150996,
+      "name": "HSBC Corporate Bond Fund - Direct Growth"
+     }
+    },
+    {
+     "bucket": "gold",
+     "label": "Gold fund (FoF)",
+     "weight": 10,
+     "fund": {
+      "code": 150714,
+      "name": "UTI Gold ETF Fund of Fund - Direct Plan - Growth Option",
+      "cagr_3y": 30.43,
+      "cagr_5y": null,
+      "max_dd": -23.57
+     },
+     "alternative": {
+      "code": 120546,
+      "name": "Aditya Birla Sun Life Gold Fund - Growth - Direct Plan"
+     }
+    }
+   ],
+   "simple": [
+    {
+     "bucket": "idx_n50",
+     "label": "Nifty 50 index fund",
+     "weight": 55,
+     "fund": {
+      "code": 118741,
+      "name": "Nippon India Index Fund - Nifty 50 Plan - Direct Plan Growth Plan - Growth Option"
+     }
+    },
+    {
+     "bucket": "idx_mid150",
+     "label": "Nifty Midcap 150 index fund",
+     "weight": 15,
+     "fund": {
+      "code": 148807,
+      "name": "Aditya Birla Sun Life Nifty Midcap 150 Index Fund-Direct Growth"
+     }
+    },
+    {
+     "bucket": "corp_bond",
+     "label": "Corporate bond fund",
+     "weight": 30,
+     "fund": {
+      "code": 141588,
+      "name": "Axis Corporate Bond Fund - Direct Plan Growth"
+     }
+    }
+   ],
+   "projections": {
+    "start": "2013-02-28",
+    "end": "2026-11-30",
+    "notes": [
+     "Nifty Midcap 150 index fund uses Mid cap (active) history (too new for its own)"
+    ],
+    "lump": {
+     "3": {
+      "p10": 1.286,
+      "p50": 1.475,
+      "p90": 1.611,
+      "worst": 1.051,
+      "windows": 131
+     },
+     "5": {
+      "p10": 1.539,
+      "p50": 1.83,
+      "p90": 2.175,
+      "worst": 1.243,
+      "windows": 107
+     },
+     "7": {
+      "p10": 2.086,
+      "p50": 2.306,
+      "p90": 2.586,
+      "worst": 1.804,
+      "windows": 83
+     },
+     "10": {
+      "p10": 3.165,
+      "p50": 3.41,
+      "p90": 3.667,
+      "worst": 2.968,
+      "windows": 47
+     }
+    },
+    "sip": {
+     "3": {
+      "p10": 40.205,
+      "p50": 43.938,
+      "p90": 47.682,
+      "worst": 33.11,
+      "windows": 131,
+      "invested": 36
+     },
+     "5": {
+      "p10": 74.545,
+      "p50": 83.665,
+      "p90": 92.026,
+      "worst": 61.978,
+      "windows": 107,
+      "invested": 60
+     },
+     "7": {
+      "p10": 118.261,
+      "p50": 135.877,
+      "p90": 149.993,
+      "worst": 99.045,
+      "windows": 83,
+      "invested": 84
+     },
+     "10": {
+      "p10": 226.946,
+      "p50": 247.778,
+      "p90": 260.793,
+      "worst": 219.758,
+      "windows": 47,
+      "invested": 120
+     }
+    },
+    "max_drawdown_pct": -17.4
+   },
+   "simple_projections": {
+    "start": "2013-02-28",
+    "end": "2026-11-30",
+    "notes": [
+     "Nifty Midcap 150 index fund uses Mid cap (active) history (too new for its own)"
+    ],
+    "lump": {
+     "3": {
+      "p10": 1.284,
+      "p50": 1.439,
+      "p90": 1.581,
+      "worst": 1.029,
+      "windows": 131
+     },
+     "5": {
+      "p10": 1.516,
+      "p50": 1.817,
+      "p90": 2.111,
+      "worst": 1.203,
+      "windows": 107
+     },
+     "7": {
+      "p10": 2.083,
+      "p50": 2.271,
+      "p90": 2.438,
+      "worst": 1.795,
+      "windows": 83
+     },
+     "10": {
+      "p10": 2.983,
+      "p50": 3.274,
+      "p90": 3.638,
+      "worst": 2.814,
+      "windows": 47
+     }
+    },
+    "sip": {
+     "3": {
+      "p10": 39.405,
+      "p50": 43.495,
+      "p90": 47.221,
+      "worst": 32.214,
+      "windows": 131,
+      "invested": 36
+     },
+     "5": {
+      "p10": 73.343,
+      "p50": 83.179,
+      "p90": 91.036,
+      "worst": 60.399,
+      "windows": 107,
+      "invested": 60
+     },
+     "7": {
+      "p10": 117.467,
+      "p50": 134.403,
+      "p90": 142.94,
+      "worst": 96.845,
+      "windows": 83,
+      "invested": 84
+     },
+     "10": {
+      "p10": 218.1,
+      "p50": 236.685,
+      "p90": 248.886,
+      "worst": 206.028,
+      "windows": 47,
+      "invested": 120
+     }
+    },
+    "max_drawdown_pct": -19.5
+   }
+  },
+  "aggressive": {
+   "label": "Aggressive",
+   "horizon": "7+ years",
+   "equity_pct": 85,
+   "about": "Maximum long-term growth; expect deep temporary falls along the way.",
+   "allocation": [
+    {
+     "bucket": "idx_n50",
+     "label": "Nifty 50 index fund",
+     "weight": 30,
+     "fund": {
+      "code": 118741,
+      "name": "Nippon India Index Fund - Nifty 50 Plan - Direct Plan Growth Plan - Growth Option",
+      "cagr_3y": 10.27,
+      "cagr_5y": 7.95,
+      "max_dd": -15.92
+     },
+     "alternative": {
+      "code": 146376,
+      "name": "DSP Nifty 50 Index Fund - Direct Plan - Growth"
+     }
+    },
+    {
+     "bucket": "idx_next50",
+     "label": "Nifty Next 50 index fund",
+     "weight": 15,
+     "fund": {
+      "code": 148745,
+      "name": "Kotak Nifty Next 50 Index Fund - Direct Plan - Growth Option",
+      "cagr_3y": 17.76,
+      "cagr_5y": 11.41,
+      "max_dd": -26.34
+     },
+     "alternative": {
+      "code": 150899,
+      "name": "Edelweiss Nifty Next 50 Index Fund - Direct Plan - Growth"
+     }
+    },
+    {
+     "bucket": "idx_mid150",
+     "label": "Nifty Midcap 150 index fund",
+     "weight": 15,
+     "fund": {
+      "code": 148807,
+      "name": "Aditya Birla Sun Life Nifty Midcap 150 Index Fund-Direct Growth",
+      "cagr_3y": 14.76,
+      "cagr_5y": 14.18,
+      "max_dd": -21.09
+     },
+     "alternative": {
+      "code": 148726,
+      "name": "Nippon India Nifty Midcap 150 Index Fund - Direct Plan - Growth Option"
+     }
+    },
+    {
+     "bucket": "idx_mom30",
+     "label": "Nifty200 Momentum 30 index fund",
+     "weight": 10,
+     "fund": {
+      "code": 148703,
+      "name": "UTI Nifty 200 Momentum 30 Index Fund - Direct Plan - Growth Option",
+      "cagr_3y": 9.7,
+      "cagr_5y": 8.13,
+      "max_dd": -31.5
+     },
+     "alternative": {
+      "code": 151781,
+      "name": "Kotak Nifty 200 Momentum 30 Index Fund - Direct Plan - Growth Option"
+     }
+    },
+    {
+     "bucket": "flexi",
+     "label": "Flexi cap (active)",
+     "weight": 10,
+     "fund": {
+      "code": 118955,
+      "name": "HDFC Flexi Cap Fund - Growth Option - Direct Plan",
+      "cagr_3y": 17.89,
+      "cagr_5y": 16.8,
+      "max_dd": -13.32
+     },
+     "alternative": {
+      "code": 148990,
+      "name": "ICICI Prudential Flexi Cap Fund - Direct Plan - Growth"
+     }
+    },
+    {
+     "bucket": "idx_small250",
+     "label": "Nifty Smallcap 250 index fund",
+     "weight": 5,
+     "fund": {
+      "code": 150892,
+      "name": "Edelweiss Nifty Smallcap 250 Index Fund - Direct Plan - Growth",
+      "cagr_3y": 13.08,
+      "cagr_5y": null,
+      "max_dd": -26.12
+     },
+     "alternative": {
+      "code": 150677,
+      "name": "SBI Nifty Smallcap 250 Index Fund - Direct Plan - Growth"
+     }
+    },
+    {
+     "bucket": "gold",
+     "label": "Gold fund (FoF)",
+     "weight": 10,
+     "fund": {
+      "code": 150714,
+      "name": "UTI Gold ETF Fund of Fund - Direct Plan - Growth Option",
+      "cagr_3y": 30.43,
+      "cagr_5y": null,
+      "max_dd": -23.57
+     },
+     "alternative": {
+      "code": 120546,
+      "name": "Aditya Birla Sun Life Gold Fund - Growth - Direct Plan"
+     }
+    },
+    {
+     "bucket": "liquid",
+     "label": "Liquid fund",
+     "weight": 5,
+     "fund": {
+      "code": 149664,
+      "name": "Sundaram Liquid Fund (Formerly Known as Principal Cash Management Fund) - Direct Plan - Growth Option",
+      "cagr_3y": 6.96,
+      "cagr_5y": null,
+      "max_dd": -0.02
+     },
+     "alternative": {
+      "code": 120389,
+      "name": "Axis Liquid Fund - Direct Plan - Growth Option"
+     }
+    }
+   ],
+   "simple": [
+    {
+     "bucket": "idx_n50",
+     "label": "Nifty 50 index fund",
+     "weight": 60,
+     "fund": {
+      "code": 118741,
+      "name": "Nippon India Index Fund - Nifty 50 Plan - Direct Plan Growth Plan - Growth Option"
+     }
+    },
+    {
+     "bucket": "idx_mid150",
+     "label": "Nifty Midcap 150 index fund",
+     "weight": 25,
+     "fund": {
+      "code": 148807,
+      "name": "Aditya Birla Sun Life Nifty Midcap 150 Index Fund-Direct Growth"
+     }
+    },
+    {
+     "bucket": "gold",
+     "label": "Gold fund (FoF)",
+     "weight": 15,
+     "fund": {
+      "code": 150714,
+      "name": "UTI Gold ETF Fund of Fund - Direct Plan - Growth Option"
+     }
+    }
+   ],
+   "projections": {
+    "start": "2013-02-28",
+    "end": "2026-11-30",
+    "notes": [
+     "Nifty Midcap 150 index fund uses Mid cap (active) history (too new for its own)",
+     "Nifty200 Momentum 30 index fund uses Mid cap (active) history (too new for its own)",
+     "Nifty Smallcap 250 index fund uses Small cap (active) history (too new for its own)"
+    ],
+    "lump": {
+     "3": {
+      "p10": 1.238,
+      "p50": 1.597,
+      "p90": 1.847,
+      "worst": 0.94,
+      "windows": 131
+     },
+     "5": {
+      "p10": 1.522,
+      "p50": 1.999,
+      "p90": 2.637,
+      "worst": 1.152,
+      "windows": 107
+     },
+     "7": {
+      "p10": 2.251,
+      "p50": 2.567,
+      "p90": 2.992,
+      "worst": 1.906,
+      "windows": 83
+     },
+     "10": {
+      "p10": 3.737,
+      "p50": 4.139,
+      "p90": 4.687,
+      "worst": 3.435,
+      "windows": 47
+     }
+    },
+    "sip": {
+     "3": {
+      "p10": 39.592,
+      "p50": 45.826,
+      "p90": 51.195,
+      "worst": 29.781,
+      "windows": 131,
+      "invested": 36
+     },
+     "5": {
+      "p10": 72.81,
+      "p50": 88.758,
+      "p90": 104.872,
+      "worst": 56.463,
+      "windows": 107,
+      "invested": 60
+     },
+     "7": {
+      "p10": 120.279,
+      "p50": 146.323,
+      "p90": 170.661,
+      "worst": 93.917,
+      "windows": 83,
+      "invested": 84
+     },
+     "10": {
+      "p10": 253.917,
+      "p50": 285.341,
+      "p90": 303.718,
+      "worst": 240.562,
+      "windows": 47,
+      "invested": 120
+     }
+    },
+    "max_drawdown_pct": -23.9
+   },
+   "simple_projections": {
+    "start": "2013-02-28",
+    "end": "2026-11-30",
+    "notes": [
+     "Nifty Midcap 150 index fund uses Mid cap (active) history (too new for its own)"
+    ],
+    "lump": {
+     "3": {
+      "p10": 1.288,
+      "p50": 1.526,
+      "p90": 1.737,
+      "worst": 0.992,
+      "windows": 131
+     },
+     "5": {
+      "p10": 1.528,
+      "p50": 1.946,
+      "p90": 2.477,
+      "worst": 1.158,
+      "windows": 107
+     },
+     "7": {
+      "p10": 2.167,
+      "p50": 2.518,
+      "p90": 2.926,
+      "worst": 1.774,
+      "windows": 83
+     },
+     "10": {
+      "p10": 3.538,
+      "p50": 3.914,
+      "p90": 4.284,
+      "worst": 3.246,
+      "windows": 47
+     }
+    },
+    "sip": {
+     "3": {
+      "p10": 40.165,
+      "p50": 44.816,
+      "p90": 49.955,
+      "worst": 31.031,
+      "windows": 131,
+      "invested": 36
+     },
+     "5": {
+      "p10": 74.762,
+      "p50": 88.161,
+      "p90": 99.914,
+      "worst": 58.395,
+      "windows": 107,
+      "invested": 60
+     },
+     "7": {
+      "p10": 120.14,
+      "p50": 145.47,
+      "p90": 165.679,
+      "worst": 94.061,
+      "windows": 83,
+      "invested": 84
+     },
+     "10": {
+      "p10": 248.134,
+      "p50": 274.072,
+      "p90": 294.784,
+      "worst": 237.613,
+      "windows": 47,
+      "invested": 120
+     }
+    },
+    "max_drawdown_pct": -23.3
+   }
+  }
+ },
+ "rules": [
+  "Direct plan, Growth option only – no distributor commission, no IDCW payouts.",
+  "Rebalance once a year, or when any part drifts more than 5 percentage points – redirect new SIPs first, sell only if needed.",
+  "Review a fund only if it falls into the bottom half of its category in two reviews in a row, or its fund manager or mandate changes.",
+  "Keep 3–6 months of expenses in a liquid fund before investing for the long term.",
+  "Equity funds: gains after 12 months taxed at 12.5% above ₹1.25 lakh a year; within 12 months at 20%. Debt funds: taxed at your slab rate.",
+  "ELSS saves tax only under the old tax regime (Section 80C) and locks each SIP for 3 years.",
+  "Check exit loads before switching (many equity funds charge 1% if sold within 1 year)."
+ ]
+}

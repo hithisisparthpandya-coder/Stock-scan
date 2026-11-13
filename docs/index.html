@@ -94,7 +94,17 @@
   .setup label{display:block;font-weight:600;margin:6px 0}
   .setup input{width:100%;font:15px "Archivo",sans-serif;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
   .setup p{color:var(--muted);font-size:13px}
-  nav.tabs{display:flex;gap:6px;margin:0 0 12px}
+  nav.tabs{display:flex;gap:6px;margin:0 0 12px;overflow-x:auto}
+  nav.tabs.mode button{font-size:15px;padding:9px 16px}
+  nav.tabs.mode button.on{background:var(--gold-grad);color:#0B4D2E}
+  .seg{display:flex;gap:6px;flex-wrap:wrap} .seg button.on{background:var(--forest);color:#FFFDF5;box-shadow:none}
+  @media (prefers-color-scheme: dark){ .seg button.on{color:#0C1712} }
+  .form{display:grid;gap:12px} @media (min-width:640px){ .form{grid-template-columns:1fr 1fr} }
+  .form label{display:block;font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px}
+  .form input{width:100%;font:600 16px "Archivo",sans-serif;padding:9px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+  .big{font:700 22px "Oswald",sans-serif;color:var(--forest)}
+  .range{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}
+  .range .num b{font-size:16px}
   nav.tabs button{box-shadow:0 0 0 1px var(--line) inset;color:var(--muted)}
   nav.tabs button.on{background:var(--forest);color:#FFFDF5;box-shadow:none}
   @media (prefers-color-scheme: dark){ nav.tabs button.on{color:#0C1712} }
@@ -126,7 +136,8 @@
       <button id="refresh" class="primary">↻ Refresh</button>
     </div>
   </header>
-  <nav class="tabs"><button id="tab-today" class="on">Today's picks</button><button id="tab-paper">Paper record</button><button id="tab-lab">Strategy lab</button></nav>
+  <nav class="tabs mode"><button id="mode-stocks" class="on">📈 Stocks</button><button id="mode-mf">🏦 Mutual funds</button></nav>
+  <nav class="tabs" id="stock-tabs"><button id="tab-today" class="on">Today's picks</button><button id="tab-paper">Paper record</button><button id="tab-lab">Strategy lab</button></nav>
   <div class="sub" id="asof">Loading…</div>
   <div id="app"></div>
   <footer>
@@ -172,6 +183,9 @@ async function getData(){
 async function load(){
   $("#asof").textContent = "Loading…";
   for(const t of ["today","paper","lab"]) $("#tab-"+t).classList.toggle("on", TAB===t);
+  $("#mode-stocks").classList.toggle("on", TAB!=="mf"); $("#mode-mf").classList.toggle("on", TAB==="mf");
+  $("#stock-tabs").style.display = TAB==="mf" ? "none" : "flex";
+  if(TAB === "mf") return loadMF();
   if(TAB === "lab") return loadLab();
   if(TAB === "paper") return loadPaper();
   try{
@@ -278,6 +292,88 @@ function render(d){
     <li>At +1R move the stop to entry. At 2R sell half, trail the rest.</li>
     <li>Max 3 open trades. The decision and the risk are yours.</li></ol></div>`;
   $("#app").innerHTML = top + `<div class="layout"><div>${left}</div><div>${right}</div></div>`;
+}
+
+// ---------------- Mutual funds ----------------
+let MF = null;
+const MFDEF = {profile:"balanced", lump:50000, deploy:"now", sip:5000, horizon:"5", style:"diversified"};
+function mfState(){ try{ return Object.assign({}, MFDEF, JSON.parse(localStorage.getItem("atm-mf") || "{}")); }catch{ return {...MFDEF}; } }
+function mfSave(st){ try{ localStorage.setItem("atm-mf", JSON.stringify(st)); }catch{} }
+async function loadMF(){
+  try{ MF = await getJSON("mf.json"); renderMF(); }
+  catch(e){
+    $("#asof").textContent = "Mutual funds";
+    $("#app").innerHTML = `<div class="card empty">Fund data isn't ready yet. Run <b>Mutual fund review</b> once from the Actions tab of your GitHub repo.</div>`;
+  }
+}
+const r100 = x => Math.round(x / 100) * 100;
+// Split an amount into ₹100 steps that add up exactly (largest remainder first)
+function split100(total, weights){
+  const raw = weights.map(w => total * w / 100), base = raw.map(x => Math.floor(x / 100) * 100);
+  let left = Math.round((Math.round(total / 100) * 100 - base.reduce((a,b) => a+b, 0)) / 100);
+  raw.map((x,i) => [x - base[i], i]).sort((a,b) => b[0]-a[0]).forEach(([_, i]) => { if(left > 0){ base[i] += 100; left--; } });
+  return base;
+}
+function renderMF(){
+  const d = MF, st = mfState(), P = d.profiles[st.profile];
+  const alloc = st.style === "simple" ? P.simple : P.allocation;
+  const proj = st.style === "simple" ? P.simple_projections : P.projections;
+  $("#asof").textContent = `Long-term fund planner · NAVs to ${d.nav_date} · ${d.universe.schemes} Direct-Growth funds screened`;
+  const seg = (name, opts) => `<div class="seg">${opts.map(([v,l]) => `<button data-mf="${name}" data-v="${v}" class="${st[name]===v?"on":""}">${l}</button>`).join("")}</div>`;
+  let h = `<div class="card"><div class="form">
+    <div><label>Risk profile</label>${seg("profile", Object.entries(d.profiles).map(([k,p]) => [k, p.label]))}<div class="sub" style="margin:6px 0 0">${esc(P.about)} Suits ${esc(P.horizon)} · ${P.equity_pct}% equity.</div></div>
+    <div><label>Horizon (years)</label>${seg("horizon", [["3","3"],["5","5"],["7","7"],["10","10"]])}</div>
+    <div><label>Lump sum (₹)</label><input id="mf-lump" type="number" inputmode="numeric" min="0" step="1000" value="${st.lump}"></div>
+    <div><label>Invest the lump sum</label>${seg("deploy", [["now","All now"],["stp6","STP over 6 months"],["stp12","STP over 12 months"]])}</div>
+    <div><label>Monthly SIP (₹)</label><input id="mf-sip" type="number" inputmode="numeric" min="0" step="500" value="${st.sip}"></div>
+    <div><label>Portfolio</label>${seg("style", [["diversified","Diversified"],["simple","Simple (3 funds)"]])}</div>
+  </div></div>`;
+  // Allocation table
+  const lump = Math.max(0, +st.lump || 0), sip = Math.max(0, +st.sip || 0);
+  const months = st.deploy === "stp6" ? 6 : st.deploy === "stp12" ? 12 : 0;
+  const liquid = (d.buckets.liquid && d.buckets.liquid.top[0]) || null;
+  let small = false;
+  const sipSplit = split100(sip, alloc.map(a => a.weight));
+  h += `<div class="layout"><div><h2>Your plan</h2><div class="card scroll"><table class="mt"><tr><th>Fund</th><th>%</th><th>Lump sum</th><th>SIP / month</th></tr>` +
+    alloc.map((a, i) => { const l = Math.round(lump * a.weight / 100), m = sipSplit[i]; if(sip && m < 500) small = true;
+      return `<tr><td style="text-align:left;color:var(--ink);font-weight:600">${a.fund ? esc(a.fund.name) : "–"}<br><span class="sub" style="font-weight:400">${esc(a.label)}</span></td><td>${a.weight}%</td>
+        <td>${months ? `${inr(l / months,0)}<br><span class="sub">× ${months} mo</span>` : inr(l,0)}</td><td>${sip ? inr(m,0) : "–"}</td></tr>`; }).join("") +
+    `<tr><td style="text-align:left"><b>Total</b></td><td>100%</td><td><b>${months ? inr(lump / months,0) + " × " + months : inr(lump,0)}</b></td><td><b>${sip ? inr(sipSplit.reduce((t,x) => t + x, 0),0) : "–"}</b></td></tr>` +
+    `</table>` + (months && liquid ? `<p class="sub" style="margin:10px 0 0">STP: put the ₹${lump.toLocaleString("en-IN")} in <b>${esc(liquid.name)}</b> and set a monthly Systematic Transfer Plan into each fund above for ${months} months. It spreads your entry price over time.</p>` : "") +
+    (small ? `<p class="sub" style="margin:8px 0 0;color:var(--warn)">Some SIP slices are under ₹500, below many funds' minimum. Raise the SIP or choose "Simple (3 funds)".</p>` : "") + `</div>`;
+  // Projections
+  const H = st.horizon, pl = proj.lump && proj.lump[H], ps = proj.sip && proj.sip[H];
+  h += `<h2>What past markets say (${H} years)</h2><div class="card">`;
+  if(!pl){ h += `<div class="empty">Not enough fund history for a ${H}-year range yet. Try a shorter horizon.</div>`; }
+  else{
+    const lv = p => lump * pl[p], sv = p => ps ? sip * ps[p] : 0, inv = lump + (ps ? sip * ps.invested : 0);
+    h += `<div class="sub" style="margin:0">Invested ₹${Math.round(inv).toLocaleString("en-IN")}. Every ${H}-year period from ${proj.start.slice(0,4)} to ${proj.end.slice(0,4)} (${pl.windows} start months) gave:</div>
+      <div class="range"><div class="num"><span>Weak (1 in 10 worse)</span><b>${inr(lv("p10")+sv("p10"),0)}</b></div>
+      <div class="num"><span>Typical (median)</span><b class="big">${inr(lv("p50")+sv("p50"),0)}</b></div>
+      <div class="num"><span>Strong (1 in 10 better)</span><b>${inr(lv("p90")+sv("p90"),0)}</b></div></div>
+      <p class="sub" style="margin:10px 0 0">Worst period: ${inr(lump*pl.worst + (ps ? sip*ps.worst : 0),0)}. Biggest fall along the way: ${proj.max_drawdown_pct}% (monthly data). ${months ? "STP results land between the lump-sum and SIP figures." : ""}
+      ${(proj.notes||[]).length ? "<br>Note: " + proj.notes.map(esc).join("; ") + "." : ""} Past returns don't guarantee future returns.</p>`;
+  }
+  h += `</div>`;
+  // Evidence
+  const ev = d.evidence || [];
+  if(ev.length) h += `<h2>Active funds vs index funds</h2><div class="card scroll"><table class="mt"><tr><th>Category</th><th>Years</th><th>Beat the index</th><th>Index / median active</th></tr>` +
+    ev.map(e => `<tr><td>${esc(e.category)}</td><td>${e.years}</td><td>${e.beat_index} of ${e.active_funds}</td><td>${e.index_cagr}% / ${e.median_active_cagr}%</td></tr>`).join("") +
+    `</table><p class="sub" style="margin:8px 0 0">Direct plans, after fees. Only funds that still exist are counted – closed losers are missing, which flatters active funds. That's why the plan uses index funds as its core.</p></div>`;
+  h += `</div><div>`;
+  // Leaderboards
+  h += `<h2>Best funds by category</h2>` + Object.entries(d.buckets).filter(([k,b]) => b.top.length).map(([k,b]) =>
+    `<details class="card pick"><summary><div class="row1"><b>${esc(b.label)}</b><span class="tag ${b.kind==="index"?"p":"b"}">${b.funds_considered} funds</span></div>
+      <div class="sub" style="margin:6px 0 0">#1 ${esc(b.top[0].name)}</div></summary><div class="more"><table>` +
+      b.top.map((f,i) => `<tr><td>${i+1}. ${esc(f.name)}<br><span class="sub">${esc(f.why)} · ${f.age_years} yrs old</span></td><td style="white-space:nowrap">3y&nbsp;${num(f.cagr_3y)}%<br>5y&nbsp;${f.cagr_5y == null ? "–" : f.cagr_5y + "%"}<br>fall&nbsp;${num(f.max_dd)}%</td></tr>`).join("") +
+    `</table></div></details>`).join("");
+  h += `<h2>Rules for long-term investing</h2><div class="card rules"><ul style="margin:0;padding-left:18px">${d.rules.map(r => `<li>${esc(r)}</li>`).join("")}</ul>
+    <p class="sub" style="margin:8px 0 0">${esc(d.universe.source)}; categories from ${esc(d.universe.categories)}. A screen, not investment advice.</p></div>`;
+  h += `</div></div>`;
+  $("#app").innerHTML = h;
+  document.querySelectorAll("[data-mf]").forEach(b => b.onclick = () => { const s2 = mfState(); s2[b.dataset.mf] = b.dataset.v; mfSave(s2); renderMF(); });
+  const upd = (id, key) => { const el = $(id); el.onchange = () => { const s2 = mfState(); s2[key] = Math.max(0, +el.value || 0); mfSave(s2); renderMF(); }; };
+  upd("#mf-lump", "lump"); upd("#mf-sip", "sip");
 }
 
 // ---------------- Paper record ----------------
@@ -406,6 +502,8 @@ $("#refresh").onclick = load;
 $("#tab-today").onclick = () => { TAB = "today"; load(); };
 $("#tab-lab").onclick = () => { TAB = "lab"; load(); };
 $("#tab-paper").onclick = () => { TAB = "paper"; load(); };
+$("#mode-stocks").onclick = () => { TAB = "today"; load(); };
+$("#mode-mf").onclick = () => { TAB = "mf"; load(); };
 if(desktop){ const b=$("#settings"); b.hidden=false; b.onclick=renderSetup; desktop.onScanUpdated(() => load()); }
 document.addEventListener("visibilitychange", () => { if(document.visibilityState === "visible") load(); });
 if(!desktop && "serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");

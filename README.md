@@ -24,7 +24,7 @@ Picks go to Telegram and to the web app on your iPhone. Free to run.
 6. **iPhone / iPad** — open `https://<your-github-username>.github.io/stock-scan/` in **Safari** → Share → **Add to Home Screen**.
 
 ## Windows app
-1. Run `ATM-Stock-Scan-Setup-1.2.0.exe`. It installs for your user only (no admin rights) with Start-menu and desktop shortcuts.
+1. Run `ATM-Stock-Scan-Setup-1.4.0.exe`. It installs for your user only (no admin rights) with Start-menu and desktop shortcuts.
    The installer is not code-signed, so Windows SmartScreen may say "Windows protected your PC": click **More info → Run anyway**.
 2. On first launch, paste your GitHub Pages address (step 6 above) and tick **Start with Windows** if you want it in the tray.
 3. The app checks for a new scan every 30 minutes while it runs and shows a Windows notification when one lands.
@@ -32,6 +32,18 @@ Picks go to Telegram and to the web app on your iPhone. Free to run.
 - Rebuild after changes: Actions → *Build Windows app* → Run workflow (downloads the .exe as an artifact),
   or locally on Linux with `cd desktop && npm ci && npm run dist` (needs `makensis`).
 - `docs/index.html` is the single UI for both the iPhone and Windows apps; `desktop/sync-ui.js` copies it in.
+
+## Mutual funds (long term)
+The app has two modes: **📈 Stocks** (swing scanner, paper trading) and **🏦 Mutual funds** (long-term planner).
+- Screens ~400 Direct-Growth funds across 15 categories from AMFI's full NAV history, refreshed on the 1st of
+  each month (Actions → **Mutual fund review**, or run it now), with a Telegram summary.
+- Index funds: same index → higher 3-year return wins (lower costs/tracking error); ties go to the longer record.
+- Active funds (5+ years): consistency vs category median, return per unit of risk, smaller falls, 5-year CAGR –
+  all on the same recent window so no fund skips a crash. An "active vs index" table shows how many beat the index.
+- Planner: Conservative / Balanced / Aggressive, your lump sum (default ₹50,000) invested now or by STP over
+  6–12 months from a liquid fund, plus a monthly SIP, split per fund in ₹100 steps; a 3-fund "Simple" version
+  for small SIPs; outcome ranges from every historical start month (weak / typical / strong).
+- Past returns don't guarantee future returns. A screen, not investment advice.
 
 ## Strategy lab (backtest)
 1. Actions → **Strategy backtest** → Run workflow. The first run downloads NSE bhavcopies from 2015 (1.5–3 h);
@@ -60,6 +72,7 @@ Edit `scanner/config.json`: `capital` (update as your account grows), `risk_pct`
 - `scanner/notify.py` — Telegram message
 - `scanner/run.py` — daily entry point (`--demo` runs on synthetic data with no network)
 - `scanner/test_funnel.py` — tests; the workflow runs them before every scan
+- `scanner/mf.py`, `mf_classify.py` — mutual fund screening, model portfolios, SIP/lump-sum ranges
 - `docs/` — the iPhone web app (reads `docs/data/picks.json`), ATM logo and fonts
 - `desktop/` — the Windows app (Electron): tray, notifications, installer script
 

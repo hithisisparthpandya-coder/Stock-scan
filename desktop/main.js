@@ -28,7 +28,7 @@ function saveSettings(patch) {
   buildTrayMenu();
   return s;
 }
-const DATA_FILES = new Set(["picks.json", "backtest.json", "ledger.json"]);
+const DATA_FILES = new Set(["picks.json", "backtest.json", "ledger.json", "mf.json"]);
 function dataUrl(base, name) {
   const root = base.replace(/data\/[^/]*\.json$/i, "").replace(/\/?$/, "/");
   return root + "data/" + name;
