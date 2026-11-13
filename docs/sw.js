@@ -1,5 +1,5 @@
 // App shell cached for offline; scan data always fetched fresh, falling back to the last copy.
-const CACHE = "atm-scan-v2";
+const CACHE = "atm-scan-v3";
 const SHELL = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "atm-mark.svg", "fonts/oswald-latin-700-normal.woff2", "fonts/archivo-latin-400-normal.woff2", "fonts/archivo-latin-600-normal.woff2", "fonts/archivo-latin-700-normal.woff2", "fonts/archivo-latin-800-normal.woff2"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL))); self.skipWaiting(); });
 self.addEventListener("activate", e => {
