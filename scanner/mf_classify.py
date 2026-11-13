@@ -96,6 +96,28 @@ def bucket_from_name(name: str) -> str | None:
     return None
 
 
+def category_family(cat: str | None) -> str | None:
+    """Map an AMFI category – old style ('Equity Scheme - Mid Cap Fund') or new style
+    ('Income/Debt Oriented Schemes - Liquid Fund', 'Index Funds - Equity Funds') – to our family."""
+    if not cat:
+        return None
+    c = cat.lower()
+    if "overseas" in c or "sectoral" in c or "thematic" in c:
+        return None
+    if "index fund" in c:
+        return "index"
+    if "fund of fund" in c or "fof" in c:
+        return "fof"
+    if "large & mid" in c or "large and mid" in c:
+        return None
+    for key, word in (("elss", "elss"), ("liquid", "liquid fund"), ("arbitrage", "arbitrage"),
+                      ("corp_bond", "corporate bond"), ("flexi", "flexi cap"), ("large", "large cap"),
+                      ("small", "small cap"), ("mid", "mid cap")):
+        if word in c:
+            return key
+    return None
+
+
 def bucket_for(name: str, amfi_category: str | None) -> str | None:
     """AMFI category decides the family; the name refines index funds and guards against mislabels."""
     if not is_direct_growth(name):
@@ -103,15 +125,12 @@ def bucket_for(name: str, amfi_category: str | None) -> str | None:
     by_name = bucket_from_name(name)
     if amfi_category is None:
         return by_name
-    cat = amfi_category.strip()
-    if cat == "Other Scheme - Index Funds":
+    fam = category_family(amfi_category)
+    if fam == "index":
         return index_bucket(name.lower())
-    if cat == "Other Scheme - FoF Domestic":
+    if fam == "fof":
         return "gold" if by_name == "gold" else None
-    for key, (_, _, c) in BUCKETS.items():
-        if c == cat and BUCKETS[key][1] != "index":
-            return key
-    return None
+    return fam
 
 
 def parse_amfi_navall(text: str) -> dict[int, dict]:

@@ -101,6 +101,12 @@ def test_classification_on_real_names():
     # AMFI category wins over the name for active funds; names refine index funds
     assert bucket_for("XYZ Bluechip Fund - Direct Plan - Growth", "Equity Scheme - Large Cap Fund") == "large"
     assert bucket_for("XYZ Nifty Next 50 Index Fund - Direct - Growth", "Other Scheme - Index Funds") == "idx_next50"
+    # AMFI's newer category names
+    assert bucket_for("ABC Liquid Fund - Direct Plan - Growth", "Income/Debt Oriented Schemes - Liquid Fund") == "liquid"
+    assert bucket_for("ABC Nifty 50 Index Fund - Direct - Growth", "Index Funds - Equity Funds") == "idx_n50"
+    assert bucket_for("ABC Gold ETF FoF - Direct - Growth", "Fund of Funds Scheme (Domestic) - Fund of Funds Scheme (Domestic)") == "gold"
+    assert bucket_for("ABC Large & Mid Cap Fund - Direct - Growth", "Equity Scheme - Large & Mid Cap Fund") is None
+    assert bucket_for("ABC Pharma Fund - Direct - Growth", "Equity Scheme - Sectoral/ Thematic") is None
 
 
 def test_parse_amfi_navall():

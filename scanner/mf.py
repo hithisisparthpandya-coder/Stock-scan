@@ -33,7 +33,7 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from mf_classify import BENCHMARK_INDEX, BUCKETS, bucket_for, parse_amfi_navall  # noqa: E402
+from mf_classify import BENCHMARK_INDEX, BUCKETS, bucket_for, category_family, parse_amfi_navall  # noqa: E402
 
 OUT = ROOT / "docs" / "data" / "mf.json"
 CACHE = ROOT / "data_cache" / "mf"
@@ -114,15 +114,16 @@ def load_universe(db: Path, amfi: dict) -> tuple[pd.DataFrame, dict, bool]:
     fresh = set(latest.loc[latest["d"] >= (pd.Timestamp(newest) - pd.Timedelta(days=10)).strftime("%Y-%m-%d"),
                            "scheme_code"])
     schemes = pd.read_sql("select scheme_code, scheme_name from schemes", con)
-    known = {c for _, _, c in BUCKETS.values()}
     if amfi:
         cats = pd.Series([v["category"] for v in amfi.values()]).value_counts()
-        print(f"AMFI list: {len(amfi)} schemes; {sum(c in known for c in cats.index)} of our categories found")
+        known = {c for c in cats.index if category_family(c)}
+        print(f"AMFI list: {len(amfi)} schemes; {len(known)} categories map to ours: {sorted(known)}")
         print("  top categories:", dict(cats.head(12)))
         overlap = len(set(amfi) & set(int(c) for c in schemes["scheme_code"]))
-        if overlap < 0.5 * len(amfi) or not any(c in known for c in cats.index):
+        if overlap < 0.5 * len(amfi) or not known:
             print("AMFI list doesn't line up with the NAV database – classifying by scheme name instead")
             amfi = {}
+    known = {v["category"] for v in amfi.values() if category_family(v["category"])} if amfi else set()
     meta = {}
     diag = {"fresh": 0, "in_amfi": 0, "our_category": 0, "direct_growth": 0}
     samples = []
