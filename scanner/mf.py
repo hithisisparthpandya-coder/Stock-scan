@@ -94,13 +94,22 @@ def amfi_categories() -> dict[int, dict]:
         return {}
 
 
-def load_universe(db: Path, amfi: dict) -> tuple[pd.DataFrame, dict]:
+def load_universe(db: Path, amfi: dict) -> tuple[pd.DataFrame, dict, bool]:
     con = sqlite3.connect(db)
     latest = pd.read_sql("select scheme_code, max(date) d from nav group by scheme_code", con)
     newest = latest["d"].max()
     fresh = set(latest.loc[latest["d"] >= (pd.Timestamp(newest) - pd.Timedelta(days=10)).strftime("%Y-%m-%d"),
                            "scheme_code"])
     schemes = pd.read_sql("select scheme_code, scheme_name from schemes", con)
+    known = {c for _, _, c in BUCKETS.values()}
+    if amfi:
+        cats = pd.Series([v["category"] for v in amfi.values()]).value_counts()
+        print(f"AMFI list: {len(amfi)} schemes; {sum(c in known for c in cats.index)} of our categories found")
+        print("  top categories:", dict(cats.head(12)))
+        overlap = len(set(amfi) & set(int(c) for c in schemes["scheme_code"]))
+        if overlap < 0.5 * len(amfi) or not any(c in known for c in cats.index):
+            print("AMFI list doesn't line up with the NAV database – classifying by scheme name instead")
+            amfi = {}
     meta = {}
     for code, name in schemes.itertuples(index=False):
         if code not in fresh:
@@ -108,15 +117,19 @@ def load_universe(db: Path, amfi: dict) -> tuple[pd.DataFrame, dict]:
         a = amfi.get(int(code))
         if amfi and a is None:
             continue                                  # not in AMFI's live list
-        b = bucket_for(a["name"] if a else name, a["category"] if a else None)
+        nm = (a["name"] if a else name).strip()
+        cat = a["category"] if a else None
+        # AMFI category known to us → use it; another AMFI category (sectoral, overseas…) → skip; none → name
+        b = bucket_for(nm, cat) if cat in known else (bucket_for(nm, None) if cat is None else None)
         if b:
-            meta[int(code)] = {"name": (a["name"] if a else name).strip(), "bucket": b,
-                               "amc": a["amc"] if a else None}
+            meta[int(code)] = {"name": nm, "bucket": b, "amc": a["amc"] if a else None}
+    if not meta:
+        raise SystemExit("No funds could be classified – check the AMFI file format and NAV database.")
     codes = ",".join(str(c) for c in meta)
     nav = pd.read_sql(f"select scheme_code, date, nav from nav where scheme_code in ({codes})", con,
                       parse_dates=["date"])
     con.close()
-    return nav, meta
+    return nav, meta, bool(amfi)
 
 
 # ------------------------------------------------------------------ metrics
@@ -303,7 +316,7 @@ def projections(weights: dict, ranked: dict, navs: dict, horizons=(3, 5, 7, 10))
 
 # ------------------------------------------------------------------ report
 def build(db: Path, amfi: dict) -> dict:
-    nav, meta = load_universe(db, amfi)
+    nav, meta, used_amfi = load_universe(db, amfi)
     navs = {int(c): g.set_index("date")["nav"].sort_index() for c, g in nav.groupby("scheme_code")}
     by_bucket: dict[str, dict] = {k: {} for k in BUCKETS}
     for code, info in meta.items():
@@ -351,7 +364,7 @@ def build(db: Path, amfi: dict) -> dict:
     return {
         "generated_at": dt.datetime.now(IST).isoformat(timespec="minutes"), "nav_date": nav_date,
         "universe": {"schemes": len(meta), "source": "AMFI NAV history (captn3m0/historical-mf-data)",
-                     "categories": "AMFI scheme categories" if amfi else "scheme names (AMFI list unavailable)"},
+                     "categories": "AMFI scheme categories" if used_amfi else "scheme names (AMFI list unavailable)"},
         "buckets": buckets, "evidence": evidence, "profiles": profiles,
         "rules": [
             "Direct plan, Growth option only – no distributor commission, no IDCW payouts.",
