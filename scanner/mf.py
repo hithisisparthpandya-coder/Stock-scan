@@ -94,6 +94,19 @@ def amfi_categories() -> dict[int, dict]:
         return {}
 
 
+def load_universe_by_name(con, schemes, fresh):
+    meta = {}
+    for code, name in schemes.itertuples(index=False):
+        if code in fresh:
+            b = bucket_for(name.strip(), None)
+            if b:
+                meta[int(code)] = {"name": name.strip(), "bucket": b, "amc": None}
+    codes = ",".join(str(c) for c in meta)
+    nav = pd.read_sql(f"select scheme_code, date, nav from nav where scheme_code in ({codes})", con, parse_dates=["date"])
+    con.close()
+    return nav, meta, False
+
+
 def load_universe(db: Path, amfi: dict) -> tuple[pd.DataFrame, dict, bool]:
     con = sqlite3.connect(db)
     latest = pd.read_sql("select scheme_code, max(date) d from nav group by scheme_code", con)
@@ -111,18 +124,35 @@ def load_universe(db: Path, amfi: dict) -> tuple[pd.DataFrame, dict, bool]:
             print("AMFI list doesn't line up with the NAV database – classifying by scheme name instead")
             amfi = {}
     meta = {}
+    diag = {"fresh": 0, "in_amfi": 0, "our_category": 0, "direct_growth": 0}
+    samples = []
     for code, name in schemes.itertuples(index=False):
         if code not in fresh:
             continue                                  # closed / merged schemes
+        diag["fresh"] += 1
         a = amfi.get(int(code))
         if amfi and a is None:
             continue                                  # not in AMFI's live list
+        diag["in_amfi"] += 1
+        if a and a["category"] in known:
+            diag["our_category"] += 1
+            from mf_classify import is_direct_growth
+            if is_direct_growth(a["name"]):
+                diag["direct_growth"] += 1
+            elif len(samples) < 5:
+                samples.append(a["name"])
         nm = (a["name"] if a else name).strip()
         cat = a["category"] if a else None
         # AMFI category known to us → use it; another AMFI category (sectoral, overseas…) → skip; none → name
         b = bucket_for(nm, cat) if cat in known else (bucket_for(nm, None) if cat is None else None)
         if b:
             meta[int(code)] = {"name": nm, "bucket": b, "amc": a["amc"] if a else None}
+    print("Universe funnel:", diag, "→ classified", len(meta))
+    if samples:
+        print("  e.g. not direct-growth:", samples)
+    if not meta and amfi:
+        print("Nothing classified via AMFI categories – retrying by scheme name")
+        return load_universe_by_name(con, schemes, fresh)
     if not meta:
         raise SystemExit("No funds could be classified – check the AMFI file format and NAV database.")
     codes = ",".join(str(c) for c in meta)
