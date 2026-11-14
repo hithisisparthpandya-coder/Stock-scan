@@ -1,229 +1,688 @@
 {
- "as_of": "2026-11-12",
+ "as_of": "2026-11-13",
  "funnel": [
   {
    "stage": "Universe (NSE EQ stocks traded today)",
-   "count": 2748
+   "count": 2744
   },
   {
    "stage": "Not on ASM/GSM or a 2%/5% circuit band",
-   "count": 2161
+   "count": 2158
   },
   {
    "stage": "Liquid (≥ ₹10 cr/day; 2× that below ₹50)",
-   "count": 815
+   "count": 824
   },
   {
    "stage": "Uptrend (price > 50 DMA > rising 200 DMA)",
-   "count": 223
+   "count": 227
   },
   {
    "stage": "Volume ≥ 1.5× 20-day average",
-   "count": 46
+   "count": 38
   },
   {
    "stage": "Valid setup (breakout or pullback bounce)",
-   "count": 37
+   "count": 24
   },
   {
    "stage": "Stop 1.5–8% away, ≥ 1 share fits",
-   "count": 2
+   "count": 7
   },
   {
    "stage": "No results due in next 7 days",
-   "count": 2
+   "count": 7
   },
   {
    "stage": "Fundamentals OK or unverified (failures dropped)",
-   "count": 2
+   "count": 4
   }
  ],
  "picks": [
   {
-   "symbol": "APLAPOLLO",
-   "name": "APL Apollo Tubes Limited",
-   "setup": "Pullback to support",
+   "symbol": "IIFLCAPS",
+   "name": "IIFL Capital Services Limited",
+   "setup": "Breakout from base",
    "low_priced": false,
-   "entry": 2225.7,
-   "stop": 2155.77,
-   "target": 2365.57,
-   "qty": 3,
-   "capital": 6677.0,
-   "max_loss": 210.0,
-   "risk_pct": 3.14,
-   "vol_ratio": 1.68,
-   "ret63_pct": 6.9,
-   "sma50": 2160.64,
-   "sma200": 2019.53,
-   "turnover_cr": 156.8,
-   "score": 90.0,
-   "next_results": "2027-01-21",
-   "fund_status": "pass",
-   "fund_notes": [],
-   "roe_pct": 25.3,
-   "de": 0.17,
-   "mcap_cr": 61798,
-   "sector": "Basic Materials"
-  },
-  {
-   "symbol": "MARKSANS",
-   "name": "Marksans Pharma Limited",
-   "setup": "Pullback to support",
-   "low_priced": false,
-   "entry": 320.0,
-   "stop": 301.53,
-   "target": 356.93,
-   "qty": 18,
-   "capital": 5760.0,
-   "max_loss": 332.0,
-   "risk_pct": 5.77,
-   "vol_ratio": 1.52,
-   "ret63_pct": -3.5,
-   "sma50": 317.84,
-   "sma200": 249.21,
-   "turnover_cr": 44.3,
-   "score": 40.0,
+   "entry": 354.15,
+   "stop": 345.51,
+   "target": 371.42,
+   "qty": 24,
+   "capital": 8500.0,
+   "max_loss": 207.0,
+   "risk_pct": 2.44,
+   "vol_ratio": 9.56,
+   "ret63_pct": 5.7,
+   "sma50": 345.02,
+   "sma200": 327.85,
+   "turnover_cr": 74.3,
+   "score": 71.4,
    "next_results": null,
    "fund_status": "pass",
    "fund_notes": [],
-   "roe_pct": 18.6,
-   "de": 0.14,
-   "mcap_cr": 14503,
-   "sector": "Healthcare"
+   "roe_pct": 19.5,
+   "de": 0.65,
+   "mcap_cr": 13198,
+   "sector": "Financial Services"
+  },
+  {
+   "symbol": "GESHIP",
+   "name": "The Great Eastern Shipping Company Limited",
+   "setup": "Pullback to support",
+   "low_priced": false,
+   "entry": 1518.0,
+   "stop": 1402.45,
+   "target": 1749.09,
+   "qty": 3,
+   "capital": 4554.0,
+   "max_loss": 347.0,
+   "risk_pct": 7.61,
+   "vol_ratio": 1.93,
+   "ret63_pct": 16.5,
+   "sma50": 1494.78,
+   "sma200": 1436.94,
+   "turnover_cr": 129.4,
+   "score": 60.0,
+   "next_results": null,
+   "fund_status": "pass",
+   "fund_notes": [],
+   "roe_pct": 26.0,
+   "de": 0.04,
+   "mcap_cr": 20400,
+   "sector": "Industrials"
+  },
+  {
+   "symbol": "ABB",
+   "name": "ABB India Limited",
+   "setup": "Pullback to support",
+   "low_priced": false,
+   "entry": 7054.5,
+   "stop": 6809.78,
+   "target": 7543.94,
+   "qty": 1,
+   "capital": 7054.0,
+   "max_loss": 245.0,
+   "risk_pct": 3.47,
+   "vol_ratio": 1.55,
+   "ret63_pct": -6.5,
+   "sma50": 6899.78,
+   "sma200": 6862.82,
+   "turnover_cr": 244.1,
+   "score": 25.7,
+   "next_results": "2026-11-13",
+   "fund_status": "pass",
+   "fund_notes": [],
+   "roe_pct": 19.1,
+   "de": 0.02,
+   "mcap_cr": 149491,
+   "sector": "Industrials"
+  },
+  {
+   "symbol": "ITDC",
+   "name": "India Tourism Development Corporation Limited",
+   "setup": "Pullback to support",
+   "low_priced": false,
+   "entry": 667.9,
+   "stop": 631.08,
+   "target": 741.54,
+   "qty": 9,
+   "capital": 6011.0,
+   "max_loss": 331.0,
+   "risk_pct": 5.51,
+   "vol_ratio": 41.57,
+   "ret63_pct": -3.6,
+   "sma50": 651.35,
+   "sma200": 603.37,
+   "turnover_cr": 13.6,
+   "score": 47.1,
+   "next_results": null,
+   "fund_status": "unknown",
+   "fund_notes": [
+    "missing: ROE"
+   ],
+   "roe_pct": null,
+   "de": 0.0,
+   "mcap_cr": 5729,
+   "sector": "Consumer Cyclical"
   }
  ],
  "market": {
   "ok": true,
-  "close": 25299.35,
-  "sma50": 23310.51,
+  "close": 25144.3,
+  "sma50": 23331.79,
   "note": "Nifty above its 50 DMA: new trades allowed."
  },
  "regime": {
   "regime": "amber",
   "note": "Mixed market – pullbacks only, in the strongest stocks, at half risk.",
-  "breadth": 0.47,
-  "nifty": 25299.35,
-  "nifty_sma50": 23267.105,
-  "nifty_sma200": 23884.961,
-  "vol_percentile": 0.738
+  "breadth": 0.467,
+  "nifty": 25144.3,
+  "nifty_sma50": 23292.037,
+  "nifty_sma200": 23882.215,
+  "vol_percentile": 0.774
  },
  "strategy": "baseline",
  "surveillance_checked": true,
  "circulars": [
   {
    "source": "SEBI",
-   "title": "Niveshak Shivir to be held on November 17, 2026 at New Delhi",
-   "link": "https://www.sebi.gov.in/media-and-notifications/press-releases/nov-2026/niveshak-shivir-to-be-held-on-november-17-2026-at-new-delhi_105731.html",
-   "date": "2026-11-12"
+   "title": "General Remittance Order dated November 13, 2026 issued against Subhalakshmi M S under RC No. 7712 of 2024 in the matter of Arvind Remedies Ltd.",
+   "link": "https://www.sebi.gov.in/enforcement/recovery-proceedings/nov-2026/general-remittance-order-dated-november-13-2026-issued-against-subhalakshmi-m-s-under-rc-no-7712-of-2024-in-the-matter-of-arvind-remedies-ltd-_105772.html",
+   "date": "2026-11-13"
   },
   {
    "source": "SEBI",
-   "title": "Appeal No. 7154 of 2026 filed by Imran",
-   "link": "https://www.sebi.gov.in/enforcement/orders/nov-2026/appeal-no-7154-of-2026-filed-by-imran_105726.html",
-   "date": "2026-11-12"
+   "title": "General Remittance Order dated November 13, 2026 issued against S Sengolancy Beaula under RC No. 7711 of 2024 in the matter of Arvind Remedies Ltd.",
+   "link": "https://www.sebi.gov.in/enforcement/recovery-proceedings/nov-2026/general-remittance-order-dated-november-13-2026-issued-against-s-sengolancy-beaula-under-rc-no-7711-of-2024-in-the-matter-of-arvind-remedies-ltd-_105770.html",
+   "date": "2026-11-13"
   },
   {
    "source": "SEBI",
-   "title": "Appeal No. 7153 of 2026 filed by Jamil Mian",
-   "link": "https://www.sebi.gov.in/enforcement/orders/nov-2026/appeal-no-7153-of-2026-filed-by-jamil-mian_105725.html",
-   "date": "2026-11-12"
+   "title": "General Remittance Order dated November 13, 2026 issued against M Sethujanani under RC No. 7709 of 2024 in the matter of Arvind Remedies Ltd.",
+   "link": "https://www.sebi.gov.in/enforcement/recovery-proceedings/nov-2026/general-remittance-order-dated-november-13-2026-issued-against-m-sethujanani-under-rc-no-7709-of-2024-in-the-matter-of-arvind-remedies-ltd-_105769.html",
+   "date": "2026-11-13"
   },
   {
    "source": "SEBI",
-   "title": "Appeal No. 7152 of 2026 filed by Amit Harlalka",
-   "link": "https://www.sebi.gov.in/enforcement/orders/nov-2026/appeal-no-7152-of-2026-filed-by-amit-harlalka_105723.html",
-   "date": "2026-11-12"
+   "title": "General Remittance Order dated November 13, 2026 issued against Shreyanse Finance Ltd under RC No. 7708 of 2024 in the matter of Arvind Remedies Ltd.",
+   "link": "https://www.sebi.gov.in/enforcement/recovery-proceedings/nov-2026/general-remittance-order-dated-november-13-2026-issued-against-shreyanse-finance-ltd-under-rc-no-7708-of-2024-in-the-matter-of-arvind-remedies-ltd-_105767.html",
+   "date": "2026-11-13"
   },
   {
    "source": "SEBI",
-   "title": "Appeal No. 7151 of 2026 filed by Aakash Goel",
-   "link": "https://www.sebi.gov.in/enforcement/orders/nov-2026/appeal-no-7151-of-2026-filed-by-aakash-goel_105722.html",
-   "date": "2026-11-12"
+   "title": "General Remittance Order dated November 13, 2026 issued against Murali Prakash Naidu under RC No. 7707 of 2024 in the matter of Arvind Remedies Ltd",
+   "link": "https://www.sebi.gov.in/enforcement/recovery-proceedings/nov-2026/general-remittance-order-dated-november-13-2026-issued-against-murali-prakash-naidu-under-rc-no-7707-of-2024-in-the-matter-of-arvind-remedies-ltd_105765.html",
+   "date": "2026-11-13"
   },
   {
    "source": "SEBI",
-   "title": "Appeal No. 7150 of 2026 filed by Nirvesh Devi",
-   "link": "https://www.sebi.gov.in/enforcement/orders/nov-2026/appeal-no-7150-of-2026-filed-by-nirvesh-devi_105720.html",
-   "date": "2026-11-12"
+   "title": "General Remittance Order dated November 13, 2026 issued against Solomon Y under RC No. 7706 of 2024 in the matter of Arvind Remedies Ltd.",
+   "link": "https://www.sebi.gov.in/enforcement/recovery-proceedings/nov-2026/general-remittance-order-dated-november-13-2026-issued-against-solomon-y-under-rc-no-7706-of-2024-in-the-matter-of-arvind-remedies-ltd-_105763.html",
+   "date": "2026-11-13"
   },
   {
    "source": "SEBI",
-   "title": "Appeal No. 7149 of 2026 filed by Rajendra Kumar Izardar",
-   "link": "https://www.sebi.gov.in/enforcement/orders/nov-2026/appeal-no-7149-of-2026-filed-by-rajendra-kumar-izardar_105719.html",
-   "date": "2026-11-12"
+   "title": "General Remittance Order dated November 13, 2026 issued against Raja P under RC No. 7704 of 2024 in the matter of Arvind Remedies Ltd.",
+   "link": "https://www.sebi.gov.in/enforcement/recovery-proceedings/nov-2026/general-remittance-order-dated-november-13-2026-issued-against-raja-p-under-rc-no-7704-of-2024-in-the-matter-of-arvind-remedies-ltd-_105761.html",
+   "date": "2026-11-13"
   },
   {
    "source": "SEBI",
-   "title": "Appeal No. 7147 of 2026 filed by Vaibhav Bansal",
-   "link": "https://www.sebi.gov.in/enforcement/orders/nov-2026/appeal-no-7147-of-2026-filed-by-vaibhav-bansal_105717.html",
-   "date": "2026-11-12"
+   "title": "General Remittance Order dated November 13, 2026 issued against M Sasikala under RC No.7699 of 2024 in the matter of Arvind Remedies Ltd.",
+   "link": "https://www.sebi.gov.in/enforcement/recovery-proceedings/nov-2026/general-remittance-order-dated-november-13-2026-issued-against-m-sasikala-under-rc-no-7699-of-2024-in-the-matter-of-arvind-remedies-ltd-_105759.html",
+   "date": "2026-11-13"
+  },
+  {
+   "source": "NSE",
+   "title": "Early Pay-in of Securities for BN Agrochem Limited (BNAGROCHEM)",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CMPT77438.pdf",
+   "date": "2026-11-13"
+  },
+  {
+   "source": "NSE",
+   "title": "Listing of further issues of Z-Tech (India) Limited",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CML77437.pdf",
+   "date": "2026-11-13"
   },
   {
    "source": "NSE",
    "title": "Listing of further issues of securities",
-   "link": "https://nsearchives.nseindia.com/content/circulars/CML77413.pdf",
-   "date": "2026-11-12"
+   "link": "https://nsearchives.nseindia.com/content/circulars/CML77436.pdf",
+   "date": "2026-11-13"
   },
   {
    "source": "NSE",
-   "title": "Face Value Split and Change in ISIN - BN Agrochem Limited (BNAGROCHEM)",
-   "link": "https://nsearchives.nseindia.com/content/circulars/CML77412.pdf",
-   "date": "2026-11-12"
+   "title": "Applicability of Short-Term Additional Surveillance Measure (ST-ASM)",
+   "link": "https://nsearchives.nseindia.com/content/circulars/SURV77435.zip",
+   "date": "2026-11-13"
   },
   {
    "source": "NSE",
-   "title": "Launch of H-SIF Hybrid Long-Short Fund (SIF) on NSE MF Invest Platform",
-   "link": "https://nsearchives.nseindia.com/content/circulars/NMF77411.pdf",
-   "date": "2026-11-12"
+   "title": "Applicability of Additional Surveillance Measure (ASM)",
+   "link": "https://nsearchives.nseindia.com/content/circulars/SURV77434.zip",
+   "date": "2026-11-13"
   },
   {
    "source": "NSE",
-   "title": "Algo Provider Empanelment for Providing Algorithmic Trading Solutions",
-   "link": "https://nsearchives.nseindia.com/content/circulars/INVG77410.pdf",
-   "date": "2026-11-12"
+   "title": "Suspension of trading in equity shares - Dr Agarwals Eye Hospital Limited",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CML77433.pdf",
+   "date": "2026-11-13"
   },
   {
    "source": "NSE",
-   "title": "Launch of DSP Fixed Maturity Plan (FMP) - Series 280 - 90 Days on NSE MF Invest Platform",
-   "link": "https://nsearchives.nseindia.com/content/circulars/NMF77409.pdf",
-   "date": "2026-11-12"
+   "title": "Applicability of Enhanced Surveillance Measure (ESM)",
+   "link": "https://nsearchives.nseindia.com/content/circulars/SURV77432.zip",
+   "date": "2026-11-13"
   },
   {
    "source": "NSE",
-   "title": "Listing of privately placed securities on the debt market segment of the Exchange",
-   "link": "https://nsearchives.nseindia.com/content/circulars/CML77408.pdf",
-   "date": "2026-11-12"
-  },
-  {
-   "source": "NSE",
-   "title": "Listing of privately placed securities on capital market segment",
-   "link": "https://nsearchives.nseindia.com/content/circulars/CML77407.pdf",
-   "date": "2026-11-12"
-  },
-  {
-   "source": "NSE",
-   "title": "Suspension of partly paid-up equity shares of Party Cruisers Limited",
-   "link": "https://nsearchives.nseindia.com/content/circulars/CML77406.pdf",
-   "date": "2026-11-12"
+   "title": "Removal of Exclusively listed companies of De-recognized/Non-operational/Exited Stock Exchanges placed on the Dissemination Board (DB)",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CML77431.pdf",
+   "date": "2026-11-13"
   }
  ],
  "paper": {
-  "summary": "📒 Paper account: ₹35,000 (+0.00% since 2026-11-12) · 0 open · 0 closed",
-  "events": [],
+  "summary": "📒 Paper account: ₹35,035 (+0.10% since 2026-11-12) · 1 open · 0 closed",
+  "events": [
+   "2026-11-13: BOUGHT APLAPOLLO 3 @ ₹2,235.30, stop ₹2,155.77"
+  ],
   "queued": [
    {
-    "symbol": "APLAPOLLO",
-    "limit": 2247.96,
-    "stop": 2155.77
+    "symbol": "IIFLCAPS",
+    "limit": 357.69,
+    "stop": 345.51
    },
    {
-    "symbol": "MARKSANS",
-    "limit": 323.2,
-    "stop": 301.53
+    "symbol": "GESHIP",
+    "limit": 1533.18,
+    "stop": 1402.45
+   },
+   {
+    "symbol": "ABB",
+    "limit": 7125.05,
+    "stop": 6809.78
+   },
+   {
+    "symbol": "ITDC",
+    "limit": 674.58,
+    "stop": 631.08
    }
   ]
  },
- "generated_at": "2026-11-13T04:38+05:30",
+ "sentiment": {
+  "mood": {
+   "score": 54.4,
+   "band": "neutral",
+   "risk_mult": 1.0,
+   "max_new": 3,
+   "note": "Neutral – normal rules.",
+   "components": [
+    {
+     "key": "breadth",
+     "label": "Breadth (stocks above 50-DMA)",
+     "value": 47,
+     "weight": 0.25
+    },
+    {
+     "key": "advance",
+     "label": "Advancers today",
+     "value": 36,
+     "weight": 0.2
+    },
+    {
+     "key": "calm",
+     "label": "Calm volatility (India VIX)",
+     "value": 28,
+     "weight": 0.2
+    },
+    {
+     "key": "trend",
+     "label": "Nifty trend vs 50-DMA",
+     "value": 100,
+     "weight": 0.15
+    },
+    {
+     "key": "news",
+     "label": "News tone",
+     "value": 56,
+     "weight": 0.2
+    },
+    {
+     "key": "flows",
+     "label": "FII + DII flows",
+     "value": 91,
+     "weight": 0.1
+    }
+   ]
+  },
+  "news_tone": {
+   "avg": 0.115,
+   "count": 48,
+   "positive": 28,
+   "negative": 20,
+   "top_positive": [
+    {
+     "title": "Jagatjit Industries Q2 net loss narrows to Rs 4 cr, revenue rises 90%",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/earnings/jagatjit-industries-q2-net-loss-narrows-to-rs-4-cr-revenue-rises-90/articleshow/135801327.cms",
+     "source": "Economic Times",
+     "score": 0.848
+    },
+    {
+     "title": "Stock under ₹100: Turtlemint hits 5% upper circuit as Q2 loss narrows 67%",
+     "link": "https://www.business-standard.com/markets/news/stock-under-100-turtlemint-hits-5-upper-circuit-as-q2-loss-narrows-67-126111300718_1.html",
+     "source": "Business Standard",
+     "score": 0.848
+    },
+    {
+     "title": "Honasa, Nykaa rally up to 4% in subdued market; record 52-week highs",
+     "link": "https://www.business-standard.com/markets/news/honasa-nykaa-rally-up-to-4-in-subdued-market-record-52-week-highs-126111300603_1.html",
+     "source": "Business Standard",
+     "score": 0.834
+    },
+    {
+     "title": "Action Construction rallies 6%, nears 52-week high on healthy Q2 results",
+     "link": "https://www.business-standard.com/markets/news/action-construction-rallies-6-nears-52-week-high-on-healthy-q2-results-126111300421_1.html",
+     "source": "Business Standard",
+     "score": 0.834
+    }
+   ],
+   "top_negative": [
+    {
+     "title": "Park Medi World shares plummet 10% as Q2 profit tanks 31%, margins slide",
+     "link": "https://www.business-standard.com/markets/news/park-medi-world-shares-fall-10-as-q2-profit-tanks-31-margins-slide-126111300629_1.html",
+     "source": "Business Standard",
+     "score": -0.848
+    },
+    {
+     "title": "Bharat Dynamics shares fall 3% as Q2 margin pressure weighs on earnings",
+     "link": "https://www.business-standard.com/markets/news/bharat-dynamics-shares-fall-3-as-q2-margin-pressure-weighs-on-earnings-126111300659_1.html",
+     "source": "Business Standard",
+     "score": -0.8
+    },
+    {
+     "title": "Nifty Bank, Auto, Realty skid 1% as inflation stokes RBI rate hike fears",
+     "link": "https://www.business-standard.com/markets/news/nifty-bank-auto-realty-skid-1-as-inflation-stokes-rbi-rate-hike-fears-126111300433_1.html",
+     "source": "Business Standard",
+     "score": -0.762
+    },
+    {
+     "title": "Gold Edges Up, Still On Track for Worst Weekly Slump Since June",
+     "link": "https://www.livemint.com/market/gold-edges-up-still-on-track-for-worst-weekly-slump-since-june-11794595223804.html",
+     "source": "Mint",
+     "score": -0.635
+    }
+   ]
+  },
+  "list": [
+   {
+    "symbol": "IIFLCAPS",
+    "name": "IIFL Capital Services Limited",
+    "setup": "Breakout from base",
+    "low_priced": false,
+    "entry": 354.15,
+    "stop": 345.51,
+    "target": 371.42,
+    "qty": 24,
+    "capital": 8500.0,
+    "max_loss": 207.0,
+    "risk_pct": 2.44,
+    "vol_ratio": 9.56,
+    "ret63_pct": 5.7,
+    "sma50": 345.02,
+    "sma200": 327.85,
+    "turnover_cr": 74.3,
+    "score": 71.4,
+    "next_results": null,
+    "fund_status": "pass",
+    "fund_notes": [],
+    "roe_pct": 19.5,
+    "de": 0.65,
+    "mcap_cr": 13198,
+    "sector": "Financial Services",
+    "industry": "",
+    "adj_score": 71.4,
+    "news_N": 0.0,
+    "sector_chg": null,
+    "reasons": [
+     "news neutral (+0.00, 3 headlines)"
+    ],
+    "veto": null,
+    "headlines": [
+     {
+      "title": "IIFL Capital open offer: 4.53% shares tendered as FIH stake hits 38%",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNQ3I5YU9ZMEhXWllRajFGbGx1U1MxTXBCN3ZlbGgtVm0zLXE4M3JqZm9UX0lDMzFucXVTVkF6SVNrcTZ6Q0pjUEN2elBTb0pyYnRxT0kyYVNkeG0tVXc0YXZOMGVvSmExYi1OOU5CMzRiZUo3M1pWX1lpdkNlQ2w4RHdtenQ2bXhVRnRKbmpiaEQteGJZZlhhWlJnbXY3M1lycXc0M2dTWVExbTdKQ2Q0UHFONW5uNEU?oc=5",
+      "source": "scanx.trade",
+      "age_h": 42.1,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "IIFL Capital Services Open Offer: Day-One Tender Update",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPdnFOSkFZR1dCbzRsWDhkTEdXeHN0S3VJY1ViNGJpdFVPLUxrcjZlaU5hTHduQzdqV0tBLTJ0UDc4TXRwNnI2RnYtZjZfc3FhMXZQVFMxWjNJa3lSZy04ZFBBNHBUbjNMMFc0eUtsazg2V25ZNUZITFpCYjU0VGVkZTdfbzFDSU9DNzlRajdJeXVFNWRpQmNqNmNucXdxcjNJdnUyUjRyeXhicU43UW5YZjBMc2xlZld5NENVdmo4WjA?oc=5",
+      "source": "Kalkine India",
+      "age_h": 62.4,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "IIFL Capital Services Open Offer: Tender Update Nov 2026",
+      "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNak9ac2JacDFsYWM5OXZzZk1LUWNFbXc5cTZrREFhY0pzM25abUQxT1pzeWNWbWJhQUxDOXhNb1dRVk1mX3R2aWlqMlFNbW1VZnNIdk9URl9JTzF5eGpaaXVwLXRMNVFIYVNCNnZFZDZjLVNIcnlLOG9nM3VuV09WZExfQ3l1MmMzOTlsNE5qT2dJR3lLaENFQjFnRV81M2Y3dHVsQWZrcDJIMDR1OWFHR0RycG42VjZkVGtieVNxLXhWN21oQjBtaTQ1ZkM5M0NFQmJ0SXI5cTNuSWlZOWV6WGl4N0VYdkpxTXJZ?oc=5",
+      "source": "Kalkine India",
+      "age_h": 62.4,
+      "score": 0.0,
+      "red_flag": false
+     }
+    ],
+    "status": "suggested"
+   },
+   {
+    "symbol": "GESHIP",
+    "name": "The Great Eastern Shipping Company Limited",
+    "setup": "Pullback to support",
+    "low_priced": false,
+    "entry": 1518.0,
+    "stop": 1402.45,
+    "target": 1749.09,
+    "qty": 3,
+    "capital": 4554.0,
+    "max_loss": 347.0,
+    "risk_pct": 7.61,
+    "vol_ratio": 1.93,
+    "ret63_pct": 16.5,
+    "sma50": 1494.78,
+    "sma200": 1436.94,
+    "turnover_cr": 129.4,
+    "score": 60.0,
+    "next_results": null,
+    "fund_status": "pass",
+    "fund_notes": [],
+    "roe_pct": 26.0,
+    "de": 0.04,
+    "mcap_cr": 20400,
+    "sector": "Industrials",
+    "industry": "",
+    "adj_score": 61.3,
+    "news_N": 0.088,
+    "sector_chg": null,
+    "reasons": [
+     "news neutral (+0.09, 5 headlines)"
+    ],
+    "veto": null,
+    "headlines": [
+     {
+      "title": "Great Eastern Shipping releases audio recording of Q2FY27 earnings call",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOZUFLSnF2NTFaemV1dEh3OVlDcldPa2kwRGlza1JudGhkNFFhdnhrTkpCNHpEN0I2Z1pYMV9HQ0Y4RkFKbE5mYWpydVh5VFVLVXp0SlJ3RWsyekRPVTZ3Q04tQ3p1eEsxcDh6NGlyVE1yZVFmYWNQdnVucGUzNy1RaXNIclpoMWJ0SHUzRS1UZTlpcXotM21oN3djbllXSlI2NkFsTEVzNHVlNU55VFlLTjZnbHlzcWg5OTl6cVFsRmxBdDg?oc=5",
+      "source": "scanx.trade",
+      "age_h": 59.1,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "Great Eastern Shipping (NSE:GESHIP): What Was Disclosed in the Q2 FY27 Earnings Call?",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPWi1xb3hRaEV2QWFQVGszWGdzNmo2MXF6a0h3cHM1YlQ1bDFfYWVEd0ZSakJOV29SQ2JybHFnaUtmT2pobFJIaFNLZkRvMDAydTF2cVpzSmwwR0JHcUdDVm1vM3hBTjk3MjZQTFhnNGpUcU51R3pocllIejgtS0tPT0xJNnFpazZXcjdvWExOSndmMG9PYTNxRElhREM4bXFMOExjT09lUk1wUFVfV2dISmJ4ZHVsd1NtNlR6TlhJWnBwTlNjWmNV?oc=5",
+      "source": "Kalkine India",
+      "age_h": 59.2,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "Great Eastern Shipping Q2 FY27 slides: record profit on tanker surge By Investing.com",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPczhabGNHSkl4LVl5cVRkTlhUR3pEdmVaVl9YaGZzVVRUWXFaaHNIUWhjM3p6YlNiZVR0TFpZUXRpT2dqYXZhazR5dFlHbUNZVjZFVHZ6dkNCR3VkOHd0TTY5Y2FLSjg5ZlhhRWhZZGlmdmxCcVdZWG5ZUmtmVFlhYWpKai1NYlhVcExIZ285bndZVWhtdHVaNnBkdU5pMmU3WnVybklsZWlIbXk0TldIQmsxMXBfclZrS2drUS1xZ1VQXzE0Z3Vn?oc=5",
+      "source": "Investing.com India",
+      "age_h": 62.9,
+      "score": 0.818,
+      "red_flag": false
+     }
+    ],
+    "status": "suggested"
+   },
+   {
+    "symbol": "ITDC",
+    "name": "India Tourism Development Corporation Limited",
+    "setup": "Pullback to support",
+    "low_priced": false,
+    "entry": 667.9,
+    "stop": 631.08,
+    "target": 741.54,
+    "qty": 9,
+    "capital": 6011.0,
+    "max_loss": 331.0,
+    "risk_pct": 5.51,
+    "vol_ratio": 41.57,
+    "ret63_pct": -3.6,
+    "sma50": 651.35,
+    "sma200": 603.37,
+    "turnover_cr": 13.6,
+    "score": 47.1,
+    "next_results": null,
+    "fund_status": "unknown",
+    "fund_notes": [
+     "missing: ROE"
+    ],
+    "roe_pct": null,
+    "de": 0.0,
+    "mcap_cr": 5729,
+    "sector": "Consumer Cyclical",
+    "industry": "",
+    "adj_score": 51.2,
+    "news_N": 0.27,
+    "sector_chg": null,
+    "reasons": [
+     "news positive (+0.27, 3 headlines)"
+    ],
+    "veto": null,
+    "headlines": [
+     {
+      "title": "ITDC (NSE:ITDC) Q2 FY27: Standalone Net Profit Up 12.6% to ₹18.88 Crore",
+      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxON1V5aHJrSVdnYVhoVGVFNlh5QWY1RFcxMFJmazBsZy1TRWQxOF95RzR1dXY2OUZpTjVLdzlZQ0FhM05XVmEza281Z3B1WHZ3Ry1pWnhTSjMyS2FNUDh5V25CRXdta2EzVEJNM0JvYVNLamlzVXNoTDl2cmNzNjNNQlNRN2hmTENibE1IX0YwemZCMFpxb0RSZDg4XzROMV9vUThEU00xal9XbHo4OTlsNVdhdlB4RGhQWjFkREZpNW9nMWVWdkFoTEEwdjhKTHdNYWYwcVFyRzNmeWZnVk9NbE1MNDNWYUpub202cDVvSQ?oc=5",
+      "source": "Kalkine India",
+      "age_h": 21.0,
+      "score": 0.762,
+      "red_flag": false
+     },
+     {
+      "title": "India Tourism Development Corporation to review Q2 results",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxORXhRRnl2c2piTU5VYTRPYnV3WEhLSWFXd0t5RHotNWlZcEFRREQ5NFhpcTRwNWUtWW1FOVlPX2lGZ0x6ckx3NHZwckFsTVVQdU9JSlp5UkxSZzFlbWJEVl9zeVlXRWNCUXRRaUZmLVo5cFd2OFJsRk1UaEQybUtJbElxb2g5WVh3eWEwOEtTMDZ4YnozSV93OFNVcw?oc=5",
+      "source": "Multibagg AI",
+      "age_h": 37.2,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "ITDC’s Hotel Exit Programme Still Awaits State Transfers",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPU0tOMGd0WlY1bm9RLWJ3Nl8wU3VSU2VYRV9pLV9oLWFPLUZ5alA5ZHRKR1VqbVM0eFZTd3NYTTZROHAxRFkzMW0xc3dPN2RublVXMGJ0WlY1ZkpIS0ZGWFIweWNRNUxzM0h5QWZCUWNLbzd5Q0haeFpiZnpHNkd6LUVPVXhJZVJhRjNVN0dOSzFmeV9rSTc2bUZCU0t2b3ZIMmhQQkVONTkyaHgta2VZQ2NPeTEweEE4?oc=5",
+      "source": "Multibagg AI",
+      "age_h": 37.2,
+      "score": 0.0,
+      "red_flag": false
+     }
+    ],
+    "status": "suggested"
+   },
+   {
+    "symbol": "ABB",
+    "name": "ABB India Limited",
+    "setup": "Pullback to support",
+    "low_priced": false,
+    "entry": 7054.5,
+    "stop": 6809.78,
+    "target": 7543.94,
+    "qty": 1,
+    "capital": 7054.0,
+    "max_loss": 245.0,
+    "risk_pct": 3.47,
+    "vol_ratio": 1.55,
+    "ret63_pct": -6.5,
+    "sma50": 6899.78,
+    "sma200": 6862.82,
+    "turnover_cr": 244.1,
+    "score": 25.7,
+    "next_results": "2026-11-13",
+    "fund_status": "pass",
+    "fund_notes": [],
+    "roe_pct": 19.1,
+    "de": 0.02,
+    "mcap_cr": 149491,
+    "sector": "Industrials",
+    "industry": "",
+    "adj_score": 35.6,
+    "news_N": 0.662,
+    "sector_chg": null,
+    "reasons": [
+     "news positive (+0.66, 9 headlines)"
+    ],
+    "veto": null,
+    "headlines": [
+     {
+      "title": "ABB India Reports Record Q3 Orders",
+      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1jV24yTzVLZ05VRnp1b1VWN25TdW9iWmpRdmgxN0RhaHlMOFlvLW1JQXBQYzFpZUpFNzltLVlIZVhuaUxDTnNyOXFaU2lTN2pKOWNhN1BzeVVoNklpTlppNkpEcWlZWmIteFctb2hpUmp2TGRYWXlB?oc=5",
+      "source": "Machine Maker",
+      "age_h": 2.3,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "ABB India : Expanding demand across segments; solid execution",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNdVFVVnFLcWI5SG5UNTVhZ1ZuUEU1S3pXZGNjWVI1eE50TlRweXJLdzlBTUxYX09ucWc2cElGLU5YWUkyT1JyOGo1REVmSnMxREpOUDA3TzNfaU5qQS1vdGJPSUQtb1lRTmJxYlpFVklSeDRpeThQQkVrbTF1NXhUVWJCeXgtRDVDb2MxSkdDWFVSUHJJVWRPMi1UXzhCeWJwT0RGX2VQMmJNRUEwaC00Mw?oc=5",
+      "source": "www.marketscreener.com",
+      "age_h": 3.1,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "ABB India Limited Reports Earnings Results for the Third Quarter and Nine Months Ended September 30, 2026",
+      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQVXBLZVdlSUxvZ2dyM1B2NnhKcXM1elJDVmpUcFRCZWYyNjBtanVYbE95Y3d5U0pfU2czOWlYZTIxUzl3Y3p4S1gwWkM3eUZDV2FkTW9zb3hoOTNzZGszem1oLXVmTm1pN2xBckI1LW91eHR1UXFWMklYWW5XM3p1aTU4RC11UTJPSUZXZXFmXzRJT1V3WUo0VGRtOEVHeC14QTRUc3dVT1FRT3N3djhqV193LWROVDhsN1N5RTZDa3d1SEtKV09UWGxZeFpwT19qd19fd25paVZvMzJfeGFBSWV3RTQzZ3c?oc=5",
+      "source": "www.marketscreener.com",
+      "age_h": 11.8,
+      "score": 0.0,
+      "red_flag": false
+     }
+    ],
+    "status": "waitlist"
+   }
+  ],
+  "flows": {
+   "dii": -2253.58,
+   "date": "13-Nov-2026",
+   "fii": 5736.55
+  },
+  "sources": {
+   "vix_history": 246,
+   "nifty500_snapshot": 0,
+   "indices": true,
+   "fii_dii": true,
+   "news_feeds": [
+    "Business Standard",
+    "Economic Times",
+    "Mint",
+    "Moneycontrol"
+   ]
+  },
+  "vix": 15.78,
+  "advances": 367,
+  "declines": 649,
+  "paper": {
+   "summary": "📒 Sentiment paper account: ₹35,000 (+0.00% since 2026-11-13) · 0 open · 0 closed",
+   "queued": [
+    {
+     "symbol": "IIFLCAPS",
+     "limit": 357.69,
+     "stop": 345.51
+    },
+    {
+     "symbol": "GESHIP",
+     "limit": 1533.18,
+     "stop": 1402.45
+    },
+    {
+     "symbol": "ITDC",
+     "limit": 674.58,
+     "stop": 631.08
+    }
+   ]
+  }
+ },
+ "generated_at": "2026-11-14T08:52+05:30",
  "config": {
   "capital": 35000,
   "risk_pct": 0.01,
@@ -242,7 +701,7 @@
   "surveillance": true,
   "price_bands": true,
   "results_calendar": true,
-  "fundamentals_covered": 2,
-  "fundamentals_checked": 2
+  "fundamentals_covered": 7,
+  "fundamentals_checked": 7
  }
 }

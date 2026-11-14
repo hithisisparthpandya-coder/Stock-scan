@@ -2,54 +2,130 @@
  "demo": false,
  "strategy": "baseline",
  "started": "2026-11-12",
- "last_date": "2026-11-12",
+ "last_date": "2026-11-13",
  "capital": 35000,
- "equity": 35000.0,
- "return_pct": 0.0,
+ "equity": 35035.49,
+ "return_pct": 0.1,
  "metrics": {
+  "start": "2026-11-12",
+  "end": "2026-11-13",
+  "total_return_pct": 0.1,
+  "cagr_pct": 44.8,
+  "max_drawdown_pct": 0.0,
+  "sharpe": 0.0,
   "trades": 0
  },
- "open_positions": [],
- "queued": [
+ "open_positions": [
   {
    "symbol": "APLAPOLLO",
-   "limit": 2247.96,
-   "stop": 2155.77
+   "qty": 3,
+   "entry": 2235.3,
+   "stop": 2155.77,
+   "last": 2251.6,
+   "entry_date": "2026-11-13",
+   "setup": "Pullback to support",
+   "partial_done": false,
+   "unrealized": 35.0,
+   "r": 0.15
+  }
+ ],
+ "queued": [
+  {
+   "symbol": "IIFLCAPS",
+   "limit": 357.69,
+   "stop": 345.51
   },
   {
-   "symbol": "MARKSANS",
-   "limit": 323.2,
-   "stop": 301.53
+   "symbol": "GESHIP",
+   "limit": 1533.18,
+   "stop": 1402.45
+  },
+  {
+   "symbol": "ABB",
+   "limit": 7125.05,
+   "stop": 6809.78
+  },
+  {
+   "symbol": "ITDC",
+   "limit": 674.58,
+   "stop": 631.08
   }
  ],
  "recent_trades": [],
- "events_latest": [],
- "events_log": [],
+ "events_latest": [
+  "2026-11-13: BOUGHT APLAPOLLO 3 @ ₹2,235.30, stop ₹2,155.77"
+ ],
+ "events_log": [
+  "2026-11-13: BOUGHT APLAPOLLO 3 @ ₹2,235.30, stop ₹2,155.77"
+ ],
  "equity_curve": {
-  "2026-11-12": 35000.0
+  "2026-11-12": 35000.0,
+  "2026-11-13": 35035.49
  },
  "sim": {
-  "cash": 35000.0,
-  "peak": 35000.0,
+  "cash": 28280.69,
+  "peak": 35035.49,
   "halt_until": -1,
-  "n": -1,
-  "equity": 35000.0,
-  "positions": {},
+  "n": 0,
+  "equity": 35035.49,
+  "positions": {
+   "APLAPOLLO": {
+    "sym": "APLAPOLLO",
+    "qty": 3,
+    "entry": 2235.3,
+    "stop": 2155.77,
+    "R": 79.5300000000002,
+    "risk_amt": 238.5900000000006,
+    "entry_n": 0,
+    "entry_date": "2026-11-13",
+    "setup": "Pullback to support",
+    "regime": "amber",
+    "partial_R": 2.0,
+    "partial_done": false,
+    "trail_on": false,
+    "be_next": false,
+    "exit_next": null,
+    "mfe": 0.2728530114422201,
+    "last_close": 2251.6,
+    "missing": 0,
+    "sold_value": 0.0,
+    "sold_qty": 0,
+    "cost": 13.411800000000001
+   }
+  },
   "pending": [
    {
-    "symbol": "APLAPOLLO",
-    "stop": 2155.77,
-    "setup": "Pullback to support",
-    "limit": 2247.957,
+    "symbol": "IIFLCAPS",
+    "stop": 345.51,
+    "setup": "Breakout from base",
+    "limit": 357.69149999999996,
     "risk": 0.01,
     "regime": "amber",
     "partial_R": 2.0
    },
    {
-    "symbol": "MARKSANS",
-    "stop": 301.53,
+    "symbol": "GESHIP",
+    "stop": 1402.45,
     "setup": "Pullback to support",
-    "limit": 323.2,
+    "limit": 1533.18,
+    "risk": 0.01,
+    "regime": "amber",
+    "partial_R": 2.0
+   },
+   {
+    "symbol": "ABB",
+    "stop": 6809.78,
+    "setup": "Pullback to support",
+    "limit": 7125.045,
+    "risk": 0.01,
+    "regime": "amber",
+    "partial_R": 2.0
+   },
+   {
+    "symbol": "ITDC",
+    "stop": 631.08,
+    "setup": "Pullback to support",
+    "limit": 674.579,
     "risk": 0.01,
     "regime": "amber",
     "partial_R": 2.0
