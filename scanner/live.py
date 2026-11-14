@@ -30,7 +30,7 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from market_intel import (IST, REF_INDEX, SECTOR_INDICES, breadth_live, collect_stock_news, load_json,  # noqa: E402
+from market_intel import (IST, REF_INDEX, SECTOR_INDICES, breadth_live, collect_stock_news, load_json, nifty500_list,  # noqa: E402
                           market_headlines, mover_takeaways, movers, news_tone, nse_json, parse_all_indices,
                           parse_announcements, parse_fii_dii, parse_index_quotes, parse_market_status,
                           parse_quote_equity, peer_moves, vix_percentile, yahoo_quotes)
@@ -189,8 +189,9 @@ def main():
             extra = [e for e in extra if e]
             if extra:
                 quotes = pd.concat([quotes, pd.DataFrame(extra).set_index("symbol")])
+        n500 = nifty500_list(nse)
         if not len(quotes):
-            syms = list(universe.get("stocks", {}))[:600] or list(want)
+            syms = list(n500) or list(universe.get("stocks", {}))[:600]
             quotes = yahoo_quotes(sorted(set(syms) | want))
             sources["prices"] = "Yahoo Finance (~15 min delayed)" if len(quotes) else None
             adv = {"advances": int((quotes.get("pchange", pd.Series(dtype=float)) > 0).sum()),
@@ -198,10 +199,13 @@ def main():
         if not len(quotes):
             print("No live prices from NSE or Yahoo; keeping the previous snapshot.")
             sys.exit(1)
-        for s in quotes.index:            # fill names/industries from the evening universe
-            u = universe.get("stocks", {}).get(s, {})
+        for s in quotes.index:            # fill names/industries from the Nifty 500 list and the evening universe
+            u = {**universe.get("stocks", {}).get(s, {}), **{k: v for k, v in n500.get(s, {}).items() if v}}
             if not quotes.at[s, "name"] and u.get("name"):
                 quotes.at[s, "name"] = u["name"]
+            if not quotes.at[s, "industry"] and u.get("industry"):
+                quotes.at[s, "industry"] = u["industry"]
+        sources["industries"] = int((quotes["industry"].astype(str) != "").sum())
         indices = parse_all_indices(nse_json(nse, "/api/allIndices"))
         sources["indices"] = bool(indices)
         flows = parse_fii_dii(nse_json(nse, "/api/fiidiiTradeReact"))

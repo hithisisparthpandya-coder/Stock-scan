@@ -163,6 +163,26 @@ def parse_announcements(data, since: dt.datetime) -> dict[str, list[dict]]:
     return out
 
 
+def nifty500_list(nse) -> dict[str, dict]:
+    """Nifty 500 constituents with company name and industry (NSE archives CSV)."""
+    import io
+    for url in ("https://nsearchives.nseindia.com/content/indices/ind_nifty500list.csv",
+                "https://www.niftyindices.com/IndexConstituent/ind_nifty500list.csv"):
+        r = nse.get(url, tries=2, timeout=20)
+        if r is None:
+            continue
+        try:
+            df = pd.read_csv(io.BytesIO(r.content))
+            df.columns = [c.strip() for c in df.columns]
+            return {str(row["Symbol"]).strip(): {"name": str(row.get("Company Name", "")).strip(),
+                                                  "industry": str(row.get("Industry", "")).strip()}
+                    for _, row in df.iterrows()}
+        except Exception:
+            continue
+    print("Nifty 500 list unavailable")
+    return {}
+
+
 # ---------------------------------------------------------------- Yahoo fallbacks
 def yahoo_quotes(symbols: list[str]) -> pd.DataFrame:
     """Fallback when NSE's live API is unreachable: today's daily bar so far from Yahoo (~15 min delay)."""
@@ -299,6 +319,8 @@ def day_fraction(now: dt.datetime) -> float:
     """Share of the 9:15–15:30 session elapsed (volume pacing)."""
     t = now.astimezone(IST)
     mins = (t.hour * 60 + t.minute) - (9 * 60 + 15)
+    if mins < 0 or t.weekday() >= 5:      # before the open / weekend: the quotes are the last full session
+        return 1.0
     return min(1.0, max(0.05, mins / 375))
 
 
@@ -319,7 +341,14 @@ def explain_move(sym: str, q: dict, ctx: dict, peer: dict | None, news: dict | N
     if news and news.get("count"):
         h = news["headlines"][0]
         agree = (news["N"] > 0.1 and up) or (news["N"] < -0.1 and not up)
-        reasons.append((2.5 if agree else 1.2, f"News {'+' if news['N'] >= 0 else ''}{news['N']:.2f}: “{h['title'][:120]}”", "news"))
+        against = (news["N"] > 0.1 and not up) or (news["N"] < -0.1 and up)
+        label = f"News {'+' if news['N'] >= 0 else ''}{news['N']:.2f}: “{h['title'][:120]}”"
+        if agree:
+            reasons.append((2.5, label, "news"))
+        elif against:
+            reasons.append((1.3, label + " – the tone doesn't match the move (priced in / 'sell the news'?)", "news_weak"))
+        else:
+            reasons.append((1.1, label + " – neutral tone", "news_weak"))
         if news.get("red_flag"):
             reasons.append((3.0, "Red-flag headline (regulator / fraud / default) – treat with caution", "news"))
     # sector
@@ -508,6 +537,9 @@ def evening_intel(nse, P: dict, f: dict, picks: list[dict], names: dict, bands: 
                    "fii_dii": bool(flows), "news_feeds": ok}
         stock_items = None
     industries = snap["industry"].to_dict() if len(snap) else {}
+    if not industries and not demo:
+        industries = {k: v["industry"] for k, v in nifty500_list(nse).items()}
+        sources["industries"] = len(industries)
     universe = build_universe(P, f, names, bands, results, cfg, vix_hist, industries)
 
     C = P["C"]

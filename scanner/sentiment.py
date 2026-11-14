@@ -57,7 +57,7 @@ LEXICON: list[tuple[str, float]] = [
     (r"upper circuit", 1.5), (r"lower circuit", -2.0),
     # brokers
     (r"(rating )?upgrades?d?|upgraded to buy", 2.0), (r"(rating )?downgrades?d?|downgraded to sell", -2.0),
-    (r"target (price )?(raised|hiked|increased)|raises? target", 1.5),
+    (r"target (price )?(raised|hiked|increased)|(raises?|lifts?|lifted|hikes?) [^.;]{0,60}?(price )?target", 1.5),
     (r"target (price )?(cut|lowered|reduced)|cuts? target", -1.5),
     (r"\bbuy (call|rating)\b|\boutperform\b|\boverweight\b", 1.2),
     (r"\bsell (call|rating)\b|\bunderperform\b|\bunderweight\b", -1.2),
