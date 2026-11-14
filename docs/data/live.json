@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-14T09:01+05:30",
+ "generated_at": "2026-11-14T09:20+05:30",
  "demo": false,
  "market_status": "Close",
  "delay_note": "Prices ~15 min delayed (Yahoo), refreshed about every 15 minutes.",
@@ -247,7 +247,7 @@
   ]
  },
  "news_tone": {
-  "avg": 0.115,
+  "avg": 0.122,
   "count": 48,
   "positive": 28,
   "negative": 20,
@@ -325,7 +325,7 @@
       "title": "Hitachi Energy India: targets from Rs 30,100 to Rs 45,790 on 86% order growth",
       "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPTFhVWTRncmVzUHJxYzFDZEg4M1RnbnpNVzk1bGpfV215MEVrcXZoYW9nWE14dFVHbFNWOGt6ci1DZkd6d2l2eWIyNTJCdVhnLTIxd1FHQ2V2cmd1ZHN6Y014VE1lWXR5MHdlWWNkcjhhd3dSbnNPUUNrWUU4M3liQnF5Y0twWDNxeE0wai1lTTJteW9Ud2F0ekp5M1lfRVYtMWxvbG1YWmg4bWx4elBHdWc0eUp0UjRYbmRxYTdHSk9lbUQwR3NF?oc=5",
       "source": "Business Upturn",
-      "age_h": 18.0,
+      "age_h": 18.4,
       "score": 0.0,
       "red_flag": false
      },
@@ -333,7 +333,7 @@
       "title": "Hitachi Energy India Surges 12% After Q2 FY27 Results: 6 Key Things to Know About Its Growth Outlook",
       "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOdzZwWDlpWEJIaVB4dThZMmtEcG52VWdaUC1sWDAya0VJNThTcWFHOFpqTWwwNVhCeEZhWEo0bURFbTdLSzI1cmpQNDlMelRhZVBjQURWWkVsZHRhQ19FcmRPT0kzRXFLc05oMXlpS18zenQzb2hLZ1ZzWWttNFV3dUI1czhGT0tlTHZQNjc5VGhRQkRCTXExSzJvTThpUzgwU1Y1NGFQT3FqLV9HYmRzRHk0ZlU1OXVURUxUSTNjbVkxNHFzbVdkQjZ4c0NKQ1NNckRxMDhsc1h2dzZtU0E?oc=5",
       "source": "Trade Brains",
-      "age_h": 20.0,
+      "age_h": 20.3,
       "score": 0.635,
       "red_flag": false
      },
@@ -341,7 +341,7 @@
       "title": "Hitachi Energy shares rally 12% on 86% rise in Q2 order inflows, PAT up 21%",
       "link": "https://www.business-standard.com/markets/news/hitachi-energy-shares-rally-12-on-86-rise-in-q2-order-inflows-pat-up-21-126111300504_1.html",
       "source": "Business Standard",
-      "age_h": 21.8,
+      "age_h": 22.1,
       "score": 0.74,
       "red_flag": false
      }
@@ -367,7 +367,7 @@
       "title": "Earnings call transcript: Amber Enterprises posts Q2 beat, shares jump 9% on growth By Investing.com",
       "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQMXpFY0RoZEE5bzN6MGw5S3VBaEZLdk9hZ1BiSlMyOWxsd2NzZ2pUcU90VXhPbjBEZmFkQVdVZUZzRFpnc0M1bVVRWXFLNllscDliUWJYSzVmRnV4LW01TURPOTU2TjAzekFTYWtTUXR5OXVwdnhpMHp1UUFTWTRid1Vkd1NNTEFfU1Vlb1g4N1FDcEZJc3hwMWVJSklXcHIzY2s5Qlkwc1kweFY5dk5aeWVMeVhnSWFNSGZBOE9MMGJDSm85WW9xNVJBb0hzVlZqOWtWZUV2TGo?oc=5",
       "source": "Investing.com India",
-      "age_h": 14.3,
+      "age_h": 14.6,
       "score": 0.537,
       "red_flag": false
      },
@@ -375,7 +375,7 @@
       "title": "Amber Enterprises Q2FY27 Results: Net loss widens to ₹66 cr; H1 PAT ₹69 cr",
       "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNWWhpSVExWUtlUGN1NkZtSy1OQjJ0RDk0ZDRTOEVab3QzWVVMamRucWI4akxkYVlqZy11X3ctZFFLbGhSRzRJdHM4Y0lSaDljdXBQa0hpYWQwWW5vckNRejlEM2RyaUlEZVVOZ2tFamZjc3RVMGdNTHVtOUllWWhPdzd5MVpodzVQQl9VQXl0SXM1Y2FSTzhVaUFBbW5BMjBfYVl1R0JWZTBXaUZhWG9ubG1wcE1ZOFpFZlYxWkFLcw?oc=5",
       "source": "scanx.trade",
-      "age_h": 33.7,
+      "age_h": 34.0,
       "score": -0.762,
       "red_flag": false
      },
@@ -383,7 +383,7 @@
       "title": "Amber Enterprises unveils FY27 financial performance and expansion plans",
       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSEFJNGZ4Z1dpc3Y3bDJkZTY4ZkhzaDEyRFhGS3pXQnl6S0NQYktEUGJFR1FPVGlnbWVYYkc0aHp3RVhlektuV0dacHBsRTZISkFYOG94eHpFenBpZGFHS2dVakxoVWkxeUI0RzV4N1NLS0hneVBxRzNMcUdPNWlQMFpPTVRrTEtEMmZPUmZuZVljanlhV0VhMnpwZVZaU1FWWlJOVDYzek0yNmhJLXc?oc=5",
       "source": "Business Upturn",
-      "age_h": 34.0,
+      "age_h": 34.3,
       "score": 0.38,
       "red_flag": false
      }
@@ -407,7 +407,7 @@
       "title": "Avanti Feeds NSE:AVANTIFEED Q2 FY27 Results Newspaper Publication",
       "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOaWxtSTR2SkczRU1SdkJsRDdhQXFGaVlCbGxiMWs2ZTRtQm9EdEtTcGN3bnFnQnZCeFY1QTdHUzJOVFR4SmFwSEdrdU1sX3RmMWdWSEl5c2VnVnRzMGVDZGVLQ1JvMHBLZktUQzNNSXRFQ19xdGFfdWcxUGFUYXNRZWR4YmFzRUlibEZ5aUswdnoxVE54OXFDaHQzVDBpT2gzZFdKM2NHdEFoc1NsaUV1cjJlUlF5VVc5cnVDOXVXdGVmWXJWb3ZVN3k3QzZXUQ?oc=5",
       "source": "Kalkine India",
-      "age_h": 66.0,
+      "age_h": 66.3,
       "score": 0.0,
       "red_flag": false
      }
@@ -432,7 +432,7 @@
       "title": "Anupam Rasayan posts strong half-year results",
       "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNT29ld1hqY1BBSWVhRm9NdVF2QUNKdkpSa2JwcFpuUkNxX2RVR3VaMjlXclIxekFFM1FKdFFkVWFPSFNqRm1SeWRUbTBfVVNkSUhCTEpGX3piOUg3ZnpULTRZUlk2bGhUSjZKM1U4UVFMWnNGTmNMeDR4Z2ExZll3NnlmMThCcHlDRWlfY1E4VFMzZnFHdUhLYUJHUC1HRDdnN2hLRUZwTy16anotQjNtZUo5NnBBRS1yQThsdG9jZS1MU05BMFFMWGVqRdIBywFBVV95cUxNT29ld1hqY1BBSWVhRm9NdVF2QUNKdkpSa2JwcFpuUkNxX2RVR3VaMjlXclIxekFFM1FKdFFkVWFPSFNqRm1SeWRUbTBfVVNkSUhCTEpGX3piOUg3ZnpULTRZUlk2bGhUSjZKM1U4UVFMWnNGTmNMeDR4Z2ExZll3NnlmMThCcHlDRWlfY1E4VFMzZnFHdUhLYUJHUC1HRDdnN2hLRUZwTy16anotQjNtZUo5NnBBRS1yQThsdG9jZS1MU05BMFFMWGVqRQ?oc=5",
       "source": "Indiatimes",
-      "age_h": 10.7,
+      "age_h": 11.0,
       "score": 0.0,
       "red_flag": false
      },
@@ -440,7 +440,7 @@
       "title": "Anupam Rasayan expects Rs 100-150 crore from U.S. deal",
       "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPeWlfazFYUWY1Y0ZmWk5vbWw4akxnbzE5U1BCOHkxMzV3MER0X2kyTUo4TVZzYjhETmFSZm91RVBldXBCNTlFUzM1YlljZjI3eG5pODhtYUxPT2JSMDdTVngwRUlzNWYyd0o4SmloUzVpS1llODFtazlXbFpwaUYweEI0M1FMUTdsbU55dlFyNGttRXZOQ0h1SEZDeGpNa3F6OXZKWlJYcGMxN1Z4Q1NkdTlMWHA?oc=5",
       "source": "Multibagg AI",
-      "age_h": 12.9,
+      "age_h": 13.2,
       "score": 0.0,
       "red_flag": false
      },
@@ -448,7 +448,7 @@
       "title": "Anupam Rasayan completes Bliss deal, takes 50.07% stake",
       "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNWFBJOG0zRlRielpxbk5lZ2FZbndPSmpmMi02WU5xUlF2d2hibGVQV2JjV2l1b1lVZ04tOUFtUDlQTHA2b0dQR2Y4YlBwZElRWFE5YXJrVDU0VXMxYW9FVFpKS1hmRERTWjJkdTIzUUJzZVNGVGt5WXZ1UTMtTHoyY0dBYmFkUUs0X3A1aDViYUVQb3AxNlZyNUpfOXNneXZubzREMkxxWmxSOHNPN2oycEJoUzk?oc=5",
       "source": "Multibagg AI",
-      "age_h": 12.9,
+      "age_h": 13.2,
       "score": 0.0,
       "red_flag": false
      }
@@ -473,7 +473,7 @@
       "title": "Aegis Vopak Terminals Ltd Surges 7.36% to Day's High of Rs 286.5 — Outperforms Sector by 8.42 Percentage Points",
       "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQcXlTOUZUYzNwY0hHNXJVNTJZQS13T1pjOG12bTdLakpxU0l2VHdTLTVKWlR6R3Y3WkQ0eWgzek5zenJEX3c3UkplYkxZUGlyeDFqM2JfeXBPZWRTelZjRVFRcU96bkwxWUFvVjNxTWN1MlBWUkI1QjE3YlZqUC1kdjJfQjNjNl9LMVlsdHBaeWZic0VudHotN0tFOUdFMlAzSlJRYU1QSExLbFc0OGJ6WnMyNm1PZmlwN2F3ZElaSl9BNUZFYTZTbXJlQno?oc=5",
       "source": "MarketsMojo",
-      "age_h": 17.8,
+      "age_h": 18.1,
       "score": 0.635,
       "red_flag": false
      }
@@ -512,7 +512,7 @@
       "title": "Aditya Birla Capital among 9 stocks showing White Marubozu Pattern",
       "link": "https://economictimes.indiatimes.com/markets/stocks/news/aditya-birla-capital-among-9-stocks-showing-white-marubozu-pattern/slideshow/135788959.cms",
       "source": "Economic Times",
-      "age_h": 23.7,
+      "age_h": 24.0,
       "score": 0.0,
       "red_flag": false
      },
@@ -520,7 +520,7 @@
       "title": "Aditya Birla Capital Sees Sharp Open Interest Surge Amid Bullish Market Momentum",
       "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOb1J5TmZ3RDk0aXNHcGFvWnpaQjRXbnc5czdZSUxDOFJVdDlSVEJNMmI0ZFBLbVVFN3JjQ0JaMEt0NGplRFpTSzRHV0ZtVVIzWUJTLTJrWlZjXzdnUWpCTmNqTkFMRklTMkMyX0xXcEZyM2stLTdPMWlza3VFNU90SnZpc2paMXhtZmNxU0QxU1BFSUhxc1lrZ2NCeXEzTnk5ZFpMQnBnM1kteWpaZWFuVG5iU3J3Ri0wbW5icGUyTHIxUEh2dDhWOF9qVEVQQURmeFI4WQ?oc=5",
       "source": "MarketsMojo",
-      "age_h": 40.0,
+      "age_h": 40.3,
       "score": 0.848,
       "red_flag": false
      },
@@ -528,7 +528,7 @@
       "title": "Aditya Birla Capital Sees Sharp Open Interest Surge Signalling Bullish Market Positioning",
       "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNd0tVTk1QQWFuLTFsaWZFRFB6cFlFaGs5anF1ZmF0cnBocDJ0VkpCTXY0aVJDNnlzUG0xaVliUUxGMlJKTGZGMDVQVEhoenVWRUtEQWloSUNianhydmtMaWJXTU9Dc3FVZE1BVWltR1Zxeml2bkJpOVIxVW5hdlpVXzZNbEFmNzAxOEE3c1Y5QjU5Sk42Qk5IN2FXczF1aU5ZRWExaHpBMDZBTWxsdTVYTzE3ZWl3eW5vd01jMUNUUGUycmtRRXlVOWdXcF9NSncwX2N4My1RZS0wY2ZlakNuYg?oc=5",
       "source": "MarketsMojo",
-      "age_h": 40.0,
+      "age_h": 40.3,
       "score": 0.848,
       "red_flag": false
      }
@@ -558,7 +558,7 @@
     "value_cr": 173.9,
     "verdict": "Likely news / event driven",
     "reasons": [
-     "News +0.15: “Phoenix Mills Ltd. Surges 6.22% to Day's High of Rs 2298.5 — Outperforms Realty Sector by 3.08 Percentage Points”",
+     "News +0.14: “Phoenix Mills Ltd. Surges 6.22% to Day's High of Rs 2298.5 — Outperforms Realty Sector by 3.08 Percentage Points”",
      "Stock-specific: Realty peers flat (+0.4%)",
      "Closing near the day's high"
     ],
@@ -567,7 +567,7 @@
       "title": "Phoenix Mills Ltd. Surges 6.22% to Day's High of Rs 2298.5 — Outperforms Realty Sector by 3.08 Percentage Points",
       "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNdkU3UzJVSDNPVzF3V0FNNlJLR21hUnlDMG5RYXQzdE8tTm1YeFA3cUd5RDhjSi1EMURERS15aHRaN09OdTdubUo4d0wwQTVFY2tjTmdaaldvYlRQTUQ5Um5BYkdxdHNNWXZvR1h3amZkeHpVbUtkNXE4WU00bjB2RU8yR0VXWkk1b2lxWTV0U1pjZ3FSbWlSek56VDkyRlFHbUhvaGIwNTE1bjN6NkZBNzFWLUxFbGJ3VkpmZWdTS2J5QQ?oc=5",
       "source": "MarketsMojo",
-      "age_h": 36.6,
+      "age_h": 36.9,
       "score": 0.635,
       "red_flag": false
      },
@@ -575,7 +575,7 @@
       "title": "The Phoenix Mills Limited raises ISMDPL stake to 68.10%",
       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNcU54bkNEd0x5NDVrQTRLdFFSNy12VTcwYTVZMkJvcGY3ZGdXVk1VUkM3bnJwdFo3bkhvMTQ3c1VvVFJSalcxQnhHWGhUbUtrcC1aM18wN1J0NFNPTERLaVRYRWN5b1gyQjJFQkpOeVg3LUxXQlFrZk9TZ2p3Y1VJMFhSQzRnN180Z1ZMN1RKb0hRWkdxRlMtZERiMlhYb1JMLUhGZGd1UmM5UzVRSHpqU2pn?oc=5",
       "source": "Multibagg AI",
-      "age_h": 42.9,
+      "age_h": 43.2,
       "score": 0.0,
       "red_flag": false
      }
@@ -599,7 +599,7 @@
       "title": "ICICI Life, HDFC Life, SBI Life, Max Financial shares climb; here's what HSBC says",
       "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOMENVUFJkMGhaR1ZmaG4yLXFuek5US1NSZ0NqNzJsLWVyMzhIb3NHMGFBaWE1YmlpTk03MkNKREpKb1F0bHh2TElJTF9TRjUxSEs2RTJxczRWNWd6Q3Z6MnJzaHJHSWJuay1Xb2FCa0Z3MUU4dEU1Y0l2ajBfVzQ3bWpKaFZhb3lOcmFtZFA3Y3hxWmdaSmZ3YWRrdkcwd2pwUmlxVnVHbFRMeW1FSEZaS2pxVnYzeHVFZ0NZZ3VhUzRFQ2hXQmpSMTdzTVBsVXZhT3FRVE5PY29MSjVqemY4aVM1Z9IB4wFBVV95cUxOMENVUFJkMGhaR1ZmaG4yLXFuek5US1NSZ0NqNzJsLWVyMzhIb3NHMGFBaWE1YmlpTk03MkNKREpKb1F0bHh2TElJTF9TRjUxSEs2RTJxczRWNWd6Q3Z6MnJzaHJHSWJuay1Xb2FCa0Z3MUU4dEU1Y0l2ajBfVzQ3bWpKaFZhb3lOcmFtZFA3Y3hxWmdaSmZ3YWRrdkcwd2pwUmlxVnVHbFRMeW1FSEZaS2pxVnYzeHVFZ0NZZ3VhUzRFQ2hXQmpSMTdzTVBsVXZhT3FRVE5PY29MSjVqemY4aVM1Zw?oc=5",
       "source": "Business Today",
-      "age_h": 45.8,
+      "age_h": 46.1,
       "score": 0.336,
       "red_flag": false
      }
@@ -626,7 +626,7 @@
       "title": "Earnings call transcript: Techno Electric posts strong Q2 2027 growth, shares fall 6%",
       "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQMjRQUGdBMjk1c0tDUUdNRFFjaVh6NFF4VkFJUXgtVDQ5OTJFVmwwQlhyOENmV0o0NGJCMU9uSjVJQzM3ZVJfSkVIZDQyRHlTVGJ2OUFzaF94MG5TRE5NZWxzVWtmZ0hVUjRxRGtuaE5IRWh0RjlldHd6R3g1eW5zai1jVGZHTDRaMkU2X0tWaEJwdFVkRDNNOXRRckN6N3RWSkxodERxdXRMb0ZEcFlEa3hnM2huM3B5NEwyQURkWFFFYkhoTFVkYUs0S0xERkpTbzMtUQ?oc=5",
       "source": "Investing.com",
-      "age_h": 16.0,
+      "age_h": 16.3,
       "score": -0.336,
       "red_flag": false
      }
@@ -649,7 +649,7 @@
       "title": "Gabriel India and 6 Other Stocks Hit 20% Upper Circuit Today. Do You Own Any?",
       "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxObHBGcGQtUFRzTVdTNE94eW1uRFZtcEc3bDNPUDI1N2FwcTg0dTNlb1d2UFRuanVmWU01ZW5FN2NFSTNGbTNIZjRZOXRfUnNfQ2pvWHBDX1dPYk1lOTJOdkVXUkxiQkgzVjNpUzhGVF9QaG9WcTgwaHp3Vmg4aUN2dXE5aXp1bDc5Tk5YMmhYZXYtN3I5ZUNIeTNqS1UyTXJyY2hpUWFPcDNaZFJoMnNJb3JpUzNFejYwdDJVR3RB?oc=5",
       "source": "Trade Brains",
-      "age_h": 40.4,
+      "age_h": 40.7,
       "score": 0.635,
       "red_flag": false
      },
@@ -657,7 +657,7 @@
       "title": "Gabriel India hits 20% upper circuit on huge volume; up 112% from March low",
       "link": "https://www.business-standard.com/markets/news/gabriel-india-hits-20-upper-circuit-on-huge-volume-up-112-from-march-low-126111200893_1.html",
       "source": "Business Standard",
-      "age_h": 41.3,
+      "age_h": 41.7,
       "score": 0.635,
       "red_flag": false
      }
@@ -680,7 +680,7 @@
       "title": "Earnings call transcript: Tata Motors Passenger Vehicles posts strong Q2 2026 growth By Investing.com",
       "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNVTdCZGZ0TEdocEk4eEp2MkdZQ0NTVEd2bnktb0Zlam41ZWFsNFJUNWs3MVZNbHR6N1JoaU92SExtZkdpcEMwRGRva0I2LU1rRVd6d2xlNDN0M1hSWUEtSGdUeXN1c1lLTlNQMjdtVjhFWGJfOF81ZzVVZzRhdnU3VDhwQ3I5YjJJX1FaMGozcnVWMVc2SldydXdEalZvR3E4TXN2S0JDVUJyUDgtXzZTOGhhYTN6Q0s4aU9pWW1ocXhFTlh6QnhaVkE5RGRaejRQOXZxWmZhZ0NCX2Vp?oc=5",
       "source": "Investing.com India",
-      "age_h": 13.3,
+      "age_h": 13.6,
       "score": 0.0,
       "red_flag": false
      },
@@ -688,7 +688,7 @@
       "title": "Tata Motors Swings to Unexpected Loss, Pares Back JLR Outlook",
       "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPemdTTTBRNGZ3dHZnbWlLRmNVSDZiZjJlWTc2MHZxQmtLM3BHMm9KR2t5YzR2X2NxRWp0YlE3UWw4LXdqVkxQMFlzam5KdDJuSDN2ME1HOU1aRUoxVURqN2JvUlE4eGFjRGo0aUJTWGN1TkxXeXlLckxLMVFnemZqWFZXTy1xSkllanhfUnhCV1hkOEZiaVR2QVV3Zl9TQU9TTmlSNlNLV1ZNZ3dtNEFxdVVPRjlCVUtGNUpITS1MR1VjTEw3eU0xRE80Vms?oc=5",
       "source": "Bloomberg.com",
-      "age_h": 16.4,
+      "age_h": 16.7,
       "score": 0.0,
       "red_flag": false
      },
@@ -696,7 +696,7 @@
       "title": "Tata Motors PV reports Rs 5,531 crore loss in Q2 FY27 despite 34% revenue growth",
       "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOR0FMS3dXSzNQajROekh4QkQwaU50YmVRaVduOVJhYTNoVFp5Z3duQTZXUTNHbUFxakw4Zzc5NlkwQTB4aGJ6M0ZYUmg0NXNPd0NseEJQNlJESXgzcmUwR19NUGRYWkJjaEdzVzY3d3ZfRncwQ0tEZkJSdS1iZWlHRko5UmJuUW1OMWVXaU96dGRvVzBPSnhJRnMxR1RxOXhHemdaekdWbWlXTEpMTlBYbldFVlp4M2U1ZW10LXc1UmNyeXJHdm92Tmg5dnnSAdIBQVVfeXFMT1NYcjhhZzdiSTZkVVE0Y2NzSkh4YW5CRlA5cW1CbC04T2NNZV9sT1JEZkJBNWtZYnVVcXpTRWctZGxEOGZjcjd1eFhLckwyVWMzN1FXUXlwaTFlNUhvV3RkdUxRaEVjR2JvcjhaOGVPeFdWWHBPWTd5Vk5kUFNWZl9sYl9PdUdNOHFiMXdDazN6QUw5Y3ZOcmMwZXlfd3picHE1dTF5YUZvMWlFTmI5SGEwZDFnYnhtWEY3UWVKVENlQktwMjl6VlVKR1g0Zm9hcnRR?oc=5",
       "source": "ET Now",
-      "age_h": 16.5,
+      "age_h": 16.8,
       "score": -0.358,
       "red_flag": false
      }
@@ -711,7 +711,7 @@
     "value_cr": 591.8,
     "verdict": "Likely news / event driven",
     "reasons": [
-     "News -0.75: “Bharat Dynamics: all four houses cut earnings as bought-out components squeeze margins”",
+     "News -0.74: “Bharat Dynamics: all four houses cut earnings as bought-out components squeeze margins”",
      "Heavy volume: 4.1× a normal day's pace – strong conviction",
      "Fell through its 50-day average",
      "Stock-specific: Capital Goods peers flat (+0.0%)"
@@ -721,7 +721,7 @@
       "title": "Bharat Dynamics: all four houses cut earnings as bought-out components squeeze margins",
       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQS0hod0VYdWFNeUFyNkVxb25pSGhHdmJBOUwtVEtzUW9NMlVMNGFRc1JoUkZtQnc0OC04ZTdmUFBEQ0xfQ2pCV1pNckZfMy1qalB3TGk5WjZHZVBYZ25mUHRNRmxmN1drcUprVm11SXNDVmRmZUhibDVMUzJNY3cyOURmTEt3Y1pCNnllS2pMUlZCajhsSTVEVXN5SzNwdEFiWVJadS1LSk5QN1BFdTA1ZDdB?oc=5",
       "source": "Business Upturn",
-      "age_h": 18.0,
+      "age_h": 18.4,
       "score": 0.0,
       "red_flag": false
      },
@@ -729,7 +729,7 @@
       "title": "Bharat Dynamics shares fall 3% as Q2 margin pressure weighs on earnings",
       "link": "https://www.business-standard.com/markets/news/bharat-dynamics-shares-fall-3-as-q2-margin-pressure-weighs-on-earnings-126111300659_1.html",
       "source": "Business Standard",
-      "age_h": 20.3,
+      "age_h": 20.6,
       "score": -0.8,
       "red_flag": false
      },
@@ -737,7 +737,7 @@
       "title": "Stocks to BUY, SELL or HOLD Today, November 13: Page Industries, HDFC Bank, HAL, Ola Electric, Bharat Dynamics and others",
       "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxPZ01GVlFCTzZIZ1FHVDVNR0FnY2FPcUo0eFNMZ1ZXT0pfQ3cwYTNDRENUdllTM3NWWl80OV9GRUZqeE5pVXh5UHgtcnFsWEZnMXc1RF9fa0VXRVJ2Nm9RRHBhN1hYZUVndVJOcy1fR3phVzgzbWdOWjdzQ0xad0t6NWpiR19QLU5WLUV0VC1VQlNrb0lzWklUa2ZNSVB4ald0Z0V2QUpISlFoV19LUHhCWENzMURWY0EzejRFY1lLTFp2SjJjNnY1YlpLZkRERFlGSE1lRHd0alhEWUtST2l2ek1yMDFYTmdncWtxbjZvb3dmT19aU09fbzNn0gH_AUFVX3lxTE1uTHVlN2tDX1lDa0loWlczajBrelY2M0RETThBNTBiR0p4TkVWZThYTGpYdFUwMDU3T1Y1UkVraXlDOENGNzJycWNfd0pJckkyUW1RUDRrQVF2UnhDeDZvSGlyLWh0cEsydDJzdWV0VFJxODczV2dNVzhudmJxeUtibGRCVDZNUnotTmJHQS1PbjlNU3dTOWtXWVZVX09wbXV3elp0XzdjaFJWT2d4RUpiWHhycm52OXVtWDhtYXctSlA4Q0lyMFZ3NE1lTV91MnVNNkRGU1dTeXpORTcxd1V6NUR0UmZCOUNDRG9feEpYLUxjaE5mZlFEYmFIOXVydw?oc=5",
       "source": "ET Now",
-      "age_h": 24.9,
+      "age_h": 25.2,
       "score": 0.0,
       "red_flag": false
      }
@@ -753,7 +753,7 @@
     "verdict": "Likely news / event driven",
     "reasons": [
      "Red-flag headline (regulator / fraud / default) – treat with caution",
-     "News -0.61: “Reliance Power Q2 Profit Falls 65% to Rs 30.10 Crore”",
+     "News -0.60: “Reliance Power Q2 Profit Falls 65% to Rs 30.10 Crore”",
      "Gapped down -2.5% at the open – overnight news or orders",
      "Light volume (0.7× normal pace) – move may not hold"
     ],
@@ -762,7 +762,7 @@
       "title": "Reliance Power Q2 Profit Falls 65% to Rs 30.10 Crore",
       "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNQ1BMUWk1TmNCZnlGU3oyV3RtaXNxeEJKUGdpVk9taUV1SWR5MTlOTlc1UTUwRHpZTkZWaDRpRXNzNGl6b2hsZEhaY2EydVVmTGZVZW0xVjlvT0JqV0p3Q0NyTGp6d25WVnd1QlJVbzVMcUJsaFNPTGZ0NmpvU0RpRXdqVQ?oc=5",
       "source": "HDFC Sky",
-      "age_h": 23.6,
+      "age_h": 23.9,
       "score": -0.762,
       "red_flag": false
      },
@@ -770,7 +770,7 @@
       "title": "Stocks to watch: ZEEL, Ola Electric, Vi, IHCL, Manappuram Finance, RPower",
       "link": "https://www.business-standard.com/markets/news/stocks-to-watch-zeel-ola-electric-vi-ihcl-manappuram-finance-rpower-126111300072_1.html",
       "source": "Business Standard",
-      "age_h": 25.0,
+      "age_h": 25.3,
       "score": 0.0,
       "red_flag": false
      },
@@ -778,7 +778,7 @@
       "title": "Stocks to Watch Today, November 13: Reliance Power, Vodafone Idea, Ola Electric, HFCL, Shree Cement and others",
       "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOSks5bl9ZS0tLMV93LXBzcE5iRFhqMVE4RU9LeVVZM3dRNjJLTjRrSmF3ek0xQ3ozMjJMOXF6eTJzQTQ0WkFTR3lXOWRiMmFmbzMzQTJ0NnBKcEZBRHFNb19uUDVGeC1BTEt0Q01sNk5RRUpkMnZEa3lWR1FpRFB2Sm5ISWQ3bzZPZ2paenVaNThFQXdGRlltVTZKUWgzNkpOdFdQS0ZVNXRLNDdIQjlKTWduSzlhRUUyM1ZROG82cDFoZkFrVGJuMmZzbnlyX0piazBZUGJicmI5M25lWi1sOXdjdVRRSHlTVmJrR9IB8gFBVV95cUxQcXRyZzlobUI2QlJNckFoZGl2anNBeFE5SFVabXBLN2xmR3JuTXBvYU5oOTl4QlFuTjJnUUo1UGZwZWxlcnhuclYxcEp3TTBzV2NGaGpTWmRhV0dKV0l5YWNGWGRKQ09EaGh0MWZNTTNaWUwzNDNnNzYyRy1HNGxkdnlxdDZPUl9oYzBuWHBBd0dJRkpMZGFTdENZcTN2R0puWGxJem1YQ1AwMUw4MEUwUVVILWtFUjdlUnJUT01SZW1SM1RXVXJIY2xLbmNtd0Rqa19JWWtRcEpYbFNBbDR6VTVsRXV3YnN0UmxqNGp5bFlCQQ?oc=5",
       "source": "ET Now",
-      "age_h": 27.4,
+      "age_h": 27.7,
       "score": 0.0,
       "red_flag": false
      }
@@ -796,14 +796,14 @@
      "Heavy volume: 5.5× a normal day's pace – strong conviction",
      "Fell through its 50-day average",
      "Stock-specific: Financial Services peers flat (-0.4%)",
-     "News +0.77: “Manappuram Finance falls 4% post-Q2 results; CLSA upgrades stock” – the tone doesn't match the move (priced in / 'sell the news'?)"
+     "News +0.76: “Manappuram Finance falls 4% post-Q2 results; CLSA upgrades stock” – the tone doesn't match the move (priced in / 'sell the news'?)"
     ],
     "headlines": [
      {
       "title": "Manappuram Finance falls 4% post-Q2 results; CLSA upgrades stock",
       "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQZVVYcmtqSGt3WXc0c3hIUFNjMFdpMGFUb2VCODd2OXNYZzY3YUFHQVFfZlBSVXl4enpSOVVmeDRteEMxSjFtbzBJOVpJUjBpNjBwcVFIVHU2SlNEZWFJLXNzOUxtQWF3RGxvVmlnUFp0X1hpOHUwS2RxM2ppR2FOODhFajlXUU5kdWJQYXdpVU9YRWY0TEJjZktXbGZkdmNmV0dBU3hoV1M4bFlrSnJWNVRRUjhiS2dIb2thd3ZDLUgzdEJYZ0kyUWtWRdIBywFBVV95cUxQZVVYcmtqSGt3WXc0c3hIUFNjMFdpMGFUb2VCODd2OXNYZzY3YUFHQVFfZlBSVXl4enpSOVVmeDRteEMxSjFtbzBJOVpJUjBpNjBwcVFIVHU2SlNEZWFJLXNzOUxtQWF3RGxvVmlnUFp0X1hpOHUwS2RxM2ppR2FOODhFajlXUU5kdWJQYXdpVU9YRWY0TEJjZktXbGZkdmNmV0dBU3hoV1M4bFlrSnJWNVRRUjhiS2dIb2thd3ZDLUgzdEJYZ0kyUWtWRQ?oc=5",
       "source": "Moneycontrol.com",
-      "age_h": 21.1,
+      "age_h": 21.4,
       "score": 0.572,
       "red_flag": false
      },
@@ -811,7 +811,7 @@
       "title": "Manappuram Finance shares decline nearly 4% even after CLSA upgrade on Q2 results",
       "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQNVdrUVhqUzNoSGZGMXBKdmxtOThiWkJvTXlEOE5YWENQSndpbElrUU1YWVl5dTVmMnYxRUZlREZQUHZCLXA3RHQyZjZ2cmh5RzFUbm1sejJ1dVFNbTBIc3JJN2lkMGpkOGdxOXJqVk00QVBDOGp1MDB3amVabHh2T2lnS1EwTWd4ajNKYzBJaW9oemw0WVRvREk2LWVpVG1pRDZQZml4dF9JLVIzLXRTRGNpWTloNE9vZzlSZmg1bDVCaU1kQlZlWTNOZ3FWUkJCOGVTN1luenZGWGdsWjFXYjU5LW9aWFhDOFY5eDFR0gHzAUFVX3lxTE9zUDFUNmQwN2pJTENUYUN0UHhqdHlPSDcxMnVCWFNNQVByZzZ0am8tU3RXdTBoNzl2bmRFQ2pQNktTVUZxUEtyQjVvV2RleTlaUW84cEJ1aHVYS2ZlNlhBb1NhMG5Hc25Ra3RoMzRFNW5ialFQT0hRX0JLZ09EZjBmUWlaZ21VVHUwV244YVFTMDFhLV9HWXpxd0Z2VUQtX0xCd2hfRHZ3eVhKMEhUUFZaVlI1SklaNTJEVWhmbF9neGZoVFVoblF4WU5wckplcUV2MUQ0ek9KTjZEWEM5NVR3UU5VRG9OcHIyOVdvdHZYRGhWRQ?oc=5",
       "source": "CNBC TV18",
-      "age_h": 21.6,
+      "age_h": 22.0,
       "score": 0.572,
       "red_flag": false
      },
@@ -819,7 +819,7 @@
       "title": "Manappuram Finance shares dip 4% even as brokerages upbeat; here's why",
       "link": "https://www.business-standard.com/markets/news/manappuram-finance-shares-dip-4-even-as-brokerages-upbeat-here-s-why-126111300542_1.html",
       "source": "Business Standard",
-      "age_h": 21.7,
+      "age_h": 22.0,
       "score": 0.0,
       "red_flag": false
      }
@@ -843,7 +843,7 @@
       "title": "Pidilite Industries Ltd Hits Intraday Low Amid Price Pressure on 13 Nov 2026",
       "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPdWVqdHpHcVZjZVhnNG9aSEktNURHclQzZFBZZnctdllIeTBaeUdqcjdsaS10ZTREby1oQ05LWjJUX3p1ak5pX2cybFFGWUpYU3ViaGQxUnJOU1VFOFAxUlNzX00ycDBuN0VmU3RmVlFxY3l1djEzcTkydlc3dUZQdzI2VXBYQ21hQzFHelNFSW1jUUwyRG01TmxaaW9JTWNTZElzUXA4RzZVYXo1b0hqQmRzcVVfc3R1MVYwdDhFUFN2X0VWbFgtZUdZSzFvR3c?oc=5",
       "source": "MarketsMojo",
-      "age_h": 17.5,
+      "age_h": 17.8,
       "score": 0.0,
       "red_flag": false
      }
@@ -866,7 +866,7 @@
       "title": "Shriram Finance Ltd falls 3.37% in Friday's session",
       "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNbmtQVjNoaE91SzdVTGZYN1JfTndxZlEwb1Fid0Q4RXZMYXQtdk5TRmxBbTZHODhnMFRqa281R1JjWXVXUzZzQlhTcV83WjJSLVFmQXVBZ3ZQdEpHaG0xM3RGdXdhTGVvUTlpaEI3YUVaQm5lWUtsMTJPU3QybWhydG8tZ1V1M0hqdEhlYUVSMHg5dE1QTnc?oc=5",
       "source": "Global Banking & Finance Review",
-      "age_h": 12.8,
+      "age_h": 13.1,
       "score": -0.336,
       "red_flag": false
      },
@@ -874,7 +874,7 @@
       "title": "Stock Market Closing Bell: Sensex falls 319 points, Nifty slips below 25,150; Shriram Finance, Grasim top Losers",
       "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNQmQ2Vjl4cmpqWldfUnZ0aU9ra2dmMHV0c21tOERWWF81UEVoRWRpbmFBc3U5MkR5dlNJNjNmS3Jhcko1WkpzUGRiQjNtX3RyMmRiTHJJTHZIanhjcXN3T2ZDZ3JscTBIZW4wZjNlRXViWDJzNUlTaW1mZUtmRDFfSThwcDdKamZyZWtHd0llNWFZeVk3NGpFaHF2ZzhIMTRDS1lyRDdid29jWnhUWlZoMVUzX2hXblZCalh0amxEd3R5dmR4QkdVNkRKaEQzOVlMNlh2LXVEcFE0TFFyX240NEtjVndJTmxTX0JuYVp2WDTSAfYBQVVfeXFMTVVja2gwVzlmUFdEVjU5Z2VxSkZYQ1Fyd0JtRTRDclgxMGxKeFZweklJMFVSSE1hb1VqVkJRZlFVcVZsendFdTVSQ2o0MEJqeGw0SXAxOGNra2l5dnZHcXgtd1ZuTGkzRHdJcjJyODJZakM1el94MWtoWktha2NTLWdhbkp1Ukt3dl9xUjYyNTRaQzdVSjM5MTdtM01lU1B0bmQzbXFWaXRnV1ZlY0RNUDIxTFhHT2hxRzhUSFZpakNWU2ZZR1pfdG9YU0lFTVFROXFTNTZJT0luN2FmY1l0aXVFNDFEbFFTRlpZRTNSYWREQ2E1MU9n?oc=5",
       "source": "ET Now",
-      "age_h": 17.1,
+      "age_h": 17.4,
       "score": -0.604,
       "red_flag": false
      },
@@ -882,7 +882,7 @@
       "title": "Shriram Finance Ltd Hits Intraday Low Amid Price Pressure on 13 Nov 2026",
       "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPVGtJNnRhTmUyZG5GYy1qWFVLcjJ2THFMWENDSWdRZUVTMFpMcjBzX0Y3eWtIbEx2UDhIbU1jTUhKallUNlVDaVBqUmZfdkV0Um1laHktemVRTlNxMWxUdEZTWTc4MnJYVUhyTnRCSnZYTWRnY3Z0VDNvMXJIU1VLT0dtVkFUVW1RajF6bmpEb3A5Q2N3SjVHRVNFMm5mUDRSVEw3RHFGTlJhSnhub053bGRVM2NKSVc5aWd3akZtem9GZ0t0WGxlYkVB?oc=5",
       "source": "MarketsMojo",
-      "age_h": 20.5,
+      "age_h": 20.9,
       "score": 0.0,
       "red_flag": false
      }
@@ -905,7 +905,7 @@
       "title": "Billionaire Jain Bets on Blackstone Deal Driving IIFL’s Growth",
       "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPNHV5X2ZKWXNDSWo3dlpCSDdfc1FKSlhUaHFNaVlrN05xelpUZi1vblZmLUlGZEUzSDI4TmYxUFRHXzhCMGhDOUo5QTRNVU9JQlBNb1d6MmJMRF9wZjJmWWFEVG5fTUZTSFAzajc4eWJ2ZXBOLVlCRWp5NjhMUDFFVk0yTzJLWVlIVTl1OUV5akNISkZaRU8xTDktQjVRTHh2RmdxVV8zOHd4Wk5GMTdUSnExSQ?oc=5",
       "source": "Bloomberg.com",
-      "age_h": 65.0,
+      "age_h": 65.3,
       "score": 0.0,
       "red_flag": false
      },
@@ -913,7 +913,7 @@
       "title": "Why IIFL Finance Share Price is Rising",
       "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNY3RIMzFRMHJrT0VFajFXUGljMURkWEtVRTl2US13a1pkMHY5ZjJjZTJudGEyVl9pNUdZVndKVmRIRHBOWW1aM25YRHRqdjk3RTU4akoxTW4tSTZTZDV3VC0tNEFtY0R1dWtHYVRfTG1nTnYtd3dEZFZpR3pSYXJEUC1qN2NUVjNQeXNXT0YydDNCN21xczRCcUFJYU5QcmRXUTktVkxwOXBBaENN?oc=5",
       "source": "Equitymaster",
-      "age_h": 66.6,
+      "age_h": 66.9,
       "score": 0.0,
       "red_flag": false
      },
@@ -921,7 +921,7 @@
       "title": "IIFL Finance Share Price Jumps Over 10% On Rs 6,414 Crore Capital Raising Plan Led By Blackstone",
       "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQc1N6d24xOWRna1ZsaDJuTEp6LXEtRE9aaUp6Nm5saGtWWjJvMVhsSkkyRWFrOEQxRGMtRU9CaUNSSC1mRzJnQ0RNVzJPNXdDUXA4ZUZXbFZ2VFl2bHhFVkZrZXdYUjB6bUpaLUh3Q1dmb2cySjlCclQ1a01HM3lfTFlEdG95d1FLTENpV1pVQjNyT2c2U05IMHRQc2w0OGZQV0pudnE1X2ZjeENGa3QtZDdXREJ0WmprWnpUY3N0TDhhcVNZX1gxb0RwNTQ5bUFaMmlUMkVn0gHeAUFVX3lxTE5QU3BVSHIwdjNOSE5PMW04b0hLREIwWlBvR2FaUWw1X05ZSmhpWUpyVHd1S2xnckdDeDFoWlFacjlVajVOV29zZ3JwU1djMXBqRTRGb2gwWm5uZE5vMlgxMWRScmlSdlhYMUxwOEZxUGk5XzFwRjBCODBKUVlaaUpHemxhVGQ3N1lBMTI3X01zVGk1NXpHUkxjZ29CRVMtZ1hMOGNIN3RGbEJSQ2hIWVZzNkktelZYTlhjbng1UE9lRGM3THd5VS1lR1d2bUhwQXR4Ry1KeEhzVlF1MVdIdw?oc=5",
       "source": "NDTV Profit",
-      "age_h": 66.9,
+      "age_h": 67.2,
       "score": 0.537,
       "red_flag": false
      }
@@ -946,7 +946,7 @@
       "title": "Tata Motors cuts Jaguar Land Rover profit margin guidance",
       "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOb1FBc1N2UHdaNTc4MmJWeGpueFlUMGFnWTVuWm00cnBGSkZKMFB4WGl6eDRvNXYxbGVsUXpzWVh5WTJLQjBPdVNDYnRhOGJJMXZ6cVBzZzN5dDFTdEktRTYyVk9NOG1obzRQejBGc1lTdEtQa3N3VXVTX1FGVUxzcDZ0M1BmTTIwRmdkMV90YU50RlJ2a3JteXQzZGtoLVN4cUZQTFNfeGFwWXBxOEJpT05qTjRjcGZ0aWFn?oc=5",
       "source": "Investing.com",
-      "age_h": 14.3,
+      "age_h": 14.6,
       "score": 0.0,
       "red_flag": false
      },
@@ -954,7 +954,7 @@
       "title": "Tata Motors PV Reports Loss Amid JLR Restructuring Costs",
       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNNzdMakFSeDJEeTdHZmJZQWhaOHJ1NVhQeXNSWUFIQ0JsMjRveThuNEY5WldONkx1Y1ZZSUFTNnVsWDk0Y18tVTg0dDB5VG9GZzV1aXFjWmlhQW85N0JUWEE3Z0o0ZUE3b0F5RndjOWVnMjduaW1HbzVrazViVHhvSEFSZmdWNDFIUDFxdm9HY3ZTTUdrbFZncGcybkhHcUxIZFItcXE0N1VobGMxTGlHQnFB0gGyAUFVX3lxTE03N0xqQVJ4MkR5N0dmYllBaFo4cnU1WFB5c1JZQUhDQmwyNG95OG40RjlaV042THVjVllJQVM2dWxYOTRjXy1VODR0MHlUb0ZnNXVpcWNaaWFBbzk3QlRYQTdnSjRlQTdvQXlGd2M5ZWcyN25pbUdvNWtrNWJUeG9IQVJmZ1Y0MUhQMXF2b0djdlNNR2tsVmdwZzJuSEdxTEhkUi1xcTQ3VWhsYzFMaUdCcUE?oc=5",
       "source": "Rediff MoneyWiz",
-      "age_h": 15.3,
+      "age_h": 15.7,
       "score": 0.0,
       "red_flag": false
      },
@@ -962,7 +962,7 @@
       "title": "Tata Motors Passenger Vehicles Q2 Sales Rise 40% to 201,723",
       "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQODJadHRpYmgyRjVHdDJlU3c1ZHgxaVMzRFdCdDRzdXhDRXhscG90WlVRMmVsU3l2R3hZVF84dmhwUWRxTUx5bkJLZVR3MURESXNWTzZSLTJUSWlFNmVodDVQUGd2N0JSTUtNN1U5Y25NQ0U0ajZMYTZORVJRczlRY0ZLTmlUWHlhN240Vnd0UTBVeTRPMUJPWjV1UFY?oc=5",
       "source": "Multibagg AI",
-      "age_h": 16.2,
+      "age_h": 16.6,
       "score": 0.635,
       "red_flag": false
      }
@@ -994,6 +994,8 @@
    "from_entry_pct": -0.0,
    "pnl": -0.0,
    "to_stop_pct": 2.5,
+   "to_target_pct": 4.88,
+   "to_target": 17.27,
    "flags": []
   },
   {
@@ -1013,6 +1015,8 @@
    "from_entry_pct": 0.0,
    "pnl": 0.0,
    "to_stop_pct": 8.24,
+   "to_target_pct": 15.22,
+   "to_target": 231.09,
    "flags": []
   },
   {
@@ -1032,6 +1036,8 @@
    "from_entry_pct": 0.0,
    "pnl": 0.0,
    "to_stop_pct": 3.59,
+   "to_target_pct": 6.94,
+   "to_target": 489.44,
    "flags": []
   },
   {
@@ -1051,6 +1057,8 @@
    "from_entry_pct": 0.0,
    "pnl": 0.0,
    "to_stop_pct": 5.83,
+   "to_target_pct": 11.03,
+   "to_target": 73.64,
    "flags": []
   },
   {
@@ -1111,7 +1119,7 @@
      "title": "IIFL Capital open offer: 4.53% shares tendered as FIH stake hits 38%",
      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNQ3I5YU9ZMEhXWllRajFGbGx1U1MxTXBCN3ZlbGgtVm0zLXE4M3JqZm9UX0lDMzFucXVTVkF6SVNrcTZ6Q0pjUEN2elBTb0pyYnRxT0kyYVNkeG0tVXc0YXZOMGVvSmExYi1OOU5CMzRiZUo3M1pWX1lpdkNlQ2w4RHdtenQ2bXhVRnRKbmpiaEQteGJZZlhhWlJnbXY3M1lycXc0M2dTWVExbTdKQ2Q0UHFONW5uNEU?oc=5",
      "source": "scanx.trade",
-     "age_h": 42.3,
+     "age_h": 42.6,
      "score": 0.0,
      "red_flag": false
     },
@@ -1119,7 +1127,7 @@
      "title": "IIFL Capital Services Open Offer: Day-One Tender Update",
      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPdnFOSkFZR1dCbzRsWDhkTEdXeHN0S3VJY1ViNGJpdFVPLUxrcjZlaU5hTHduQzdqV0tBLTJ0UDc4TXRwNnI2RnYtZjZfc3FhMXZQVFMxWjNJa3lSZy04ZFBBNHBUbjNMMFc0eUtsazg2V25ZNUZITFpCYjU0VGVkZTdfbzFDSU9DNzlRajdJeXVFNWRpQmNqNmNucXdxcjNJdnUyUjRyeXhicU43UW5YZjBMc2xlZld5NENVdmo4WjA?oc=5",
      "source": "Kalkine India",
-     "age_h": 62.5,
+     "age_h": 62.8,
      "score": 0.0,
      "red_flag": false
     },
@@ -1127,7 +1135,7 @@
      "title": "IIFL Capital Services Open Offer: Tender Update Nov 2026",
      "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNak9ac2JacDFsYWM5OXZzZk1LUWNFbXc5cTZrREFhY0pzM25abUQxT1pzeWNWbWJhQUxDOXhNb1dRVk1mX3R2aWlqMlFNbW1VZnNIdk9URl9JTzF5eGpaaXVwLXRMNVFIYVNCNnZFZDZjLVNIcnlLOG9nM3VuV09WZExfQ3l1MmMzOTlsNE5qT2dJR3lLaENFQjFnRV81M2Y3dHVsQWZrcDJIMDR1OWFHR0RycG42VjZkVGtieVNxLXhWN21oQjBtaTQ1ZkM5M0NFQmJ0SXI5cTNuSWlZOWV6WGl4N0VYdkpxTXJZ?oc=5",
      "source": "Kalkine India",
-     "age_h": 62.5,
+     "age_h": 62.9,
      "score": 0.0,
      "red_flag": false
     }
@@ -1163,7 +1171,7 @@
    "sector": "Industrials",
    "industry": "Services",
    "adj_score": 62.0,
-   "news_N": 0.088,
+   "news_N": 0.087,
    "sector_chg": 0.13,
    "reasons": [
     "news neutral (+0.09, 5 headlines)",
@@ -1175,7 +1183,7 @@
      "title": "Great Eastern Shipping releases audio recording of Q2FY27 earnings call",
      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOZUFLSnF2NTFaemV1dEh3OVlDcldPa2kwRGlza1JudGhkNFFhdnhrTkpCNHpEN0I2Z1pYMV9HQ0Y4RkFKbE5mYWpydVh5VFVLVXp0SlJ3RWsyekRPVTZ3Q04tQ3p1eEsxcDh6NGlyVE1yZVFmYWNQdnVucGUzNy1RaXNIclpoMWJ0SHUzRS1UZTlpcXotM21oN3djbllXSlI2NkFsTEVzNHVlNU55VFlLTjZnbHlzcWg5OTl6cVFsRmxBdDg?oc=5",
      "source": "scanx.trade",
-     "age_h": 59.3,
+     "age_h": 59.6,
      "score": 0.0,
      "red_flag": false
     },
@@ -1183,7 +1191,7 @@
      "title": "Great Eastern Shipping (NSE:GESHIP): What Was Disclosed in the Q2 FY27 Earnings Call?",
      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPWi1xb3hRaEV2QWFQVGszWGdzNmo2MXF6a0h3cHM1YlQ1bDFfYWVEd0ZSakJOV29SQ2JybHFnaUtmT2pobFJIaFNLZkRvMDAydTF2cVpzSmwwR0JHcUdDVm1vM3hBTjk3MjZQTFhnNGpUcU51R3pocllIejgtS0tPT0xJNnFpazZXcjdvWExOSndmMG9PYTNxRElhREM4bXFMOExjT09lUk1wUFVfV2dISmJ4ZHVsd1NtNlR6TlhJWnBwTlNjWmNV?oc=5",
      "source": "Kalkine India",
-     "age_h": 59.4,
+     "age_h": 59.7,
      "score": 0.0,
      "red_flag": false
     },
@@ -1191,7 +1199,7 @@
      "title": "Great Eastern Shipping Q2 FY27 slides: record profit on tanker surge By Investing.com",
      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPczhabGNHSkl4LVl5cVRkTlhUR3pEdmVaVl9YaGZzVVRUWXFaaHNIUWhjM3p6YlNiZVR0TFpZUXRpT2dqYXZhazR5dFlHbUNZVjZFVHZ6dkNCR3VkOHd0TTY5Y2FLSjg5ZlhhRWhZZGlmdmxCcVdZWG5ZUmtmVFlhYWpKai1NYlhVcExIZ285bndZVWhtdHVaNnBkdU5pMmU3WnVybklsZWlIbXk0TldIQmsxMXBfclZrS2drUS1xZ1VQXzE0Z3Vn?oc=5",
      "source": "Investing.com India",
-     "age_h": 63.0,
+     "age_h": 63.4,
      "score": 0.818,
      "red_flag": false
     }
@@ -1229,7 +1237,7 @@
    "sector": "Consumer Cyclical",
    "industry": "",
    "adj_score": 51.1,
-   "news_N": 0.269,
+   "news_N": 0.266,
    "sector_chg": null,
    "reasons": [
     "news positive (+0.27, 3 headlines)"
@@ -1240,23 +1248,23 @@
      "title": "ITDC (NSE:ITDC) Q2 FY27: Standalone Net Profit Up 12.6% to ₹18.88 Crore",
      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxON1V5aHJrSVdnYVhoVGVFNlh5QWY1RFcxMFJmazBsZy1TRWQxOF95RzR1dXY2OUZpTjVLdzlZQ0FhM05XVmEza281Z3B1WHZ3Ry1pWnhTSjMyS2FNUDh5V25CRXdta2EzVEJNM0JvYVNLamlzVXNoTDl2cmNzNjNNQlNRN2hmTENibE1IX0YwemZCMFpxb0RSZDg4XzROMV9vUThEU00xal9XbHo4OTlsNVdhdlB4RGhQWjFkREZpNW9nMWVWdkFoTEEwdjhKTHdNYWYwcVFyRzNmeWZnVk9NbE1MNDNWYUpub202cDVvSQ?oc=5",
      "source": "Kalkine India",
-     "age_h": 21.2,
+     "age_h": 21.5,
      "score": 0.762,
-     "red_flag": false
-    },
-    {
-     "title": "India Tourism Development Corporation to review Q2 results",
-     "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxORXhRRnl2c2piTU5VYTRPYnV3WEhLSWFXd0t5RHotNWlZcEFRREQ5NFhpcTRwNWUtWW1FOVlPX2lGZ0x6ckx3NHZwckFsTVVQdU9JSlp5UkxSZzFlbWJEVl9zeVlXRWNCUXRRaUZmLVo5cFd2OFJsRk1UaEQybUtJbElxb2g5WVh3eWEwOEtTMDZ4YnozSV93OFNVcw?oc=5",
-     "source": "Multibagg AI",
-     "age_h": 37.3,
-     "score": 0.0,
      "red_flag": false
     },
     {
      "title": "ITDC’s Hotel Exit Programme Still Awaits State Transfers",
      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPU0tOMGd0WlY1bm9RLWJ3Nl8wU3VSU2VYRV9pLV9oLWFPLUZ5alA5ZHRKR1VqbVM0eFZTd3NYTTZROHAxRFkzMW0xc3dPN2RublVXMGJ0WlY1ZkpIS0ZGWFIweWNRNUxzM0h5QWZCUWNLbzd5Q0haeFpiZnpHNkd6LUVPVXhJZVJhRjNVN0dOSzFmeV9rSTc2bUZCU0t2b3ZIMmhQQkVONTkyaHgta2VZQ2NPeTEweEE4?oc=5",
      "source": "Multibagg AI",
-     "age_h": 37.3,
+     "age_h": 37.6,
+     "score": 0.0,
+     "red_flag": false
+    },
+    {
+     "title": "India Tourism Development Corporation to review Q2 results",
+     "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxORXhRRnl2c2piTU5VYTRPYnV3WEhLSWFXd0t5RHotNWlZcEFRREQ5NFhpcTRwNWUtWW1FOVlPX2lGZ0x6ckx3NHZwckFsTVVQdU9JSlp5UkxSZzFlbWJEVl9zeVlXRWNCUXRRaUZmLVo5cFd2OFJsRk1UaEQybUtJbElxb2g5WVh3eWEwOEtTMDZ4YnozSV93OFNVcw?oc=5",
+     "source": "Multibagg AI",
+     "age_h": 37.7,
      "score": 0.0,
      "red_flag": false
     }
@@ -1291,8 +1299,8 @@
    "mcap_cr": 149491,
    "sector": "Industrials",
    "industry": "Capital Goods",
-   "adj_score": 35.8,
-   "news_N": 0.66,
+   "adj_score": 35.7,
+   "news_N": 0.656,
    "sector_chg": 0.03,
    "reasons": [
     "news positive (+0.66, 9 headlines)",
@@ -1304,7 +1312,7 @@
      "title": "ABB India Reports Record Q3 Orders",
      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1jV24yTzVLZ05VRnp1b1VWN25TdW9iWmpRdmgxN0RhaHlMOFlvLW1JQXBQYzFpZUpFNzltLVlIZVhuaUxDTnNyOXFaU2lTN2pKOWNhN1BzeVVoNklpTlppNkpEcWlZWmIteFctb2hpUmp2TGRYWXlB?oc=5",
      "source": "Machine Maker",
-     "age_h": 2.4,
+     "age_h": 2.7,
      "score": 0.0,
      "red_flag": false
     },
@@ -1312,7 +1320,7 @@
      "title": "ABB India : Expanding demand across segments; solid execution",
      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNdVFVVnFLcWI5SG5UNTVhZ1ZuUEU1S3pXZGNjWVI1eE50TlRweXJLdzlBTUxYX09ucWc2cElGLU5YWUkyT1JyOGo1REVmSnMxREpOUDA3TzNfaU5qQS1vdGJPSUQtb1lRTmJxYlpFVklSeDRpeThQQkVrbTF1NXhUVWJCeXgtRDVDb2MxSkdDWFVSUHJJVWRPMi1UXzhCeWJwT0RGX2VQMmJNRUEwaC00Mw?oc=5",
      "source": "www.marketscreener.com",
-     "age_h": 3.2,
+     "age_h": 3.5,
      "score": 0.0,
      "red_flag": false
     },
@@ -1320,7 +1328,7 @@
      "title": "ABB India Limited Reports Earnings Results for the Third Quarter and Nine Months Ended September 30, 2026",
      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQVXBLZVdlSUxvZ2dyM1B2NnhKcXM1elJDVmpUcFRCZWYyNjBtanVYbE95Y3d5U0pfU2czOWlYZTIxUzl3Y3p4S1gwWkM3eUZDV2FkTW9zb3hoOTNzZGszem1oLXVmTm1pN2xBckI1LW91eHR1UXFWMklYWW5XM3p1aTU4RC11UTJPSUZXZXFmXzRJT1V3WUo0VGRtOEVHeC14QTRUc3dVT1FRT3N3djhqV193LWROVDhsN1N5RTZDa3d1SEtKV09UWGxZeFpwT19qd19fd25paVZvMzJfeGFBSWV3RTQzZ3c?oc=5",
      "source": "www.marketscreener.com",
-     "age_h": 11.9,
+     "age_h": 12.2,
      "score": 0.0,
      "red_flag": false
     }
@@ -1330,6 +1338,43 @@
    "pchange": 1.8994655496172186
   }
  ],
+ "prices": {
+  "IIFLCAPS": {
+   "last": 354.15,
+   "pchange": 0.54,
+   "open": 353.25,
+   "high": 360.95,
+   "low": 351.5
+  },
+  "GESHIP": {
+   "last": 1518.0,
+   "pchange": 4.73,
+   "open": 1442.3,
+   "high": 1527.9,
+   "low": 1430.0
+  },
+  "ABB": {
+   "last": 7054.5,
+   "pchange": 1.9,
+   "open": 6944.5,
+   "high": 7120.0,
+   "low": 6922.0
+  },
+  "ITDC": {
+   "last": 667.9,
+   "pchange": 2.99,
+   "open": 642.0,
+   "high": 722.1,
+   "low": 636.0
+  },
+  "APLAPOLLO": {
+   "last": 2251.6,
+   "pchange": 1.16,
+   "open": 2235.3,
+   "high": 2257.0,
+   "low": 2211.0
+  }
+ },
  "alerts_today": [
   "GESHIP|move+"
  ],
