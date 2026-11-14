@@ -22,6 +22,7 @@ from sentiment import adjusted_list, market_mood, name_keys, score_headline, sto
 
 IST = ZoneInfo("Asia/Kolkata")
 WWW = "https://www.nseindia.com"
+REF_INDEX = WWW + "/market-data/live-equity-market?symbol=NIFTY%20500"
 
 MARKET_FEEDS = [
     ("Economic Times", "https://economictimes.indiatimes.com/markets/stocks/rssfeeds/2146842.cms"),
@@ -46,15 +47,31 @@ def _num(x):
 
 
 # ---------------------------------------------------------------- NSE live endpoints
-def nse_json(nse, path: str):
+def nse_json(nse, path: str, referer: str | None = None):
+    """GET an NSE JSON API. Some endpoints (index snapshots) only answer after the matching web page
+    has set its cookies, so on failure the referer page is visited once and the call retried."""
+    import time
     nse._warm_www()
-    r = nse.get(WWW + path, tries=2, timeout=20)
-    if r is None:
-        return None
-    try:
-        return r.json()
-    except ValueError:
-        return None
+    last = None
+    for attempt in range(3):
+        try:
+            hdr = {"Referer": referer} if referer else {}
+            r = nse.s.get(WWW + path, timeout=20, headers=hdr)
+            last = r.status_code
+            if r.status_code == 200 and r.content:
+                try:
+                    return r.json()
+                except ValueError:
+                    last = "not JSON"
+        except Exception as e:
+            last = type(e).__name__
+        try:
+            nse.s.get(referer or WWW + "/market-data/live-equity-market", timeout=20)
+        except Exception:
+            pass
+        time.sleep(1.5 * (attempt + 1))
+    print(f"NSE {path} failed: {last}")
+    return None
 
 
 def parse_index_quotes(data) -> tuple[pd.DataFrame, dict]:
@@ -483,7 +500,7 @@ def evening_intel(nse, P: dict, f: dict, picks: list[dict], names: dict, bands: 
                                                  "link": "", "source": "Demo", "published": utc_now - dt.timedelta(hours=5)}]
     else:
         vix_hist = yahoo_vix_history()
-        snap, _ = parse_index_quotes(nse_json(nse, "/api/equity-stockIndices?index=NIFTY%20500"))
+        snap, _ = parse_index_quotes(nse_json(nse, "/api/equity-stockIndices?index=NIFTY%20500", REF_INDEX))
         idx = parse_all_indices(nse_json(nse, "/api/allIndices"))
         flows = parse_fii_dii(nse_json(nse, "/api/fiidiiTradeReact"))
         mkt_items, ok = market_headlines(nse)

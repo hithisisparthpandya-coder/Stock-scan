@@ -30,7 +30,7 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from market_intel import (IST, SECTOR_INDICES, breadth_live, collect_stock_news, load_json,  # noqa: E402
+from market_intel import (IST, REF_INDEX, SECTOR_INDICES, breadth_live, collect_stock_news, load_json,  # noqa: E402
                           market_headlines, mover_takeaways, movers, news_tone, nse_json, parse_all_indices,
                           parse_announcements, parse_fii_dii, parse_index_quotes, parse_market_status,
                           parse_quote_equity, peer_moves, vix_percentile, yahoo_quotes)
@@ -179,7 +179,7 @@ def main():
             if last_run[:10] == now.date().isoformat() and last_run[11:16] >= "15:30":
                 print(f"Market {status['status']} and today's closing snapshot is already saved.")
                 return
-        quotes, adv = parse_index_quotes(nse_json(nse, "/api/equity-stockIndices?index=NIFTY%20500"))
+        quotes, adv = parse_index_quotes(nse_json(nse, "/api/equity-stockIndices?index=NIFTY%20500", REF_INDEX))
         sources["prices"] = "NSE Nifty 500 snapshot" if len(quotes) else None
         want = {p["symbol"] for p in picks} | {p["symbol"] for p in ledger.get("open_positions", [])} | \
                {o["symbol"] for o in ledger.get("queued", [])} | {s["symbol"] for s in sent_doc.get("list", [])}
