@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-11-13T04:41+05:30",
+ "generated_at": "2026-11-14T14:01+05:30",
  "demo": false,
  "data": {
   "start": "2015-01-01",
-  "end": "2026-11-12",
+  "end": "2026-11-13",
   "symbols": 1490,
-  "trading_days": 3016
+  "trading_days": 3017
  },
  "oos_start": "2021-01-01",
  "capital": 35000,
@@ -24,20 +24,20 @@
    "label": "Current funnel (baseline)",
    "all": {
     "start": "2016-01-20",
-    "end": "2026-11-12",
-    "total_return_pct": -10.9,
+    "end": "2026-11-13",
+    "total_return_pct": -11.2,
     "cagr_pct": -1.1,
     "max_drawdown_pct": -30.2,
-    "sharpe": -0.05,
+    "sharpe": -0.06,
     "trades": 262,
     "trades_per_year": 24.2,
     "win_rate_pct": 31.3,
-    "avg_r": -0.087,
-    "avg_win_r": 2.0,
+    "avg_r": -0.089,
+    "avg_win_r": 1.99,
     "avg_loss_r": -1.04,
     "profit_factor": 0.92,
     "max_losing_streak": 13,
-    "avg_days_held": 22.9
+    "avg_days_held": 23.0
    },
    "in_sample": {
     "start": "2016-01-20",
@@ -58,18 +58,18 @@
    },
    "out_of_sample": {
     "start": "2021-01-01",
-    "end": "2026-11-12",
-    "total_return_pct": 4.3,
-    "cagr_pct": 0.7,
+    "end": "2026-11-13",
+    "total_return_pct": 3.8,
+    "cagr_pct": 0.6,
     "max_drawdown_pct": -16.8,
-    "sharpe": 0.12,
+    "sharpe": 0.11,
     "trades": 150,
     "trades_per_year": 25.6,
     "win_rate_pct": 31.3,
-    "avg_r": -0.014,
+    "avg_r": -0.018,
     "avg_win_r": 1.93,
-    "avg_loss_r": -0.9,
-    "profit_factor": 1.0,
+    "avg_loss_r": -0.91,
+    "profit_factor": 0.99,
     "max_losing_streak": 13,
     "avg_days_held": 21.3
    },
@@ -84,14 +84,14 @@
     "2023": 11.3,
     "2024": 3.6,
     "2025": -5.8,
-    "2026": -4.6
+    "2026": -5.0
    },
    "by_regime": {
     "amber": {
      "trades": 116,
      "win_rate_pct": 24.1,
-     "avg_r": -0.317,
-     "pnl": -10243.0
+     "avg_r": -0.32,
+     "pnl": -10305.0
     },
     "green": {
      "trades": 116,
@@ -102,8 +102,8 @@
     "red": {
      "trades": 30,
      "win_rate_pct": 43.3,
-     "avg_r": -0.132,
-     "pnl": 1930.0
+     "avg_r": -0.139,
+     "pnl": 1860.0
     }
    },
    "by_setup": {
@@ -116,8 +116,8 @@
     "Pullback to support": {
      "trades": 236,
      "win_rate_pct": 30.5,
-     "avg_r": -0.122,
-     "pnl": -5441.0
+     "avg_r": -0.125,
+     "pnl": -5573.0
     }
    },
    "by_exit": {
@@ -130,8 +130,8 @@
     "end of test": {
      "trades": 3,
      "win_rate_pct": 33.3,
-     "avg_r": -0.051,
-     "pnl": -16.0
+     "avg_r": -0.227,
+     "pnl": -148.0
     },
     "no data": {
      "trades": 2,
@@ -729,7 +729,7 @@
     "2026-10-25": 31348,
     "2026-11-01": 31348,
     "2026-11-08": 31419,
-    "2026-11-15": 31198
+    "2026-11-15": 31065
    },
    "recent_trades": [
     {
@@ -1043,44 +1043,44 @@
     {
      "symbol": "MUFIN",
      "entry_date": "2026-11-03",
-     "exit_date": "2026-11-12",
+     "exit_date": "2026-11-13",
      "entry": 136.61,
-     "exit": 140.08,
+     "exit": 138.53,
      "qty": 45,
-     "pnl": 115.25,
-     "r": 0.373,
+     "pnl": 45.64,
+     "r": 0.148,
      "reason": "end of test",
      "setup": "Pullback to support",
      "regime": "red",
-     "days": 7
+     "days": 8
     },
     {
      "symbol": "AKUMS",
      "entry_date": "2026-11-11",
-     "exit_date": "2026-11-12",
+     "exit_date": "2026-11-13",
      "entry": 772.9,
-     "exit": 749.9,
+     "exit": 741.05,
      "qty": 4,
-     "pnl": -120.18,
-     "r": -0.459,
+     "pnl": -155.51,
+     "r": -0.593,
      "reason": "end of test",
      "setup": "Pullback to support",
      "regime": "amber",
-     "days": 1
+     "days": 2
     },
     {
      "symbol": "BEML",
      "entry_date": "2026-11-12",
-     "exit_date": "2026-11-12",
+     "exit_date": "2026-11-13",
      "entry": 2112.0,
-     "exit": 2125.5,
+     "exit": 2098.2,
      "qty": 1,
-     "pnl": -10.98,
-     "r": -0.068,
+     "pnl": -38.22,
+     "r": -0.237,
      "reason": "end of test",
      "setup": "Pullback to support",
      "regime": "amber",
-     "days": 0
+     "days": 1
     }
    ]
   },
@@ -1088,8 +1088,8 @@
    "label": "Regime-adaptive momentum",
    "all": {
     "start": "2016-01-20",
-    "end": "2026-11-12",
-    "total_return_pct": -25.2,
+    "end": "2026-11-13",
+    "total_return_pct": -25.1,
     "cagr_pct": -2.6,
     "max_drawdown_pct": -34.6,
     "sharpe": -0.27,
@@ -1097,11 +1097,11 @@
     "trades_per_year": 32.3,
     "win_rate_pct": 30.9,
     "avg_r": -0.139,
-    "avg_win_r": 1.72,
+    "avg_win_r": 1.73,
     "avg_loss_r": -0.97,
     "profit_factor": 0.74,
     "max_losing_streak": 15,
-    "avg_days_held": 16.6
+    "avg_days_held": 16.7
    },
    "in_sample": {
     "start": "2016-01-20",
@@ -1122,7 +1122,7 @@
    },
    "out_of_sample": {
     "start": "2021-01-01",
-    "end": "2026-11-12",
+    "end": "2026-11-13",
     "total_return_pct": -11.9,
     "cagr_pct": -2.1,
     "max_drawdown_pct": -17.8,
@@ -1130,7 +1130,7 @@
     "trades": 220,
     "trades_per_year": 37.5,
     "win_rate_pct": 27.7,
-    "avg_r": -0.099,
+    "avg_r": -0.098,
     "avg_win_r": 1.92,
     "avg_loss_r": -0.87,
     "profit_factor": 0.77,
@@ -1154,8 +1154,8 @@
     "amber": {
      "trades": 229,
      "win_rate_pct": 31.9,
-     "avg_r": -0.089,
-     "pnl": -2293.0
+     "avg_r": -0.088,
+     "pnl": -2281.0
     },
     "green": {
      "trades": 120,
@@ -1175,7 +1175,7 @@
      "trades": 322,
      "win_rate_pct": 31.1,
      "avg_r": -0.077,
-     "pnl": -1267.0
+     "pnl": -1255.0
     }
    },
    "by_exit": {
@@ -1188,8 +1188,8 @@
     "end of test": {
      "trades": 3,
      "win_rate_pct": 33.3,
-     "avg_r": -0.165,
-     "pnl": -28.0
+     "avg_r": -0.146,
+     "pnl": -15.0
     },
     "no data": {
      "trades": 2,
@@ -1787,7 +1787,7 @@
     "2026-10-25": 26219,
     "2026-11-01": 26219,
     "2026-11-08": 26168,
-    "2026-11-15": 26191
+    "2026-11-15": 26204
    },
    "recent_trades": [
     {
@@ -2101,44 +2101,44 @@
     {
      "symbol": "NAZARA",
      "entry_date": "2026-11-05",
-     "exit_date": "2026-11-12",
+     "exit_date": "2026-11-13",
      "entry": 425.0,
-     "exit": 414.3,
+     "exit": 425.4,
      "qty": 2,
-     "pnl": -40.76,
-     "r": -0.67,
+     "pnl": -18.6,
+     "r": -0.306,
+     "reason": "end of test",
+     "setup": "Pullback to support",
+     "regime": "amber",
+     "days": 6
+    },
+    {
+     "symbol": "HONASA",
+     "entry_date": "2026-11-06",
+     "exit_date": "2026-11-13",
+     "entry": 464.17,
+     "exit": 496.45,
+     "qty": 2,
+     "pnl": 28.7,
+     "r": 0.536,
      "reason": "end of test",
      "setup": "Pullback to support",
      "regime": "amber",
      "days": 5
     },
     {
-     "symbol": "HONASA",
-     "entry_date": "2026-11-06",
-     "exit_date": "2026-11-12",
-     "entry": 464.17,
-     "exit": 493.3,
-     "qty": 2,
-     "pnl": 22.41,
-     "r": 0.419,
-     "reason": "end of test",
-     "setup": "Pullback to support",
-     "regime": "amber",
-     "days": 4
-    },
-    {
      "symbol": "ZYDUSLIFE",
      "entry_date": "2026-11-06",
-     "exit_date": "2026-11-12",
+     "exit_date": "2026-11-13",
      "entry": 1194.5,
-     "exit": 1206.0,
+     "exit": 1189.9,
      "qty": 1,
-     "pnl": -9.3,
-     "r": -0.245,
+     "pnl": -25.37,
+     "r": -0.669,
      "reason": "end of test",
      "setup": "Pullback to support",
      "regime": "amber",
-     "days": 4
+     "days": 5
     }
    ]
   }
@@ -2714,15 +2714,15 @@
    "2026-10-25": 108218,
    "2026-11-01": 110388,
    "2026-11-08": 119856,
-   "2026-11-15": 121144
+   "2026-11-15": 120401
   },
   "all": {
    "start": "2016-01-20",
-   "end": "2026-11-12",
-   "total_return_pct": 246.1,
-   "cagr_pct": 12.2,
+   "end": "2026-11-13",
+   "total_return_pct": 244.0,
+   "cagr_pct": 12.1,
    "max_drawdown_pct": -38.4,
-   "sharpe": 0.8,
+   "sharpe": 0.79,
    "trades": null
   },
   "yearly": {
@@ -2736,7 +2736,7 @@
    "2023": 20.0,
    "2024": 8.8,
    "2025": 10.5,
-   "2026": -3.2
+   "2026": -3.8
   }
  },
  "research": {
@@ -2753,25 +2753,25 @@
   "all": {
    "strategy": {
     "start": "2016-01-20",
-    "end": "2026-11-12",
-    "total_return_pct": 547.2,
-    "cagr_pct": 18.9,
+    "end": "2026-11-13",
+    "total_return_pct": 546.6,
+    "cagr_pct": 18.8,
     "max_drawdown_pct": -44.3,
     "sharpe": 0.78,
     "holdings_closed": 879,
     "closed_per_year": 81.3,
-    "win_rate_pct": 47.0,
+    "win_rate_pct": 46.9,
     "avg_ret_pct": 4.55,
     "profit_factor": 1.47,
     "avg_days_held": 45.7
    },
    "nifty": {
     "start": "2016-01-20",
-    "end": "2026-11-12",
-    "total_return_pct": 246.1,
-    "cagr_pct": 12.2,
+    "end": "2026-11-13",
+    "total_return_pct": 244.0,
+    "cagr_pct": 12.1,
     "max_drawdown_pct": -38.4,
-    "sharpe": 0.8
+    "sharpe": 0.79
    }
   },
   "in_sample": {
@@ -2801,25 +2801,25 @@
   "out_of_sample": {
    "strategy": {
     "start": "2021-01-01",
-    "end": "2026-11-12",
-    "total_return_pct": 215.0,
+    "end": "2026-11-13",
+    "total_return_pct": 214.6,
     "cagr_pct": 21.6,
     "max_drawdown_pct": -39.2,
     "sharpe": 0.83,
     "holdings_closed": 509,
     "closed_per_year": 86.8,
-    "win_rate_pct": 47.5,
+    "win_rate_pct": 47.3,
     "avg_ret_pct": 6.13,
     "profit_factor": 1.51,
-    "avg_days_held": 45.2
+    "avg_days_held": 45.3
    },
    "nifty": {
     "start": "2021-01-01",
-    "end": "2026-11-12",
-    "total_return_pct": 80.5,
-    "cagr_pct": 10.6,
+    "end": "2026-11-13",
+    "total_return_pct": 79.4,
+    "cagr_pct": 10.5,
     "max_drawdown_pct": -17.2,
-    "sharpe": 0.78
+    "sharpe": 0.77
    }
   },
   "beats_nifty_in_sample": true,
@@ -2835,7 +2835,7 @@
    "2023": 54.0,
    "2024": 29.2,
    "2025": -24.2,
-   "2026": 8.4
+   "2026": 8.3
   },
   "nifty_yearly": {
    "2016": 12.0,
@@ -2848,7 +2848,7 @@
    "2023": 20.0,
    "2024": 8.8,
    "2025": 10.5,
-   "2026": -3.2
+   "2026": -3.8
   },
   "equity": {
    "2016-01-24": 35000,
@@ -3415,11 +3415,428 @@
    "2026-10-25": 203006,
    "2026-11-01": 217946,
    "2026-11-08": 220484,
-   "2026-11-15": 226534
+   "2026-11-15": 226311
   },
   "notes": [
    "Nifty here is the price index (no dividends), which understates buy-and-hold by about 1–1.5% a year.",
    "Always invested: no market filter and no stop-losses, so drawdowns follow the market."
+  ]
+ },
+ "factor_study": {
+  "k": 15,
+  "horizons": [
+   "1d",
+   "5d",
+   "20d"
+  ],
+  "random_hit_pct": 10.0,
+  "rankings": [
+   {
+    "key": "picks",
+    "label": "Current picks (funnel + current ranking)",
+    "in_sample": {
+     "1d": {
+      "picks": 3729,
+      "days_with_picks": 793,
+      "hit_pct": 10.9,
+      "beat_median_pct": 49.1,
+      "excess_pct": 0.21
+     },
+     "5d": {
+      "picks": 3728,
+      "days_with_picks": 793,
+      "hit_pct": 10.6,
+      "beat_median_pct": 49.5,
+      "excess_pct": 0.27
+     },
+     "20d": {
+      "picks": 3720,
+      "days_with_picks": 793,
+      "hit_pct": 10.1,
+      "beat_median_pct": 52.8,
+      "excess_pct": 0.6
+     }
+    },
+    "out_of_sample": {
+     "1d": {
+      "picks": 8744,
+      "days_with_picks": 932,
+      "hit_pct": 12.5,
+      "beat_median_pct": 49.0,
+      "excess_pct": 0.25
+     },
+     "5d": {
+      "picks": 8735,
+      "days_with_picks": 928,
+      "hit_pct": 12.0,
+      "beat_median_pct": 50.0,
+      "excess_pct": 0.62
+     },
+     "20d": {
+      "picks": 8675,
+      "days_with_picks": 922,
+      "hit_pct": 10.6,
+      "beat_median_pct": 51.8,
+      "excess_pct": 1.53
+     }
+    }
+   },
+   {
+    "key": "picks_composite",
+    "label": "Funnel picks re-ranked by momentum + 52-week high",
+    "in_sample": {
+     "1d": {
+      "picks": 3708,
+      "days_with_picks": 792,
+      "hit_pct": 10.8,
+      "beat_median_pct": 49.3,
+      "excess_pct": 0.22
+     },
+     "5d": {
+      "picks": 3707,
+      "days_with_picks": 792,
+      "hit_pct": 10.7,
+      "beat_median_pct": 49.4,
+      "excess_pct": 0.27
+     },
+     "20d": {
+      "picks": 3699,
+      "days_with_picks": 792,
+      "hit_pct": 10.2,
+      "beat_median_pct": 52.8,
+      "excess_pct": 0.61
+     }
+    },
+    "out_of_sample": {
+     "1d": {
+      "picks": 8672,
+      "days_with_picks": 931,
+      "hit_pct": 12.5,
+      "beat_median_pct": 49.1,
+      "excess_pct": 0.26
+     },
+     "5d": {
+      "picks": 8663,
+      "days_with_picks": 927,
+      "hit_pct": 12.0,
+      "beat_median_pct": 50.6,
+      "excess_pct": 0.63
+     },
+     "20d": {
+      "picks": 8602,
+      "days_with_picks": 921,
+      "hit_pct": 10.5,
+      "beat_median_pct": 52.1,
+      "excess_pct": 1.57
+     }
+    }
+   },
+   {
+    "key": "funnel_all",
+    "label": "Every stock passing the funnel (no ranking)",
+    "in_sample": {
+     "1d": {
+      "picks": 3800,
+      "days_with_picks": 793,
+      "hit_pct": 10.8,
+      "beat_median_pct": 49.3,
+      "excess_pct": 0.22
+     },
+     "5d": {
+      "picks": 3799,
+      "days_with_picks": 793,
+      "hit_pct": 10.6,
+      "beat_median_pct": 49.4,
+      "excess_pct": 0.27
+     },
+     "20d": {
+      "picks": 3791,
+      "days_with_picks": 793,
+      "hit_pct": 10.1,
+      "beat_median_pct": 52.7,
+      "excess_pct": 0.59
+     }
+    },
+    "out_of_sample": {
+     "1d": {
+      "picks": 10259,
+      "days_with_picks": 932,
+      "hit_pct": 12.2,
+      "beat_median_pct": 49.4,
+      "excess_pct": 0.27
+     },
+     "5d": {
+      "picks": 10250,
+      "days_with_picks": 928,
+      "hit_pct": 11.7,
+      "beat_median_pct": 50.6,
+      "excess_pct": 0.65
+     },
+     "20d": {
+      "picks": 10184,
+      "days_with_picks": 922,
+      "hit_pct": 10.6,
+      "beat_median_pct": 51.8,
+      "excess_pct": 1.57
+     }
+    }
+   },
+   {
+    "key": "momentum",
+    "label": "Top volatility-adjusted 6+12-month momentum",
+    "in_sample": {
+     "1d": {
+      "picks": 18564,
+      "days_with_picks": 1238,
+      "hit_pct": 13.2,
+      "beat_median_pct": 48.4,
+      "excess_pct": 0.12
+     },
+     "5d": {
+      "picks": 18545,
+      "days_with_picks": 1238,
+      "hit_pct": 15.0,
+      "beat_median_pct": 50.5,
+      "excess_pct": 0.47
+     },
+     "20d": {
+      "picks": 18460,
+      "days_with_picks": 1238,
+      "hit_pct": 16.1,
+      "beat_median_pct": 52.7,
+      "excess_pct": 1.85
+     }
+    },
+    "out_of_sample": {
+     "1d": {
+      "picks": 22710,
+      "days_with_picks": 1518,
+      "hit_pct": 15.2,
+      "beat_median_pct": 49.4,
+      "excess_pct": 0.14
+     },
+     "5d": {
+      "picks": 22417,
+      "days_with_picks": 1514,
+      "hit_pct": 16.3,
+      "beat_median_pct": 51.4,
+      "excess_pct": 0.6
+     },
+     "20d": {
+      "picks": 21547,
+      "days_with_picks": 1499,
+      "hit_pct": 17.7,
+      "beat_median_pct": 51.7,
+      "excess_pct": 1.58
+     }
+    }
+   },
+   {
+    "key": "near_high",
+    "label": "Closest to 52-week high",
+    "in_sample": {
+     "1d": {
+      "picks": 18567,
+      "days_with_picks": 1238,
+      "hit_pct": 11.7,
+      "beat_median_pct": 50.9,
+      "excess_pct": 0.15
+     },
+     "5d": {
+      "picks": 18544,
+      "days_with_picks": 1238,
+      "hit_pct": 11.2,
+      "beat_median_pct": 50.6,
+      "excess_pct": 0.18
+     },
+     "20d": {
+      "picks": 18476,
+      "days_with_picks": 1238,
+      "hit_pct": 10.0,
+      "beat_median_pct": 50.8,
+      "excess_pct": 0.4
+     }
+    },
+    "out_of_sample": {
+     "1d": {
+      "picks": 22765,
+      "days_with_picks": 1518,
+      "hit_pct": 14.5,
+      "beat_median_pct": 50.5,
+      "excess_pct": 0.23
+     },
+     "5d": {
+      "picks": 22637,
+      "days_with_picks": 1514,
+      "hit_pct": 13.3,
+      "beat_median_pct": 50.3,
+      "excess_pct": 0.43
+     },
+     "20d": {
+      "picks": 22247,
+      "days_with_picks": 1499,
+      "hit_pct": 12.2,
+      "beat_median_pct": 51.3,
+      "excess_pct": 1.18
+     }
+    }
+   },
+   {
+    "key": "composite",
+    "label": "Momentum + 52-week high (composite)",
+    "in_sample": {
+     "1d": {
+      "picks": 18565,
+      "days_with_picks": 1238,
+      "hit_pct": 12.3,
+      "beat_median_pct": 49.9,
+      "excess_pct": 0.14
+     },
+     "5d": {
+      "picks": 18541,
+      "days_with_picks": 1238,
+      "hit_pct": 12.4,
+      "beat_median_pct": 49.9,
+      "excess_pct": 0.24
+     },
+     "20d": {
+      "picks": 18477,
+      "days_with_picks": 1238,
+      "hit_pct": 12.1,
+      "beat_median_pct": 50.9,
+      "excess_pct": 0.77
+     }
+    },
+    "out_of_sample": {
+     "1d": {
+      "picks": 22749,
+      "days_with_picks": 1518,
+      "hit_pct": 15.3,
+      "beat_median_pct": 50.1,
+      "excess_pct": 0.2
+     },
+     "5d": {
+      "picks": 22516,
+      "days_with_picks": 1514,
+      "hit_pct": 15.1,
+      "beat_median_pct": 50.8,
+      "excess_pct": 0.54
+     },
+     "20d": {
+      "picks": 21902,
+      "days_with_picks": 1499,
+      "hit_pct": 14.7,
+      "beat_median_pct": 52.8,
+      "excess_pct": 1.48
+     }
+    }
+   },
+   {
+    "key": "volume",
+    "label": "Biggest volume surge today",
+    "in_sample": {
+     "1d": {
+      "picks": 18558,
+      "days_with_picks": 1238,
+      "hit_pct": 15.5,
+      "beat_median_pct": 48.1,
+      "excess_pct": 0.1
+     },
+     "5d": {
+      "picks": 18535,
+      "days_with_picks": 1238,
+      "hit_pct": 13.2,
+      "beat_median_pct": 47.5,
+      "excess_pct": -0.08
+     },
+     "20d": {
+      "picks": 18494,
+      "days_with_picks": 1238,
+      "hit_pct": 11.4,
+      "beat_median_pct": 48.2,
+      "excess_pct": 0.06
+     }
+    },
+    "out_of_sample": {
+     "1d": {
+      "picks": 22759,
+      "days_with_picks": 1518,
+      "hit_pct": 19.1,
+      "beat_median_pct": 47.8,
+      "excess_pct": 0.29
+     },
+     "5d": {
+      "picks": 22649,
+      "days_with_picks": 1514,
+      "hit_pct": 14.8,
+      "beat_median_pct": 46.0,
+      "excess_pct": 0.27
+     },
+     "20d": {
+      "picks": 22257,
+      "days_with_picks": 1499,
+      "hit_pct": 12.3,
+      "beat_median_pct": 47.3,
+      "excess_pct": 0.77
+     }
+    }
+   },
+   {
+    "key": "reversal",
+    "label": "Biggest 1-week losers (reversal)",
+    "in_sample": {
+     "1d": {
+      "picks": 18565,
+      "days_with_picks": 1238,
+      "hit_pct": 14.6,
+      "beat_median_pct": 49.3,
+      "excess_pct": 0.12
+     },
+     "5d": {
+      "picks": 18558,
+      "days_with_picks": 1238,
+      "hit_pct": 13.8,
+      "beat_median_pct": 49.6,
+      "excess_pct": 0.15
+     },
+     "20d": {
+      "picks": 18484,
+      "days_with_picks": 1238,
+      "hit_pct": 13.5,
+      "beat_median_pct": 48.8,
+      "excess_pct": 0.49
+     }
+    },
+    "out_of_sample": {
+     "1d": {
+      "picks": 22735,
+      "days_with_picks": 1518,
+      "hit_pct": 14.4,
+      "beat_median_pct": 47.1,
+      "excess_pct": 0.07
+     },
+     "5d": {
+      "picks": 22580,
+      "days_with_picks": 1514,
+      "hit_pct": 12.8,
+      "beat_median_pct": 48.3,
+      "excess_pct": 0.2
+     },
+     "20d": {
+      "picks": 22220,
+      "days_with_picks": 1499,
+      "hit_pct": 11.4,
+      "beat_median_pct": 46.6,
+      "excess_pct": 0.52
+     }
+    }
+   }
+  ],
+  "best": null,
+  "summary": [
+   "Current picks, 1 week later: 12.0% land in the top 10% (random ≈ 10%), 0.62% vs the median stock (unseen years).",
+   "No alternative ranking beat the current one on both design and unseen years.",
+   "Next day: the best ranking put 19.1% of its picks in the top 10% (random ≈ 10%). One-day moves are mostly news and noise; the 1-week and 1-month columns matter for swing trades."
   ]
  },
  "robustness": [
@@ -3446,7 +3863,7 @@
    "cagr_pct": -3.6,
    "max_drawdown_pct": -38.8,
    "win_rate_pct": 31.4,
-   "avg_r": -0.298,
+   "avg_r": -0.297,
    "profit_factor": 0.69,
    "trades": 350
   },
