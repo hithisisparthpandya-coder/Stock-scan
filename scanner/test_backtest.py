@@ -219,6 +219,20 @@ def test_momentum_portfolio_no_lookahead():
     pd.testing.assert_series_equal(a.equity[a.equity.index <= cut], b.equity[b.equity.index <= cut])
 
 
+def test_factor_study_matches_signals_and_runs():
+    """The vectorised funnel used by the factor study must select the same stocks as strategy.signals."""
+    import bt_factors
+    hist, nifty = make_long_history(years=3, n_stocks=40)
+    P = build_panel(hist); f = features(P, nifty, CFG)
+    m, _, _, _ = bt_factors.baseline_mask_and_score(P, f, CFG)
+    for i in range(300, len(P["C"]), 23):
+        cands, _, _ = signals(f, P, i, CFG, "baseline", set())
+        assert set(c["symbol"] for c in cands) == set(m.columns[m.iloc[i].values]), i
+    out = bt_factors.factor_study(P, f, CFG, P["C"].index[int(len(P["C"]) * 0.55)], 260)
+    assert len(out["rankings"]) == 8 and out["summary"]
+    json.dumps(out)
+
+
 def test_report_has_research_section():
     import bt_report
     hist, nifty = make_long_history(years=3, n_stocks=40)

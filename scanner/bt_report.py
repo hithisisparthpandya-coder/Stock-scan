@@ -173,6 +173,10 @@ def run(hist: pd.DataFrame, nifty: pd.Series, cfg: dict, demo: bool, exclude: se
     }
 
     rep["research"] = research_momentum_portfolio(P, f, cfg, n, split)
+    t2 = time.time()
+    from bt_factors import factor_study
+    rep["factor_study"] = factor_study(P, f, cfg, split, cfg["bt_warmup"])
+    print("factor study:", rep["factor_study"]["summary"], f"({time.time() - t2:.0f}s)")
 
     rob = []
     for label, over in ROBUSTNESS:
