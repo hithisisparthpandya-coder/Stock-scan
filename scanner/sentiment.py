@@ -135,25 +135,33 @@ def red_flag(text: str) -> bool:
 STOP = {"limited", "ltd", "ltd.", "the", "company", "co", "corporation", "corp", "india", "(india)", "of", "and", "&"}
 
 
+COMMON_FIRST = {"reliance", "tata", "adani", "bajaj", "hindustan", "indian", "bharat", "mahindra", "aditya", "birla",
+                "jindal", "godrej", "state", "national", "power", "global", "united", "general", "central", "punjab",
+                "kotak", "hdfc", "icici", "torrent", "jubilant", "sun", "great", "new", "first", "southern", "eastern",
+                "western", "orient", "oriental", "asian", "gujarat", "maharashtra", "bank", "infra", "capital"}
+
+
+def norm(text: str) -> str:
+    return " " + re.sub(r"[^a-z0-9]+", " ", (text or "").lower()).strip() + " "
+
+
 def name_keys(symbol: str, name: str) -> list[str]:
-    """Phrases that identify a company in a headline: its symbol (if distinctive) and the first one
-    or two significant words of its name."""
-    words = [w for w in re.split(r"[\s,.]+", (name or "").lower()) if w and w not in STOP]
+    """Phrases that identify a company in a headline: the first two significant words of its name, the
+    first word alone only when it is distinctive, and the symbol when it is a real word-like ticker."""
+    words = [w for w in norm(name).split() if w not in STOP]
     keys = []
     if len(words) >= 2:
         keys.append(" ".join(words[:2]))
-    if words and (len(words[0]) >= 6 or len(words) == 1) and len(words[0]) >= 4:
+    if words and (len(words) == 1 or (len(words[0]) >= 7 and words[0] not in COMMON_FIRST)) and len(words[0]) >= 3:
         keys.append(words[0])
-    if words and words[0] == symbol.lower() and len(symbol) >= 3:
-        keys.append(words[0])
-    if len(symbol) >= 4 and symbol.isalpha():
+    if len(symbol) >= 4 and symbol.isalpha() and symbol.lower() not in COMMON_FIRST:
         keys.append(symbol.lower())
     return list(dict.fromkeys(keys))
 
 
 def mentions(headline: str, keys: list[str]) -> bool:
-    h = headline.lower()
-    return any(re.search(r"(?<![a-z0-9])" + re.escape(k) + r"(?![a-z0-9])", h) for k in keys)
+    h = norm(headline)
+    return any(f" {k} " in h for k in keys)
 
 
 def _age_hours(item: dict, now: datetime) -> float:

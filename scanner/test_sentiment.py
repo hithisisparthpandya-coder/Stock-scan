@@ -57,6 +57,9 @@ def test_stock_sentiment_decay_and_matching():
     assert S.stock_sentiment(other, keys, NOW)["count"] == 0
     assert S.stock_sentiment([{"title": "Tata Motors bags order", "published": NOW - dt.timedelta(days=5)}], keys, NOW)["count"] == 0
     assert "itc" in S.name_keys("ITC", "ITC Limited")
+    rp = S.name_keys("RPOWER", "Reliance Power Limited")
+    assert not S.mentions("Reliance Industries shares rebound 15%", rp) and S.mentions("Reliance Power hits upper circuit", rp)
+    assert S.mentions("Larsen & Toubro bags order", S.name_keys("LT", "Larsen & Toubro Limited"))
 
 
 def test_market_mood_bounds_and_bands():

@@ -18,7 +18,7 @@ from zoneinfo import ZoneInfo
 import numpy as np
 import pandas as pd
 
-from sentiment import adjusted_list, market_mood, name_keys, score_headline, stock_sentiment
+from sentiment import adjusted_list, market_mood, mentions, name_keys, score_headline, stock_sentiment
 
 IST = ZoneInfo("Asia/Kolkata")
 WWW = "https://www.nseindia.com"
@@ -302,8 +302,8 @@ def collect_stock_news(nse, targets: dict[str, str], market_items: list[dict], c
                                     for it in items]}
         else:
             items = []
-        own = [it for it in items if not keys or any(k in it["title"].lower() for k in keys + [sym.lower()])]
-        feed = [it for it in market_items if keys and any(re.search(r"(?<![a-z0-9])" + re.escape(k) + r"(?![a-z0-9])", it["title"].lower()) for k in keys)]
+        own = [it for it in items if not keys or mentions(it["title"], keys + [sym.lower()])]
+        feed = [it for it in market_items if keys and mentions(it["title"], keys)]
         out[sym] = stock_sentiment(own + feed, keys, now, already_matched=True)
     return out
 

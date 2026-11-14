@@ -273,7 +273,7 @@ def main():
         "nifty": {"last": nifty.get("last"), "pchange": nifty.get("pchange")},
         "vix": {"last": vix.get("last"), "pchange": vix.get("pchange")},
         "advance_decline": adv, "flows": flows, "sectors": sectors,
-        "industries": sorted(peers.values(), key=lambda p: -p["median"]),
+        "industries": sorted([p for p in peers.values() if p["n"] >= 3], key=lambda p: -p["median"]),
         "mood": mood, "news_tone": tone,
         "movers": mv, "takeaways": mover_takeaways(mv, peers),
         "watch": watch, "dynamic": dyn,
