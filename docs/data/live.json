@@ -1,0 +1,2200 @@
+{
+ "generated_at": "2026-11-14T08:54+05:30",
+ "demo": false,
+ "market_status": "Close",
+ "delay_note": "Prices ~15 min delayed (Yahoo), refreshed about every 15 minutes.",
+ "sources": {
+  "prices": "Yahoo Finance (~15 min delayed)",
+  "indices": true,
+  "fii_dii": true,
+  "announcements": true,
+  "news_feeds": [
+   "Business Standard",
+   "Economic Times",
+   "Mint",
+   "Moneycontrol"
+  ]
+ },
+ "nifty": {
+  "last": 25144.3,
+  "pchange": -0.61
+ },
+ "vix": {
+  "last": 15.78,
+  "pchange": -5.06
+ },
+ "advance_decline": {
+  "advances": 288,
+  "declines": 299,
+  "unchanged": 0
+ },
+ "flows": {
+  "dii": -2253.58,
+  "date": "13-Nov-2026",
+  "fii": 5736.55
+ },
+ "sectors": [
+  {
+   "name": "Energy",
+   "pchange": 0.03
+  },
+  {
+   "name": "FMCG",
+   "pchange": -0.01
+  },
+  {
+   "name": "Media",
+   "pchange": -0.2
+  },
+  {
+   "name": "Midcap 100",
+   "pchange": -0.24
+  },
+  {
+   "name": "Smallcap 100",
+   "pchange": -0.26
+  },
+  {
+   "name": "Infrastructure",
+   "pchange": -0.35
+  },
+  {
+   "name": "Healthcare Index",
+   "pchange": -0.38
+  },
+  {
+   "name": "Pharma",
+   "pchange": -0.49
+  },
+  {
+   "name": "PSU Bank",
+   "pchange": -0.51
+  },
+  {
+   "name": "Consumer Durables",
+   "pchange": -0.6
+  },
+  {
+   "name": "Oil & Gas",
+   "pchange": -0.68
+  },
+  {
+   "name": "Financial Services",
+   "pchange": -0.72
+  },
+  {
+   "name": "IT",
+   "pchange": -0.72
+  },
+  {
+   "name": "Bank",
+   "pchange": -0.79
+  },
+  {
+   "name": "Metal",
+   "pchange": -0.98
+  },
+  {
+   "name": "Auto",
+   "pchange": -1.07
+  },
+  {
+   "name": "Realty",
+   "pchange": -1.39
+  }
+ ],
+ "industries": [],
+ "mood": {
+  "score": 57.6,
+  "band": "neutral",
+  "risk_mult": 1.0,
+  "max_new": 3,
+  "note": "Neutral – normal rules.",
+  "components": [
+   {
+    "key": "breadth",
+    "label": "Breadth (stocks above 50-DMA)",
+    "value": 50,
+    "weight": 0.25
+   },
+   {
+    "key": "advance",
+    "label": "Advancers today",
+    "value": 49,
+    "weight": 0.2
+   },
+   {
+    "key": "calm",
+    "label": "Calm volatility (India VIX)",
+    "value": 28,
+    "weight": 0.2
+   },
+   {
+    "key": "trend",
+    "label": "Nifty trend vs 50-DMA",
+    "value": 100,
+    "weight": 0.15
+   },
+   {
+    "key": "news",
+    "label": "News tone",
+    "value": 56,
+    "weight": 0.2
+   },
+   {
+    "key": "flows",
+    "label": "FII + DII flows",
+    "value": 91,
+    "weight": 0.1
+   }
+  ]
+ },
+ "news_tone": {
+  "avg": 0.115,
+  "count": 48,
+  "positive": 28,
+  "negative": 20,
+  "top_positive": [
+   {
+    "title": "Jagatjit Industries Q2 net loss narrows to Rs 4 cr, revenue rises 90%",
+    "link": "https://economictimes.indiatimes.com/markets/stocks/earnings/jagatjit-industries-q2-net-loss-narrows-to-rs-4-cr-revenue-rises-90/articleshow/135801327.cms",
+    "source": "Economic Times",
+    "score": 0.848
+   },
+   {
+    "title": "Stock under ₹100: Turtlemint hits 5% upper circuit as Q2 loss narrows 67%",
+    "link": "https://www.business-standard.com/markets/news/stock-under-100-turtlemint-hits-5-upper-circuit-as-q2-loss-narrows-67-126111300718_1.html",
+    "source": "Business Standard",
+    "score": 0.848
+   },
+   {
+    "title": "Honasa, Nykaa rally up to 4% in subdued market; record 52-week highs",
+    "link": "https://www.business-standard.com/markets/news/honasa-nykaa-rally-up-to-4-in-subdued-market-record-52-week-highs-126111300603_1.html",
+    "source": "Business Standard",
+    "score": 0.834
+   },
+   {
+    "title": "Action Construction rallies 6%, nears 52-week high on healthy Q2 results",
+    "link": "https://www.business-standard.com/markets/news/action-construction-rallies-6-nears-52-week-high-on-healthy-q2-results-126111300421_1.html",
+    "source": "Business Standard",
+    "score": 0.834
+   }
+  ],
+  "top_negative": [
+   {
+    "title": "Park Medi World shares plummet 10% as Q2 profit tanks 31%, margins slide",
+    "link": "https://www.business-standard.com/markets/news/park-medi-world-shares-fall-10-as-q2-profit-tanks-31-margins-slide-126111300629_1.html",
+    "source": "Business Standard",
+    "score": -0.848
+   },
+   {
+    "title": "Bharat Dynamics shares fall 3% as Q2 margin pressure weighs on earnings",
+    "link": "https://www.business-standard.com/markets/news/bharat-dynamics-shares-fall-3-as-q2-margin-pressure-weighs-on-earnings-126111300659_1.html",
+    "source": "Business Standard",
+    "score": -0.8
+   },
+   {
+    "title": "Nifty Bank, Auto, Realty skid 1% as inflation stokes RBI rate hike fears",
+    "link": "https://www.business-standard.com/markets/news/nifty-bank-auto-realty-skid-1-as-inflation-stokes-rbi-rate-hike-fears-126111300433_1.html",
+    "source": "Business Standard",
+    "score": -0.762
+   },
+   {
+    "title": "Gold Edges Up, Still On Track for Worst Weekly Slump Since June",
+    "link": "https://www.livemint.com/market/gold-edges-up-still-on-track-for-worst-weekly-slump-since-june-11794595223804.html",
+    "source": "Mint",
+    "score": -0.635
+   }
+  ]
+ },
+ "movers": {
+  "gainers": [
+   {
+    "symbol": "JARO",
+    "name": "Jaro Institute of Technology Management and Research Limited",
+    "industry": "",
+    "last": 402.20001220703125,
+    "pchange": 16.13,
+    "value_cr": 369.9,
+    "verdict": "Technical / flow driven – no clear news found",
+    "reasons": [
+     "Heavy volume: 240.2× a normal day's pace – strong conviction",
+     "Bounce inside a downtrend (still below its 50-day average)"
+    ],
+    "headlines": []
+   },
+   {
+    "symbol": "DHANBANK",
+    "name": "Dhanlaxmi Bank Limited",
+    "industry": "",
+    "last": 40.2400016784668,
+    "pchange": 14.81,
+    "value_cr": 439.2,
+    "verdict": "Technical / flow driven – no clear news found",
+    "reasons": [
+     "Heavy volume: 281.5× a normal day's pace – strong conviction"
+    ],
+    "headlines": []
+   },
+   {
+    "symbol": "KENNAMET",
+    "name": "Kennametal India Limited",
+    "industry": "",
+    "last": 3954.800048828125,
+    "pchange": 13.94,
+    "value_cr": 334.1,
+    "verdict": "Likely news / event driven",
+    "reasons": [
+     "News +0.46: “Kennametal India reports ₹1.43B quarterly pretax profit”",
+     "Heavy volume: 277.9× a normal day's pace – strong conviction",
+     "Gapped up +19.8% at the open – overnight news or orders",
+     "Faded from the day's high – sellers stepped in",
+     "Bounce inside a downtrend (still below its 50-day average)"
+    ],
+    "headlines": [
+     {
+      "title": "Kennametal India reports ₹1.43B quarterly pretax profit",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9yLVFjeGNUVnV4dnVqemt4MGFMWkpQdHBuamY1X0NKakZmYzJTdzZBMDlmdFFnUlFDX0JTV1pldUdSTzVZc0VHaXF4MnZLU0ROSDFMM1ZJZFNSX1NHNnItYVJHNk1ZemVwbHcwbXh3LVZpUmRvUVRhUEJOeWZGQkk?oc=5",
+      "source": "Mugglehead Investment Magazine",
+      "age_h": 14.9,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "Kennametal India FY26 Results: PBT up 90% to ₹2,663 mn",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQVWRodWROcGdyNWFTWkY0QVk3bnpiTUxJa2hCNUUtclBLVXNpV2ZVVjJQcmUtRTN3ZG90R0dIZ1hXbndMbTV0Q1hLMFdlTHNjT3NIWEppd3JRSlkxMHFqajhiRXdWZGpYWkxwVmhkSnJvaXdTdmgxcTJTQVl4TVdBb2tZU2g1ZzdOWmVFMXpvRWZ1aE40MXZmZDFMMDB0bElCTDFaVFgyaWM?oc=5",
+      "source": "scanx.trade",
+      "age_h": 17.3,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "Kennametal India's July-Sep quarter PBT jumps to Rs 143 cr on strong hard metal volumes",
+      "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOdGlmR0NmOWZFREg0OE9WTEFQUVBhYUROT3AwSTZoUFc0eFJ5R2pudklGNU9CdW40dE0yOHFyc3NBM0FyakdaNnJZXzFKdXExOXkyTTdYRUtRRHJVS0d0Wnhyekx6VnhZT3NuZUJIWmJpcjY1cWYtMTRJRlM3VFJYVlA5a1VDOWRKMVkzUXZuVHQ1d21IdHNhc2JabmdXdGVwVlN5SUVLdlZSXzZneXV2Vl9mUWxvQjRWNk9GVkhCNHNIVG1OTHg0YmV5SzREdkxuZkdDV3hNdmJYUE14S0U3dkQ2LWE2dDhXdDFyb04zU0h3WTJER21rbmJNUFNvZF9vcHR30gH8AUFVX3lxTE9zUXplc3d0MEZMOXdQZlpnZm1NNXdPT2FIdVhOb2pNN2RuVnBhZnNqbVNmYVNwVjk4ZHBSRTFyS1JVek5PNFJNLXotT3ZpZnRIQ1Jya0xINWlNSko1Vkl4cnpnbHpwZTVUQW1QdkM0RnJCTWp5M2g5eVVfd3d0S3g3aDR0cDlpUE9Hek1xeHFNdHZDTFN1UVJxUEVSc2g0djJiTUY2NndWWXRPRWM4YTlLSFp2Sjg5Ul9RZzRFQWVvdE5YTTBiTFR5NElIQVIxRUlfN0lrbkpwNzZDamxxRF92OHJzYm42Y0xIaEFsRmg2T2JSdmttOGdGYkJ0TA?oc=5",
+      "source": "The Economic Times",
+      "age_h": 17.6,
+      "score": 0.537,
+      "red_flag": false
+     }
+    ]
+   },
+   {
+    "symbol": "DCXINDIA",
+    "name": "DCX Systems Limited",
+    "industry": "",
+    "last": 161.99000549316406,
+    "pchange": 10.81,
+    "value_cr": 972.0,
+    "verdict": "Likely news / event driven",
+    "reasons": [
+     "Heavy volume: 337.3× a normal day's pace – strong conviction",
+     "News -0.22: “Earnings Update: Here's Why Analysts Just Lifted Their DCX Systems Limited (NSE:DCXINDIA) Price Target To ₹192”"
+    ],
+    "headlines": [
+     {
+      "title": "Earnings Update: Here's Why Analysts Just Lifted Their DCX Systems Limited (NSE:DCXINDIA) Price Target To ₹192",
+      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOWXZjNmdweTVtNDJfVEVBclNrTkRjZ1lkTU5JR3FERlpqcDRkeWl5ZkM3ZG5GYWpQN0g4cDFvWk1pZ1U4UG1qMVJLeGF1THp0UUFXaGw2Zm5uUFEzUnZPMTZwTEEtNTVUQ0tPNmY5QzU1MnNWQXQyV1VHWWJYMjBKaV9OSHdNNm00SHZXWjNXVHlBdXRJQ25LMlJDRkZIX1p6WWVkYjk3Y2hvR3J1R0NYeTQwblZVYUZFZHlwVXpJWFVCVzZEUHl6TjB0TnFsSG1mWThOcVRBcGZFclHSAeABQVVfeXFMUGpBYTM0WGoyaDltQTJrdHVPRmR6LWZNUEpsbVVHVjJEVG1RYnlLM0M5NnhzRFFobUthTlM4QTJpS0Y5OXlyMHZkYWhRR0JCLWw0U1gzVEZ6bHN4UEZOOFNiRWkyUWhlZnFVaUVKdWw3VFpiOUR5dm1HVW5RVzlyeVRUR3BJYjhCbzVvWG1FTG12RmhENDFOTkpuLVBYdWpWNE5ERHQ2ZFF4MUw5ajlyU3FhY3NxMW9GOTk4RXM4OGk3V0JYU2sxM1pqVkRTZ09RdXBEVXR4dkFIRE1hVUZnTjk?oc=5",
+      "source": "Simply Wall St",
+      "age_h": 1.2,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "DCX Systems Receives ₹25.53 Crore in New Purchase Orders",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQWkdGa1lZaG56c0hrZjhscGg1NjVOelM4ZzZlYjh2azNSeG05cm14N0E1M0RxWlBkN081SVE2YWdmZk9iOHlmUkxDR3dfYzVBMWNtVXRfT3R4SlpRbGFqbHQ3OUlwUlhFZHlGRWhuZjZTemhod2U1dTFPOTNSR0l2dndaTFZWWC04MEZtWG9hekxuc0Z4aHFvNGFDdw?oc=5",
+      "source": "EquityBulls",
+      "age_h": 15.9,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "DCX Systems Secures ₹25.53 Crore Orders for Cable and Electronic Assemblies; Shares Fall 2.34%",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNdm1NWnJoUm85MnpFT0xHMnNZZ2tvUDR2b1U5cDdJYURFOWlVN3k2WjRUdGhhVXdBV0Q4XzJhMkMtUXhVRDRvdnlKV1VveU9jQXhXS0VTc0I3cGxLblRjMGsxV21aN0U0QVhXVEt5QUVYMVpoeVJqR1g5bTBMNmJRY09KeTIzdTdaclFvRWJEMFNMZTZ5UWlKcExrSUxXa0pYX1VleE9aaHZmVGlDbXdRT19Xb0ZFSzh1UDVEajV4VVpiT0ZSbkE?oc=5",
+      "source": "HDFC Sky",
+      "age_h": 20.9,
+      "score": -0.336,
+      "red_flag": false
+     }
+    ]
+   },
+   {
+    "symbol": "FIEMIND",
+    "name": "Fiem Industries Limited",
+    "industry": "",
+    "last": 2133.300048828125,
+    "pchange": 9.77,
+    "value_cr": 219.2,
+    "verdict": "Likely news / event driven",
+    "reasons": [
+     "News +0.37: “Earnings call transcript: Fiem Industries posts record Q2 2026 sales, stock jumps 9.8% By Investing.com”",
+     "Heavy volume: 176.1× a normal day's pace – strong conviction",
+     "Gapped up +6.5% at the open – overnight news or orders",
+     "Closing near the day's high"
+    ],
+    "headlines": [
+     {
+      "title": "Earnings call transcript: Fiem Industries posts record Q2 2026 sales, stock jumps 9.8% By Investing.com",
+      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOQTVHMllVVVpYeTlxWEZWRHQ3ZWNfUnZ3T1plckdHM2lVaTE4NkJacVpaa3hFRXhjSEtPakYzUUlORVUwbGlFWHdOUmJCNkpzTnEwd2l4OURtUnFMc055OTVjRjRlT1hYTE9nVE03NzFRcEVxVTFDaDRqSVlsaVlldURaOVNmamVpOTgtS3Rha2NFdkZ4STJlUjNEdEVBblUyd3NHY0RGYzhyVG9mVFJ2ZUV4R3czWEpNOVlsRXVGVVQya0YxWktUNURFeDA1TnY2VEZPTTIxbnBGRFE?oc=5",
+      "source": "Investing.com India",
+      "age_h": 15.7,
+      "score": 0.537,
+      "red_flag": false
+     },
+     {
+      "title": "Fiem Industries submits Q2FY27 earning call presentation",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOUFNkb1FLVGNjYUVYTmM5R2pxNk5zd3JiNlpJVlUzNVBEaWY3NmNZRXJ1endHSDQzZGd5eTVhR3pyMTFPVmVWNmtuc3ctMlNHc0xKQkR1OWJpUS14SHV0M1NTWUF3TW1VUnoxYnFXRW51MTgtbHZ0ek9YdVlJajlJWjFGU3VFYndITVVxaTRHQ0JNOXk3YnZydWt2eHk3eTZScDlNLQ?oc=5",
+      "source": "InvestyWise",
+      "age_h": 38.4,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "Fiem Industries Q2 standalone profit rises 32% to Rs 84.17 crore",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQQUc5UC1IVzFuZnlpV0tOUWoxZ3llaHVoTTY2Wng1RWlZZnJQcmVzanBvVF9jTmNLWnJjbWdCNmh6UjNrTndwdUR6Vm1MeXJZYWVHbVREMFl0WGVWSXNpa1hTZ2VDaFZMbEFWTWF2RUtxV1o1ZWpVTFZHam5LVTRILVcySkhlV09tSUk1aGpzUDhhUUwyc0RIRk1IckJKVXUtUVF6NW1rMGxMbmRObXlQTTZMdkJWRWM?oc=5",
+      "source": "Multibagg AI",
+      "age_h": 40.7,
+      "score": 0.762,
+      "red_flag": false
+     }
+    ]
+   },
+   {
+    "symbol": "AMBER",
+    "name": "Amber Enterprises India Limited",
+    "industry": "",
+    "last": 6772.0,
+    "pchange": 9.07,
+    "value_cr": 1842.2,
+    "verdict": "Likely news / event driven",
+    "reasons": [
+     "News +0.14: “Earnings call transcript: Amber Enterprises posts Q2 beat, shares jump 9% on growth By Investing.com”",
+     "Heavy volume: 161.1× a normal day's pace – strong conviction",
+     "Gapped down -2.5% at the open – overnight news or orders",
+     "Bounce inside a downtrend (still below its 50-day average)"
+    ],
+    "headlines": [
+     {
+      "title": "Earnings call transcript: Amber Enterprises posts Q2 beat, shares jump 9% on growth By Investing.com",
+      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQMXpFY0RoZEE5bzN6MGw5S3VBaEZLdk9hZ1BiSlMyOWxsd2NzZ2pUcU90VXhPbjBEZmFkQVdVZUZzRFpnc0M1bVVRWXFLNllscDliUWJYSzVmRnV4LW01TURPOTU2TjAzekFTYWtTUXR5OXVwdnhpMHp1UUFTWTRid1Vkd1NNTEFfU1Vlb1g4N1FDcEZJc3hwMWVJSklXcHIzY2s5Qlkwc1kweFY5dk5aeWVMeVhnSWFNSGZBOE9MMGJDSm85WW9xNVJBb0hzVlZqOWtWZUV2TGo?oc=5",
+      "source": "Investing.com India",
+      "age_h": 14.2,
+      "score": 0.537,
+      "red_flag": false
+     },
+     {
+      "title": "Amber Enterprises Q2FY27 Results: Net loss widens to ₹66 cr; H1 PAT ₹69 cr",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNWWhpSVExWUtlUGN1NkZtSy1OQjJ0RDk0ZDRTOEVab3QzWVVMamRucWI4akxkYVlqZy11X3ctZFFLbGhSRzRJdHM4Y0lSaDljdXBQa0hpYWQwWW5vckNRejlEM2RyaUlEZVVOZ2tFamZjc3RVMGdNTHVtOUllWWhPdzd5MVpodzVQQl9VQXl0SXM1Y2FSTzhVaUFBbW5BMjBfYVl1R0JWZTBXaUZhWG9ubG1wcE1ZOFpFZlYxWkFLcw?oc=5",
+      "source": "scanx.trade",
+      "age_h": 33.6,
+      "score": -0.762,
+      "red_flag": false
+     },
+     {
+      "title": "Amber Enterprises unveils FY27 financial performance and expansion plans",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSEFJNGZ4Z1dpc3Y3bDJkZTY4ZkhzaDEyRFhGS3pXQnl6S0NQYktEUGJFR1FPVGlnbWVYYkc0aHp3RVhlektuV0dacHBsRTZISkFYOG94eHpFenBpZGFHS2dVakxoVWkxeUI0RzV4N1NLS0hneVBxRzNMcUdPNWlQMFpPTVRrTEtEMmZPUmZuZVljanlhV0VhMnpwZVZaU1FWWlJOVDYzek0yNmhJLXc?oc=5",
+      "source": "Business Upturn",
+      "age_h": 33.9,
+      "score": 0.38,
+      "red_flag": false
+     }
+    ]
+   },
+   {
+    "symbol": "HDFIRE",
+    "name": "HD Fire Protect Limited",
+    "industry": "",
+    "last": 308.45001220703125,
+    "pchange": 8.49,
+    "value_cr": 129.1,
+    "verdict": "Likely news / event driven",
+    "reasons": [
+     "Heavy volume: 24.8× a normal day's pace – strong conviction",
+     "News -0.83: “3,931,998 Equity Shares of HD Fire Protect Limited are subject to a Lock-Up Agreement Ending on 14-NOV-2026.”"
+    ],
+    "headlines": [
+     {
+      "title": "3,931,998 Equity Shares of HD Fire Protect Limited are subject to a Lock-Up Agreement Ending on 14-NOV-2026.",
+      "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQSjZJMHZ6eDFCMkQtSm43RHdGWjkxVzk2cjdYR1g5UmtXRzltTGhNZHNIUGVIcDIzcWxvLWp2SEdWbEhFcWNMS1RLOGcyT2RfTjBiR3VZUDBJeGdGVEJFUnVmZ0VRMzFhZ2l3T2NHVmdHSi1LeWRqSTA4T2puZjlDa3RSZEtvNDhRelRvSTlweW9XaVlmclc3cTJCY05iSVk2NDZGdlJMclc4cTBNNkJuZkdCRzBSeGRsenltSHQyWXR4LWJMM0lfMm43bk1od1VIendaQ2xvOGNhaHBlNVRxXy1Qc19oODlz?oc=5",
+      "source": "www.marketscreener.com",
+      "age_h": 3.1,
+      "score": -0.635,
+      "red_flag": false
+     },
+     {
+      "title": "HD FIRE PROTECT LIMITED Share Price",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE44cDNiakVmbUwyRm9TYzE4WlBDTjEtV01samg0LW5Id3pHam5CRkM2NnVhd1dzTkUwb3pxajFFS1FKaExYTkhqZFgzM20wUVFyTUl6ejdUclhpdWUxQ2NDVTVTczBPMTJTRzc0VTFlbw?oc=5",
+      "source": "Upstox",
+      "age_h": 14.5,
+      "score": -0.635,
+      "red_flag": false
+     },
+     {
+      "title": "HD Fire Protect Reports Q2 Net Profit Growth Ahead Of H2 Revenue Peak",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNTzNvSGgzdFBwMXZ5aVFEeGZPM3ZVT0RJcThLS0dDcTBQVVEwWUF4MF9wNFR1S29QT3pOd0JEdlhjN2pqeXcwbUZPX2tpZDg0My04WS1fODNhMU51dDhUNXNJNkp0SFl0cktSRE5PSVhQSHdLX2lLakQ5Skt2eXIwWmFPZWFqd3lHeFE4aWs3WWEzUzgtTXJkUUN4NA?oc=5",
+      "source": "Sahi",
+      "age_h": 40.4,
+      "score": 0.245,
+      "red_flag": false
+     }
+    ]
+   },
+   {
+    "symbol": "AVANTIFEED",
+    "name": "Avanti Feeds Limited",
+    "industry": "",
+    "last": 762.9000244140625,
+    "pchange": 8.35,
+    "value_cr": 1212.1,
+    "verdict": "Likely news / event driven",
+    "reasons": [
+     "Heavy volume: 296.7× a normal day's pace – strong conviction",
+     "News +0.00: “Avanti Feeds NSE:AVANTIFEED Q2 FY27 Results Newspaper Publication”"
+    ],
+    "headlines": [
+     {
+      "title": "Avanti Feeds NSE:AVANTIFEED Q2 FY27 Results Newspaper Publication",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOaWxtSTR2SkczRU1SdkJsRDdhQXFGaVlCbGxiMWs2ZTRtQm9EdEtTcGN3bnFnQnZCeFY1QTdHUzJOVFR4SmFwSEdrdU1sX3RmMWdWSEl5c2VnVnRzMGVDZGVLQ1JvMHBLZktUQzNNSXRFQ19xdGFfdWcxUGFUYXNRZWR4YmFzRUlibEZ5aUswdnoxVE54OXFDaHQzVDBpT2gzZFdKM2NHdEFoc1NsaUV1cjJlUlF5VVc5cnVDOXVXdGVmWXJWb3ZVN3k3QzZXUQ?oc=5",
+      "source": "Kalkine India",
+      "age_h": 65.9,
+      "score": 0.0,
+      "red_flag": false
+     }
+    ]
+   },
+   {
+    "symbol": "ANURAS",
+    "name": "Anupam Rasayan India Limited",
+    "industry": "",
+    "last": 1300.5999755859375,
+    "pchange": 8.22,
+    "value_cr": 226.2,
+    "verdict": "Likely news / event driven",
+    "reasons": [
+     "News +0.28: “Anupam Rasayan posts strong half-year results”",
+     "Heavy volume: 61.4× a normal day's pace – strong conviction",
+     "Closing near the day's high"
+    ],
+    "headlines": [
+     {
+      "title": "Anupam Rasayan posts strong half-year results",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNT29ld1hqY1BBSWVhRm9NdVF2QUNKdkpSa2JwcFpuUkNxX2RVR3VaMjlXclIxekFFM1FKdFFkVWFPSFNqRm1SeWRUbTBfVVNkSUhCTEpGX3piOUg3ZnpULTRZUlk2bGhUSjZKM1U4UVFMWnNGTmNMeDR4Z2ExZll3NnlmMThCcHlDRWlfY1E4VFMzZnFHdUhLYUJHUC1HRDdnN2hLRUZwTy16anotQjNtZUo5NnBBRS1yQThsdG9jZS1MU05BMFFMWGVqRdIBywFBVV95cUxNT29ld1hqY1BBSWVhRm9NdVF2QUNKdkpSa2JwcFpuUkNxX2RVR3VaMjlXclIxekFFM1FKdFFkVWFPSFNqRm1SeWRUbTBfVVNkSUhCTEpGX3piOUg3ZnpULTRZUlk2bGhUSjZKM1U4UVFMWnNGTmNMeDR4Z2ExZll3NnlmMThCcHlDRWlfY1E4VFMzZnFHdUhLYUJHUC1HRDdnN2hLRUZwTy16anotQjNtZUo5NnBBRS1yQThsdG9jZS1MU05BMFFMWGVqRQ?oc=5",
+      "source": "Indiatimes",
+      "age_h": 10.6,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "Anupam Rasayan expects Rs 100-150 crore from U.S. deal",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPeWlfazFYUWY1Y0ZmWk5vbWw4akxnbzE5U1BCOHkxMzV3MER0X2kyTUo4TVZzYjhETmFSZm91RVBldXBCNTlFUzM1YlljZjI3eG5pODhtYUxPT2JSMDdTVngwRUlzNWYyd0o4SmloUzVpS1llODFtazlXbFpwaUYweEI0M1FMUTdsbU55dlFyNGttRXZOQ0h1SEZDeGpNa3F6OXZKWlJYcGMxN1Z4Q1NkdTlMWHA?oc=5",
+      "source": "Multibagg AI",
+      "age_h": 12.8,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "Anupam Rasayan completes Bliss deal, takes 50.07% stake",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNWFBJOG0zRlRielpxbk5lZ2FZbndPSmpmMi02WU5xUlF2d2hibGVQV2JjV2l1b1lVZ04tOUFtUDlQTHA2b0dQR2Y4YlBwZElRWFE5YXJrVDU0VXMxYW9FVFpKS1hmRERTWjJkdTIzUUJzZVNGVGt5WXZ1UTMtTHoyY0dBYmFkUUs0X3A1aDViYUVQb3AxNlZyNUpfOXNneXZubzREMkxxWmxSOHNPN2oycEJoUzk?oc=5",
+      "source": "Multibagg AI",
+      "age_h": 12.8,
+      "score": 0.0,
+      "red_flag": false
+     }
+    ]
+   },
+   {
+    "symbol": "APOLLO",
+    "name": "Apollo Micro Systems Limited",
+    "industry": "",
+    "last": 475.6000061035156,
+    "pchange": 8.07,
+    "value_cr": 1363.5,
+    "verdict": "Likely news / event driven",
+    "reasons": [
+     "Heavy volume: 41.4× a normal day's pace – strong conviction",
+     "News +0.00: “Apollo Micro Systems Reports No Deviation in Preferential Issue Proceeds”",
+     "Closing near the day's high"
+    ],
+    "headlines": [
+     {
+      "title": "Apollo Micro Systems Reports No Deviation in Preferential Issue Proceeds",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPdWNYc0RDYXc2Q2tYMGhFNE9CSGNXYUV0c0lhLWZfdnN2MHhiX2VkaGVta3FLQUJZQ21VU25XX2lDaVEweWNUYVNLY2xNSDNDa1M4cUUyalI4UkZ6RmxKcmRRTVdHSXNHbjgyVGU4T0JwYXBWZU5ESlpxVEpDQUFNc29RdTRXeno4cVV2YWJyYW5qR2I0MWgwSnZqY0s1Y1lRNTYySFhvTzhrMjFMNUd0NFotY2lYUzdzdE1GVk1zeVhBZw?oc=5",
+      "source": "TipRanks",
+      "age_h": 10.0,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "Apollo Micro Systems reports no deviation in utilisation of ₹742.25 crore preferential issue proceeds",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPNURPelk5ZFBJNFdsMmk2Wm1RR05PWGhMd2lKcm9RcFdOcnJEd3ZRVFYyMnBYNTlzemVIaXBQV2NVUXViWTlMT3lpWV9pTmo2elRGalpxMjhmbWtzVGI4SGxLNDdGbm1XeDFqeTVBOVFEdU9yMUV5Y1hvT19wYXRKTjNoRWh1eWIxT082Qi1wY1lOOS1hUVlFMkVpa2ViZE9vbFZVc1NpQlBNZjlYMnQweXZNNWtpWjRxOXZIVDRMaTRvSzFMaGltbldrcUZPdGZqbUxfTlJn?oc=5",
+      "source": "Business Upturn",
+      "age_h": 10.3,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "Apollo Micro Systems shares: Why experts bet high on this multibagger defence stock after MSCI rejig? Target, stop-loss",
+      "link": "https://www.livemint.com/market/stock-market-news/apollo-micro-systems-shares-why-experts-bet-high-on-this-multibagger-defence-stock-after-msci-rejig-target-stoploss-11794555639681.html",
+      "source": "Mint",
+      "age_h": 19.2,
+      "score": 0.0,
+      "red_flag": false
+     }
+    ]
+   }
+  ],
+  "losers": [
+   {
+    "symbol": "KPEL",
+    "name": "K.P. Energy Limited",
+    "industry": "",
+    "last": 186.5,
+    "pchange": -8.89,
+    "value_cr": 39.6,
+    "verdict": "Likely news / event driven",
+    "reasons": [
+     "Heavy volume: 21.8× a normal day's pace – strong conviction",
+     "News +0.00: “K.P. Energy KPEL Q2 FY27 Earnings Call Recording Available”"
+    ],
+    "headlines": [
+     {
+      "title": "K.P. Energy KPEL Q2 FY27 Earnings Call Recording Available",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNaW55aGxSSHNuSm9jUFZyTkFWZ2N1RjV5Q1djVzRRWThUUVcwUGdkd0ZoRU1UTGJoVExyU2E3djRBMk9jNy1KQURxZTJXUE1mRS13X3NCdWJBQmlXRVBTUEVMV0p2QVRxOXd1eFZoVHltWk9keDJ5bmpkOWkyNG5BOTd6aUhiZWJoRG56OWtDeThiamM3M2dJbHZiUUtVbXJnX3pRcmtDNFFQZw?oc=5",
+      "source": "Kalkine India",
+      "age_h": 12.8,
+      "score": 0.0,
+      "red_flag": false
+     }
+    ]
+   },
+   {
+    "symbol": "FEDDERSHOL",
+    "name": "Fedders Holding Limited",
+    "industry": "",
+    "last": 57.04999923706055,
+    "pchange": -7.19,
+    "value_cr": 21.0,
+    "verdict": "Technical / flow driven – no clear news found",
+    "reasons": [
+     "Heavy volume: 42.4× a normal day's pace – strong conviction",
+     "Fell through its 50-day average"
+    ],
+    "headlines": []
+   },
+   {
+    "symbol": "MANINDS",
+    "name": "Man Industries (India) Limited",
+    "industry": "",
+    "last": 821.4500122070312,
+    "pchange": -5.83,
+    "value_cr": 98.1,
+    "verdict": "Likely news / event driven",
+    "reasons": [
+     "Heavy volume: 35.4× a normal day's pace – strong conviction",
+     "Fell through its 50-day average",
+     "News +0.62: “MAN Industries PAT rises to Rs 82 cr in Q2”",
+     "Closing near the day's low"
+    ],
+    "headlines": [
+     {
+      "title": "MAN Industries PAT rises to Rs 82 cr in Q2",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/earnings/man-industries-pat-rises-to-rs-82-cr-in-q2/articleshow/135806024.cms",
+      "source": "Economic Times",
+      "age_h": 13.4,
+      "score": 0.336,
+      "red_flag": false
+     },
+     {
+      "title": "Man Industries Share Price - Live NSE: MANINDS Stock Price & Chart",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1QN0dScEJfM1hqUUlpMUgwNTV0QWZsN3MtUXhMaGJNRGxkb1l5ZDRqUmYyUkZXWW1VYzhlYVgtb3c4ekJaZGRBbjhES3U1bm1kZmV1eWNfVl9nVzVPOEZlYXBVZFUzR0xRYnY0?oc=5",
+      "source": "Upstox",
+      "age_h": 37.4,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "MAN Industries Q2 EBITDA reaches Rs 190 crore after NPC",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQZEhFZDUyeV9uTWczMVllRk1pYnNLbG9yRG9xekFYMFdsWGdjbTFyRldJa2FTNlRTSVlycmVUZjRhMmIwYlN2RGpnaTI4YkxnLV8ydFVvRU1xNmdQQWVRN3M4SVJNeWlLWENPRzRkY3VhODIxTy02eV9vRkFJR2pBb182b1QxaW55QzlBQW1mQkdPS3hOQWxCQTBtbmJfakRReWFROTU1ZnY2MHZUTXpMWG5xRU5sbnRV?oc=5",
+      "source": "Multibagg AI",
+      "age_h": 37.9,
+      "score": 0.0,
+      "red_flag": false
+     }
+    ]
+   },
+   {
+    "symbol": "LASERPOWER",
+    "name": "Laser Power & Infra Limited",
+    "industry": "",
+    "last": 211.02999877929688,
+    "pchange": -5.54,
+    "value_cr": 10.7,
+    "verdict": "Likely news / event driven",
+    "reasons": [
+     "Heavy volume: 16.8× a normal day's pace – strong conviction",
+     "Gapped down -3.3% at the open – overnight news or orders",
+     "News +0.00: “Laser Power & Infra (NSE:LASERPOWER) Q2 FY27 Revenue at ₹628.22 Crore”"
+    ],
+    "headlines": [
+     {
+      "title": "Laser Power & Infra (NSE:LASERPOWER) Q2 FY27 Revenue at ₹628.22 Crore",
+      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQUXo2SHU0ODJXM1QzTE1NSF9VR0tpdGN1NFVuUjhuSXotMk9OZGptVjh6aElDV2pwU2h5dVl1ME5RRWdlQmczYTd0QUFyU2FtR0hGcWJ5OWtJZnFNZ1dfYWJGZE1CdlNEdnc1R1JRMGJ5RWt2bDhPSzcxcW13eE4yYkszSDVGeUJ3WDlSNElFYWtlQk0wNmZkcUdLSDliT2RwTGN6ck02YmFaNjRJQWkyZUZ1LVlod3dwVnVuSEFuM2J3bzZNNnVlRW4wM2VZYXNVdjR6QUNGczl2amREc21BRnBsb0EwU2c?oc=5",
+      "source": "Kalkine India",
+      "age_h": 21.1,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "Laser Power Infra gets stock exchange nod",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxObmV6eHdBWGNWMUE0bGU5eUhjUzJySmtISHJtcm5hWXA0MThHeUluMWFEUG4yM3RfY2U2b2I4bVFxMjRnUVJNZmlqc05zTFA2aDhSSll4Y2pHbmt1ZDk4a0tJcjU0WmM4SElzY05LRG4xd2pJeTJyT3RHZ0RmaVJyWGtTWjNBd1hTUW5LN0ZTSnRkQXBIRDBoaEEzYw?oc=5",
+      "source": "InvestyWise",
+      "age_h": 21.1,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "Laser Power & Infra reappoints CMD for 5 years",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOVFBNbW9uTGVuT3JrY1ZKR3RGMGVlZGYwdDZsYUNUY2NIQmo1S2NETWtyUlplejVldC1TeU44SWlHLUFDc1hROTF2QlF5RDBVbXRNUV9OaHVSbFRIRnN1bjI3TkRha19kblNmYWVVZTVkVXVYRkhIcWJCY2loMUNvWUZ3SldldnVOOWNTWHY1bzhkbENYNGNocVpGNF92SjFGdnc?oc=5",
+      "source": "InvestyWise",
+      "age_h": 21.1,
+      "score": 0.0,
+      "red_flag": false
+     }
+    ]
+   },
+   {
+    "symbol": "GABRIEL",
+    "name": "Gabriel India Limited",
+    "industry": "",
+    "last": 1552.699951171875,
+    "pchange": -5.39,
+    "value_cr": 191.4,
+    "verdict": "Likely news / event driven",
+    "reasons": [
+     "Heavy volume: 28.3× a normal day's pace – strong conviction",
+     "News +0.26: “Gabriel India and 6 Other Stocks Hit 20% Upper Circuit Today. Do You Own Any?”"
+    ],
+    "headlines": [
+     {
+      "title": "Gabriel India and 6 Other Stocks Hit 20% Upper Circuit Today. Do You Own Any?",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxObHBGcGQtUFRzTVdTNE94eW1uRFZtcEc3bDNPUDI1N2FwcTg0dTNlb1d2UFRuanVmWU01ZW5FN2NFSTNGbTNIZjRZOXRfUnNfQ2pvWHBDX1dPYk1lOTJOdkVXUkxiQkgzVjNpUzhGVF9QaG9WcTgwaHp3Vmg4aUN2dXE5aXp1bDc5Tk5YMmhYZXYtN3I5ZUNIeTNqS1UyTXJyY2hpUWFPcDNaZFJoMnNJb3JpUzNFejYwdDJVR3RB?oc=5",
+      "source": "Trade Brains",
+      "age_h": 40.3,
+      "score": 0.635,
+      "red_flag": false
+     },
+     {
+      "title": "Gabriel India hits 20% upper circuit on huge volume; up 112% from March low",
+      "link": "https://www.business-standard.com/markets/news/gabriel-india-hits-20-upper-circuit-on-huge-volume-up-112-from-march-low-126111200893_1.html",
+      "source": "Business Standard",
+      "age_h": 41.2,
+      "score": 0.635,
+      "red_flag": false
+     }
+    ]
+   },
+   {
+    "symbol": "BLUESTONE",
+    "name": "BlueStone Jewellery and Lifestyle Limited",
+    "industry": "",
+    "last": 734.6500244140625,
+    "pchange": -5.29,
+    "value_cr": 37.3,
+    "verdict": "Likely news / event driven",
+    "reasons": [
+     "Heavy volume: 14.6× a normal day's pace – strong conviction",
+     "Fell through its 50-day average",
+     "News +0.00: “BLUESTONE JEWEL LFSTL LTD (BLUESTONE.NS) Q4 25/26 earnings call transcript”"
+    ],
+    "headlines": [
+     {
+      "title": "BLUESTONE JEWEL LFSTL LTD (BLUESTONE.NS) Q4 25/26 earnings call transcript",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQeUVMdHhBUTBXeW9rZHRxSWExVFk4X0NpYWNZenAwYWpZX3VFVnp0bEFwMDNCQ0ZBb1lUaXd4dnhNWHFDRnFiT0JyU2xfZGRCeGMzanBoRWRfZUtudFJHSHVtWW5lUEo4V3laNkdQcjV1R1lTd2VPNGJZRmp4VzZUNmtyMlhxYkdfQmQ4VDRlOVhhdVR2TkZnRVpHd25MU1RINzVz?oc=5",
+      "source": "Yahoo Finance",
+      "age_h": 15.7,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "BlueStone to participate in BofA India Corporate Day on November 17",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQSU9Kd0RfZGUwTTZtX1FBZF9xWlo4N3JRZFJvV19aZEJsaU55anZZMkFZeTgyRU11blpHVFluUUN2VGRUM2ZIWXdpdE9EZlIydHNfRXptc1JwWkU1U3BGSnhuVHpsMjREMG0wTFY2a3ZfMWJFb3ZoVFBXX1cwajM1UEtEWXU3a05WVXBSOHBhZlZ6Q2dEZmpuTUdmc01uNDJPX2hySFlYNVVMbk9iOGZRWGpTR0RKUQ?oc=5",
+      "source": "scanx.trade",
+      "age_h": 38.1,
+      "score": 0.0,
+      "red_flag": false
+     }
+    ]
+   },
+   {
+    "symbol": "MAHSEAMLES",
+    "name": "Maharashtra Seamless Limited",
+    "industry": "",
+    "last": 540.9000244140625,
+    "pchange": -5.21,
+    "value_cr": 54.0,
+    "verdict": "Likely news / event driven",
+    "reasons": [
+     "News -0.39: “Maharashtra Seamless Q2 results: Profit falls 42% to ₹73 crore, revenue rises nearly 10% - CNBC TV18”",
+     "Heavy volume: 80.0× a normal day's pace – strong conviction"
+    ],
+    "headlines": [
+     {
+      "title": "Maharashtra Seamless Q2 results: Profit falls 42% to ₹73 crore, revenue rises nearly 10% - CNBC TV18",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVUdyNnlrUXBDVkg2aV96YnUxN2k0VXl4bHJtdmNSdVhZaVpkT3JQRjRIM2FuaVJmZk5pak1aUlAzTVBVRlFYR3dKOS01eXdDeEI4amluTkEwVGNZNXpESDBjaEl4TFJ5b3F3QVJueUZkcVhiRlMwc2JWOEZWdjRKQnJsTGMyd0c4eHdhV1FQNW9ZbTNwcjhvT245WFpiOWw1TVlaTTlncF94VUtSR0djYWxNQlhuRjZDWm93?oc=5",
+      "source": "LinkedIn",
+      "age_h": 15.6,
+      "score": -0.245,
+      "red_flag": false
+     },
+     {
+      "title": "Maharashtra Seamless Q2 FY27 Earnings Report",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNdGlZWWVYaHQzNklFalZWRW5ReUxlT19WNUJtMVE2RWs5QWQ3bV9wY3VIV09JVG9xYzhFdlpSdFcxb1JZU001dEI0Y25MWHp6SFF0RHpkQnVhR2xqNFBnWHJ5TEdsZnI5WldYQk1fLWxVSWMzTW91SWNaMlVEXzFfX2lYRkk3T0lGWHUxcnota3p0Q0d0U3c?oc=5",
+      "source": "InvestyWise",
+      "age_h": 16.8,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "Maharashtra Seamless Limited Plans Rs 852 Crore Capex From Cash",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRmtZRzJhb3FjcVJoWGczN2lvcUE4cU5Lbll1NVNnZXBmYXIyY0lDTlhrY3k0aU53SFBDWDFoOXJteWxGdDJwNzhoaDByWld4QlJlLTJ4N3BTQ3NqQm4yWk85SFo5THYydkExY3Y1dzJtWDhKNVE0WHB5enh2WTF1a3k0TVpobEEzX2hKVDNzYmVPZTFzeTJhUENyUzJWcXpENEJzbEgzdXljejRfX1BUbDJfYw?oc=5",
+      "source": "Multibagg AI",
+      "age_h": 17.0,
+      "score": 0.0,
+      "red_flag": false
+     }
+    ]
+   },
+   {
+    "symbol": "LALITHAA",
+    "name": "Lalithaa Jewellery Mart Limited",
+    "industry": "",
+    "last": 349.3999938964844,
+    "pchange": -4.99,
+    "value_cr": 169.0,
+    "verdict": "Likely news / event driven",
+    "reasons": [
+     "Hit its 5% lower circuit",
+     "Heavy volume: 43.4× a normal day's pace – strong conviction",
+     "News +0.00: “Lalithaa Jewellery Reports No Deviation in IPO Proceeds Use”",
+     "Closing near the day's low"
+    ],
+    "headlines": [
+     {
+      "title": "Lalithaa Jewellery Reports No Deviation in IPO Proceeds Use",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPZXdVdkhKeGdQaHNDUEtoMFFuLU5meURrTVJCUWI4VUtiNVF2RmN0ZFh4dnAtUUl3eGxQLVowLVJWSDJOT2RuN0lkUWI2cUtWWGxNLWlPQ29SbS1COUlNVFBfV2RLVUhJZWUzcjgwVFcwOTlCd1RuUktXcEJWQ3Z5OEdsdUIzR1gwMHktVTVZb256ODFtRVV2eHdJTVhmWXh1dmR1cE5KYmhvVUpaOXhZZQ?oc=5",
+      "source": "TipRanks",
+      "age_h": 41.2,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "Lalithaa Jewellery Board Approves September-Quarter Results and Merger Draft",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPZHBRMFc2V0VuNWNfaXV5eTg0b2xwaEc3b1c3anI1NGFWY2lKZDN4cXMyWHg2RzhROVdnNmllM0h6Smw4S3F2Rm1iZkNuR1g0ODMza25yUkloSzdfLVVVZWRqSU5KcVFDazcxWGg4eDN3Tm9acU9fTFFYZkIyakx3QXJIN3B4TFJCOXc2UWJDZ0hmLVhJYVpoODBTbEU2THIzMTN5eHo5M1U1djJaUnp5dGNwcmlBZi1SUFJ4MlhLdFhFSHJxVkVJ?oc=5",
+      "source": "TipRanks",
+      "age_h": 59.3,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "Lalithaa Jew Q2FY27 PAT up 4.5% YoY to ₹2,530 crore",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNaEV0MjhiR0VfbUVjakJaWGJpUkdKMlVxbFVvMkhTUW1saUJGQlhuVENtLXpqRHdtWDg3TEQwZ01RS1VLdE1yMXI4SV8yNmNId1lrRXVaa0J1QzJaaW9vdTQwVDllenc0Y3RwQWpkTEo5TVRmWXh4U2pieDlDYXBUa2Q3LWtvZU9fWVFSbllvZlIzMlU5WHN3b0g5TEE5UEVYX2hWOXhn?oc=5",
+      "source": "scanx.trade",
+      "age_h": 60.9,
+      "score": 0.0,
+      "red_flag": false
+     }
+    ]
+   },
+   {
+    "symbol": "APEX",
+    "name": "Apex Frozen Foods Limited",
+    "industry": "",
+    "last": 326.25,
+    "pchange": -4.88,
+    "value_cr": 14.6,
+    "verdict": "Likely news / event driven",
+    "reasons": [
+     "Heavy volume: 20.2× a normal day's pace – strong conviction",
+     "Gapped down -5.2% at the open – overnight news or orders",
+     "News +0.00: “Apex Frozen Foods announces financial results for Q2 & H1FY27”"
+    ],
+    "headlines": [
+     {
+      "title": "Apex Frozen Foods announces financial results for Q2 & H1FY27",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxONFczUTFLelV3cW1rYlNtdFlVczd5YXpqN0RIU3BQNG12LU1DMk5SWXRjYzZpTFdDS25iVWh4TFRmUzVxZGc2aXctQjhwVjN4ZC1zaDNOTGtXbk0yR3BPNVdkak9WWWJyUjJINVJEYnU1TW9mVjVzWmljRjliZkpmYUs1UUE0bnh5cVFaaGVreVdwbVI3b1JuVnBnVXk?oc=5",
+      "source": "Business Upturn",
+      "age_h": 11.9,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "Apex Frozen Foods Q2FY27 results: EBITDA up 16.8% YoY to ₹13.32 crore",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNbHBPaXBneG9Pb19RZDNmeU1TYVVha1pRRmF1Z3pUajdKZUl4MVl4WVNnU1k4X09lX0RVNzYzUHQxbGhjZl9KeTJnUnMtX0RFRk1EckNMdjFHTk9MLTdtYmtRMDA0S3hRejUwQ0RMcWNoVFFyTTVJZUtEa3NXVmdkckRjWG5DcmpFWXI4SFNmRWZhcVRzd2cyeVdNN1F6UmZXS05QOVJWR2xlcGhEVVBIYl9tYnR5aS1FemR1Rk8zc0U?oc=5",
+      "source": "scanx.trade",
+      "age_h": 39.3,
+      "score": 0.0,
+      "red_flag": false
+     }
+    ]
+   },
+   {
+    "symbol": "ASTRAMICRO",
+    "name": "Astra Microwave Products Limited",
+    "industry": "",
+    "last": 1703.5,
+    "pchange": -4.61,
+    "value_cr": 129.9,
+    "verdict": "Likely news / event driven",
+    "reasons": [
+     "Heavy volume: 35.5× a normal day's pace – strong conviction",
+     "News +0.15: “Earnings call transcript: Astra Microwave posts Q2 2026 beat as stock falls By Investing.com”"
+    ],
+    "headlines": [
+     {
+      "title": "Earnings call transcript: Astra Microwave posts Q2 2026 beat as stock falls By Investing.com",
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOVzRXTXpZUkUwU0hPWjNjLVYyQThySnZYYWhLQTV1bnA3YUl4dkRnUHlZdGNQbWozTEFHTWlpUDRZbldSdElGbHh2VGpnZXFONk9LdnV6QlpQYXBDLXJ3UzFhUXN5dUFvT3NPRE11MDZQaWhmdmF6bWtaUF9YMmFnT0M3bk5hOXRNcmgxOHd1ZWVjRTkyS1RYcm9lZWZaOHBSUERqRFAxX28wNng0bm01LTI2SWExNlQ0M1I4RjVqTlg0Szg4N0lLYldiUi03WTZx?oc=5",
+      "source": "Investing.com India",
+      "age_h": 17.6,
+      "score": -0.336,
+      "red_flag": false
+     },
+     {
+      "title": "Astra Microwave Products Ltd. presents Q2 FY27 investor update",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPSUQ2Wl9fYklFYUd5bGJYQ1hQZm1sSkNLVmRsbW81M1l5V292TE1maFc2dEhSQk5OcnFKaEMtQ3RNcVJ4bm5uaVl1WFYwdHVWRHI1ZEhReDZraFJIU1dBN05MZ25ON0tYdmlXcURGaXNGUlNKZEpGM2VwcGNjUkpBckZfMi16N3JuZ1dEWVBpcnFUc0NLYmc?oc=5",
+      "source": "InvestyWise",
+      "age_h": 41.0,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "Astra Microwave Products confirms no deviation in preferential issue funds",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQMUc1YXVESk8yX2xrcVFXS01ObTktWUF4anVkaHdBdEJlSEZ6a3V6Q21BQzlVZHBiRmwxRnBpOEpaazJoemxhT2pmN3JtY1lYT0w4NWZLU3FJcW1fd0tnV012RGU0YlV5emtHMklTYjBFbThnY3BHa0I5NlNlQ2g2OUJyLUloblQwVW9YUkJhNEtsQm01enM0RWJFR0RvdkE4T2tZMU93?oc=5",
+      "source": "InvestyWise",
+      "age_h": 43.6,
+      "score": 0.0,
+      "red_flag": false
+     }
+    ]
+   }
+  ]
+ },
+ "takeaways": [
+  "8 of 10 gainers have a news or event explanation; the rest look technical or flow-driven.",
+  "9 of 10 losers have a news or event explanation; the rest look technical or flow-driven."
+ ],
+ "watch": [
+  {
+   "symbol": "IIFLCAPS",
+   "role": "Paper order (next open)",
+   "entry": 354.15,
+   "stop": 345.51,
+   "target": 371.42,
+   "qty": 24,
+   "limit": 357.69,
+   "name": "IIFL Capital Services Limited",
+   "last": 354.1499938964844,
+   "pchange": 0.54,
+   "open": 353.25,
+   "low": 351.5,
+   "high": 360.95001220703125,
+   "from_entry_pct": -0.0,
+   "pnl": -0.0,
+   "to_stop_pct": 2.5,
+   "flags": []
+  },
+  {
+   "symbol": "GESHIP",
+   "role": "Paper order (next open)",
+   "entry": 1518.0,
+   "stop": 1402.45,
+   "target": 1749.09,
+   "qty": 3,
+   "limit": 1533.18,
+   "name": "The Great Eastern Shipping Company Limited",
+   "last": 1518.0,
+   "pchange": 4.73,
+   "open": 1442.300048828125,
+   "low": 1430.0,
+   "high": 1527.9000244140625,
+   "from_entry_pct": 0.0,
+   "pnl": 0.0,
+   "to_stop_pct": 8.24,
+   "flags": []
+  },
+  {
+   "symbol": "ABB",
+   "role": "Paper order (next open)",
+   "entry": 7054.5,
+   "stop": 6809.78,
+   "target": 7543.94,
+   "qty": 1,
+   "limit": 7125.05,
+   "name": "ABB India Limited",
+   "last": 7054.5,
+   "pchange": 1.9,
+   "open": 6944.5,
+   "low": 6922.0,
+   "high": 7120.0,
+   "from_entry_pct": 0.0,
+   "pnl": 0.0,
+   "to_stop_pct": 3.59,
+   "flags": []
+  },
+  {
+   "symbol": "ITDC",
+   "role": "Paper order (next open)",
+   "entry": 667.9,
+   "stop": 631.08,
+   "target": 741.54,
+   "qty": 9,
+   "limit": 674.58,
+   "name": "India Tourism Development Corporation Limited",
+   "last": 667.9000244140625,
+   "pchange": 2.99,
+   "open": 642.0,
+   "low": 636.0,
+   "high": 722.0999755859375,
+   "from_entry_pct": 0.0,
+   "pnl": 0.0,
+   "to_stop_pct": 5.83,
+   "flags": []
+  },
+  {
+   "symbol": "APLAPOLLO",
+   "role": "Paper position",
+   "entry": 2235.3,
+   "stop": 2155.77,
+   "qty": 3,
+   "target": null,
+   "name": "APL Apollo Tubes Limited",
+   "last": 2251.60009765625,
+   "pchange": 1.16,
+   "open": 2235.300048828125,
+   "low": 2211.0,
+   "high": 2257.0,
+   "from_entry_pct": 0.73,
+   "pnl": 49.0,
+   "to_stop_pct": 4.45,
+   "flags": []
+  }
+ ],
+ "dynamic": [
+  {
+   "symbol": "IIFLCAPS",
+   "name": "IIFL Capital Services Limited",
+   "setup": "Breakout from base",
+   "low_priced": false,
+   "entry": 354.15,
+   "stop": 345.51,
+   "target": 371.42,
+   "qty": 24,
+   "capital": 8500.0,
+   "max_loss": 207.0,
+   "risk_pct": 2.44,
+   "vol_ratio": 9.56,
+   "ret63_pct": 5.7,
+   "sma50": 345.02,
+   "sma200": 327.85,
+   "turnover_cr": 74.3,
+   "score": 71.4,
+   "next_results": null,
+   "fund_status": "pass",
+   "fund_notes": [],
+   "roe_pct": 19.5,
+   "de": 0.65,
+   "mcap_cr": 13198,
+   "sector": "Financial Services",
+   "industry": "",
+   "adj_score": 71.4,
+   "news_N": 0.0,
+   "sector_chg": null,
+   "reasons": [
+    "news neutral (+0.00, 3 headlines)"
+   ],
+   "veto": null,
+   "headlines": [
+    {
+     "title": "IIFL Capital open offer: 4.53% shares tendered as FIH stake hits 38%",
+     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNQ3I5YU9ZMEhXWllRajFGbGx1U1MxTXBCN3ZlbGgtVm0zLXE4M3JqZm9UX0lDMzFucXVTVkF6SVNrcTZ6Q0pjUEN2elBTb0pyYnRxT0kyYVNkeG0tVXc0YXZOMGVvSmExYi1OOU5CMzRiZUo3M1pWX1lpdkNlQ2w4RHdtenQ2bXhVRnRKbmpiaEQteGJZZlhhWlJnbXY3M1lycXc0M2dTWVExbTdKQ2Q0UHFONW5uNEU?oc=5",
+     "source": "scanx.trade",
+     "age_h": 42.2,
+     "score": 0.0,
+     "red_flag": false
+    },
+    {
+     "title": "IIFL Capital Services Open Offer: Day-One Tender Update",
+     "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPdnFOSkFZR1dCbzRsWDhkTEdXeHN0S3VJY1ViNGJpdFVPLUxrcjZlaU5hTHduQzdqV0tBLTJ0UDc4TXRwNnI2RnYtZjZfc3FhMXZQVFMxWjNJa3lSZy04ZFBBNHBUbjNMMFc0eUtsazg2V25ZNUZITFpCYjU0VGVkZTdfbzFDSU9DNzlRajdJeXVFNWRpQmNqNmNucXdxcjNJdnUyUjRyeXhicU43UW5YZjBMc2xlZld5NENVdmo4WjA?oc=5",
+     "source": "Kalkine India",
+     "age_h": 62.4,
+     "score": 0.0,
+     "red_flag": false
+    },
+    {
+     "title": "IIFL Capital Services Open Offer: Tender Update Nov 2026",
+     "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNak9ac2JacDFsYWM5OXZzZk1LUWNFbXc5cTZrREFhY0pzM25abUQxT1pzeWNWbWJhQUxDOXhNb1dRVk1mX3R2aWlqMlFNbW1VZnNIdk9URl9JTzF5eGpaaXVwLXRMNVFIYVNCNnZFZDZjLVNIcnlLOG9nM3VuV09WZExfQ3l1MmMzOTlsNE5qT2dJR3lLaENFQjFnRV81M2Y3dHVsQWZrcDJIMDR1OWFHR0RycG42VjZkVGtieVNxLXhWN21oQjBtaTQ1ZkM5M0NFQmJ0SXI5cTNuSWlZOWV6WGl4N0VYdkpxTXJZ?oc=5",
+     "source": "Kalkine India",
+     "age_h": 62.4,
+     "score": 0.0,
+     "red_flag": false
+    }
+   ],
+   "status": "suggested",
+   "last": 354.1499938964844,
+   "pchange": 0.5393879053184891
+  },
+  {
+   "symbol": "GESHIP",
+   "name": "The Great Eastern Shipping Company Limited",
+   "setup": "Pullback to support",
+   "low_priced": false,
+   "entry": 1518.0,
+   "stop": 1402.45,
+   "target": 1749.09,
+   "qty": 3,
+   "capital": 4554.0,
+   "max_loss": 347.0,
+   "risk_pct": 7.61,
+   "vol_ratio": 1.93,
+   "ret63_pct": 16.5,
+   "sma50": 1494.78,
+   "sma200": 1436.94,
+   "turnover_cr": 129.4,
+   "score": 60.0,
+   "next_results": null,
+   "fund_status": "pass",
+   "fund_notes": [],
+   "roe_pct": 26.0,
+   "de": 0.04,
+   "mcap_cr": 20400,
+   "sector": "Industrials",
+   "industry": "",
+   "adj_score": 61.3,
+   "news_N": 0.088,
+   "sector_chg": null,
+   "reasons": [
+    "news neutral (+0.09, 5 headlines)"
+   ],
+   "veto": null,
+   "headlines": [
+    {
+     "title": "Great Eastern Shipping releases audio recording of Q2FY27 earnings call",
+     "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOZUFLSnF2NTFaemV1dEh3OVlDcldPa2kwRGlza1JudGhkNFFhdnhrTkpCNHpEN0I2Z1pYMV9HQ0Y4RkFKbE5mYWpydVh5VFVLVXp0SlJ3RWsyekRPVTZ3Q04tQ3p1eEsxcDh6NGlyVE1yZVFmYWNQdnVucGUzNy1RaXNIclpoMWJ0SHUzRS1UZTlpcXotM21oN3djbllXSlI2NkFsTEVzNHVlNU55VFlLTjZnbHlzcWg5OTl6cVFsRmxBdDg?oc=5",
+     "source": "scanx.trade",
+     "age_h": 59.2,
+     "score": 0.0,
+     "red_flag": false
+    },
+    {
+     "title": "Great Eastern Shipping (NSE:GESHIP): What Was Disclosed in the Q2 FY27 Earnings Call?",
+     "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPWi1xb3hRaEV2QWFQVGszWGdzNmo2MXF6a0h3cHM1YlQ1bDFfYWVEd0ZSakJOV29SQ2JybHFnaUtmT2pobFJIaFNLZkRvMDAydTF2cVpzSmwwR0JHcUdDVm1vM3hBTjk3MjZQTFhnNGpUcU51R3pocllIejgtS0tPT0xJNnFpazZXcjdvWExOSndmMG9PYTNxRElhREM4bXFMOExjT09lUk1wUFVfV2dISmJ4ZHVsd1NtNlR6TlhJWnBwTlNjWmNV?oc=5",
+     "source": "Kalkine India",
+     "age_h": 59.3,
+     "score": 0.0,
+     "red_flag": false
+    },
+    {
+     "title": "Great Eastern Shipping Q2 FY27 slides: record profit on tanker surge By Investing.com",
+     "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPczhabGNHSkl4LVl5cVRkTlhUR3pEdmVaVl9YaGZzVVRUWXFaaHNIUWhjM3p6YlNiZVR0TFpZUXRpT2dqYXZhazR5dFlHbUNZVjZFVHZ6dkNCR3VkOHd0TTY5Y2FLSjg5ZlhhRWhZZGlmdmxCcVdZWG5ZUmtmVFlhYWpKai1NYlhVcExIZ285bndZVWhtdHVaNnBkdU5pMmU3WnVybklsZWlIbXk0TldIQmsxMXBfclZrS2drUS1xZ1VQXzE0Z3Vn?oc=5",
+     "source": "Investing.com India",
+     "age_h": 62.9,
+     "score": 0.818,
+     "red_flag": false
+    }
+   ],
+   "status": "suggested",
+   "last": 1518.0,
+   "pchange": 4.725767506036571
+  },
+  {
+   "symbol": "ITDC",
+   "name": "India Tourism Development Corporation Limited",
+   "setup": "Pullback to support",
+   "low_priced": false,
+   "entry": 667.9,
+   "stop": 631.08,
+   "target": 741.54,
+   "qty": 9,
+   "capital": 6011.0,
+   "max_loss": 331.0,
+   "risk_pct": 5.51,
+   "vol_ratio": 41.57,
+   "ret63_pct": -3.6,
+   "sma50": 651.35,
+   "sma200": 603.37,
+   "turnover_cr": 13.6,
+   "score": 47.1,
+   "next_results": null,
+   "fund_status": "unknown",
+   "fund_notes": [
+    "missing: ROE"
+   ],
+   "roe_pct": null,
+   "de": 0.0,
+   "mcap_cr": 5729,
+   "sector": "Consumer Cyclical",
+   "industry": "",
+   "adj_score": 51.2,
+   "news_N": 0.27,
+   "sector_chg": null,
+   "reasons": [
+    "news positive (+0.27, 3 headlines)"
+   ],
+   "veto": null,
+   "headlines": [
+    {
+     "title": "ITDC (NSE:ITDC) Q2 FY27: Standalone Net Profit Up 12.6% to ₹18.88 Crore",
+     "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxON1V5aHJrSVdnYVhoVGVFNlh5QWY1RFcxMFJmazBsZy1TRWQxOF95RzR1dXY2OUZpTjVLdzlZQ0FhM05XVmEza281Z3B1WHZ3Ry1pWnhTSjMyS2FNUDh5V25CRXdta2EzVEJNM0JvYVNLamlzVXNoTDl2cmNzNjNNQlNRN2hmTENibE1IX0YwemZCMFpxb0RSZDg4XzROMV9vUThEU00xal9XbHo4OTlsNVdhdlB4RGhQWjFkREZpNW9nMWVWdkFoTEEwdjhKTHdNYWYwcVFyRzNmeWZnVk9NbE1MNDNWYUpub202cDVvSQ?oc=5",
+     "source": "Kalkine India",
+     "age_h": 21.1,
+     "score": 0.762,
+     "red_flag": false
+    },
+    {
+     "title": "India Tourism Development Corporation to review Q2 results",
+     "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxORXhRRnl2c2piTU5VYTRPYnV3WEhLSWFXd0t5RHotNWlZcEFRREQ5NFhpcTRwNWUtWW1FOVlPX2lGZ0x6ckx3NHZwckFsTVVQdU9JSlp5UkxSZzFlbWJEVl9zeVlXRWNCUXRRaUZmLVo5cFd2OFJsRk1UaEQybUtJbElxb2g5WVh3eWEwOEtTMDZ4YnozSV93OFNVcw?oc=5",
+     "source": "Multibagg AI",
+     "age_h": 37.2,
+     "score": 0.0,
+     "red_flag": false
+    },
+    {
+     "title": "ITDC’s Hotel Exit Programme Still Awaits State Transfers",
+     "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPU0tOMGd0WlY1bm9RLWJ3Nl8wU3VSU2VYRV9pLV9oLWFPLUZ5alA5ZHRKR1VqbVM0eFZTd3NYTTZROHAxRFkzMW0xc3dPN2RublVXMGJ0WlY1ZkpIS0ZGWFIweWNRNUxzM0h5QWZCUWNLbzd5Q0haeFpiZnpHNkd6LUVPVXhJZVJhRjNVN0dOSzFmeV9rSTc2bUZCU0t2b3ZIMmhQQkVONTkyaHgta2VZQ2NPeTEweEE4?oc=5",
+     "source": "Multibagg AI",
+     "age_h": 37.2,
+     "score": 0.0,
+     "red_flag": false
+    }
+   ],
+   "status": "suggested",
+   "last": 667.9000244140625,
+   "pchange": 2.991522654442935
+  },
+  {
+   "symbol": "ABB",
+   "name": "ABB India Limited",
+   "setup": "Pullback to support",
+   "low_priced": false,
+   "entry": 7054.5,
+   "stop": 6809.78,
+   "target": 7543.94,
+   "qty": 1,
+   "capital": 7054.0,
+   "max_loss": 245.0,
+   "risk_pct": 3.47,
+   "vol_ratio": 1.55,
+   "ret63_pct": -6.5,
+   "sma50": 6899.78,
+   "sma200": 6862.82,
+   "turnover_cr": 244.1,
+   "score": 25.7,
+   "next_results": "2026-11-13",
+   "fund_status": "pass",
+   "fund_notes": [],
+   "roe_pct": 19.1,
+   "de": 0.02,
+   "mcap_cr": 149491,
+   "sector": "Industrials",
+   "industry": "",
+   "adj_score": 35.6,
+   "news_N": 0.661,
+   "sector_chg": null,
+   "reasons": [
+    "news positive (+0.66, 9 headlines)"
+   ],
+   "veto": null,
+   "headlines": [
+    {
+     "title": "ABB India Reports Record Q3 Orders",
+     "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1jV24yTzVLZ05VRnp1b1VWN25TdW9iWmpRdmgxN0RhaHlMOFlvLW1JQXBQYzFpZUpFNzltLVlIZVhuaUxDTnNyOXFaU2lTN2pKOWNhN1BzeVVoNklpTlppNkpEcWlZWmIteFctb2hpUmp2TGRYWXlB?oc=5",
+     "source": "Machine Maker",
+     "age_h": 2.3,
+     "score": 0.0,
+     "red_flag": false
+    },
+    {
+     "title": "ABB India : Expanding demand across segments; solid execution",
+     "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNdVFVVnFLcWI5SG5UNTVhZ1ZuUEU1S3pXZGNjWVI1eE50TlRweXJLdzlBTUxYX09ucWc2cElGLU5YWUkyT1JyOGo1REVmSnMxREpOUDA3TzNfaU5qQS1vdGJPSUQtb1lRTmJxYlpFVklSeDRpeThQQkVrbTF1NXhUVWJCeXgtRDVDb2MxSkdDWFVSUHJJVWRPMi1UXzhCeWJwT0RGX2VQMmJNRUEwaC00Mw?oc=5",
+     "source": "www.marketscreener.com",
+     "age_h": 3.1,
+     "score": 0.0,
+     "red_flag": false
+    },
+    {
+     "title": "ABB India Limited Reports Earnings Results for the Third Quarter and Nine Months Ended September 30, 2026",
+     "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQVXBLZVdlSUxvZ2dyM1B2NnhKcXM1elJDVmpUcFRCZWYyNjBtanVYbE95Y3d5U0pfU2czOWlYZTIxUzl3Y3p4S1gwWkM3eUZDV2FkTW9zb3hoOTNzZGszem1oLXVmTm1pN2xBckI1LW91eHR1UXFWMklYWW5XM3p1aTU4RC11UTJPSUZXZXFmXzRJT1V3WUo0VGRtOEVHeC14QTRUc3dVT1FRT3N3djhqV193LWROVDhsN1N5RTZDa3d1SEtKV09UWGxZeFpwT19qd19fd25paVZvMzJfeGFBSWV3RTQzZ3c?oc=5",
+     "source": "www.marketscreener.com",
+     "age_h": 11.8,
+     "score": 0.0,
+     "red_flag": false
+    }
+   ],
+   "status": "waitlist",
+   "last": 7054.5,
+   "pchange": 1.8994655496172186
+  }
+ ],
+ "alerts_today": [
+  "GESHIP|move+"
+ ],
+ "alerts_sent": [
+  "2026-11-14|GESHIP|move+"
+ ],
+ "news_cache": {
+  "JARO": {
+   "fetched": "2026-11-14T03:24+00:00",
+   "items": []
+  },
+  "DHANBANK": {
+   "fetched": "2026-11-14T03:24+00:00",
+   "items": []
+  },
+  "KENNAMET": {
+   "fetched": "2026-11-14T03:24+00:00",
+   "items": [
+    {
+     "title": "Kennametal India's July-Sep quarter PBT jumps to Rs 143 cr on strong hard metal volumes",
+     "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOdGlmR0NmOWZFREg0OE9WTEFQUVBhYUROT3AwSTZoUFc0eFJ5R2pudklGNU9CdW40dE0yOHFyc3NBM0FyakdaNnJZXzFKdXExOXkyTTdYRUtRRHJVS0d0Wnhyekx6VnhZT3NuZUJIWmJpcjY1cWYtMTRJRlM3VFJYVlA5a1VDOWRKMVkzUXZuVHQ1d21IdHNhc2JabmdXdGVwVlN5SUVLdlZSXzZneXV2Vl9mUWxvQjRWNk9GVkhCNHNIVG1OTHg0YmV5SzREdkxuZkdDV3hNdmJYUE14S0U3dkQ2LWE2dDhXdDFyb04zU0h3WTJER21rbmJNUFNvZF9vcHR30gH8AUFVX3lxTE9zUXplc3d0MEZMOXdQZlpnZm1NNXdPT2FIdVhOb2pNN2RuVnBhZnNqbVNmYVNwVjk4ZHBSRTFyS1JVek5PNFJNLXotT3ZpZnRIQ1Jya0xINWlNSko1Vkl4cnpnbHpwZTVUQW1QdkM0RnJCTWp5M2g5eVVfd3d0S3g3aDR0cDlpUE9Hek1xeHFNdHZDTFN1UVJxUEVSc2g0djJiTUY2NndWWXRPRWM4YTlLSFp2Sjg5Ul9RZzRFQWVvdE5YTTBiTFR5NElIQVIxRUlfN0lrbkpwNzZDamxxRF92OHJzYm42Y0xIaEFsRmg2T2JSdmttOGdGYkJ0TA?oc=5",
+     "published": "2026-11-13T09:48:42+00:00",
+     "source": "The Economic Times"
+    },
+    {
+     "title": "Kennametal India FY26 Results: PBT up 90% to ₹2,663 mn",
+     "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQVWRodWROcGdyNWFTWkY0QVk3bnpiTUxJa2hCNUUtclBLVXNpV2ZVVjJQcmUtRTN3ZG90R0dIZ1hXbndMbTV0Q1hLMFdlTHNjT3NIWEppd3JRSlkxMHFqajhiRXdWZGpYWkxwVmhkSnJvaXdTdmgxcTJTQVl4TVdBb2tZU2g1ZzdOWmVFMXpvRWZ1aE40MXZmZDFMMDB0bElCTDFaVFgyaWM?oc=5",
+     "published": "2026-11-13T10:05:23+00:00",
+     "source": "scanx.trade"
+    },
+    {
+     "title": "Kennametal India reports ₹1.43B quarterly pretax profit",
+     "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9yLVFjeGNUVnV4dnVqemt4MGFMWkpQdHBuamY1X0NKakZmYzJTdzZBMDlmdFFnUlFDX0JTV1pldUdSTzVZc0VHaXF4MnZLU0ROSDFMM1ZJZFNSX1NHNnItYVJHNk1ZemVwbHcwbXh3LVZpUmRvUVRhUEJOeWZGQkk?oc=5",
+     "published": "2026-11-13T12:29:08+00:00",
+     "source": "Mugglehead Investment Magazine"
+    },
+    {
+     "title": "Kennametal India Limited revenue rises 86% to Rs 551.7 crore",
+     "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQcVVfNXBFb0hFZzk2UHU3RTFsakJuSDFaMG56T3BTNjdmaGFYNjJXMVA2TWZ3VDV2RUgwbDB4SG5uY0JGVHoxRUtHT2NuTFljSXFES2FiYktsbTRVcmY1RmpIQnd2VS15S2M3Skl2Sk9mbTgzR2tDalVySXQ5Z3JVTVdPcHJfZ2tZakFBZERkZEhGdlV4UGMxbXN3M0t1X1JnUTliZHFDSWQ2YVNBbXd1ZWdLalR4Z0NJanRGMHNUSkNYUQ?oc=5",
+     "published": "2026-11-12T12:41:26+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "Kennametal India Q1FY27 Results: Revenue up 86.4% YoY to ₹5,517 Mn",
+     "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQb2RNTnBYcENfVzFWMXI5bFduLWtZNkFWaHFLTlNTem1GWEVKWXdZMUZqTXFFaE5EX0VodC1US1dDMVJNNk5xN3Q5RDhyU21Wd0V0d0swT3gwcVV2VHZQVS1ZcWE0R3lQTkJhZTBmajFJTXZySnp2NWVHbWpYUHVtdm9hTW41ODFKcFRUeXVBTXlVcEZCSXI4YUpEdEJWUmlydjV1dmZCU3MwU1M4b3VJdGw3a0QtZV90?oc=5",
+     "published": "2026-11-12T13:37:47+00:00",
+     "source": "scanx.trade"
+    },
+    {
+     "title": "Kennametal India Q1 FY27 Revenue Rises 48% to ₹478 Crore",
+     "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOOXdyUndYQVVuVWxNc2xVOHlhUWF4YV80NXZNRXpfSkp2ekFoQjFIWTFrWTEyaF92eF9wMk5qSDZueWY5N25rRm1mblRuSUtUdElEQS10c2pOZ3BVaWRmMDFUaXpuczhJUVJTYVMzRFZDQjBRLURwSFBHaDluZFZEdHczU2FEMWZSZzZST0NBOHh3cnhXcE5nOWplck8tTzdhRnlsMUdlVHZmSkE?oc=5",
+     "published": "2026-11-12T12:40:48+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "Kennametal India Limited hard metal drove nearly all Q1 growth",
+     "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQekM3MTVkSkFOOU9qeE5sU3JkRUJ1MnlXYndqaXo4VVd1UkRGVXU4akthd0NUOXRpb3RtaHBhYlJ6YUczcWJ0NHdmNkQ4ZV9WQlJtc1BwOG5uN0VDWjROY2pQd2RrUm05WXJLYmVpUzJTbS1UXzRTaXpwdnA4SVBhWjJPUjdRNVgyc1VNN1VaU3lGNkV3YzBNSnFOdzJlR3pXTkh6UUpKemNnd2lZeGJqcWh0UFlyZEstWDM4?oc=5",
+     "published": "2026-11-12T12:41:36+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "12 Stocks That Hit 20% Upper Circuit Today: Do You Own Any?",
+     "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNRXctS0ltdTk2WjZoWGRPNGJvamZCNFBoRU02ZlF0QVBOV3I4RkxTMVJqYndDY0RwMzlWVU5zdGl6TGlFWlJDSmktRkVEeTFkdUYzNTYtOWFxd2xvdUVxTGNfbDZwSV9leFJCVzdYQXcyMGRaN2ZkTnppSWxBNUZqckwyckxkNV9pR0lmcG93bDRuTWxEUkxuMUdSSmpoOVprZEliQmdn?oc=5",
+     "published": "2026-11-13T10:45:28+00:00",
+     "source": "Trade Brains"
+    }
+   ]
+  },
+  "DCXINDIA": {
+   "fetched": "2026-11-14T03:24+00:00",
+   "items": [
+    {
+     "title": "Earnings Update: Here's Why Analysts Just Lifted Their DCX Systems Limited (NSE:DCXINDIA) Price Target To ₹192",
+     "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOWXZjNmdweTVtNDJfVEVBclNrTkRjZ1lkTU5JR3FERlpqcDRkeWl5ZkM3ZG5GYWpQN0g4cDFvWk1pZ1U4UG1qMVJLeGF1THp0UUFXaGw2Zm5uUFEzUnZPMTZwTEEtNTVUQ0tPNmY5QzU1MnNWQXQyV1VHWWJYMjBKaV9OSHdNNm00SHZXWjNXVHlBdXRJQ25LMlJDRkZIX1p6WWVkYjk3Y2hvR3J1R0NYeTQwblZVYUZFZHlwVXpJWFVCVzZEUHl6TjB0TnFsSG1mWThOcVRBcGZFclHSAeABQVVfeXFMUGpBYTM0WGoyaDltQTJrdHVPRmR6LWZNUEpsbVVHVjJEVG1RYnlLM0M5NnhzRFFobUthTlM4QTJpS0Y5OXlyMHZkYWhRR0JCLWw0U1gzVEZ6bHN4UEZOOFNiRWkyUWhlZnFVaUVKdWw3VFpiOUR5dm1HVW5RVzlyeVRUR3BJYjhCbzVvWG1FTG12RmhENDFOTkpuLVBYdWpWNE5ERHQ2ZFF4MUw5ajlyU3FhY3NxMW9GOTk4RXM4OGk3V0JYU2sxM1pqVkRTZ09RdXBEVXR4dkFIRE1hVUZnTjk?oc=5",
+     "published": "2026-11-14T02:13:24+00:00",
+     "source": "Simply Wall St"
+    },
+    {
+     "title": "DCX Systems Secures ₹25.53 Crore Orders for Cable and Electronic Assemblies; Shares Fall 2.34%",
+     "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNdm1NWnJoUm85MnpFT0xHMnNZZ2tvUDR2b1U5cDdJYURFOWlVN3k2WjRUdGhhVXdBV0Q4XzJhMkMtUXhVRDRvdnlKV1VveU9jQXhXS0VTc0I3cGxLblRjMGsxV21aN0U0QVhXVEt5QUVYMVpoeVJqR1g5bTBMNmJRY09KeTIzdTdaclFvRWJEMFNMZTZ5UWlKcExrSUxXa0pYX1VleE9aaHZmVGlDbXdRT19Xb0ZFSzh1UDVEajV4VVpiT0ZSbkE?oc=5",
+     "published": "2026-11-13T06:28:36+00:00",
+     "source": "HDFC Sky"
+    },
+    {
+     "title": "DCX non-offset project share rises from 15% to about 40%",
+     "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNbkN6X085RHpiY1pfOGw3OXB0cDBLZnZ0N1hzVHV3T25YVFFzbllOWVVWU3dhazA5RnZ6dDBwaDFycGRVZGp5bWVuc1ZMMjJhdDZpVlVpaGQzenJWdmNPNW9PLXRPcmUwOVdxUEVpb0haMmp6X29na05DRjNJSkV4bzdGQ2lEZjFzclIxT1hoYzh5M0paVFVBTHFJUG1OUi1XcVVRbnBB?oc=5",
+     "published": "2026-11-13T04:01:41+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "DCX Systems posts standalone profit of ₹42.9 million in Q2FY27",
+     "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPM1NJSnpxNXlnX1JhTlpCNjhQVzVYX3pNUnIyTUE3Uk9tb2dPSUJJMzhZU1hWOHIyYXFGZXhVZVlURXBZSHJfTjhnaW8tUVlPZnF5ejBqMVZYSDlZTGNiRlNvLXBxTnJxc1N3SENSYlV1WlZpbC1TTG92bG5GMUZMMkExWUFGZzB6d1BzV1A3Ujk4UHc4NXgxUlFtNmZnQnBSZ2UyTlhNNXgzV1pUdHdjNVZMc2k?oc=5",
+     "published": "2026-11-11T12:33:10+00:00",
+     "source": "scanx.trade"
+    },
+    {
+     "title": "DCX Systems subsidiaries post Rs 17.588 crore H1 loss",
+     "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPVEpzMk11djRnLXl6WXJBa0pQam9sZEk2UDhzUUxsZU16dXBMUUYwVWx2c3hLWjltdGJvS2drYVhid0JiNEFOdnBscENSMER2QUpCdTBUMDlFdHNHRHRQRlctRUU4TWdoeXM2d2dxVjkyeHF0ZkZPT3psSGhsbnRpWlFvUGtkamVTYmpBVXlTU1RCY21UeEs1TDN6R21FY0pFd1lieHJiLWg3QzRDc3UzbjRhOUM5QUtrM0E?oc=5",
+     "published": "2026-11-11T11:55:40+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "DCX Systems DCXINDIA Q2 FY27 Unaudited Results Newspaper Ad",
+     "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPc3pCaFBMclFNSEpyUUN1cHJLN01wQVl2VDlYakJvdmdMNU9jYWk0VnhPcXJscVMxbTY1VXVjMGJTZE04RFRhVTJQckJMN0pwNER2aHhtLXBzMDdJdXNnLVFlc090al9SaERBamVSU0VzVHJmdURuWVB1bmV3bEs0ZWp0XzlMRkRYN0lBS1lmaWd2NFYySnNGemxScjlPUG9KclNHbDUybXpGcFp4QjEzSDdPczdVcnhPTVNQRnV5ODI0dnMxZFEtanF0cHhibEFCV0JNU3JyQQ?oc=5",
+     "published": "2026-11-12T09:55:00+00:00",
+     "source": "Kalkine India"
+    },
+    {
+     "title": "DCX Systems Limited H1 profit falls 52% as revenue declines 42%",
+     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOWDB1MjhpLXJpc1BiZjVnb19XeXpoNVhqMmFzODZoVC1VaE13b1hud1hqTjhuSmNYYUliSkRtQm5GQW00QlBWUTQ3cmJPN1NZdDRyQ2lNemdoM0JlZXUzcmZnaXhzeFRFeFV3a3Q3N1ozRlF3LVZ6X0UtSHB4YlVXeHRCamNOM3BuUkxyUF91ZFdNLWVNeEdTcm1pWU95azlDRmJ2eDdQLS1sWE1HeHpPaDl4c1ZITHM?oc=5",
+     "published": "2026-11-11T11:55:32+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "DCX Systems Receives ₹25.53 Crore in New Purchase Orders",
+     "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQWkdGa1lZaG56c0hrZjhscGg1NjVOelM4ZzZlYjh2azNSeG05cm14N0E1M0RxWlBkN081SVE2YWdmZk9iOHlmUkxDR3dfYzVBMWNtVXRfT3R4SlpRbGFqbHQ3OUlwUlhFZHlGRWhuZjZTemhod2U1dTFPOTNSR0l2dndaTFZWWC04MEZtWG9hekxuc0Z4aHFvNGFDdw?oc=5",
+     "published": "2026-11-13T11:31:29+00:00",
+     "source": "EquityBulls"
+    },
+    {
+     "title": "DCX Systems secures purchase orders worth INR 23.06 Crores and INR 2.47 Crores",
+     "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOaVZWYU4xdk9OeEE4cnR2X3pEbWxfMHlwSkI0X2phblFfLTFLcWtoMjV5MHI3QTh5UTBiYW9DQVZYUk1ocDdTQ01qcTJqM2tpQVBYWmRQWEdZQ0NXN1JPekV3TjZiQ09WM0dvVER6NnFSNHdLVEtaZlBtY2xCNlZvVkpUSHNXQzVid0FLVW1qT3RFdnB5a1BFVG1sNlNTdG03ZFd4bmh4ZDdaWE40dzg4cDZGVzVzZw?oc=5",
+     "published": "2026-11-13T05:50:59+00:00",
+     "source": "Business Upturn"
+    }
+   ]
+  },
+  "FIEMIND": {
+   "fetched": "2026-11-14T03:24+00:00",
+   "items": [
+    {
+     "title": "Earnings call transcript: Fiem Industries posts record Q2 2026 sales, stock jumps 9.8% By Investing.com",
+     "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOQTVHMllVVVpYeTlxWEZWRHQ3ZWNfUnZ3T1plckdHM2lVaTE4NkJacVpaa3hFRXhjSEtPakYzUUlORVUwbGlFWHdOUmJCNkpzTnEwd2l4OURtUnFMc055OTVjRjRlT1hYTE9nVE03NzFRcEVxVTFDaDRqSVlsaVlldURaOVNmamVpOTgtS3Rha2NFdkZ4STJlUjNEdEVBblUyd3NHY0RGYzhyVG9mVFJ2ZUV4R3czWEpNOVlsRXVGVVQya0YxWktUNURFeDA1TnY2VEZPTTIxbnBGRFE?oc=5",
+     "published": "2026-11-13T11:42:29+00:00",
+     "source": "Investing.com India"
+    },
+    {
+     "title": "Fiem Industries Limited Holds Q2 FY27 Results Board Meeting",
+     "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQSkgyMy1VQmRKZlJHXzVCemJxWFA5VzZsWEF2SGhWV0ZjUW9kYUNGXzRxZ2Fmb1ZzekVVaTNIZFR1VWhLT21UZmctamtGcTdkb2RvQllJX0Q1YlFWanRLUGhjWXAyZnZyUXZhZGh0OVYwSlY3ZGw4bDJjRWVuTDhqYWhsenFBTzgzSG9oQ2dVMFVSZ3JJWVlQUWJsMjNKb09ZckxEbkxGSQ?oc=5",
+     "published": "2026-11-12T10:43:25+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "Fiem Industries Q2 standalone profit rises 32% to Rs 84.17 crore",
+     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQQUc5UC1IVzFuZnlpV0tOUWoxZ3llaHVoTTY2Wng1RWlZZnJQcmVzanBvVF9jTmNLWnJjbWdCNmh6UjNrTndwdUR6Vm1MeXJZYWVHbVREMFl0WGVWSXNpa1hTZ2VDaFZMbEFWTWF2RUtxV1o1ZWpVTFZHam5LVTRILVcySkhlV09tSUk1aGpzUDhhUUwyc0RIRk1IckJKVXUtUVF6NW1rMGxMbmRObXlQTTZMdkJWRWM?oc=5",
+     "published": "2026-11-12T10:44:14+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "FIEM Q2FY27 automotive sales remain tied to two-wheelers",
+     "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOcGtZQ3M4Z0dIaDJzck5WYjBOZkp3czU1VlNUeGUxVmgwVW41UGFWb0ZSZ29oVlh6aTV1ZklSdTMxNlZBS0t4dk5rTV9qMDNSMjloX0lFXzhfbDhNRmJEUXJFMGVzdkYyY3ozSXZELWVZcExtdVQza2xidFA2UDNRY0FkdUpqWVdXVnpuaWdzWDg0Y2RKRzBSWjRpVm5IWWs1QlRsdEpTcEhyWjY1ZlNZUQ?oc=5",
+     "published": "2026-11-12T12:45:41+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "FIEM FY26 EBITDA margin rose to 14.18% with nil borrowings",
+     "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxONXFJNEhHaUNzYlk4eEg3aHJlLUNGbjN4aWJoNmdRYjJ0WG5nMFkwcl9RdDl0QUl6QVRsZHQ1UmhzVE5nT1c1YmNwT3VlLXl4ZUlPVlJKUklybFVCRFVuc1laYk1UelJidE91VHhWWXkzazlVS3FrSFVteXNMQUFWMWlHVC1JdVNhTWJ6dUpLYVc1bThJWFJieWJsaTNQLW42ZmE2M1c2eE9UNGE3eWc?oc=5",
+     "published": "2026-11-12T12:45:45+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "Fiem Industries awaits final insurer settlements for fires",
+     "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNTDk1Y1lBaTJMb29NNUVxWUpDMlhKNXhhVGxhcnlSQ3BhcUY5aTB6Y2l4a1V1UjlXWHFQQnNZb3FKZUZ1eEpQZEUwR2s2WThoM2xZTHI1Y0Z3dk1jSjJ4Q1JXVFVzSF9UdlI0NjlycHpRT2ZOY1NYd0JQUXVhTVRQcHBwVVNDTGFUT1V0LTZvU1hRZ0gyLWFjRmlDUldIbjg2YUFXZjdzWU9VUlVncmNtRkdXR25Gb3JQUGFrdTFQdFpuZw?oc=5",
+     "published": "2026-11-12T10:44:02+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "Fiem Industries submits Q2FY27 earning call presentation",
+     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOUFNkb1FLVGNjYUVYTmM5R2pxNk5zd3JiNlpJVlUzNVBEaWY3NmNZRXJ1endHSDQzZGd5eTVhR3pyMTFPVmVWNmtuc3ctMlNHc0xKQkR1OWJpUS14SHV0M1NTWUF3TW1VUnoxYnFXRW51MTgtbHZ0ek9YdVlJajlJWjFGU3VFYndITVVxaTRHQ0JNOXk3YnZydWt2eHk3eTZScDlNLQ?oc=5",
+     "published": "2026-11-12T12:59:42+00:00",
+     "source": "InvestyWise"
+    }
+   ]
+  },
+  "AMBER": {
+   "fetched": "2026-11-14T03:24+00:00",
+   "items": [
+    {
+     "title": "Earnings call transcript: Amber Enterprises posts Q2 beat, shares jump 9% on growth By Investing.com",
+     "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQMXpFY0RoZEE5bzN6MGw5S3VBaEZLdk9hZ1BiSlMyOWxsd2NzZ2pUcU90VXhPbjBEZmFkQVdVZUZzRFpnc0M1bVVRWXFLNllscDliUWJYSzVmRnV4LW01TURPOTU2TjAzekFTYWtTUXR5OXVwdnhpMHp1UUFTWTRid1Vkd1NNTEFfU1Vlb1g4N1FDcEZJc3hwMWVJSklXcHIzY2s5Qlkwc1kweFY5dk5aeWVMeVhnSWFNSGZBOE9MMGJDSm85WW9xNVJBb0hzVlZqOWtWZUV2TGo?oc=5",
+     "published": "2026-11-13T13:13:57+00:00",
+     "source": "Investing.com India"
+    },
+    {
+     "title": "Amber Enterprises Q2FY27 Results: Net loss widens to ₹66 cr; H1 PAT ₹69 cr",
+     "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNWWhpSVExWUtlUGN1NkZtSy1OQjJ0RDk0ZDRTOEVab3QzWVVMamRucWI4akxkYVlqZy11X3ctZFFLbGhSRzRJdHM4Y0lSaDljdXBQa0hpYWQwWW5vckNRejlEM2RyaUlEZVVOZ2tFamZjc3RVMGdNTHVtOUllWWhPdzd5MVpodzVQQl9VQXl0SXM1Y2FSTzhVaUFBbW5BMjBfYVl1R0JWZTBXaUZhWG9ubG1wcE1ZOFpFZlYxWkFLcw?oc=5",
+     "published": "2026-11-12T17:47:54+00:00",
+     "source": "scanx.trade"
+    },
+    {
+     "title": "Amber Enterprises India Limited Files FY26 Results Presentation",
+     "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPWE5NVnZ0ZkFVaGtGOVowX054dUt4OGRqb3J0UDUxMVBxUWl6eGdpaGk1R2RXN3hJamdUZ3hGNHpOYm9TMEM4VmppMzlnMWE2czduRHl4S0RGN0tKLVlOOUs0dFVwNEx4eGJLU0Rwd0Q3OEl6VGFVc0gyTDdLTFJhTlRneWN3NTVaellDaHRBV1NMcXBVSTRyUnJuVU9HYVduMTZTUHpNdw?oc=5",
+     "published": "2026-11-12T17:20:11+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "Amber expands IL JIN control across four group businesses",
+     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPbkNaUWMxb3gzYU9jcl83Y080dVF1ajdCMjhndktkWWtuNWFwVHcyTFlPZHNSY0xOQkJNVDJQa3Z2MlMyekFpUFV3elNOdUxzWDdCZDU4Z2pYX0NIaUpjVFprYTlnMFdhRmxwbjBwTTJ0YzlFYVJ2d09OLWFUb3JSa1J4YzA1QjMyMEF6Rk5xZnFYd2VBZ2QySFBBMzZMdWRlblR6LU0tU3BUdllzRER4ZXJ2OFp2MXc?oc=5",
+     "published": "2026-11-12T16:57:44+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "Amber Enterprises unveils FY27 financial performance and expansion plans",
+     "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSEFJNGZ4Z1dpc3Y3bDJkZTY4ZkhzaDEyRFhGS3pXQnl6S0NQYktEUGJFR1FPVGlnbWVYYkc0aHp3RVhlektuV0dacHBsRTZISkFYOG94eHpFenBpZGFHS2dVakxoVWkxeUI0RzV4N1NLS0hneVBxRzNMcUdPNWlQMFpPTVRrTEtEMmZPUmZuZVljanlhV0VhMnpwZVZaU1FWWlJOVDYzek0yNmhJLXc?oc=5",
+     "published": "2026-11-12T17:30:36+00:00",
+     "source": "Business Upturn"
+    },
+    {
+     "title": "Amber Enterprises India Limited reports improved profits for H1 FY27",
+     "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPS0ZFWHZKOHZOSU1ubFV0NUhPRFpOUy1sWDZobFZDVUNEM0ttTjEyclNXZDFaQkxlV2kxbHJUUlYycVN1R1l5Nk1LQUJNWktVRHFoUlUyUmFpcFdVNGdVN0Z1dmFUd1dpbGJiVTFQb0VLY2lFa0ZKMEJTUnBYVHZwWnVQTTBUdWdfM01IallFaDVZb3V0SkJ0ZElLaktLN3dh?oc=5",
+     "published": "2026-11-12T17:05:33+00:00",
+     "source": "InvestyWise"
+    },
+    {
+     "title": "Amber Enterprises approves unaudited financial results for Q2 FY27",
+     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPazRNYTlrZEM4dzRvVnRPT3pOWF9jSnVUdm5Td3ZCalhRVjRWU3BRbmdMd3NYWmlzMG1vZ3ByTG5Vcm1QMWp1RkNpRTljYmtUNjFoQ013dTZ2WTc4QUZNME1lMUY3eTdSS2JKcFBsbEVlOERHZ3F2bktjemZvSTJ0cXRIbkF1ZFgxcTkyTHJybDBjWTRJTmdMRktwQk5MUQ?oc=5",
+     "published": "2026-11-12T17:30:11+00:00",
+     "source": "InvestyWise"
+    }
+   ]
+  },
+  "HDFIRE": {
+   "fetched": "2026-11-14T03:24+00:00",
+   "items": [
+    {
+     "title": "HD FIRE PROTECT LIMITED Share Price",
+     "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE44cDNiakVmbUwyRm9TYzE4WlBDTjEtV01samg0LW5Id3pHam5CRkM2NnVhd1dzTkUwb3pxajFFS1FKaExYTkhqZFgzM20wUVFyTUl6ejdUclhpdWUxQ2NDVTVTczBPMTJTRzc0VTFlbw?oc=5",
+     "published": "2026-11-13T12:57:15+00:00",
+     "source": "Upstox"
+    },
+    {
+     "title": "3,931,998 Equity Shares of HD Fire Protect Limited are subject to a Lock-Up Agreement Ending on 14-NOV-2026.",
+     "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQSjZJMHZ6eDFCMkQtSm43RHdGWjkxVzk2cjdYR1g5UmtXRzltTGhNZHNIUGVIcDIzcWxvLWp2SEdWbEhFcWNMS1RLOGcyT2RfTjBiR3VZUDBJeGdGVEJFUnVmZ0VRMzFhZ2l3T2NHVmdHSi1LeWRqSTA4T2puZjlDa3RSZEtvNDhRelRvSTlweW9XaVlmclc3cTJCY05iSVk2NDZGdlJMclc4cTBNNkJuZkdCRzBSeGRsenltSHQyWXR4LWJMM0lfMm43bk1od1VIendaQ2xvOGNhaHBlNVRxXy1Qc19oODlz?oc=5",
+     "published": "2026-11-14T00:20:33+00:00",
+     "source": "www.marketscreener.com"
+    },
+    {
+     "title": "HD Fire Protect operating cash flow rises to Rs 71.06 crore",
+     "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPc1VNdmRxR1hsZ3BtbGtGRjVSQmhOZWFqd3dGWERBb2Z5NW5uVGJwTlotN2hZTXpVd0sybXp2d1NQcUxZMGpHbGx4elZqcWExdDE4dkU4UnowNTdUd3BuU204elhwT0dIZlZxczZjVXJmLUtUS0pkSTA0NnhVUmNhUDNjZ2ZzWUNfX2hEdjdoZHlOX3lUUmZtTEFESVVXMWtMbExUUVIxU2R4TzljZlppZEI0eVQxcVpqQTZOX1Zn?oc=5",
+     "published": "2026-11-12T07:56:28+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "HD Fire Protect Reports Q2 Net Profit Growth Ahead Of H2 Revenue Peak",
+     "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNTzNvSGgzdFBwMXZ5aVFEeGZPM3ZVT0RJcThLS0dDcTBQVVEwWUF4MF9wNFR1S29QT3pOd0JEdlhjN2pqeXcwbUZPX2tpZDg0My04WS1fODNhMU51dDhUNXNJNkp0SFl0cktSRE5PSVhQSHdLX2lLakQ5Skt2eXIwWmFPZWFqd3lHeFE4aWs3WWEzUzgtTXJkUUN4NA?oc=5",
+     "published": "2026-11-12T10:59:09+00:00",
+     "source": "Sahi"
+    },
+    {
+     "title": "HD Fire’s 21 UL Listings Support 35.63% Export Revenue Mix",
+     "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNYVFPMGtHNG1BdEJZLUJNckI1UFgzajQ0WGxqbGd4RldWMkw2c3R5cUNuWWllbkxZa3hsLUFDMnBpc3NKNmJxM29mVl8zRURJOXlJdnduOVpqeVIwemVNeF9QcVludGRkc1lKLXRNVTRKLWZWRnFOenQ0TTFzY3pYLUNGSG0tQWFIYzVNYmhTNE9zTzVfMEZmdFVmUmtOSWE0T0dFeFRSYThKODly?oc=5",
+     "published": "2026-11-12T09:11:12+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "HD Fire cash cycle hits 116 days, operating cash Rs 71.068 crore",
+     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQN21yREI3Vm8zTWtpUHlHb2lBSzNWQnlxNlpHZWRCeVIxeWFucVFvcEh0dUktYTlpUTVrbXF5R193aV9FSy1rZ3RRcGQ1TXhZdU5xY1NfbS03OWN6NkVoZUFjTllHUXNGMjQ3b3dWOTVXNDYwWjh5VW9oZEJXLUJVLXFvVnEwd01yLXNFOW9tckVwYWdIRVpacG9fOVRKM0ZjaEdTNw?oc=5",
+     "published": "2026-11-12T09:11:19+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "HD Fire Protect Submits Unaudited Results for September 2026",
+     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOaE05NWlITHVpRkpzUDRZdVE4THd0SGNtajRUaGdHR29UNFFmMlZaRXVHTTBGOEc5aGc4ajRHSmdiLTR1U29yRmRaX0RJNWJsanhvNVhqNFpXUVFJVnpCTWRQdF83UHVPOGNMdFZvTVNmLUUyblczSkFFMVdUXy1TZVc3SWlGUlFtNG9mOWVfbWQ3MzFZVTFPXzR5NVZKR3BieFlZcjYzYVU2cC03Wk9rWExR?oc=5",
+     "published": "2026-11-12T09:21:01+00:00",
+     "source": "TipRanks"
+    },
+    {
+     "title": "HD Fire Protect reports 28.79% revenue growth in Q2 FY27",
+     "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQQkxCeWVEd3kxVHlHSi1ra2pwMXlyMkpwMmZOMnNZTmdMVktQQmprbEl5d29LVmZvX2x1VGhZc0I5WDlLaHRGTWtDQ3FLNTBrdDhKdjF3WHVHTXRwS1VqUUsxaWhKVzQtNjlhTU91RGlOdzExbW9vclZ5YjlKR2dHQl9yeXRHYzdUbkxNRWNLVmdULTZ4eHFyUXhHZw?oc=5",
+     "published": "2026-11-12T09:09:35+00:00",
+     "source": "InvestyWise"
+    },
+    {
+     "title": "HD Fire Protect reports 28.79% revenue growth in Q2 FY27",
+     "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1hQk4xcWpiUWhad21lNXFxVWpQRW5VWDNEWGlJbV9TUVQ0bTlkbW84XzdDcGRfSHlURUtNOVNkaE1VRDFldmRBUjdCa2lzTmdadmZRc2ZISjRVRjFiQllEVHMwU1BlR0I4VkVaLUtvUXRNUmt0QkxnTHpjSGZYZVE?oc=5",
+     "published": "2026-11-12T09:29:37+00:00",
+     "source": "InvestyWise"
+    },
+    {
+     "title": "HD Fire Protect approves Q2 FY27 unaudited financial results",
+     "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNbmNaQ2ZtRE5uOWV1X1VzVVhtd0hqSU9wY0ZSQTJUN0FnTURYU3gzRy1BNnpZbG93QVRKV3N2MW1Id01UWC1oTnhGMjNQaU1CUzc5MmV5RDdKU284ckp4VHhOdXoyT3l3ajJoZWhhN3MtM2VmNWZqenFfdlBzd2wyWXlaYzBwZXR0Mmc?oc=5",
+     "published": "2026-11-12T08:15:07+00:00",
+     "source": "InvestyWise"
+    }
+   ]
+  },
+  "AVANTIFEED": {
+   "fetched": "2026-11-14T03:24+00:00",
+   "items": [
+    {
+     "title": "Avanti Feeds NSE:AVANTIFEED Q2 FY27 Results Newspaper Publication",
+     "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOaWxtSTR2SkczRU1SdkJsRDdhQXFGaVlCbGxiMWs2ZTRtQm9EdEtTcGN3bnFnQnZCeFY1QTdHUzJOVFR4SmFwSEdrdU1sX3RmMWdWSEl5c2VnVnRzMGVDZGVLQ1JvMHBLZktUQzNNSXRFQ19xdGFfdWcxUGFUYXNRZWR4YmFzRUlibEZ5aUswdnoxVE54OXFDaHQzVDBpT2gzZFdKM2NHdEFoc1NsaUV1cjJlUlF5VVc5cnVDOXVXdGVmWXJWb3ZVN3k3QzZXUQ?oc=5",
+     "published": "2026-11-11T09:33:00+00:00",
+     "source": "Kalkine India"
+    }
+   ]
+  },
+  "ANURAS": {
+   "fetched": "2026-11-14T03:24+00:00",
+   "items": [
+    {
+     "title": "ANUPAM RASAYAN INDIA LTD (ANURAS.NS) Q4 25/26 earnings call transcript",
+     "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQeFAwS1AtY05HT2I1bDdsdGtJT3dYdjZPaG5FY0tCeGdlbV9lMFV3RW9SeWI5clcxX1FkZnZ3NlY1aExWX2VIZGRuMUtrQWlRRDd4cGFwQ2RFb1FUT3JHVTduQk8tR0tSMmJWejBQa3hqcWdDbDE1eUlqal9qVUxhZEltRVBYT3JDTDNDWnhLeDE4YmF1MGtWV0JB?oc=5",
+     "published": "2026-11-13T03:42:06+00:00",
+     "source": "Yahoo Finance"
+    },
+    {
+     "title": "Anupam Rasayan posts strong half-year results",
+     "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNT29ld1hqY1BBSWVhRm9NdVF2QUNKdkpSa2JwcFpuUkNxX2RVR3VaMjlXclIxekFFM1FKdFFkVWFPSFNqRm1SeWRUbTBfVVNkSUhCTEpGX3piOUg3ZnpULTRZUlk2bGhUSjZKM1U4UVFMWnNGTmNMeDR4Z2ExZll3NnlmMThCcHlDRWlfY1E4VFMzZnFHdUhLYUJHUC1HRDdnN2hLRUZwTy16anotQjNtZUo5NnBBRS1yQThsdG9jZS1MU05BMFFMWGVqRdIBywFBVV95cUxNT29ld1hqY1BBSWVhRm9NdVF2QUNKdkpSa2JwcFpuUkNxX2RVR3VaMjlXclIxekFFM1FKdFFkVWFPSFNqRm1SeWRUbTBfVVNkSUhCTEpGX3piOUg3ZnpULTRZUlk2bGhUSjZKM1U4UVFMWnNGTmNMeDR4Z2ExZll3NnlmMThCcHlDRWlfY1E4VFMzZnFHdUhLYUJHUC1HRDdnN2hLRUZwTy16anotQjNtZUo5NnBBRS1yQThsdG9jZS1MU05BMFFMWGVqRQ?oc=5",
+     "published": "2026-11-13T16:51:12+00:00",
+     "source": "Indiatimes"
+    },
+    {
+     "title": "Anupam Rasayan expects Rs 100-150 crore from U.S. deal",
+     "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPeWlfazFYUWY1Y0ZmWk5vbWw4akxnbzE5U1BCOHkxMzV3MER0X2kyTUo4TVZzYjhETmFSZm91RVBldXBCNTlFUzM1YlljZjI3eG5pODhtYUxPT2JSMDdTVngwRUlzNWYyd0o4SmloUzVpS1llODFtazlXbFpwaUYweEI0M1FMUTdsbU55dlFyNGttRXZOQ0h1SEZDeGpNa3F6OXZKWlJYcGMxN1Z4Q1NkdTlMWHA?oc=5",
+     "published": "2026-11-13T14:37:04+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "Anupam Rasayan India ANURAS Investor Meet November 2026",
+     "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNNHp2X2RkTWEtUGRYMXlIQjJ5RTBMXzJCN2ZXX1JwX1dVNjhUbWdfalRjNk83RXNSM1RpQlJmVXFVMllJV042Z0ZhX0M1SEx5Q1pmWktSbXBkLW4xY2hYM0g4LTAwRC1oX2dKcUpPemJUbGRhR0ZEaFduTU4xOWNoS3I4Z0NJQ29wZnpGd1FURC1sYW9jb2E5RFVUbEt5cEs1cHZCbzgtcXQwVlQ3WTBfRzJXcEE2WE5wU1h6Q1dmUXk2RTdaNHMtVENIQnBHUXZGY0pXeDNkc19Rdzh1X2tyM3pn?oc=5",
+     "published": "2026-11-11T15:55:00+00:00",
+     "source": "Kalkine India"
+    },
+    {
+     "title": "Anupam Rasayan completes Bliss deal, takes 50.07% stake",
+     "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNWFBJOG0zRlRielpxbk5lZ2FZbndPSmpmMi02WU5xUlF2d2hibGVQV2JjV2l1b1lVZ04tOUFtUDlQTHA2b0dQR2Y4YlBwZElRWFE5YXJrVDU0VXMxYW9FVFpKS1hmRERTWjJkdTIzUUJzZVNGVGt5WXZ1UTMtTHoyY0dBYmFkUUs0X3A1aDViYUVQb3AxNlZyNUpfOXNneXZubzREMkxxWmxSOHNPN2oycEJoUzk?oc=5",
+     "published": "2026-11-13T14:37:07+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "Anupam Rasayan reports 11% revenue growth and 41% EBITDA increase in Q2 FY27",
+     "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNQjNFOVNXUFUyQmRFVGJJRDFkUEtZUXRzVWhXNThEN1FWRHdWSWtnOExtN0pTUUZZT3RBUU1DVG1oRmtNNnhNOGRNc0tiNk4wUmoybTNuaHlGelZRWU56TC10STFmeTJqYWE2VmVVcDNmajN4ak5nTzJtV3RtMlpNR2haUVBDN1FVRF84YmRoWV9mallEVi1z?oc=5",
+     "published": "2026-11-13T13:51:26+00:00",
+     "source": "InvestyWise"
+    }
+   ]
+  },
+  "APOLLO": {
+   "fetched": "2026-11-14T03:24+00:00",
+   "items": [
+    {
+     "title": "Premier Explosives Q2FY27 Results: EBITDA up 165%, order book hits ₹1,642 crore",
+     "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOV0dPU2w3SW14ZEcxMHBlNVcwTWZLemNRbEQ3T3dyQzNrX3hOc3JBanBNTG00UnVTUVh5QUtLbnBKOE8yMnl2Y1drTVp4TWhyRGVtREwxbEFQQk1haGVTUm9hNmdmcWxWVTZWZFNkeHpMNUFNb0g2X0NoQ2lBRFd3TTg0OWt1dGVPS2IzWXhGX19CaXktdkdycERHZFNjTnBUaE9mZkNKNWt2RHFOU0xIV0V6N3dHSEdZdkFtWmpsU3hsZWQ4Nnc?oc=5",
+     "published": "2026-11-12T09:55:47+00:00",
+     "source": "scanx.trade"
+    },
+    {
+     "title": "Groww, Meesho and 3 Other Stocks Trading Near Their Resistance Zones",
+     "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNTHdKZUZnNnhuTmJtamQ2NnRQdkxBcWxiUERpbDh5aEUyNkdxd3ZTUHdQZHB5LTRMdVdCTW9Ib0tqSkg4U2dyYjZKbzlPa0lrLWE4UWJ0eXd4NXZuenZpcFY2M19vTU1DeWF3YlZBek1aNUU3Mm1hT05hV0pJcUhINFIyZVFyN2pERzVGOWIyTnVyYWYxTU1RQURXRkhoUVpwR2prTkdlU0NaNGh5VUJJNXRYYVc?oc=5",
+     "published": "2026-11-13T11:00:37+00:00",
+     "source": "Trade Brains"
+    },
+    {
+     "title": "Apollo Micro Systems Reports No Deviation in Preferential Issue Proceeds",
+     "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPdWNYc0RDYXc2Q2tYMGhFNE9CSGNXYUV0c0lhLWZfdnN2MHhiX2VkaGVta3FLQUJZQ21VU25XX2lDaVEweWNUYVNLY2xNSDNDa1M4cUUyalI4UkZ6RmxKcmRRTVdHSXNHbjgyVGU4T0JwYXBWZU5ESlpxVEpDQUFNc29RdTRXeno4cVV2YWJyYW5qR2I0MWgwSnZqY0s1Y1lRNTYySFhvTzhrMjFMNUd0NFotY2lYUzdzdE1GVk1zeVhBZw?oc=5",
+     "published": "2026-11-13T17:24:42+00:00",
+     "source": "TipRanks"
+    },
+    {
+     "title": "Stocks To Watch: Small Cap Defence Stock To Be In Focus Following MSCI Index Inclusion",
+     "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQUGJ0ckZkUTJKTkxGNHp4R1dlelo4MXZCTHd0eUlHNVk2WmJPOTl6LXdQeXA2OUlIQ1NkMlAzSVhRdXdJRXY3RE5hS1Q5S2l4enBtZW54VmloNUp3SzkzU1U1UEsxNFhtYXpKeTZzSXIwaFNvRTA1VHJYX1Y5SVJUZjRHTGM4NGlTQ0syUXlEcWxUdVBfRXhLX0hlQkwyb3ZqSE1IamE2dEFiLS1EMzlUNXhYYmZaTWhxQ2FDdF9kZnA5RUEyVFc0dXZmS054dTRlb3l6cWFYd1pPQktuSVNKNtIB5wFBVV95cUxOdVAxaUxmYU1qNmtCbl9icDVXZ1ZqWHBPekhNM0VjZWtzWFI1RmE3M3hxamd6WDNXR01hN2kzZmVWMGJ0eDRwcEVvS2daRlJZbWgyWGVzSzVndW9BazkybXI4SXdvV3NNNDVaS3JzbVdtWWVCLUs0ZkdMaDJXdElqeU9IekF2SUhlYm8zVmhkcmFIeEtrMzB4b0dZRFlNeUZGYkNjTnF0X3dpVmxnTWgwREI2RWdEb3ltYU9nbHZUdkpxQkhhUFIwaFZBZnhMdVllVGVwTnc4VTNoZFJfNTFVOV9OMVlXcHc?oc=5",
+     "published": "2026-11-12T11:32:00+00:00",
+     "source": "The Daily Jagran"
+    },
+    {
+     "title": "Defence stock under Rs 500 joins MSCI India Small Cap Index, here's what it means",
+     "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNSDF0YXZsU2l2X1lneFJFNUhaY1JEQ0pDY2JTc25DNXJCcW1WYlR5OWZIMkFRejRSOW1LUy1uVEw5WDdmSEUyUUJVVkFPakNoZ1JRZ3ZuLS12M09KM1Y4UlVmXzNXdjJzRGpQUUE0Z1BGSWRmVF8tQjVHbkdvMEVTSXdVNmFOMVZHdExWelEyeHN2a1NEeW9nMHhMYWFmUkhGdzFZdTVscDBHMGxxQlpqU2hValV5U05aWDlwVXM5RmdhaU5kbEdVb1B6dXdTZ1A5NzctaFJOWWfSAd4BQVVfeXFMUHpwNGdzMXhkWWJfRjJrU09zRk1oQUFQMWJIZktqNVpNSHlHYzRYV1A3YVpaYmtDUkpMOGhjQUxQUVRDcVMzQUdxVUZPRVhMbG5QTlk1cmI5MDRXb0lVUlV1cUJJTlk4X1JiYmRVc2Q3ZFhCZVFKOXJtRk9QVldYTjFiV2xYYW1PLXVGbE02NE9DVW80R2pqeGJBcmZDR3lZZ1M3ZDRTY0ZndlhtOVdzbUpiUFZMMTh5Mm5lblp1OHZ0Sk9La2V1b1BGT0ZOT2RmZWRsTUVVYnlBNGRadnFn?oc=5",
+     "published": "2026-11-12T08:14:34+00:00",
+     "source": "India TV News"
+    },
+    {
+     "title": "Apollo Micro Systems reports no deviation in utilisation of ₹742.25 crore preferential issue proceeds",
+     "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPNURPelk5ZFBJNFdsMmk2Wm1RR05PWGhMd2lKcm9RcFdOcnJEd3ZRVFYyMnBYNTlzemVIaXBQV2NVUXViWTlMT3lpWV9pTmo2elRGalpxMjhmbWtzVGI4SGxLNDdGbm1XeDFqeTVBOVFEdU9yMUV5Y1hvT19wYXRKTjNoRWh1eWIxT082Qi1wY1lOOS1hUVlFMkVpa2ViZE9vbFZVc1NpQlBNZjlYMnQweXZNNWtpWjRxOXZIVDRMaTRvSzFMaGltbldrcUZPdGZqbUxfTlJn?oc=5",
+     "published": "2026-11-13T17:06:38+00:00",
+     "source": "Business Upturn"
+    },
+    {
+     "title": "Defence stock jumps 10% amid rally in benchmark indices due to sustained moderation in crude prices",
+     "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOOENXMFNNcF9FLW1sYlJzTzJNRVNmUVJ5Z0MtWlNLZE4tWHpVeU56eFJKX3ZkVnVNSVlqTlZQZW1xR2d6UmppdkdYUTJ2US1TNlc1N3Q1N28wNzZKa3BvcEJUMWJXQnJsT0htWTV2R243d0Vrb2pJbFlibWJJcEFqemVicjFaall2VHBxZHhySlhIUGhtazljdXUzYnZMYW5wNzVuMk1VaVRZWmNqQkFMRFBvWWNGRzZlUjhFQktpOGJGWnVabVlENnRIZmctZnlRWUJ4N2VoUEtTVUNjSkJmUTBNUVVVemU2cVpJeUJnRFE1cy110gH6AUFVX3lxTE52YnpsZW9EUVdSakVDT0dWYlItWDZMOEpQTF9TM0U2RzVPOFR2Q0Y5M29uMHlYdThWMFQ3aGJuYmNUZ2JRc3ZSSHpFY2JmdU85Z0paWkwxWjV0QkJESC1kMm1PNjN1WjdON3VjaDlUdDhMSkVwR0t0VW8xWUxJOUZabENpbFBPV3pHVXUtVUJyd2VHS3NobVV1TVRsZ3FiUTVIODlSckhUem5CRVFtbHFfa3AyVk1qOWxiMDBaaVMtY2RacmFDN0pscThIdmg1TlVQRGpqVjZmOEItNEw2RUVMamxGaDJkZm5EZ2VkSVpadnFlWVdEQ0JmZ2c?oc=5",
+     "published": "2026-11-11T08:37:47+00:00",
+     "source": "India TV News"
+    }
+   ]
+  },
+  "KPEL": {
+   "fetched": "2026-11-14T03:24+00:00",
+   "items": [
+    {
+     "title": "K.P. Energy Q2 revenue rises 79% as profit falls 25% year-on-year",
+     "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOdWFUa1g2Sjg0SUY4bF91emVpdE15TktRTW9EQWFTN2pOTUVBa1UtSjlTUG90RHlYY1hWVXh4MjY0eUpvVWp3c1BxeHJyb3Z4dnUtcjRqWnpiRnkwVURvVHdZU3E2UkFFd1B6anVyV1l6eXVpMFdHeVFWQkw3ZDV4X3NDdV9uNVA4bllLRll3NERZeUllUDR3LTZaSFJFd1RJNXcxVjdvWVB1S2NTV1JJ?oc=5",
+     "published": "2026-11-13T08:56:21+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "K.P. Energy KPEL Q2 FY27 Earnings Call Recording Available",
+     "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNaW55aGxSSHNuSm9jUFZyTkFWZ2N1RjV5Q1djVzRRWThUUVcwUGdkd0ZoRU1UTGJoVExyU2E3djRBMk9jNy1KQURxZTJXUE1mRS13X3NCdWJBQmlXRVBTUEVMV0p2QVRxOXd1eFZoVHltWk9keDJ5bmpkOWkyNG5BOTd6aUhiZWJoRG56OWtDeThiamM3M2dJbHZiUUtVbXJnX3pRcmtDNFFQZw?oc=5",
+     "published": "2026-11-13T14:35:00+00:00",
+     "source": "Kalkine India"
+    },
+    {
+     "title": "KP Energy Q2FY27 Results: Net profit falls 25% YoY to ₹26.88 crore",
+     "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPdkFqU0djSmxwaVFtS191NUNhbU1LUS1qWXlvUDQxQ3pTWjRqckoyNkJVdVFVcDdJSXFzYTVTaEp5NElYVkZjcHk1Q29TUzRzdnA4S0IxbjV4TUx2SV9HdS1fVU1JbjVRT0MyQkNNdHdpMWtqa0hiblFDUlNITzhKQmxwQWp5eWFacFN5d3ZfWW9SNF8wRW1PS05JSkwwOVNVbUE?oc=5",
+     "published": "2026-11-13T09:33:18+00:00",
+     "source": "scanx.trade"
+    },
+    {
+     "title": "KPI Green Q2 FY27 slides: capacity doubles as profit faces growth pressure By Investing.com",
+     "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPZ1U4eHRoWHFFTGZQdWUzanVGUm85UVp1M2I1ZDB1TGJEMnl5cUtUMjd5SnpwYUpveXcxdkFqU001QWEwVlFDM2EyOHp4c00xTXpPQnd5ZE1lZXNvVkFyenVJV2ZNdXBEcXg1ZnJncmhoRkVfQzlMYTUyOEVSNW4yVkdRSzlnUUxpOVZjelFwQmVjX2FsLW1xakcwOTZaS0x2LVNVcjNCN3A1RXhNdU9QS0RXM1d1U1dUWGptVV81QXU1RFJvWE0xVE5YRldSNTQ?oc=5",
+     "published": "2026-11-13T11:58:50+00:00",
+     "source": "Investing.com India"
+    },
+    {
+     "title": "KP Energy takes wind EPC role, leads wind hybrids above 50 MW",
+     "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOVldlMDBWYUxleXBvZmJHMVFDemlPaC1oTTF1d3dRb2w4ZU9VUFFSamRENW1RLUlFT3lSUEhUbVZ6YmhCbDE1NmRmMHQwQjR1aTZMRXRQTHQ3TkxDYUdaT2JvUXBGbVhjTm5sck8tR3ZMejZaQXhIb0ZuN01lcDhEakFfQ09EWFNHYkxDcHBLbloydnplZ3NvSkVidUpQcGc0Y1l5MG5zOUZFd2c?oc=5",
+     "published": "2026-11-13T08:59:02+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "Purple United Kids triples retail revenue as distributor share falls",
+     "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPWmJ2TXpGRkcybEJ1VlRuZ0RRVmNRaWdKN1dIeXNEb3d5dEVYaTdzMVVOOFNuTU16ck4tVXlvekR5U3BWLTRYYkx5TExobTZLTm5SS1d2amtaV0s2U3JLMDZYUzRnYjFXcDQtRHN3MEZqZzc2VDVmR2ZsTWNHaXh3WGVLZndKbDl3TU1wT2V3bmQ5RnBidnljMUJqWlpKUlZfNEZKUmI4QTJkOGg5?oc=5",
+     "published": "2026-11-13T01:57:49+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "Parmeshwari Silk Mills September profit rises 26% on revenue",
+     "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNUEw1SkhnZTgzb3g1M3B3ODU4WkxvTVhUcHI5YXlJcDJtdFJYSk52MzcyUzQyYkZBdVJISmE2a3djR2pZS2Vocy1Hb19PNjA0XzlCWE1fdXFVSENINTVsSnA1QjVBYmhFaW9lSm1LZEgzaER4LVRHalh1cFhoNkNTSzdJY0hnN3ppZnlYQmc1dWlRc0lOVDhJRHgzWi12YXlRTXlzMkFlTnhxYzRZYXBkeGlXbjB1MkluWU5uUHlQODNyUjg?oc=5",
+     "published": "2026-11-12T14:06:17+00:00",
+     "source": "Multibagg AI"
+    }
+   ]
+  },
+  "FEDDERSHOL": {
+   "fetched": "2026-11-14T03:24+00:00",
+   "items": []
+  },
+  "MANINDS": {
+   "fetched": "2026-11-14T03:24+00:00",
+   "items": [
+    {
+     "title": "Man Industries Share Price - Live NSE: MANINDS Stock Price & Chart",
+     "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1QN0dScEJfM1hqUUlpMUgwNTV0QWZsN3MtUXhMaGJNRGxkb1l5ZDRqUmYyUkZXWW1VYzhlYVgtb3c4ekJaZGRBbjhES3U1bm1kZmV1eWNfVl9nVzVPOEZlYXBVZFUzR0xRYnY0?oc=5",
+     "published": "2026-11-12T14:00:50+00:00",
+     "source": "Upstox"
+    },
+    {
+     "title": "Man Industries Q2 revenue rises 45%, net profit more than doubles",
+     "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQVG5NUEpoNWotTGl4S2VJWmhzc2M5UlFYdEJnMm0welRYQmI3aHhJdE1FOGlWbWZ5Qi1BcmJxUmRJTS1BZ3JiODBvZ0RwM1NpUlYyV1pJbHZaU0FBVjdTajZnSE5oT05aWUZyS2kzT2Fqb29hV1JIRlNtNEdtNWZvX0NQTnAyNDlkSlBEdEhFb0xjR2M0ZWRoemRXSWs5Sk9HRnFjdHViWHBWcGhkRTNqbm03YmFCd3RyelE?oc=5",
+     "published": "2026-11-12T08:28:03+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "Man Industries Q2 results: Net profit rises 122% to ₹82 crore, revenue up 45%",
+     "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNSlVUWTRUMmo1Zm5UZ1h1U2hBX0pMdnp3b3pyNlZmVE9PcENldEdtTXdXOWtoeXZKYXcxQmlqUlg1SS1Pb3hpUnlBV2ZOLW1LOUl0Vy1JU2NVMy1oZHpGYTdpdjV5dnk3OHZsX3owT0E3dFVDdzVhU25aWlNSQ1UwUDNpaF85T0o1TjY3bHlTaGVPSk9VNUFKaHM4WXFRZlZKNVUzMHZwcXdta3U5RkZHUU5kbXRVVy1XWXlIc0c2RktEWUxJdlVjc281bGHSAdIBQVVfeXFMUHRoTWc1N0RnVEt4bUt2WkZpdE5mTWJzaXljdjF4MXhzQlBHWGEzMkRsYW9NRzFOM3QwN25ETHc2TEp4NHdaZkstSFNYOFFaOGdCeDZ1LVB6Sm1RQlhrLURXVTc0YTBLZ2MxdEVFNVdDY1NzRS1FdUsyUV9MX1kxcDFCVVFLU0N4eEhPWU9faXFDaDN5ZEJodjlkWTF1LVhvM0hrbjBxTTRsNE05SDNUM2hnX0YyVGVBTGtabFppXzQ3OUdlczJDWl9qZGh5NGhCMG5n?oc=5",
+     "published": "2026-11-12T10:17:19+00:00",
+     "source": "CNBC TV18"
+    },
+    {
+     "title": "Man Industries MANINDS: USD 110 Million US HSAW Plant Approved",
+     "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVUhlaUV4WnViOE9WRGJ1YU1YLVlONHo5TU9PenA1ZTRrajRGdzZ5WlRXNmFwVHZRMGdhc0ZjenRHVlNkeVA2Q3BFRW5TanlocWp5SXpJS0UybkpaMTI0N3FYbVltb2k1YTlhREt4MDlJdFVKbU52OV92YVlpbTFEcXVfRzY3enVMNXE4cmVQa3B3ejdHWWt0c3lmSWlramRPRE5BTXQ1TVhhcGlPakItQlBJWHBpbWpkYlVV?oc=5",
+     "published": "2026-11-12T08:29:00+00:00",
+     "source": "Kalkine India"
+    },
+    {
+     "title": "Man Industries approves $110 million US HSAW pipe facility",
+     "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQTzlacFhhWnh3T3k5dnpxRkd6bHZLNlpQMWJid0hOZHMyM0FSSnVvd1NSSkRpN3p0NC1zZnNPLUJIV1U1WkdaWGhoYzZZbzBqeDRpaFRYZzJsOXNvekNiSWV1SjJ3aTdzRkJXbUxGd1hFblFLS0NaOUFZWk00a2JiRE9IVzJnWHQzeEV0R1dCODVCUU1GdXNQME9yV21qWmtlMTdaMmhmdFlRX19rMjlrN3BMVHRRUndr?oc=5",
+     "published": "2026-11-12T08:28:11+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "MAN Industries Q2 EBITDA reaches Rs 190 crore after NPC",
+     "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQZEhFZDUyeV9uTWczMVllRk1pYnNLbG9yRG9xekFYMFdsWGdjbTFyRldJa2FTNlRTSVlycmVUZjRhMmIwYlN2RGpnaTI4YkxnLV8ydFVvRU1xNmdQQWVRN3M4SVJNeWlLWENPRzRkY3VhODIxTy02eV9vRkFJR2pBb182b1QxaW55QzlBQW1mQkdPS3hOQWxCQTBtbmJfakRReWFROTU1ZnY2MHZUTXpMWG5xRU5sbnRV?oc=5",
+     "published": "2026-11-12T13:31:11+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "MAN Industries Q2: Consolidated PAT Jumps 121.7% to ₹82 Crore; EBITDA Hits Record ₹190 Crore",
+     "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOME83ME54cVMxbXNBUEJiZ3prRUV0STl5NkQ1MkJFRUN6d3ZZYW1IUjRRcnhhbzVtSERZWXdseHNid0VMUDVFWlhRbEtPRFhXZnVQekxpclZ3UW04Y21mazNLTDhrd0Q3X0FDeWdOV2tDaXBfSl9fRklmMV9MM0Jsb0pJdDJPUktJNFBzUlR0dUdRS2UzUi1sMGNVcVpUdVdScTlMYXVTR1NEYzJVM09CSmw2ZEE3SXFzSnZmMEtNY3FmdTVJODJtdUlMeUgxUQ?oc=5",
+     "published": "2026-11-12T11:30:37+00:00",
+     "source": "Trade Brains"
+    },
+    {
+     "title": "Man Industries Q2 results: Net profit jumps 121.8% YoY to Rs 82.02 crore; revenue rises 45.1%",
+     "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQUE1jcWxzUGxrLU52Yjk0Sm5WTXBJQUZ1cDJVWS1MQ1RSYVR1QnJtVXlLSVpndmZjdXFKS05jcVhScjFTcWFQZUVoLVJBamtjSDR0VjVXVlQzd1lmeEEwNHRlaWNmNnZCUVdpaVVPN3JtS0J2UEdJQlFWZVBQbHdROFJmZkh1RHBwdFRJVG44UUFlRm9pZC1yVjF6dUlVeGhHS1VHREdGSlgtTm5LeFFLT2JjaW1xTTZKdzhtRUJGT0QwdktyLXF3LS1DaG9wNEE2dUNIVnlWS2w2cG9iaHd5LTVwc0E3QlVpbTFYNGkzd0ZXdw?oc=5",
+     "published": "2026-11-12T08:34:14+00:00",
+     "source": "Business Upturn"
+    }
+   ]
+  },
+  "LASERPOWER": {
+   "fetched": "2026-11-14T03:24+00:00",
+   "items": [
+    {
+     "title": "Laser Power & Infra Limited reports Rs 102.8068 crore cash outflow",
+     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNb3J4dlE2bDZZVVRIRGZqVXNUUVVrYjlQdGpTVnFEU3VVdS03QmRYMW1JWVA5RzdqYjFLVzFrZGlkblU3ZXNzUjlWMnZCV28yRFhJVFg0Y1JuZ3lTV1BFSk9BR3E3MG0wU2puZjVVU016NVAtRUFNdWg1VWJKNjE2VnJJSmhmdWcyRjBTdnAtZFJabE1yT0NhQi0xRUQ5WmVxaF9BdUNWS2loVWpCQ016b0dnd2JCSjQ?oc=5",
+     "published": "2026-11-12T15:58:55+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "Laser Power government revenue mix reached 65.2% in FY26",
+     "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOeTVkM2VlSGdHYWpCR21PSGhhM09fMTh3a21NbEJVeDV5am81bFFXOGNrVXlQTktPZVdzUnRJS2RsVHBpRUlFb2dZeWd4NFctbkJXNHA5cXV2UHp4bWJaNWZRX1JVelowNW5PandIUHB6b1JYOXM3NzVrdkxXeE5OUFhzRFFtWmRBVlZDOTVydmM4NmpvOHYycGxVeGVHeTBWaWEwaFBHeHFkUmhJMEVuTQ?oc=5",
+     "published": "2026-11-12T16:30:10+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "Laser Power & Infra (NSE:LASERPOWER) Q2 FY27 Revenue at ₹628.22 Crore",
+     "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQUXo2SHU0ODJXM1QzTE1NSF9VR0tpdGN1NFVuUjhuSXotMk9OZGptVjh6aElDV2pwU2h5dVl1ME5RRWdlQmczYTd0QUFyU2FtR0hGcWJ5OWtJZnFNZ1dfYWJGZE1CdlNEdnc1R1JRMGJ5RWt2bDhPSzcxcW13eE4yYkszSDVGeUJ3WDlSNElFYWtlQk0wNmZkcUdLSDliT2RwTGN6ck02YmFaNjRJQWkyZUZ1LVlod3dwVnVuSEFuM2J3bzZNNnVlRW4wM2VZYXNVdjR6QUNGczl2amREc21BRnBsb0EwU2c?oc=5",
+     "published": "2026-11-13T06:21:00+00:00",
+     "source": "Kalkine India"
+    },
+    {
+     "title": "Laser Power Infra gets stock exchange nod",
+     "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxObmV6eHdBWGNWMUE0bGU5eUhjUzJySmtISHJtcm5hWXA0MThHeUluMWFEUG4yM3RfY2U2b2I4bVFxMjRnUVJNZmlqc05zTFA2aDhSSll4Y2pHbmt1ZDk4a0tJcjU0WmM4SElzY05LRG4xd2pJeTJyT3RHZ0RmaVJyWGtTWjNBd1hTUW5LN0ZTSnRkQXBIRDBoaEEzYw?oc=5",
+     "published": "2026-11-13T06:20:53+00:00",
+     "source": "InvestyWise"
+    },
+    {
+     "title": "Laser Power & Infra Board Approves September-Quarter Financial Results",
+     "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQV0c0c19LYlBwaWJNWEoya0hadkZISkpTWVAyeWYzb0NVZDlKUFRfVjUyUDNZV2U3Q3EySzlodklJTFRVbVFoZm5DQ04wakszZlJZTWdFNnc1R0pFRjJBNzdZbS1GUkhMS3VnSmZEU29RaXZtdldOVnYyamFGRURQY05DVTJndjZTaTdVeHdSUVRVM05KajhRbkJKc2tTTUJ2clNXM3d3UHhwbmtUOWZ0RXVSRTQ5cmt5ZHg3Sw?oc=5",
+     "published": "2026-11-12T16:25:05+00:00",
+     "source": "TipRanks"
+    },
+    {
+     "title": "Laser Power & Infra confirms no IPO proceeds deviation for Q2 FY27",
+     "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQZFFsQXFzUTN1cU1NVUc0ZGVqa3FyMjU4aGx4R1l3S1Y1elQ1blJoYUpmNkxBczl0NmpDTS10TEY3YXBYQzhZNzQ1eHlZRlBwSDZydUMyNUJ4NElCUlJKTXE1RVpfMGNYMWRxVHdfVWlJb1oyb1I2d2RlTVVKcnl2YmtYUkpDU1BqNTRFQlVCUzc3T3Q5dncyLU1nUDEwUUNSUEl4dUJSbw?oc=5",
+     "published": "2026-11-12T17:20:10+00:00",
+     "source": "InvestyWise"
+    },
+    {
+     "title": "Laser Power & Infra reappoints CMD for 5 years",
+     "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOVFBNbW9uTGVuT3JrY1ZKR3RGMGVlZGYwdDZsYUNUY2NIQmo1S2NETWtyUlplejVldC1TeU44SWlHLUFDc1hROTF2QlF5RDBVbXRNUV9OaHVSbFRIRnN1bjI3TkRha19kblNmYWVVZTVkVXVYRkhIcWJCY2loMUNvWUZ3SldldnVOOWNTWHY1bzhkbENYNGNocVpGNF92SjFGdnc?oc=5",
+     "published": "2026-11-13T06:15:53+00:00",
+     "source": "InvestyWise"
+    },
+    {
+     "title": "Laser Power & Infra reappoints Deepak Goel for 5 years",
+     "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPSGN3ZlRlMDU2dWIzR2h5bmtaLW45cFBOWHR4bTZocU53ZjNZUkdMMWItU3Nnd3YyS0kyNnF4Sk5FR0otclhuSHI2Q1NMZEk1bUc2ZFplelNZcW9feG9vUWNGZmJoYi0wTFRwSDJWaU5WLUY0RnhlOHVhZVNqWUVJSFV0U3BtYktfeVpMYWVSQmlQem9MMHBNdlRCMkg1MzhDcWVvN2QtTQ?oc=5",
+     "published": "2026-11-12T16:00:07+00:00",
+     "source": "InvestyWise"
+    },
+    {
+     "title": "Laser Power & Infra approves unaudited financial results for Q2 FY27 and reappoints MD",
+     "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPdDlacGduQ3V4YlQxQWh2cTlvTlZJNGNxc24tVFlYZTgyWlktSWRzYVZ1dlJEb056WC1ycUpUVE5uUU5DcE56bVlOQW00WUkwWml3NnFpT2RCVU1DU0dTbXc0MGhIdUZuVDNYeFdpUmZUUEdfOGx3MkxvQ2dES0lYcjhvNTBUZUZjdnZiZ1YxbEJnZXFtQVRla0t3SQ?oc=5",
+     "published": "2026-11-12T16:10:07+00:00",
+     "source": "InvestyWise"
+    }
+   ]
+  },
+  "GABRIEL": {
+   "fetched": "2026-11-14T03:24+00:00",
+   "items": [
+    {
+     "title": "Pricol Limited (PRICOLLTD.NS) stock price, news, quote and history",
+     "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9qbnFuT3JJN01DMU1yWEtkNWd1a21MVjZkQUpZbzZkWFNpalYweHBmVzRMMkZFT2xIak9kTDM1ZUluaXMwaDBqVG90WVljX0dvS1JlLVZyUzRCdmRJ?oc=5",
+     "published": "2026-11-12T15:56:07+00:00",
+     "source": "Yahoo Finance Australia"
+    },
+    {
+     "title": "CMR Green’s IPO: Price Band Rs182-192",
+     "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxON0xFUDlIREhfWlVwUVpOcm1YQ0pFVHZYZzNRUVRhVC1OUVpVWUpHcFVHRzUwZ3pkRUlpLW14bVdHSEUyR0xab2VJbk1ucTlIQlVoLXdkd1pCYnRETXh3bTYtOWdSOVZONEhYS2FhV1VVMHVCLTJNV3JHT0M4Rl9RY1FEQ2ZXYUtmcTE1MlV1UQ?oc=5",
+     "published": "2026-11-11T06:52:31+00:00",
+     "source": "https://www.fintechbiznews.com/"
+    },
+    {
+     "title": "Gabriel India and 6 Other Stocks Hit 20% Upper Circuit Today. Do You Own Any?",
+     "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxObHBGcGQtUFRzTVdTNE94eW1uRFZtcEc3bDNPUDI1N2FwcTg0dTNlb1d2UFRuanVmWU01ZW5FN2NFSTNGbTNIZjRZOXRfUnNfQ2pvWHBDX1dPYk1lOTJOdkVXUkxiQkgzVjNpUzhGVF9QaG9WcTgwaHp3Vmg4aUN2dXE5aXp1bDc5Tk5YMmhYZXYtN3I5ZUNIeTNqS1UyTXJyY2hpUWFPcDNaZFJoMnNJb3JpUzNFejYwdDJVR3RB?oc=5",
+     "published": "2026-11-12T11:06:27+00:00",
+     "source": "Trade Brains"
+    }
+   ]
+  },
+  "BLUESTONE": {
+   "fetched": "2026-11-14T03:24+00:00",
+   "items": [
+    {
+     "title": "BlueStone to participate in BofA India Corporate Day on November 17",
+     "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQSU9Kd0RfZGUwTTZtX1FBZF9xWlo4N3JRZFJvV19aZEJsaU55anZZMkFZeTgyRU11blpHVFluUUN2VGRUM2ZIWXdpdE9EZlIydHNfRXptc1JwWkU1U3BGSnhuVHpsMjREMG0wTFY2a3ZfMWJFb3ZoVFBXX1cwajM1UEtEWXU3a05WVXBSOHBhZlZ6Q2dEZmpuTUdmc01uNDJPX2hySFlYNVVMbk9iOGZRWGpTR0RKUQ?oc=5",
+     "published": "2026-11-12T13:16:03+00:00",
+     "source": "scanx.trade"
+    },
+    {
+     "title": "BLUESTONE JEWEL LFSTL LTD (BLUESTONE.NS) Q4 25/26 earnings call transcript",
+     "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQeUVMdHhBUTBXeW9rZHRxSWExVFk4X0NpYWNZenAwYWpZX3VFVnp0bEFwMDNCQ0ZBb1lUaXd4dnhNWHFDRnFiT0JyU2xfZGRCeGMzanBoRWRfZUtudFJHSHVtWW5lUEo4V3laNkdQcjV1R1lTd2VPNGJZRmp4VzZUNmtyMlhxYkdfQmQ4VDRlOVhhdVR2TkZnRVpHd25MU1RINzVz?oc=5",
+     "published": "2026-11-13T11:45:06+00:00",
+     "source": "Yahoo Finance"
+    },
+    {
+     "title": "Titan Company Limited (TITAN.NS) Stock Price, News, Quote & History",
+     "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1zRlJqQXBHaTBsVmc5LVZDajFBZTVkYnlMZFlOeFZkMUlmZDNhZEtuaTFnQWMwVElfbGxyNFFFR1JxZUI5VkR1WndaOFhKN3FoV2VHeHhHYw?oc=5",
+     "published": "2026-11-12T17:41:17+00:00",
+     "source": "Yahoo! Finance Canada"
+    }
+   ]
+  },
+  "MAHSEAMLES": {
+   "fetched": "2026-11-14T03:24+00:00",
+   "items": [
+    {
+     "title": "Maharashtra Seamless Limited Plans Rs 852 Crore Capex From Cash",
+     "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRmtZRzJhb3FjcVJoWGczN2lvcUE4cU5Lbll1NVNnZXBmYXIyY0lDTlhrY3k0aU53SFBDWDFoOXJteWxGdDJwNzhoaDByWld4QlJlLTJ4N3BTQ3NqQm4yWk85SFo5THYydkExY3Y1dzJtWDhKNVE0WHB5enh2WTF1a3k0TVpobEEzX2hKVDNzYmVPZTFzeTJhUENyUzJWcXpENEJzbEgzdXljejRfX1BUbDJfYw?oc=5",
+     "published": "2026-11-13T10:24:30+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "Maharashtra Seamless Q2 results: Profit falls 42% to ₹73 crore, revenue rises nearly 10% - CNBC TV18",
+     "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVUdyNnlrUXBDVkg2aV96YnUxN2k0VXl4bHJtdmNSdVhZaVpkT3JQRjRIM2FuaVJmZk5pak1aUlAzTVBVRlFYR3dKOS01eXdDeEI4amluTkEwVGNZNXpESDBjaEl4TFJ5b3F3QVJueUZkcVhiRlMwc2JWOEZWdjRKQnJsTGMyd0c4eHdhV1FQNW9ZbTNwcjhvT245WFpiOWw1TVlaTTlncF94VUtSR0djYWxNQlhuRjZDWm93?oc=5",
+     "published": "2026-11-13T11:51:08+00:00",
+     "source": "LinkedIn"
+    },
+    {
+     "title": "MAHSEAMLES: Q2 revenue grew YoY, but profit declined; H1 operating cash flow turned negative",
+     "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPQURNcjRaM25MTDFtck56LWZZeHhJanIxQmNxQXd6QkVxcTRpaGo3RmVGWk9BQ29fTHhiTUlORFlVNkVFRDVRS3h0S1pLTElKRHI3US1JT3d6alJ4RUNrWTZPNGp5Ykl6RElZWHQ0ZGhLV25HTldjTG1Pajl4OUE3YkFLOEUyemtWME5BNkpKak13QTBaQm5OTHh0Q0dEVGtEb090aEJyMlpyYi1sTjFrdHB5U3VMcmxZM1pMWVhndkx4djJ4OFFnZTljcUotZDM4NUhQdEZoVml4Z1QxMmkxUElUMEp5YW5wV2Y0cnhlUzItcXppU05RbTFTelQ0U1h4Vnc?oc=5",
+     "published": "2026-11-13T09:37:39+00:00",
+     "source": "TradingView"
+    },
+    {
+     "title": "Maharashtra Seamless Q2 FY27 Earnings Report",
+     "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNdGlZWWVYaHQzNklFalZWRW5ReUxlT19WNUJtMVE2RWs5QWQ3bV9wY3VIV09JVG9xYzhFdlpSdFcxb1JZU001dEI0Y25MWHp6SFF0RHpkQnVhR2xqNFBnWHJ5TEdsZnI5WldYQk1fLWxVSWMzTW91SWNaMlVEXzFfX2lYRkk3T0lGWHUxcnota3p0Q0d0U3c?oc=5",
+     "published": "2026-11-13T10:36:08+00:00",
+     "source": "InvestyWise"
+    },
+    {
+     "title": "Maharashtra Seamless reports Q2 FY27 results, appoints CFO",
+     "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQZDh1S281b1hlZTNmdGRBSFBrcm5qSWdlQzNUMkh2T0FNYnJWTkZUT0pLV3hKa0tLT3I5M2lIdkNvY3d5NmRyMTRzRlFvT0ZzUS12aEhScnNwZTM4UTFiTlhadTF6aWptRTI2QldDZ2tjNnRVUHI1QmFDTk9HUWMtYjJUZXpuVGl5bFJwYmtxOHJLNDJ0cm44Q3l0MA?oc=5",
+     "published": "2026-11-13T09:36:04+00:00",
+     "source": "InvestyWise"
+    },
+    {
+     "title": "Maharashtra Seamless Limited reports Q2 FY27 unaudited results",
+     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOMXQyT0pmamNyYndUMHdtUFlZWUVMVkV4bWFERGp5LTRSckV6OEV5QzV0dnBEdDBOQWVxR3htX3JVX2lyNTAxTld0cXZ4UUYyQmFSNnBDSEZVRTYxUWoyN1VwWlIwWUpDcVFPbWRvbmJqdG1EY1BrY2Z1ODd0bDNPTkFlb0NfM2FCRmFLc0J4RnNsV0hpUGN6Y2g2WGZvdw?oc=5",
+     "published": "2026-11-13T09:56:06+00:00",
+     "source": "InvestyWise"
+    },
+    {
+     "title": "Maharashtra Seamless Limited appoints new CFO and approves Q2 2026 results",
+     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQMDZfSVJMRDZPRVBVUzRsRnA5Wk43VEVhUWhyYkV4dVhnZURZLXVhY3poUXh2czhyd2h5YmI3OXMyM0tvSldmbDRKM3FtN3RkOGRVbXZ1VEEtMkY1d0lSeU5xOHRpRllxcjNnVmJhZjd6a0twOU55TW4zeTF4WFcwZzloVXJlMVUxR0lvLVNrYXJFSnJNTEhZeXF0cDZsUQ?oc=5",
+     "published": "2026-11-13T09:36:04+00:00",
+     "source": "InvestyWise"
+    },
+    {
+     "title": "Nirav Commercials reports unaudited results for H1 2026",
+     "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxORDFETEd4WWd6VjJ6aGFSWW9ISFMyZldkNTU0SW8tZ1phV1g4dEY2Tng4MmpXajcxa3F0UmxRMzIzUDNCYXpOTVJBMUxlWFJ5bXBnV0tMNUhYUFBtTm13Wjl5Y2xDNFNHbWhKSzYxUV95ek0xZENDMW0wbm1uMHVGZU1NdFZhVzcwbnpQZkxoOGVUNUQ4b3JpYkRpTEF2TmM?oc=5",
+     "published": "2026-11-13T09:56:06+00:00",
+     "source": "InvestyWise"
+    }
+   ]
+  },
+  "LALITHAA": {
+   "fetched": "2026-11-14T03:24+00:00",
+   "items": [
+    {
+     "title": "Lalithaa Jew Q2FY27 PAT up 4.5% YoY to ₹2,530 crore",
+     "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNaEV0MjhiR0VfbUVjakJaWGJpUkdKMlVxbFVvMkhTUW1saUJGQlhuVENtLXpqRHdtWDg3TEQwZ01RS1VLdE1yMXI4SV8yNmNId1lrRXVaa0J1QzJaaW9vdTQwVDllenc0Y3RwQWpkTEo5TVRmWXh4U2pieDlDYXBUa2Q3LWtvZU9fWVFSbllvZlIzMlU5WHN3b0g5TEE5UEVYX2hWOXhn?oc=5",
+     "published": "2026-11-11T14:31:44+00:00",
+     "source": "scanx.trade"
+    },
+    {
+     "title": "Lalithaa Jewellery plans merger with no new share issuance",
+     "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPWTFHOWI4YkhoaG5oT29SWG9XVmw2cmdvQXFFTmFlejFzUWctT0w5dlRYYkYzRVJsYl85SmhfZUtPeGlGbmR5aG1ibTFfMkwtRmt6NlVKWWZHcVN2LTlROVhHQXlieHN4dmROckIwWlJfTkVwRFQ1QkRHRXlFaC1xaGRkYUt3Q1J4OWMwaXNQd2RYdnlQbk5ldWxqS2VBNmUwSm9mVW1zM3JZNEY1YzJVcWNRbjhVWEUydkh1VlFrLWc?oc=5",
+     "published": "2026-11-11T14:23:11+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "Nityas Gems and Jewellery Limited (NITYAS.BO) Company Profile & Facts",
+     "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBrUVNUdUphTWljUGIzWFNlREFZOTNURXlyRlpHcUxPYmtmaHBBZzhzNzVpeGJNZ0RVTlFRRGhSYkUwNWZDTE16YmRNdjNmMGc3SEktakhrNHVQeU9YOFdKalR6Yw?oc=5",
+     "published": "2026-11-12T15:45:22+00:00",
+     "source": "Yahoo! Finance Canada"
+    },
+    {
+     "title": "Lalithaa Jewellery Reports No Deviation in IPO Proceeds Use",
+     "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPZXdVdkhKeGdQaHNDUEtoMFFuLU5meURrTVJCUWI4VUtiNVF2RmN0ZFh4dnAtUUl3eGxQLVowLVJWSDJOT2RuN0lkUWI2cUtWWGxNLWlPQ29SbS1COUlNVFBfV2RLVUhJZWUzcjgwVFcwOTlCd1RuUktXcEJWQ3Z5OEdsdUIzR1gwMHktVTVZb256ODFtRVV2eHdJTVhmWXh1dmR1cE5KYmhvVUpaOXhZZQ?oc=5",
+     "published": "2026-11-12T10:12:21+00:00",
+     "source": "TipRanks"
+    },
+    {
+     "title": "Lalithaa Jewellery Board Approves September-Quarter Results and Merger Draft",
+     "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPZHBRMFc2V0VuNWNfaXV5eTg0b2xwaEc3b1c3anI1NGFWY2lKZDN4cXMyWHg2RzhROVdnNmllM0h6Smw4S3F2Rm1iZkNuR1g0ODMza25yUkloSzdfLVVVZWRqSU5KcVFDazcxWGg4eDN3Tm9acU9fTFFYZkIyakx3QXJIN3B4TFJCOXc2UWJDZ0hmLVhJYVpoODBTbEU2THIzMTN5eHo5M1U1djJaUnp5dGNwcmlBZi1SUFJ4MlhLdFhFSHJxVkVJ?oc=5",
+     "published": "2026-11-11T16:07:48+00:00",
+     "source": "TipRanks"
+    },
+    {
+     "title": "Embassy Developments Promoter Group increases stake to 43.99%",
+     "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNTGpmZ2N1elU4YU5GU1dkYXcwMF9uc282YjFIOGRQX19Ia3ZaOWlCSlNBV1N3ZjludE5HTno3V3RGeE51TjV3ei0yY3lfTm5Wb2EyOXphbWVuSVBjRjRXb09iQkdrZVhROE9BRDZMNlFZcTlMX3JZbXBWaE8wenNjdGRVQ3FCd1VHaTlnN0E4UkVDY3dPM3dFSThEOEs2Yk5Rbkh3UmlVWVk?oc=5",
+     "published": "2026-11-11T15:28:17+00:00",
+     "source": "InvestyWise"
+    },
+    {
+     "title": "Storage Technologies and Automation Limited reports H1 FY27 profit turnaround",
+     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxObVRzbjdGV0JKRGlRNlI0RjAwZjBGMEZXZFdWSmU3RVUwTmNvQ19OZmZRSzFVNE4ybGdPZWxFQUR4eDRpXzJMS2ZwNlMzWDdST3p4YmhObU9seWZRTzZXTWNJdnczbTVfRHZDaEpNOU9Qdk15dHp5RUVBYUwxVHc1cGRPOXUyR2U4SjZsbzJ4V3FnZGFJclF2VTUtRXo0ZHI2Z0RXMA?oc=5",
+     "published": "2026-11-11T17:13:25+00:00",
+     "source": "InvestyWise"
+    }
+   ]
+  },
+  "APEX": {
+   "fetched": "2026-11-14T03:24+00:00",
+   "items": [
+    {
+     "title": "Apex Frozen Foods Q2FY27 results: EBITDA up 16.8% YoY to ₹13.32 crore",
+     "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNbHBPaXBneG9Pb19RZDNmeU1TYVVha1pRRmF1Z3pUajdKZUl4MVl4WVNnU1k4X09lX0RVNzYzUHQxbGhjZl9KeTJnUnMtX0RFRk1EckNMdjFHTk9MLTdtYmtRMDA0S3hRejUwQ0RMcWNoVFFyTTVJZUtEa3NXVmdkckRjWG5DcmpFWXI4SFNmRWZhcVRzd2cyeVdNN1F6UmZXS05QOVJWR2xlcGhEVVBIYl9tYnR5aS1FemR1Rk8zc0U?oc=5",
+     "published": "2026-11-12T12:08:30+00:00",
+     "source": "scanx.trade"
+    },
+    {
+     "title": "Apex Frozen Foods announces financial results for Q2 & H1FY27",
+     "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxONFczUTFLelV3cW1rYlNtdFlVczd5YXpqN0RIU3BQNG12LU1DMk5SWXRjYzZpTFdDS25iVWh4TFRmUzVxZGc2aXctQjhwVjN4ZC1zaDNOTGtXbk0yR3BPNVdkak9WWWJyUjJINVJEYnU1TW9mVjVzWmljRjliZkpmYUs1UUE0bnh5cVFaaGVreVdwbVI3b1JuVnBnVXk?oc=5",
+     "published": "2026-11-13T15:27:59+00:00",
+     "source": "Business Upturn"
+    },
+    {
+     "title": "Frozen Shrimp Market Demonstrates Long-Term Growth Potential At 8.7% CAGR",
+     "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNZkxBT3RwVXN5NF9QQTF5QVJvMGxERWtJdlI2ZFdZMi1uUFJONzUtZG5iRzhoN2Z0dk40WUdKRFFHeW40aG5VaWY4NTdtNjhreHozWlBZeUY5MHdtNHVhZmhLRF9yN2hhaFJqOVNydi1fYmpYcHFsR1NONHRCU2hJbzhGendkOU42S1dhUW5uSmVjTjlQVUttSzg1dUY?oc=5",
+     "published": "2026-11-11T06:45:39+00:00",
+     "source": "openPR.com"
+    }
+   ]
+  },
+  "ASTRAMICRO": {
+   "fetched": "2026-11-14T03:24+00:00",
+   "items": [
+    {
+     "title": "Earnings call transcript: Astra Microwave posts Q2 2026 beat as stock falls By Investing.com",
+     "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOVzRXTXpZUkUwU0hPWjNjLVYyQThySnZYYWhLQTV1bnA3YUl4dkRnUHlZdGNQbWozTEFHTWlpUDRZbldSdElGbHh2VGpnZXFONk9LdnV6QlpQYXBDLXJ3UzFhUXN5dUFvT3NPRE11MDZQaWhmdmF6bWtaUF9YMmFnT0M3bk5hOXRNcmgxOHd1ZWVjRTkyS1RYcm9lZWZaOHBSUERqRFAxX28wNng0bm01LTI2SWExNlQ0M1I4RjVqTlg0Szg4N0lLYldiUi03WTZx?oc=5",
+     "published": "2026-11-13T09:47:18+00:00",
+     "source": "Investing.com India"
+    },
+    {
+     "title": "Astra Microwave Q2FY27 Results: Net profit jumps 127% YoY to ₹46.91 crore",
+     "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOMEQzd1hrS1ZQUUY1Y0ZRbnJ2clpYb0k1OG1NcjQyRWJKR1ZUQzl2T1dZNUtHWnhEZnJKNHh4T0tGLXlBcHRRekxoNU5hN1RXbWkwMGNUcWRLLVkwSUVmLVNGeUlJM1JuTDNIZm1YYW1KS096a1pNcG9yQlNxZWFYaFZibk51UklTVWZzOGVZNklSTGpXMG1qN0R2alRQcVBHZEhMYVJFY1RNa0o4aTdWb2xkUkE4X0RkRks1Z09rcUNVUQ?oc=5",
+     "published": "2026-11-12T07:20:24+00:00",
+     "source": "scanx.trade"
+    },
+    {
+     "title": "Astra Microwave Q2 profit more than doubles to Rs 51.08 crore",
+     "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVmpndTlWV2FwTDZRMDN5WlBYS1RVODNYeWRBVmtuZHdpS2I3aVZicncweEdBdjRSOEM0WlFRaFVYMlNFTkRNSnlqU2pBX041WVJkVmJ5Q1oxMkZIa2JSUGVWc1c2VDFtVHVldDJhbHlYcldjT2R0c251ZGtCX3RZamJ2WDZ3Qk96c0lQc04zV2Y4UElESjQ1V000WlpIc0lXZEhUV2ZjSy1ORG1ZU01wRVQ3cjBLT2tERFNR?oc=5",
+     "published": "2026-11-12T07:08:45+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "Astra Microwave Products Q2 results: Net profit jumps 2X to Rs 51.1 crore, EBITDA up 84% YoY",
+     "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPa010VjNzSTBjanpacXZUa0VBOEJNZGp1Y2xVNDZsRVhodDJyRkxwN3JaWlo5U1BOQXhVRkFJdUJzc3NPVlhRbmVSdzhWdnNHRjJqRl9DLW01eHlKeThHMFZiODZ6cE12VWtvS2RMd2p2cnp1bmkwVDZuUkYxbTZDUXVwRDNXQ1NUM3VWeXo3UjFuOWE5azFPcEFCN1JzUjQ4SVc3ZHUzTzlTaU9rSVV3RnJsX1lzeVJpLXBKSWFJSXpoeXpyWldzYWhFUW1NdWJjUTJFbHIzYUE4OHhlQlkycENWZThWcEhYcUlwdHBhU1BVdw?oc=5",
+     "published": "2026-11-12T07:08:51+00:00",
+     "source": "Business Upturn"
+    },
+    {
+     "title": "Astra Microwave Products confirms no deviation in preferential issue funds",
+     "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQMUc1YXVESk8yX2xrcVFXS01ObTktWUF4anVkaHdBdEJlSEZ6a3V6Q21BQzlVZHBiRmwxRnBpOEpaazJoemxhT2pmN3JtY1lYT0w4NWZLU3FJcW1fd0tnV012RGU0YlV5emtHMklTYjBFbThnY3BHa0I5NlNlQ2g2OUJyLUloblQwVW9YUkJhNEtsQm01enM0RWJFR0RvdkE4T2tZMU93?oc=5",
+     "published": "2026-11-12T07:49:26+00:00",
+     "source": "InvestyWise"
+    },
+    {
+     "title": "Astra Microwave Products Ltd. presents Q2 FY27 investor update",
+     "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPSUQ2Wl9fYklFYUd5bGJYQ1hQZm1sSkNLVmRsbW81M1l5V292TE1maFc2dEhSQk5OcnFKaEMtQ3RNcVJ4bm5uaVl1WFYwdHVWRHI1ZEhReDZraFJIU1dBN05MZ25ON0tYdmlXcURGaXNGUlNKZEpGM2VwcGNjUkpBckZfMi16N3JuZ1dEWVBpcnFUc0NLYmc?oc=5",
+     "published": "2026-11-12T10:24:37+00:00",
+     "source": "InvestyWise"
+    }
+   ]
+  },
+  "IIFLCAPS": {
+   "fetched": "2026-11-14T03:24+00:00",
+   "items": [
+    {
+     "title": "IIFL Capital open offer: 4.53% shares tendered as FIH stake hits 38%",
+     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNQ3I5YU9ZMEhXWllRajFGbGx1U1MxTXBCN3ZlbGgtVm0zLXE4M3JqZm9UX0lDMzFucXVTVkF6SVNrcTZ6Q0pjUEN2elBTb0pyYnRxT0kyYVNkeG0tVXc0YXZOMGVvSmExYi1OOU5CMzRiZUo3M1pWX1lpdkNlQ2w4RHdtenQ2bXhVRnRKbmpiaEQteGJZZlhhWlJnbXY3M1lycXc0M2dTWVExbTdKQ2Q0UHFONW5uNEU?oc=5",
+     "published": "2026-11-12T09:13:36+00:00",
+     "source": "scanx.trade"
+    },
+    {
+     "title": "IIFL Capital Services Open Offer: Day-One Tender Update",
+     "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPdnFOSkFZR1dCbzRsWDhkTEdXeHN0S3VJY1ViNGJpdFVPLUxrcjZlaU5hTHduQzdqV0tBLTJ0UDc4TXRwNnI2RnYtZjZfc3FhMXZQVFMxWjNJa3lSZy04ZFBBNHBUbjNMMFc0eUtsazg2V25ZNUZITFpCYjU0VGVkZTdfbzFDSU9DNzlRajdJeXVFNWRpQmNqNmNucXdxcjNJdnUyUjRyeXhicU43UW5YZjBMc2xlZld5NENVdmo4WjA?oc=5",
+     "published": "2026-11-11T13:01:00+00:00",
+     "source": "Kalkine India"
+    },
+    {
+     "title": "Kalyan Jewellers Share Price Rallies 33% in Seven Sessions; Stock Jumps 6.67% Today",
+     "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQdHhyb1Z1YzVyWjR5ZDA2eGdlcmNCaEp2MEhPMkxBQkJZU0x0bDFTZk5nQlJidl94SklfSXVUNFZ5dzBFZFBoWmJRd1ZrYjZZZnpUNElYR1kyMU1IRzdUUS1XTmx1cW9tVVVfWnBBcjViZ0tFbHp4dC1CcDFzM3RSS0NwT20xSm1RR0lmVXpFS2hrN3JqandQSm5ZQXdWdmVhTGMwSTZSN0R0cklIWUNaQ25xdnFYaVYydUF1Q0xFSUV1QnM?oc=5",
+     "published": "2026-11-12T05:45:00+00:00",
+     "source": "India Infoline"
+    },
+    {
+     "title": "SBI Share Price: Stock Gains 1% as Management Retains 14–15% Loan Growth Guidance",
+     "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQQjN4aHVBS3FQVFUyOW9nWDV3djVpZVpYSzVlbWhfRk1BOHZUOUtMRmtoZ3pydFA1N0tRSzBTdTRwZHA2OTlCa0RNY1BWS1IwWkR6dUVwX2syR1pTT0xjVjZyMUNqdE9DcnJzeVVKNm00akxJdVh3QURRWGp4WTZSM2I5dXVxR1pWYWZWR0J4RVhWWllUelFlbDdENVhfZzVIY0lycmxMbXVuRnBOdGdLU0xrSEJ1SldfR00zb2gtVzY?oc=5",
+     "published": "2026-11-12T05:54:41+00:00",
+     "source": "India Infoline"
+    },
+    {
+     "title": "IIFL Capital Services Open Offer: Tender Update Nov 2026",
+     "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNak9ac2JacDFsYWM5OXZzZk1LUWNFbXc5cTZrREFhY0pzM25abUQxT1pzeWNWbWJhQUxDOXhNb1dRVk1mX3R2aWlqMlFNbW1VZnNIdk9URl9JTzF5eGpaaXVwLXRMNVFIYVNCNnZFZDZjLVNIcnlLOG9nM3VuV09WZExfQ3l1MmMzOTlsNE5qT2dJR3lLaENFQjFnRV81M2Y3dHVsQWZrcDJIMDR1OWFHR0RycG42VjZkVGtieVNxLXhWN21oQjBtaTQ1ZkM5M0NFQmJ0SXI5cTNuSWlZOWV6WGl4N0VYdkpxTXJZ?oc=5",
+     "published": "2026-11-11T12:59:00+00:00",
+     "source": "Kalkine India"
+    },
+    {
+     "title": "Tata Motors Share Price Rises 2% as Commercial Vehicle Industry Records Strong Growth",
+     "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPRDlvOWc5blVCWjRnSnp1VnVnUUdhR3ZnVkFwUHM1cV9HYzRyeS1yNFhJUU4ybloyYUZ2Um5QRzNSVlcta3A0WVhETGpLUmpKaHBEWWtCR3RrWnlJc2Vod0hGMjJycFFfRjFkNGVQQzNzQWp4QnZxTE05bTZjaFR3WE50VXVqeG5mdVNGNXpMYU9fcTB6Yk9hSTFTUEJfU0QwaEljUDM4QjNUOWE5aXF2ZjhkS1R0bGNYOEhIVE5rQnN4OHZJVlVmaw?oc=5",
+     "published": "2026-11-12T06:20:10+00:00",
+     "source": "India Infoline"
+    },
+    {
+     "title": "Nifty Ends at 25,299 as Nifty Bank Surges 1.19%, Realty Jumps 4.5% and Insurers Rally on Strong October Premium Data",
+     "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPdTM2VzY0a3BQWXZQLU0xcFVleUJuMUV0Z051ZDZRZ3hoUXNEOFNWcDZzUFZUM3h4bHZYdDg3RWF4WUVmREQ3YlhKUGxDMDA2Z2lJVDVYOWd3MmlhbEdZMWgzaDBRZExIbWxzRWNWdjEzdDhheWZOZDJLNVEzWGVrb3VONlVHVEtjSTloSmhJQTVyNzNDZXA4Tm5PbmdtWVhLVThqQm42ZEpNX2x5bTlFc1V3Q1JQVjE2UURIc1ItbVRab2lTS2lEellYVEV2aUhXWk16elRQQ1VoTE9hYW9ENGQ2QjB4bkNMWVNR?oc=5",
+     "published": "2026-11-12T12:27:51+00:00",
+     "source": "India Infoline"
+    },
+    {
+     "title": "HDFC Bank Share Price Rises 2.46% to ₹817.75, Hits 3-Month High: 5 Factors Driving the Rally",
+     "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPbjI2UGZOWG9mUF8wa0dPWV9oTnZkZEZWTEtaNFVLcHAzLVJZZjJIcGxsTW8zMXN4VWlNdGN6elExNUlpc1hPTENOakk2N1VIbWFUUnkyT1NXcWNWTjU2WmxiOGo0a0RqRGpHbU9pTEp4cmlONU5IdHE3QU1XeTE5ckIwY19xQmQ3cTVlYnRIb0hYVXJQMXlheVhzcGlxaHJwSXBkLXFIV2h6S3Z1ODZtamp2M0lweUI0V1NXNVZzdXItWkFnV0hZVXVfek9EZw?oc=5",
+     "published": "2026-11-11T06:19:25+00:00",
+     "source": "India Infoline"
+    },
+    {
+     "title": "Sensex gains 1200 points, Nifty above 25,300. Why is the stock market going up today? Explained",
+     "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQX3RGU2lRT012Wk4yMjEyNEhmSnhpUUwweVpWU2padWJzMnFwSkg1SEh6N3RjZzIyYWlDejRqcFVQWU0xbFpmVW9lQ3gzZU9DMzdvVW1KQ0ctS2pxRE5vdGgwRUFkN1pzSEdaMlg3aC1tTDVvQXpjRmV6bEpGN1UzU3ZUSGNIMkhUcmltc1NBSmhxZ2N2MWZlajJjMEFtVTktZ0dwX1ZUalE3N2FUd2YtZ3pPWDBXVzR4N3hKRkdqekNPRG14YldtSHZabUtrVTQ?oc=5",
+     "published": "2026-11-11T06:52:41+00:00",
+     "source": "India Infoline"
+    },
+    {
+     "title": "Hindustan Coca-Cola Holdings IPO: DRHP, Issue Size & Review",
+     "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBYWXBPSHFWS21pY19Gby1wR0QxMm5sMFJWVlBrQTJrRzlXMkFXYldxM3JtNWNzVTNsRTZzUERqTUIzVDJvSkFpRThqLTRmUmhhOXUyellpMEc1UzhaVnhGRGZ0ejF1NkdIZWljLWpuMm5pNXUy?oc=5",
+     "published": "2026-11-13T10:26:33+00:00",
+     "source": "IndiaIPO"
+    }
+   ]
+  },
+  "GESHIP": {
+   "fetched": "2026-11-14T03:24+00:00",
+   "items": [
+    {
+     "title": "Great Eastern Shipping (NSEI:GESHIP) Stock Forecast & Analyst Predictions",
+     "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOU0dHMUlpMjBCbC1TMDdNMjd6QTV4bHFwbEdnOW1TMzZsMDFIZmJJXzUzLXR6amhDeEdqS1dmUC0zZGdnVmJJZlZYSnlzLTQ0R1pKNXNhN19NaTMxRHpvVDNNM1AzNzBRaGJqcURaTGcxU2M3WUVHQ2JsZGxreHhiYmhDLWJ3dXh0MHctUFpsRQ?oc=5",
+     "published": "2026-11-11T08:00:00+00:00",
+     "source": "Simply Wall St"
+    },
+    {
+     "title": "Earnings call transcript: Great Eastern Shipping posts strong Q2 2026 revenue beat",
+     "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPQUtUQ2dyTFd4ZVRvVXk2QnhuNGhIblA2TFh2VWd5eUJ1dDBHcHlmaHQxVnhiaUZEMWN0ejItZ3ktMXRseXIwXy0tajFrMzdIbzBlTzVIbmtkcUdNTFVOR25wMnZNMnJRaXlwYmEzdVc1UGZCd3lmWVI3eUZOSGVqU0RncmlzaTBNM2ktZWwyNzdXNlRVbW55TlNRS0R6Tjd1Vy1BZG9ESC1aMGRoUjFwRVVfZ2lPdXJWU19KbDBZNmYxM3RLb0Q0cXRod3B2SE5SRW1Z?oc=5",
+     "published": "2026-11-11T12:19:38+00:00",
+     "source": "Investing.com"
+    },
+    {
+     "title": "Great Eastern Shipping releases audio recording of Q2FY27 earnings call",
+     "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOZUFLSnF2NTFaemV1dEh3OVlDcldPa2kwRGlza1JudGhkNFFhdnhrTkpCNHpEN0I2Z1pYMV9HQ0Y4RkFKbE5mYWpydVh5VFVLVXp0SlJ3RWsyekRPVTZ3Q04tQ3p1eEsxcDh6NGlyVE1yZVFmYWNQdnVucGUzNy1RaXNIclpoMWJ0SHUzRS1UZTlpcXotM21oN3djbllXSlI2NkFsTEVzNHVlNU55VFlLTjZnbHlzcWg5OTl6cVFsRmxBdDg?oc=5",
+     "published": "2026-11-11T16:14:32+00:00",
+     "source": "scanx.trade"
+    },
+    {
+     "title": "Great Eastern Shipping (NSE:GESHIP): What Was Disclosed in the Q2 FY27 Earnings Call?",
+     "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPWi1xb3hRaEV2QWFQVGszWGdzNmo2MXF6a0h3cHM1YlQ1bDFfYWVEd0ZSakJOV29SQ2JybHFnaUtmT2pobFJIaFNLZkRvMDAydTF2cVpzSmwwR0JHcUdDVm1vM3hBTjk3MjZQTFhnNGpUcU51R3pocllIejgtS0tPT0xJNnFpazZXcjdvWExOSndmMG9PYTNxRElhREM4bXFMOExjT09lUk1wUFVfV2dISmJ4ZHVsd1NtNlR6TlhJWnBwTlNjWmNV?oc=5",
+     "published": "2026-11-11T16:08:00+00:00",
+     "source": "Kalkine India"
+    },
+    {
+     "title": "Great Eastern Shipping Q2 FY27 slides: record profit on tanker surge By Investing.com",
+     "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPczhabGNHSkl4LVl5cVRkTlhUR3pEdmVaVl9YaGZzVVRUWXFaaHNIUWhjM3p6YlNiZVR0TFpZUXRpT2dqYXZhazR5dFlHbUNZVjZFVHZ6dkNCR3VkOHd0TTY5Y2FLSjg5ZlhhRWhZZGlmdmxCcVdZWG5ZUmtmVFlhYWpKai1NYlhVcExIZ285bndZVWhtdHVaNnBkdU5pMmU3WnVybklsZWlIbXk0TldIQmsxMXBfclZrS2drUS1xZ1VQXzE0Z3Vn?oc=5",
+     "published": "2026-11-11T12:29:25+00:00",
+     "source": "Investing.com India"
+    },
+    {
+     "title": "144% Dividend Alert! Small-cap shipping stock to trade ex-date this week; Check record date",
+     "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPUWdPcG1YLWFDVU9mVzNPWmxpbjRySFV0c240NEFTVjdGYnFndlFuOUhzTjgwS2MtcWZwcXFCTFZkUUJrVWFXeEJnUFJZSWt6cnM3YVp2YTR1LWt3NFpOZjBCQ0dnbzBNcE1iczVXNXVkMl9LMGl3ZzJlRHJ4UFU4dExZSWtBamlpTVFuWFZDVmxnSGc0TnVTeWNnVHA4UnAxMjc5bFdBQkY0aGFqblZWb3RheWs3Q2JlS1pKVVJiV3M3RHpuN1RubkZoU0tOZUlzWC1vUjFR?oc=5",
+     "published": "2026-11-11T11:16:00+00:00",
+     "source": "Zee Business"
+    }
+   ]
+  },
+  "ABB": {
+   "fetched": "2026-11-14T03:24+00:00",
+   "items": [
+    {
+     "title": "ABB India Limited Reports Earnings Results for the Third Quarter and Nine Months Ended September 30, 2026",
+     "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQVXBLZVdlSUxvZ2dyM1B2NnhKcXM1elJDVmpUcFRCZWYyNjBtanVYbE95Y3d5U0pfU2czOWlYZTIxUzl3Y3p4S1gwWkM3eUZDV2FkTW9zb3hoOTNzZGszem1oLXVmTm1pN2xBckI1LW91eHR1UXFWMklYWW5XM3p1aTU4RC11UTJPSUZXZXFmXzRJT1V3WUo0VGRtOEVHeC14QTRUc3dVT1FRT3N3djhqV193LWROVDhsN1N5RTZDa3d1SEtKV09UWGxZeFpwT19qd19fd25paVZvMzJfeGFBSWV3RTQzZ3c?oc=5",
+     "published": "2026-11-13T15:35:51+00:00",
+     "source": "www.marketscreener.com"
+    },
+    {
+     "title": "ABB India Reports Record Q3 Orders",
+     "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1jV24yTzVLZ05VRnp1b1VWN25TdW9iWmpRdmgxN0RhaHlMOFlvLW1JQXBQYzFpZUpFNzltLVlIZVhuaUxDTnNyOXFaU2lTN2pKOWNhN1BzeVVoNklpTlppNkpEcWlZWmIteFctb2hpUmp2TGRYWXlB?oc=5",
+     "published": "2026-11-14T01:06:21+00:00",
+     "source": "Machine Maker"
+    },
+    {
+     "title": "ABB India Q3 orders jump 56% to record ₹4,733 crore",
+     "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQNjZKYjhpMmp3Zk1RZlI1VFlNM3AxWVNqUjRqTDh2eDVBdEhjVExSb2hPRXNjRWQ0c2hEdWUtUDZIS1FRczRkZXYwWEpSenI1dzVQZ01xUGw5cW43bUhQbENGb0hSaVBramZpMUE0RmJMalhlb2pteXpmcGptWlljR3M3NTdLZTNwUFlRMGw1cHZseTR4NzhlTVhTd1JSSGQyeFBBY0RB?oc=5",
+     "published": "2026-11-13T14:10:59+00:00",
+     "source": "scanx.trade"
+    },
+    {
+     "title": "ABB India Q3 revenue rises 19% as continuing profit hits Rs 440 crore",
+     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQOGxzQ0I4bktacGZkSGgza05mNFhYUVN4MVYySWF3TU9vMVJZRVhPR2hyR2lXV3JnVlBxS2UxZnc0a1k3Ympsa2NiX0UzeDhSS3VUZUpNUUZpMVRsTUpJZzM3bjAzcGpTZkViX0hrX3dkTmRoUklKLUhqbTFpbEMyYXNRZWI5QmVZTF9hcFpVNFFGNzllcEh4Ync2LTAxRXZqdVlPWFBVbzlCX21wZmdMbFF3?oc=5",
+     "published": "2026-11-13T12:32:03+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "ABB India : Expanding demand across segments; solid execution",
+     "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNdVFVVnFLcWI5SG5UNTVhZ1ZuUEU1S3pXZGNjWVI1eE50TlRweXJLdzlBTUxYX09ucWc2cElGLU5YWUkyT1JyOGo1REVmSnMxREpOUDA3TzNfaU5qQS1vdGJPSUQtb1lRTmJxYlpFVklSeDRpeThQQkVrbTF1NXhUVWJCeXgtRDVDb2MxSkdDWFVSUHJJVWRPMi1UXzhCeWJwT0RGX2VQMmJNRUEwaC00Mw?oc=5",
+     "published": "2026-11-14T00:19:04+00:00",
+     "source": "www.marketscreener.com"
+    },
+    {
+     "title": "ABB India Electrification revenue jumps 40% in Q3 2026",
+     "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNakVQb1JqVzc3clZrQm9tS05XT2hJU19iMDlVNlI3QXF2ZWZYMUlRV3ZNUGR1bktMVXFTZEZVa3lXOGZXcTA4Q05OS1J5c2xRTnNWcWM1aTV2RWhTTFhCeUN0TWw3aENwQjRHNDNIZ0JwbE5YT3QybzlQazVDTEJqV0djMnIyQmhlYkxQRnVuRnhtRGRxQ25oQnBZaHNyVXR2UThYeHVER2dLT3FmcUhHc0dUMTMzOWlKcmJVZkJ3?oc=5",
+     "published": "2026-11-13T12:32:06+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "ABB India stock faces margin test as September results approach",
+     "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTFFKb2VjVUZMZW1WWUcxcUUtdmdnY2NtRTYxamdqd0p6X0tyeVEtVm5rUnRnWm9ieHlzSUV2cTFxVXF4OEFBczdBOFRVQ3U3cE5zMWFrSk16bXdoSXhpM0ZnWElLX1o2aDNOSWxRWUN5UmxxeTJTdEh0c2ZPOEZDNFMweDRhd0NkcjFhaXVycVluUWdDUXZWMUt6U0JDdnk5Z0RFckpSQi01Y3dOZGVlajlwVXFoQklBMC0wdFk1WQ?oc=5",
+     "published": "2026-11-13T00:54:21+00:00",
+     "source": "ad-hoc-news.de"
+    },
+    {
+     "title": "Grasim Industries, Eicher Motors, and 10 Other Stocks Announcing September Quarter Results Today",
+     "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQOW04cF9laTZDY1VXdmdGeVlkdjNMYWluOFAxSTc3NFd6aTAwWG9seVBySFE4MzZyVGNiUlFreEVIQWtCWUVYZ0xGSDB4ZkV6em9mR2xzcTZSQ2RQcHlLOUdmUWRKcGl6Mmp1N0lveWFXc1JvQUNPMUVMLWozVmRoOXRfdDVtNHNPaU5fRXhaNmZubTAyZkloQUQ2ajNnVlVQM0JLR0tjOW52b1B4MjR5ZnJWOFV2Tms2MEdkWnI4SkZPaFd2TjNCcmwzTjlLWXpBX0xBejRWVFM?oc=5",
+     "published": "2026-11-13T01:30:37+00:00",
+     "source": "Trade Brains"
+    },
+    {
+     "title": "ABB India appoints N. V. Sivakumar as Independent Director",
+     "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBLeXVDOGpSMGJ2TkItbmhVbGRaMGp6Qmk2Nm5TSkZxMDBJR1FSTTRTNFhtQUkyUUJxY3lMSl9qaFF0OXRzdldGbXVILUFyMXd1Nk5mWGcybDNvS1VqT1JPa0hxY1dmTU40YVdEMzh3S05yQVN1c21NdjlSUFI?oc=5",
+     "published": "2026-11-13T12:41:21+00:00",
+     "source": "InvestyWise"
+    },
+    {
+     "title": "ABB India reports Q3 FY27 unaudited results with ₹442.52 crore profit",
+     "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOZUJSM3R4cDhpOVVBeEtXT1hiYmRuV1JwX0VJS0MtbWlGRDZFSkVDNWprcEJaV01qMmFyUm5MOUd2QkgtVkM3MjY0dzY3NnZndVVaT3hMYTRuOEpTRnJiV2J5VVFIUjU1OVpqUjNGNWxDQ0NjNG1PeF82ZGJvMXNpSWdTdkg1b1JYSjVQWUpVbGc?oc=5",
+     "published": "2026-11-13T12:26:20+00:00",
+     "source": "InvestyWise"
+    }
+   ]
+  },
+  "ITDC": {
+   "fetched": "2026-11-14T03:24+00:00",
+   "items": [
+    {
+     "title": "India Tourism Development Corporation to review Q2 results",
+     "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxORXhRRnl2c2piTU5VYTRPYnV3WEhLSWFXd0t5RHotNWlZcEFRREQ5NFhpcTRwNWUtWW1FOVlPX2lGZ0x6ckx3NHZwckFsTVVQdU9JSlp5UkxSZzFlbWJEVl9zeVlXRWNCUXRRaUZmLVo5cFd2OFJsRk1UaEQybUtJbElxb2g5WVh3eWEwOEtTMDZ4YnozSV93OFNVcw?oc=5",
+     "published": "2026-11-12T14:11:30+00:00",
+     "source": "Multibagg AI"
+    },
+    {
+     "title": "ITDC (NSE:ITDC) Q2 FY27: Standalone Net Profit Up 12.6% to ₹18.88 Crore",
+     "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxON1V5aHJrSVdnYVhoVGVFNlh5QWY1RFcxMFJmazBsZy1TRWQxOF95RzR1dXY2OUZpTjVLdzlZQ0FhM05XVmEza281Z3B1WHZ3Ry1pWnhTSjMyS2FNUDh5V25CRXdta2EzVEJNM0JvYVNLamlzVXNoTDl2cmNzNjNNQlNRN2hmTENibE1IX0YwemZCMFpxb0RSZDg4XzROMV9vUThEU00xal9XbHo4OTlsNVdhdlB4RGhQWjFkREZpNW9nMWVWdkFoTEEwdjhKTHdNYWYwcVFyRzNmeWZnVk9NbE1MNDNWYUpub202cDVvSQ?oc=5",
+     "published": "2026-11-13T06:21:00+00:00",
+     "source": "Kalkine India"
+    },
+    {
+     "title": "ITDC’s Hotel Exit Programme Still Awaits State Transfers",
+     "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPU0tOMGd0WlY1bm9RLWJ3Nl8wU3VSU2VYRV9pLV9oLWFPLUZ5alA5ZHRKR1VqbVM0eFZTd3NYTTZROHAxRFkzMW0xc3dPN2RublVXMGJ0WlY1ZkpIS0ZGWFIweWNRNUxzM0h5QWZCUWNLbzd5Q0haeFpiZnpHNkd6LUVPVXhJZVJhRjNVN0dOSzFmeV9rSTc2bUZCU0t2b3ZIMmhQQkVONTkyaHgta2VZQ2NPeTEweEE4?oc=5",
+     "published": "2026-11-12T14:12:19+00:00",
+     "source": "Multibagg AI"
+    }
+   ]
+  },
+  "APLAPOLLO": {
+   "fetched": "2026-11-14T03:24+00:00",
+   "items": [
+    {
+     "title": "NSE:APLAPOLLO için TraderRahulPal tarafından APL Apollo Tubes: Falling Resistance Breakout – Is 2400 Next?",
+     "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOVUlQY1ZRbU9DZGFzbXFXVkJKcWo1N0g1c25nSDFmc1p5dzRlcC00ajlSdjQ3RUpkeE1idy0zdGMxem5mTHBURmJVbEVFTGpEaE9jWG1KR1BnNVRZVk15cEc3R2lnaThUQlBlQklsbzZNcDVMMUl4Y3ZkdjFqd0ZUdHo4eXdMUjJXc2RJbXdYRVlBZGFxX04xaWZ1VTlqel9weHVnOHdiVnJTWnVrQTBB?oc=5",
+     "published": "2026-11-12T04:29:03+00:00",
+     "source": "TradingView"
+    }
+   ]
+  }
+ }
+}
