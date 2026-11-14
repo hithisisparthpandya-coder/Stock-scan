@@ -78,6 +78,9 @@ def watchlist(picks: list[dict], ledger: dict, sent_list: list[dict], quotes: pd
                 r["pnl"] = round((last - r["entry"]) * r["qty"], 0)
         if last and r.get("stop"):
             r["to_stop_pct"] = round((last / r["stop"] - 1) * 100, 2)
+        if last and r.get("target"):
+            r["to_target_pct"] = round((r["target"] / last - 1) * 100, 2)
+            r["to_target"] = round(r["target"] - last, 2)
         flags = []
         if r.get("stop") and x.get("low") and x["low"] <= r["stop"]:
             flags.append("stop touched")
@@ -277,6 +280,8 @@ def main():
         "mood": mood, "news_tone": tone,
         "movers": mv, "takeaways": mover_takeaways(mv, peers),
         "watch": watch, "dynamic": dyn,
+        "prices": {w["symbol"]: {k: (round(w[k], 2) if isinstance(w.get(k), float) else w.get(k))
+                                 for k in ("last", "pchange", "open", "high", "low")} for w in watch if w.get("last")},
         "alerts_today": [k.split("|", 1)[1] for k in sorted(sent)],
         "alerts_sent": sorted(sent), "news_cache": cache,
     }

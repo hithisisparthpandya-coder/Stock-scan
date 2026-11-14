@@ -51,7 +51,7 @@
   .ok{background:var(--ok-bg);color:var(--ok)} .bad{background:var(--bad-bg);color:var(--bad)} .warn{background:var(--warn-bg);color:var(--warn)}
   h2{font:700 15px "Oswald",sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:var(--forest);margin:20px 2px 10px;display:flex;align-items:center;gap:8px}
   h2::before{content:"";width:16px;height:3px;background:var(--gold-grad);border-radius:2px}
-  .layout{display:grid;gap:0 18px}
+  .layout{display:grid;gap:0 18px;grid-template-columns:minmax(0,1fr)} .layout > div{min-width:0}
   @media (min-width: 900px){ .layout{grid-template-columns: minmax(0,1.65fr) minmax(0,1fr)} }
   .grid{display:grid;gap:12px;align-items:start}
   @media (min-width: 640px){ .grid{grid-template-columns:repeat(2,minmax(0,1fr))} }
@@ -134,6 +134,11 @@
   .live-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#0B8A4A;margin-right:6px;animation:pulse 1.6s infinite}
   @keyframes pulse{50%{opacity:.25}}
   .two{display:grid;gap:12px} @media (min-width:700px){ .two{grid-template-columns:1fr 1fr} }
+  .trk td{white-space:nowrap} .trk th{white-space:normal} .trk td:first-child{color:var(--ink)}
+  .prog{height:6px;border-radius:3px;background:var(--soft);overflow:hidden;margin-top:4px;min-width:70px}
+  .prog b{display:block;height:100%;border-radius:3px}
+  .liveline{display:flex;gap:10px;flex-wrap:wrap;align-items:baseline;margin-top:10px;padding:8px 10px;border-radius:10px;background:var(--soft);font-size:13px}
+  .liveline b{font-size:15px;font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -207,7 +212,9 @@ async function load(){
   try{
     const d = await getData();
     if(d.setup) return renderSetup();
-    render(d);
+    let live = null;
+    try{ live = await getJSON("live.json"); }catch(e){}
+    render(d, live);
   }catch(e){
     $("#asof").textContent = "Couldn't load the latest scan.";
     $("#app").innerHTML = `<div class="card empty">No data yet. ${desktop ? "Check the scan address in Settings, or your internet connection." : "The first scan runs after market close on the next trading day."}</div>`;
@@ -234,7 +241,7 @@ async function renderSetup(){
   $("#demo").onclick = async () => { await desktop.saveSettings({dataUrl:"demo", autoStart:$("#autostart").checked}); load(); };
 }
 
-function render(d){
+function render(d, live){
   const gen = d.generated_at ? new Date(d.generated_at).toLocaleString("en-IN",{dateStyle:"medium",timeStyle:"short"}) : "";
   $("#asof").textContent = `Close of ${new Date(d.as_of+"T00:00:00").toLocaleDateString("en-IN",{weekday:"short",day:"numeric",month:"short",year:"numeric"})}` + (gen ? ` · scanned ${gen}` : "");
   const m = d.market || {};
@@ -260,7 +267,8 @@ function render(d){
   (d.warnings||[]).forEach(w => top += `<div class="banner warn">${esc(w)}</div>`);
 
   const picks = d.picks || [];
-  let left = `<h2>Top ${picks.length} candidates</h2>`;
+  const T = pickTracker(picks, live, d);
+  let left = T.html + `<h2>Top ${picks.length} candidates</h2>`;
   if(!picks.length) left += `<div class="card empty">No stock passed every rule today.<br>No trade is a valid result.</div>`;
   left += `<div class="grid">` + picks.map((p,i) => {
     const cls = p.setup.startsWith("Breakout") ? "b" : "p";
@@ -274,6 +282,7 @@ function render(d){
         ${p.next_results ? `<span class="chip">Results ${fmtDate(p.next_results)}</span>` : ""}
         ${p.low_priced ? `<span class="chip wc">Low-priced</span>` : ""}
       </div>
+      ${T.line(p)}
       <div class="nums">
         <div class="num"><span>Entry (limit)</span><b>${inr(p.entry)}</b></div>
         <div class="num stop"><span>Stop-loss</span><b>${inr(p.stop)}</b></div>
@@ -315,6 +324,57 @@ function render(d){
     <li>At +1R move the stop to entry. At 2R sell half, trail the rest.</li>
     <li>Max 3 open trades. The decision and the risk are yours.</li></ol></div>`;
   $("#app").innerHTML = top + `<div class="layout"><div>${left}</div><div>${right}</div></div>`;
+}
+
+// ---------------- Today's picks: live tracker ----------------
+function pickLive(p, live){
+  const px = (live && live.prices && live.prices[p.symbol]) || ((live && live.watch) || []).find(w => w.symbol === p.symbol) || null;
+  if(!px || !px.last) return null;
+  const last = px.last, diff = last - p.entry, pct = diff / p.entry * 100;
+  const left = p.target - last, leftPct = left / last * 100;
+  const prog = (last - p.entry) / Math.max(1e-9, p.target - p.entry) * 100;           // 0% at entry, 100% at target
+  const toStop = (last / p.stop - 1) * 100;
+  const st = [];
+  if(px.high != null && px.high >= p.target) st.push(["target touched", "pos"]);
+  if(px.low != null && px.low <= p.stop) st.push(["stop touched", "neg"]);
+  if(px.open != null && px.open > p.entry * 1.01) st.push(["opened >1% above entry – rules say skip", "neg"]);
+  return {last, diff, pct, pnl: diff * (p.qty || 0), left, leftPct, prog, toStop, st, day: px.pchange};
+}
+function pickTracker(picks, live, d){
+  const none = {html: "", line: () => ""};
+  if(!picks.length) return none;
+  if(!live || !live.generated_at){
+    return {html: `<div class="card sub" style="margin-top:4px">Live prices for these picks appear here once the market opens (9:15 am IST).</div>`, line: () => ""};
+  }
+  const liveDay = live.generated_at.slice(0,10), fresh = liveDay > d.as_of;
+  const rows = picks.map(p => [p, fresh ? pickLive(p, live) : null]);
+  const have = rows.filter(r => r[1]);
+  let h = `<h2>Live tracker</h2><div class="card">`;
+  if(!fresh){
+    h += `<div class="sub" style="margin:0">These picks are from the close of ${fmtDate(d.as_of)}, so the price is still the entry price. Live prices start at 9:15 am IST on the next trading day and refresh about every 15 minutes.</div></div>`;
+    return {html: h, line: () => ""};
+  }
+  const tot = have.reduce((a, [p, x]) => a + x.pnl, 0), up = have.filter(r => r[1].diff > 0).length, down = have.filter(r => r[1].diff < 0).length;
+  const near = have.slice().sort((a, b) => a[1].leftPct - b[1].leftPct)[0];
+  h += `<div class="sub" style="margin:0 0 8px">Prices at ${new Date(live.generated_at).toLocaleTimeString("en-IN",{hour:"2-digit",minute:"2-digit"})} (${ago(live.generated_at)}) · ${esc(live.sources?.prices || "")}</div>
+    <div class="nums" style="margin-top:0">
+      <div class="num"><span>If bought at entry</span><b class="${tot>=0?"pos":"neg"}">${inr(tot,0)}</b></div>
+      <div class="num"><span>Up / down</span><b><em class="pos" style="font-style:normal">${up}</em> / <em class="neg" style="font-style:normal">${down}</em></b></div>
+      <div class="num"><span>Closest to target</span><b>${near ? esc(near[0].symbol) : "–"}</b>${near ? `<span>${near[1].leftPct.toFixed(1)}% to go</span>` : ""}</div>
+    </div>
+    <div class="scroll" style="margin-top:10px"><table class="mt trk"><tr><th>Stock · now</th><th>vs entry</th><th>Left to target</th><th>To stop</th></tr>` +
+    rows.map(([p, x]) => !x ? `<tr><td>${esc(p.symbol)}</td><td colspan="3" style="text-align:left">no live price yet</td></tr>` :
+      `<tr><td><b>${esc(p.symbol)}</b><br>${inr(x.last)}${x.st.map(([t,c]) => `<br><span class="${c}" style="font-size:11px;white-space:normal">${esc(t)}</span>`).join("")}</td>
+        <td><b class="${x.diff>=0?"pos":"neg"}">${x.pct>=0?"+":""}${x.pct.toFixed(1)}%</b><br><span class="${x.diff>=0?"pos":"neg"}">${x.diff>=0?"+":"−"}₹${Math.abs(x.diff).toFixed(2)}</span><br><span class="sub">${inr(x.pnl,0)} on ${p.qty}</span></td>
+        <td>${x.left <= 0 ? '<b class="pos">reached ✓</b>' : `<b>₹${x.left.toFixed(2)}</b><br>${x.leftPct.toFixed(1)}% more`}
+          <div class="prog"><b style="width:${Math.max(0, Math.min(100, x.prog))}%;background:var(--tgt)"></b></div><span class="sub">${x.prog < 0 ? "below entry" : Math.round(Math.min(100, x.prog)) + "% there"}</span></td>
+        <td>${x.toStop.toFixed(1)}%</td></tr>`).join("") +
+    `</table></div><p class="sub" style="margin:8px 0 0">"If bought at entry" assumes the suggested quantity was bought at the entry price. Target = 2R. Progress is measured from entry (0%) to target (100%).</p></div>`;
+  const map = Object.fromEntries(rows.map(([p, x]) => [p.symbol, x]));
+  const line = p => { const x = map[p.symbol]; if(!x) return "";
+    return `<div class="liveline"><span>Now <b>${inr(x.last)}</b></span><span class="${x.diff>=0?"pos":"neg"}"><b>${x.pct>=0?"+":""}${x.pct.toFixed(1)}%</b> vs entry (${inr(x.pnl,0)})</span>
+      <span>${x.left <= 0 ? '<b class="pos">target reached</b>' : `<b>₹${x.left.toFixed(2)}</b> (${x.leftPct.toFixed(1)}%) to target`}</span></div>`; };
+  return {html: h, line};
 }
 
 // ---------------- Live market ----------------
@@ -376,9 +436,9 @@ function renderLive(d){
   h += `</div><div>`;
   // Watchlist
   const w = d.watch || [];
-  h += `<h2>Your watchlist</h2><div class="card scroll">` + (w.length ? `<table class="mt"><tr><th>Stock</th><th>Last</th><th>Today</th><th>vs entry</th><th>to stop</th></tr>` +
+  h += `<h2>Your watchlist</h2><div class="card scroll">` + (w.length ? `<table class="mt"><tr><th>Stock</th><th>Last</th><th>Today</th><th>vs entry</th><th>to target</th><th>to stop</th></tr>` +
     w.map(x => `<tr><td>${esc(x.symbol)}<br><span class="sub">${esc(x.role)}</span>${(x.flags||[]).map(f => `<br><span class="neg" style="font-size:11px">${esc(f)}</span>`).join("")}</td>
-      <td>${inr(x.last)}</td><td>${sgn(x.pchange,1)}</td><td>${sgn(x.from_entry_pct,1)}${x.pnl != null ? `<br><span class="sub">${inr(x.pnl,0)}</span>` : ""}</td><td>${x.to_stop_pct != null ? x.to_stop_pct + "%" : "–"}</td></tr>`).join("") + `</table>` :
+      <td>${inr(x.last)}</td><td>${sgn(x.pchange,1)}</td><td>${sgn(x.from_entry_pct,1)}${x.pnl != null ? `<br><span class="sub">${inr(x.pnl,0)}</span>` : ""}</td><td>${x.to_target != null ? (x.to_target <= 0 ? '<span class="pos">reached</span>' : `₹${x.to_target}<br><span class="sub">${x.to_target_pct}%</span>`) : "–"}</td><td>${x.to_stop_pct != null ? x.to_stop_pct + "%" : "–"}</td></tr>`).join("") + `</table>` :
     `<div class="empty" style="padding:8px">No picks, paper orders or positions to watch.</div>`) + `</div>`;
   // Dynamic sentiment list
   const dy = d.dynamic || [];
