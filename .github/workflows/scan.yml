@@ -35,7 +35,9 @@ jobs:
       - run: pip install -r requirements.txt
 
       - name: Run tests
-        run: python scanner/test_funnel.py
+        run: |
+          python scanner/test_funnel.py
+          python scanner/test_sentiment.py
 
       - name: Restore price history
         uses: actions/cache/restore@v4
@@ -65,5 +67,4 @@ jobs:
           git config user.email "scan-bot@users.noreply.github.com"
           git add docs/data
           git diff --cached --quiet || git commit -m "Scan $(date -u +%F)"
-          git pull --rebase
-          git push
+          for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done

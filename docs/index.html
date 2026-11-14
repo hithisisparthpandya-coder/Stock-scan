@@ -121,6 +121,19 @@
   .toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom));transform:translateX(-50%);
     background:var(--forest);color:#FFFDF5;padding:8px 14px;border-radius:10px;font-size:14px;opacity:0;transition:opacity .2s;pointer-events:none}
   .toast.on{opacity:1}
+  .gauge{position:relative;height:12px;border-radius:6px;background:linear-gradient(90deg,#C0392B 0 35%,#E8B000 35% 50%,#9BBF7A 50% 65%,#0B8A4A 65%);margin:10px 0 4px}
+  .gauge i{position:absolute;top:-5px;width:4px;height:22px;border-radius:2px;background:var(--ink);transform:translateX(-2px)}
+  .gscale{display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}
+  .mv summary{padding:10px 12px} .mv .row1{gap:8px} .mv .sym{font-size:16px}
+  .chg{font:700 15px "Archivo",sans-serif;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .why{margin:0;padding:0 12px 12px 30px;font-size:13px;color:var(--ink)} .why li{margin:3px 0}
+  .hl{display:block;font-size:12px;color:var(--muted);text-decoration:none;margin:4px 12px 0 12px} .hl:last-child{margin-bottom:12px}
+  .bar{display:grid;grid-template-columns:minmax(0,1fr) 60px;gap:2px 8px;font-size:13px;margin:6px 0}
+  .bar .t{grid-column:1/3;height:5px;border-radius:3px;background:var(--soft);position:relative;overflow:hidden}
+  .bar .t b{position:absolute;top:0;bottom:0}
+  .live-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#0B8A4A;margin-right:6px;animation:pulse 1.6s infinite}
+  @keyframes pulse{50%{opacity:.25}}
+  .two{display:grid;gap:12px} @media (min-width:700px){ .two{grid-template-columns:1fr 1fr} }
 </style>
 </head>
 <body>
@@ -137,7 +150,7 @@
     </div>
   </header>
   <nav class="tabs mode"><button id="mode-stocks" class="on">📈 Stocks</button><button id="mode-mf">🏦 Mutual funds</button></nav>
-  <nav class="tabs" id="stock-tabs"><button id="tab-today" class="on">Today's picks</button><button id="tab-paper">Paper record</button><button id="tab-lab">Strategy lab</button></nav>
+  <nav class="tabs" id="stock-tabs"><button id="tab-live" class="on">⚡ Live</button><button id="tab-today">Today's picks</button><button id="tab-paper">Paper record</button><button id="tab-lab">Strategy lab</button></nav>
   <div class="sub" id="asof">Loading…</div>
   <div id="app"></div>
   <footer>
@@ -155,7 +168,8 @@ const fmtDate = s => new Date(s + "T00:00:00").toLocaleDateString("en-IN",{day:"
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 function toast(msg){ const t=$("#toast"); t.textContent=msg; t.classList.add("on"); setTimeout(()=>t.classList.remove("on"),1800); }
 
-let TAB = "today";
+let TAB = "live";
+let LIVE_TIMER = null;
 async function getJSON(name){
   if(desktop){
     const r = await desktop.fetchJSON(name);
@@ -182,7 +196,9 @@ async function getData(){
 
 async function load(){
   $("#asof").textContent = "Loading…";
-  for(const t of ["today","paper","lab"]) $("#tab-"+t).classList.toggle("on", TAB===t);
+  for(const t of ["live","today","paper","lab"]) $("#tab-"+t).classList.toggle("on", TAB===t);
+  clearInterval(LIVE_TIMER); LIVE_TIMER = null;
+  if(TAB === "live") return loadLive();
   $("#mode-stocks").classList.toggle("on", TAB!=="mf"); $("#mode-mf").classList.toggle("on", TAB==="mf");
   $("#stock-tabs").style.display = TAB==="mf" ? "none" : "flex";
   if(TAB === "mf") return loadMF();
@@ -233,6 +249,13 @@ function render(d){
     top += `<div class="banner ${cls}"><span class="rg ${rg.regime}">${rg.regime.toUpperCase()}</span>${esc(rg.note)}` +
       (rg.breadth != null ? ` <span style="font-weight:400">· breadth ${Math.round(rg.breadth*100)}% of liquid stocks above their 50 DMA</span>` : "") +
       (d.strategy ? ` <span style="font-weight:400">· live strategy: ${d.strategy === "adaptive" ? "regime-adaptive" : "baseline funnel"}</span>` : "") + `</div>`;
+  }
+  const sm = d.sentiment || {}, md = sm.mood || {};
+  if(md.score != null){
+    const cls = {fear:"bad", cautious:"warn", neutral:"ok", greed:"ok"}[md.band] || "warn";
+    const sug = (sm.list||[]).filter(x => x.status === "suggested").map(x => x.symbol), vet = (sm.list||[]).filter(x => x.status === "vetoed");
+    top += `<div class="banner ${cls}">Market Mood ${Math.round(md.score)}/100 (${esc(md.band)}) – ${esc(md.note)}` +
+      `<span style="font-weight:400"> · sentiment-adjusted picks: ${sug.length ? esc(sug.join(", ")) : "none"}${vet.length ? " · vetoed: " + vet.map(x => esc(x.symbol + " (" + x.veto + ")")).join(", ") : ""} · details in ⚡ Live</span></div>`;
   }
   (d.warnings||[]).forEach(w => top += `<div class="banner warn">${esc(w)}</div>`);
 
@@ -292,6 +315,93 @@ function render(d){
     <li>At +1R move the stop to entry. At 2R sell half, trail the rest.</li>
     <li>Max 3 open trades. The decision and the risk are yours.</li></ol></div>`;
   $("#app").innerHTML = top + `<div class="layout"><div>${left}</div><div>${right}</div></div>`;
+}
+
+// ---------------- Live market ----------------
+async function loadLive(silent){
+  try{
+    const d = await getJSON("live.json");
+    renderLive(d);
+    if(!LIVE_TIMER) LIVE_TIMER = setInterval(() => { if(TAB === "live" && document.visibilityState === "visible") loadLive(true); }, 60000);
+  }catch(e){
+    if(silent) return;
+    $("#asof").textContent = "Live market";
+    $("#app").innerHTML = `<div class="card empty">Live data starts with the next market session (Mon–Fri, 9:15 am – 3:30 pm IST). It refreshes about every 15 minutes.</div>`;
+  }
+}
+const sgn = (v, d=2) => v == null ? "–" : `<span class="${v>=0?"pos":"neg"}">${v>0?"+":""}${Number(v).toFixed(d)}%</span>`;
+const ago = iso => { const m = Math.round((Date.now() - Date.parse(iso)) / 60000); return m < 1 ? "just now" : m < 60 ? `${m} min ago` : m < 1440 ? `${Math.round(m/60)} h ago` : `${Math.round(m/1440)} d ago`; };
+function moverCard(r){
+  const v = r.verdict || "";
+  const vc = v.startsWith("Likely news") ? "okc" : v.startsWith("Moving with") ? "" : "wc";
+  return `<details class="card pick mv"><summary><div class="row1">
+      <div style="min-width:0;flex:1"><div class="sym">${esc(r.symbol)}</div><div class="name">${esc(r.name || "")}${r.industry ? " · " + esc(r.industry) : ""}</div></div>
+      <div style="text-align:right"><div class="chg">${sgn(r.pchange)}</div><div class="name">${inr(r.last)}</div></div></div>
+      <div class="chips"><span class="chip ${vc}">${esc(v)}</span>${r.value_cr ? `<span class="chip">₹${r.value_cr} cr traded</span>` : ""}</div></summary>
+    <ul class="why">${(r.reasons||[]).map(x => `<li>${esc(x)}</li>`).join("") || "<li>No clear driver found.</li>"}</ul>
+    ${(r.headlines||[]).map(h => `<a class="hl" href="${esc(h.link)}" target="_blank" rel="noopener">📰 ${esc(h.title)} <b class="${h.score>=0?"pos":"neg"}">${h.score>0?"+":""}${h.score}</b> · ${esc(h.source||"")} · ${h.age_h}h ago</a>`).join("")}
+    <div class="more"><button data-open="${esc(r.symbol)}">Chart ↗</button></div></details>`;
+}
+function renderLive(d){
+  const open = (d.market_status || "").toLowerCase() === "open";
+  const mins = (Date.now() - Date.parse(d.generated_at)) / 60000;
+  $("#asof").innerHTML = `${open ? '<span class="live-dot"></span>' : ""}Market ${esc(d.market_status || "–")} · updated ${new Date(d.generated_at).toLocaleTimeString("en-IN",{hour:"2-digit",minute:"2-digit"})} (${ago(d.generated_at)}) · app re-checks every minute`;
+  let h = d.demo ? `<div class="banner warn">Demo data – real live data appears in market hours.</div>` : "";
+  if(open && mins > 35) h += `<div class="banner warn">This snapshot is ${Math.round(mins)} minutes old – GitHub's scheduler may be running late.</div>`;
+  h += `<div class="sub" style="margin-top:-6px">${esc(d.delay_note || "")}</div>`;
+  const ad = d.advance_decline || {}, fl = d.flows || {};
+  h += `<div class="card"><div class="nums">
+    <div class="num"><span>Nifty 50</span><b>${d.nifty?.last ? d.nifty.last.toLocaleString("en-IN") : "–"}</b> ${sgn(d.nifty?.pchange)}</div>
+    <div class="num"><span>India VIX</span><b>${d.vix?.last ?? "–"}</b> ${sgn(d.vix?.pchange)}</div>
+    <div class="num"><span>Advance / decline</span><b><em class="pos" style="font-style:normal">${ad.advances ?? "–"}</em> / <em class="neg" style="font-style:normal">${ad.declines ?? "–"}</em></b></div>
+    ${fl.fii != null ? `<div class="num"><span>FII net (${esc(fl.date||"")})</span><b class="${fl.fii>=0?"pos":"neg"}">${inr(fl.fii,0)} cr</b></div>
+    <div class="num"><span>DII net</span><b class="${fl.dii>=0?"pos":"neg"}">${inr(fl.dii,0)} cr</b></div>` : ""}
+  </div></div>`;
+  // Mood
+  const md = d.mood || {};
+  h += `<div class="layout"><div>`;
+  if(md.score != null){
+    h += `<h2>Market Mood</h2><div class="card"><div class="row1"><span class="big">${Math.round(md.score)}</span><span class="sub" style="margin:0">/ 100 · <b>${esc(md.band)}</b></span></div>
+      <div class="gauge"><i style="left:${md.score}%"></i></div><div class="gscale"><span>Fear</span><span>35</span><span>50</span><span>65</span><span>Greed</span></div>
+      <p style="margin:10px 0 6px;font-weight:600">${esc(md.note||"")}</p>
+      <table class="mt"><tr><th>Ingredient</th><th>Reading</th><th>Weight</th></tr>${(md.components||[]).map(c => `<tr><td>${esc(c.label)}</td><td>${c.value}/100</td><td>${Math.round(c.weight*100)}%</td></tr>`).join("")}</table>
+      <details style="margin-top:8px"><summary class="sub" style="cursor:pointer">How the mood is calculated</summary><p class="sub">Mood = weighted average of the ingredients available today (weights rescale if one is missing): breadth 25%, advancers 20%, calm VIX 20% (1 − VIX percentile over a year), Nifty trend 15% (0.5 + (Nifty/50-DMA − 1)/6%), news tone 20% ((average headline score + 1)/2), FII+DII flows 10% (0.5 + tanh(net ₹cr/3000)/2). Below 35: no new suggestions. 35–50: at most 2, at half risk. Mood only ever lowers risk. Weights are fixed by hand and are being paper-tested, not proven.</p></details></div>`;
+  }
+  const tk = d.takeaways || [];
+  if(tk.length) h += `<h2>What's moving the market</h2><div class="card rules"><ul style="margin:0;padding-left:18px">${tk.map(t => `<li>${esc(t)}</li>`).join("")}</ul></div>`;
+  const mv = d.movers || {};
+  h += `<div class="two"><div><h2>Top gainers</h2>${(mv.gainers||[]).map(moverCard).join("") || '<div class="card empty">–</div>'}</div>
+        <div><h2>Top losers</h2>${(mv.losers||[]).map(moverCard).join("") || '<div class="card empty">–</div>'}</div></div>`;
+  h += `<p class="sub">Nifty 500 stocks with at least ₹5 cr traded. "Why" is a rule-based read of news, NSE announcements, results dates, sector, volume pace, gap and trend – a starting point, not a certainty.</p>`;
+  h += `</div><div>`;
+  // Watchlist
+  const w = d.watch || [];
+  h += `<h2>Your watchlist</h2><div class="card scroll">` + (w.length ? `<table class="mt"><tr><th>Stock</th><th>Last</th><th>Today</th><th>vs entry</th><th>to stop</th></tr>` +
+    w.map(x => `<tr><td>${esc(x.symbol)}<br><span class="sub">${esc(x.role)}</span>${(x.flags||[]).map(f => `<br><span class="neg" style="font-size:11px">${esc(f)}</span>`).join("")}</td>
+      <td>${inr(x.last)}</td><td>${sgn(x.pchange,1)}</td><td>${sgn(x.from_entry_pct,1)}${x.pnl != null ? `<br><span class="sub">${inr(x.pnl,0)}</span>` : ""}</td><td>${x.to_stop_pct != null ? x.to_stop_pct + "%" : "–"}</td></tr>`).join("") + `</table>` :
+    `<div class="empty" style="padding:8px">No picks, paper orders or positions to watch.</div>`) + `</div>`;
+  // Dynamic sentiment list
+  const dy = d.dynamic || [];
+  h += `<h2>Sentiment-adjusted picks</h2><div class="card">` + (dy.length ? dy.map(x => `<div style="padding:8px 0;border-bottom:1px solid var(--line)">
+      <div class="row1"><b class="sym" style="font-size:16px">${esc(x.symbol)}</b><span class="sub" style="margin:0">score ${x.score} → <b>${x.adj_score}</b></span>
+      <span class="tag ${x.status==="suggested"?"p":"b"}">${esc(x.status)}</span></div>
+      <div class="sub" style="margin:4px 0 0">${esc((x.reasons||[]).join(" · "))}${x.veto ? ` · <span class="neg">vetoed: ${esc(x.veto)}</span>` : ""}${x.live_note ? ` · <span class="neg">${esc(x.live_note)}</span>` : ""}</div>
+      ${(x.headlines||[]).slice(0,2).map(hh => `<a class="hl" style="margin:4px 0 0" href="${esc(hh.link)}" target="_blank" rel="noopener">📰 ${esc(hh.title)}</a>`).join("")}</div>`).join("") +
+    `<p class="sub" style="margin:8px 0 0">Adjusted = technical score + 15 × news sentiment (−1…+1) + 5 × sector move (capped ±1%). Red-flag or strongly negative news vetoes a pick. Tracked in its own paper ledger – not proven yet.</p>` :
+    `<div class="empty" style="padding:8px">No technical picks today, so nothing to adjust.</div>`) + `</div>`;
+  // Sectors
+  const sec = d.sectors || [];
+  if(sec.length){ const mx = Math.max(1, ...sec.map(s => Math.abs(s.pchange)));
+    h += `<h2>Sectors today</h2><div class="card">` + sec.map(s => `<div class="bar"><span>${esc(s.name)}</span><b style="text-align:right">${sgn(s.pchange)}</b>
+      <div class="t"><b style="left:${s.pchange>=0?50:50-50*Math.abs(s.pchange)/mx}%;width:${50*Math.abs(s.pchange)/mx}%;background:${s.pchange>=0?"var(--tgt)":"var(--stop)"}"></b></div></div>`).join("") + `</div>`; }
+  // News tone
+  const nt = d.news_tone || {};
+  if(nt.count) h += `<h2>Headline tone</h2><div class="card"><div class="sub" style="margin:0 0 6px">${nt.positive} positive · ${nt.negative} negative market headlines in the last 24 h</div>` +
+    [...(nt.top_positive||[]), ...(nt.top_negative||[])].map(x => `<a class="hl" style="margin:6px 0" href="${esc(x.link)}" target="_blank" rel="noopener"><b class="${x.score>=0?"pos":"neg"}">${x.score>0?"+":""}${x.score}</b> ${esc(x.title)} · ${esc(x.source)}</a>`).join("") + `</div>`;
+  const al = d.alerts_today || [];
+  if(al.length) h += `<h2>Alerts sent today</h2><div class="card rules"><ul style="margin:0;padding-left:18px">${al.map(a => `<li>${esc(a.replace(/\|/g, " · "))}</li>`).join("")}</ul></div>`;
+  h += `</div></div>`;
+  $("#app").innerHTML = h;
 }
 
 // ---------------- Mutual funds ----------------
@@ -377,7 +487,9 @@ function renderMF(){
 }
 
 // ---------------- Paper record ----------------
+let SL = null;
 async function loadPaper(){
+  try{ SL = await getJSON("ledger_sentiment.json"); }catch(e){ SL = null; }
   try{ renderPaper(await getJSON("ledger.json")); }
   catch(e){
     $("#asof").textContent = "Paper record";
@@ -408,7 +520,8 @@ function renderPaper(L){
     gateRow("Avg profit per trade ≥ 0.1R", (m.avg_r||0) >= 0.1, `${m.avg_r ?? "–"}R`) +
     gateRow("Worst fall from peak better than −10%", (m.max_drawdown_pct ?? 0) > -10, `${m.max_drawdown_pct ?? 0}%`) +
     `</table><p class="sub" style="margin:8px 0 0">All four, plus a backtest verdict that isn't "no proven edge", before any real money.</p></div>`;
-  h += `<h2>Paper stats</h2><div class="card">${mtable([["Paper", m]])}</div>`;
+  h += `<h2>Paper stats</h2><div class="card">${mtable(SL ? [["Technical", m], ["Sentiment-adjusted", SL.metrics || {}]] : [["Paper", m]])}</div>`;
+  if(SL) h += `<div class="card"><b>Sentiment paper account:</b> ₹${Math.round(SL.equity).toLocaleString("en-IN")} (${SL.return_pct >= 0 ? "+" : ""}${SL.return_pct}%) · ${(SL.open_positions||[]).length} open · ${(SL.metrics||{}).trades || 0} closed since ${esc(SL.started || "–")}. Same rules and capital as the main paper account, but it only takes the sentiment-adjusted picks, at the risk the Market Mood allows.</div>`;
   const ev = L.events_log || L.events_latest || [];
   h += `<h2>Latest activity</h2><div class="card rules">${ev.length ? `<ul style="margin:0;padding-left:18px">${ev.slice().reverse().map(e => `<li>${esc(e)}</li>`).join("")}</ul>` : "No fills or exits yet."}</div>`;
   h += `</div></div>`;
@@ -500,12 +613,13 @@ document.addEventListener("click", async e => {
 });
 $("#refresh").onclick = load;
 $("#tab-today").onclick = () => { TAB = "today"; load(); };
+$("#tab-live").onclick = () => { TAB = "live"; load(); };
 $("#tab-lab").onclick = () => { TAB = "lab"; load(); };
 $("#tab-paper").onclick = () => { TAB = "paper"; load(); };
-$("#mode-stocks").onclick = () => { TAB = "today"; load(); };
+$("#mode-stocks").onclick = () => { TAB = "live"; load(); };
 $("#mode-mf").onclick = () => { TAB = "mf"; load(); };
 if(desktop){ const b=$("#settings"); b.hidden=false; b.onclick=renderSetup; desktop.onScanUpdated(() => load()); }
-document.addEventListener("visibilitychange", () => { if(document.visibilityState === "visible") load(); });
+document.addEventListener("visibilitychange", () => { if(document.visibilityState === "visible") TAB === "live" ? loadLive(true) : load(); });
 if(!desktop && "serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");
 load();
 </script>

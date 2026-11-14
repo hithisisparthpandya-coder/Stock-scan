@@ -27,6 +27,11 @@ def build_message(result: dict, cfg: dict) -> str:
     if rg.get("regime"):
         icon = {"green": "🟢", "amber": "🟡", "red": "🔴"}[rg["regime"]]
         lines.append(f"{icon} Regime {rg['regime'].upper()} – {rg['note']}")
+    sm = result.get("sentiment") or {}
+    md = sm.get("mood") or {}
+    if md.get("score") is not None:
+        icon = {"fear": "😟", "cautious": "😐", "neutral": "🙂", "greed": "😃"}.get(md["band"], "")
+        lines.append(f"{icon} Market Mood {md['score']:.0f}/100 ({md['band']}) – {html.escape(md.get('note', ''))}")
     f = result.get("funnel", [])
     if f:
         lines.append("Funnel: " + " → ".join(str(x["count"]) for x in f))
@@ -47,6 +52,13 @@ def build_message(result: dict, cfg: dict) -> str:
             f"   Entry {_inr(p['entry'])} · Stop {_inr(p['stop'])} · Target {_inr(p['target'])}\n"
             f"   Qty {p['qty']} · Max loss {_inr(p['max_loss'], 0)} · Vol {p['vol_ratio']}×"
         )
+    sl = sm.get("list") or []
+    if sl:
+        sug = [x["symbol"] for x in sl if x["status"] == "suggested"]
+        vet = [f"{x['symbol']} ({x['veto']})" for x in sl if x["status"] == "vetoed"]
+        lines.append("\n🧭 <b>Sentiment-adjusted (paper test)</b>: " + (", ".join(sug) if sug else "none today"))
+        if vet:
+            lines.append("   Vetoed: " + html.escape(", ".join(vet)))
     paper = result.get("paper") or {}
     if paper.get("summary"):
         lines.append("\n" + html.escape(paper["summary"]))

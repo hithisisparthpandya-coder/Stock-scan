@@ -31,7 +31,10 @@ def _risk_for(strategy: str, regime: str, market_ok: bool, cfg: dict) -> float:
 
 
 def update(path: Path, hist: pd.DataFrame, feat: dict, picks: list[dict], cfg: dict, strategy: str,
-           demo: bool = False) -> dict:
+           demo: bool = False, risk_mult: float = 1.0) -> dict:
+    """risk_mult (0–1) scales the risk of new paper orders – used by the sentiment ledger's mood bands.
+    It is clamped so it can never raise risk."""
+    risk_mult = max(0.0, min(1.0, float(risk_mult)))
     lcfg = dict(cfg, bt_capital=cfg["capital"])
     led = json.loads(path.read_text()) if path.exists() else {}
     if led.get("demo") and not demo:
@@ -65,7 +68,7 @@ def update(path: Path, hist: pd.DataFrame, feat: dict, picks: list[dict], cfg: d
     # queue today's picks for tomorrow's open (replaces any queue from an earlier run today)
     sim.pending = []
     reg_today = feat["regime"].iloc[-1]
-    risk = _risk_for(strategy, reg_today, bool(feat["market_ok"].iloc[-1]), lcfg) * sim.risk_multiplier()
+    risk = _risk_for(strategy, reg_today, bool(feat["market_ok"].iloc[-1]), lcfg) * sim.risk_multiplier() * risk_mult
     cands = [{"symbol": p["symbol"], "stop": p["stop"], "setup": p["setup"], "close": p["entry"]} for p in picks]
     if len(sim.pos) < lcfg["max_positions"]:
         sim.queue(cands, risk, reg_today)

@@ -175,6 +175,21 @@ def main():
     led = update_ledger(OUT.parent / "ledger.json", hist, feat, picks, cfg, strategy, demo=args.demo)
     result["paper"] = {"summary": summary_line(led), "events": led["events_latest"][-10:],
                        "queued": led["queued"]}
+    try:   # sentiment layer: universe for the live job, Market Mood, sentiment-adjusted list + its paper ledger
+        from market_intel import evening_intel
+        universe, sent = evening_intel(None if args.demo else nse, P, feat, picks, names, bands, results, cfg, now,
+                                       demo=args.demo)
+        (OUT.parent / "universe.json").write_text(json.dumps(universe, ensure_ascii=False, default=str))
+        chosen = [x for x in sent["list"] if x["status"] == "suggested"]
+        sled = update_ledger(OUT.parent / "ledger_sentiment.json", hist, feat, chosen, cfg, strategy,
+                             demo=args.demo, risk_mult=sent["mood"]["risk_mult"])
+        sent["paper"] = {"summary": summary_line(sled).replace("Paper account", "Sentiment paper account"),
+                         "queued": sled["queued"]}
+        result["sentiment"] = sent
+    except Exception as e:  # never lose the main scan over the optional layer
+        import traceback
+        traceback.print_exc()
+        result.setdefault("warnings_internal", []).append(f"Sentiment layer failed: {type(e).__name__}")
     result["generated_at"] = now.isoformat(timespec="minutes")
     result["config"] = {k: cfg[k] for k in ("capital", "risk_pct", "max_position_pct", "reward_risk",
                                             "min_turnover_cr", "vol_mult", "max_stop_pct", "min_roe",

@@ -33,6 +33,32 @@ Picks go to Telegram and to the web app on your iPhone. Free to run.
   or locally on Linux with `cd desktop && npm ci && npm run dist` (needs `makensis`).
 - `docs/index.html` is the single UI for both the iPhone and Windows apps; `desktop/sync-ui.js` copies it in.
 
+## ⚡ Live market tab (intraday)
+Every ~15 minutes from 9:15 am to 3:30 pm IST (Mon–Fri), **Live market update** (`.github/workflows/live.yml`) writes
+`docs/data/live.json`; the app's **⚡ Live** tab re-checks it every minute while open. It shows:
+- Nifty, India VIX, advances/declines, FII/DII flows and sector moves.
+- **Top 10 gainers and losers** in the Nifty 500, each with a "why it moved" read: NSE announcements, results dates,
+  news headlines (with sentiment), sector peers, volume pace, opening gap, 20-day high/low, 50-DMA, 52-week high/low, circuit.
+- **Market Mood** (0–100) and the **sentiment-adjusted picks** (see below), refreshed with live prices and news.
+- **Your watchlist**: today's picks, paper orders and paper positions with live P&L and distance to the stop.
+- Telegram pings only for big moves: a watched stock ±3% on the day, or touching its stop or target (once per day each).
+
+Prices come from NSE's own website snapshot (Yahoo Finance as fallback, ~15 min delayed). This isn't a licensed
+real-time feed, and GitHub's scheduler can start runs 5–20 minutes late. It never places orders.
+
+## Sentiment layer (paper test)
+All formulas live in `scanner/sentiment.py`; the weights were fixed by hand, **not fitted to past prices** (there is no
+free history of old headlines to test them on).
+- Headline score h = tanh(Σ finance-phrase weights / 2), from −1 to +1 ("bags order" +2, "downgrade" −2, "SEBI order" −2 …).
+- Stock news sentiment N = tanh(Σ h × 0.5^(age/24h) / 1.5), using headlines from the last 72 h that name the company
+  (Google News, ET, Moneycontrol, Mint, Business Standard).
+- Market Mood = weighted average of breadth 25%, advancers 20%, calm VIX 20%, Nifty trend 15%, news tone 20%, FII+DII flows 10%.
+  Below 35 (fear): no new suggestions. 35–50: at most 2, at half risk. Mood can only lower risk.
+- Sentiment-adjusted score = technical score + 15·N + 5·(sector move, capped ±1%). Red-flag or strongly negative news vetoes a pick.
+- Each evening the scan writes `universe.json` (context for the live job) and the sentiment list, which
+  `docs/data/ledger_sentiment.json` paper-trades with the same rules and capital as the main ledger. Compare the two in **Paper record**
+  before letting sentiment change anything live.
+
 ## Mutual funds (long term)
 The app has two modes: **📈 Stocks** (swing scanner, paper trading) and **🏦 Mutual funds** (long-term planner).
 - Screens ~400 Direct-Growth funds across 15 categories from AMFI's full NAV history, refreshed on the 1st of
@@ -70,6 +96,7 @@ Edit `scanner/config.json`: `capital` (update as your account grows), `risk_pct`
 - `scanner/strategy.py` — features, market regime, baseline + adaptive signals (shared by live and backtest)
 - `scanner/backtest.py`, `bt_report.py`, `bt_data.py` — portfolio backtester, report, 10-year data cache
 - `scanner/notify.py` — Telegram message
+- `scanner/live.py`, `market_intel.py`, `sentiment.py` — intraday live job, movers analysis, news and the sentiment equations (`test_sentiment.py` tests them)
 - `scanner/run.py` — daily entry point (`--demo` runs on synthetic data with no network)
 - `scanner/test_funnel.py` — tests; the workflow runs them before every scan
 - `scanner/mf.py`, `mf_classify.py` — mutual fund screening, model portfolios, SIP/lump-sum ranges
