@@ -5,6 +5,7 @@ and judged by its return to the close of t+1 (1 day), t+5 (1 week) and t+20 (1 m
 every other liquid stock over the same window.
 
   hit rate  = share of picks that land in the top 10% of all liquid stocks (random picking ≈ 10%)
+  bottom    = share that land in the bottom 10% (a ranking that only picks jumpy stocks raises both)
   excess    = average pick return minus the median stock's return over the same window
   beat      = share of picks that beat the median stock
 
@@ -101,6 +102,7 @@ def factor_study(P: dict, f: dict, cfg: dict, split, start_i: int) -> dict:
                 ex = fwd[hname][rows.values].where(pk).sub(med, axis=0)
                 res[hname] = {"picks": n, "days_with_picks": int(pk.any(axis=1).sum()),
                               "hit_pct": round(float((pp >= 0.9).sum().sum() / n * 100), 1),
+                              "bottom_pct": round(float((pp <= 0.1).sum().sum() / n * 100), 1),
                               "beat_median_pct": round(float((pp > 0.5).sum().sum() / n * 100), 1),
                               "excess_pct": round(float(np.nanmean(ex.values)) * 100, 2)}
             row[part] = res

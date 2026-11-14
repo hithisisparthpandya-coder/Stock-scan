@@ -66,6 +66,8 @@ def build_message(result: dict, cfg: dict) -> str:
             lines.append("   • " + html.escape(e))
         if paper.get("queued"):
             lines.append("   Paper orders for next open: " + ", ".join(html.escape(q["symbol"]) for q in paper["queued"]))
+    if (result.get("scorecard") or {}).get("line"):
+        lines.append("\n" + html.escape(result["scorecard"]["line"]))
     if result.get("circulars"):
         lines.append(f"\n📰 {len(result['circulars'])} new SEBI/NSE circulars – see app.")
     lines.append(

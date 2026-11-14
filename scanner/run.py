@@ -175,6 +175,14 @@ def main():
     led = update_ledger(OUT.parent / "ledger.json", hist, feat, picks, cfg, strategy, demo=args.demo)
     result["paper"] = {"summary": summary_line(led), "events": led["events_latest"][-10:],
                        "queued": led["queued"]}
+    try:   # did past picks become top performers?
+        from scorecard import summary_line as sc_line, update as update_scorecard
+        sc = update_scorecard(OUT.parent / "scorecard.json", P, feat, cfg, tech["as_of"], picks, demo=args.demo)
+        result["scorecard"] = {"summary": sc["summary"], "line": sc_line(sc)}
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        result.setdefault("warnings_internal", []).append(f"Scorecard failed: {type(e).__name__}")
     try:   # sentiment layer: universe for the live job, Market Mood, sentiment-adjusted list + its paper ledger
         from market_intel import evening_intel
         universe, sent = evening_intel(None if args.demo else nse, P, feat, picks, names, bands, results, cfg, now,

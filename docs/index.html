@@ -212,9 +212,10 @@ async function load(){
   try{
     const d = await getData();
     if(d.setup) return renderSetup();
-    let live = null;
+    let live = null, sc = null;
     try{ live = await getJSON("live.json"); }catch(e){}
-    render(d, live);
+    try{ sc = await getJSON("scorecard.json"); }catch(e){}
+    render(d, live, sc);
   }catch(e){
     $("#asof").textContent = "Couldn't load the latest scan.";
     $("#app").innerHTML = `<div class="card empty">No data yet. ${desktop ? "Check the scan address in Settings, or your internet connection." : "The first scan runs after market close on the next trading day."}</div>`;
@@ -241,7 +242,7 @@ async function renderSetup(){
   $("#demo").onclick = async () => { await desktop.saveSettings({dataUrl:"demo", autoStart:$("#autostart").checked}); load(); };
 }
 
-function render(d, live){
+function render(d, live, sc){
   const gen = d.generated_at ? new Date(d.generated_at).toLocaleString("en-IN",{dateStyle:"medium",timeStyle:"short"}) : "";
   $("#asof").textContent = `Close of ${new Date(d.as_of+"T00:00:00").toLocaleDateString("en-IN",{weekday:"short",day:"numeric",month:"short",year:"numeric"})}` + (gen ? ` · scanned ${gen}` : "");
   const m = d.market || {};
@@ -308,8 +309,9 @@ function render(d, live){
       <button data-open="${esc(p.symbol)}">Chart ↗</button>
       </div></details>`;}).join("") + `</div>`;
 
+  let right = scorecardCard(sc);
   const f = d.funnel || [], t0 = f.length ? Math.max(1, f[0].count) : 1;
-  let right = `<h2>Today's funnel</h2><div class="card">` + f.map(s =>
+  right += `<h2>Today's funnel</h2><div class="card">` + f.map(s =>
     `<div class="stage"><span>${esc(s.stage)}</span><b>${s.count.toLocaleString("en-IN")}</b>
      <div class="track"><div class="fill" style="width:${Math.max(1.5, 100*s.count/t0)}%"></div></div></div>`).join("") + `</div>`;
   const c = d.circulars || [];
@@ -326,6 +328,22 @@ function render(d, live){
   $("#app").innerHTML = top + `<div class="layout"><div>${left}</div><div>${right}</div></div>`;
 }
 
+function scorecardCard(sc){
+  if(!sc || !sc.days || !sc.days.length) return "";
+  const S = sc.summary || {}, lab = {"1d":"Next day","5d":"1 week","20d":"1 month"};
+  let h = `<h2>Did past picks become top performers?</h2><div class="card">`;
+  const hs = Object.keys(lab).filter(k => S[k]);
+  if(!hs.length) h += `<div class="sub" style="margin:0">Tracking started ${fmtDate(sc.days[0].date)}. The first result appears after the next trading day.</div>`;
+  else h += `<div class="scroll"><table class="mt"><tr><th></th>${hs.map(k => `<th>${lab[k]}</th>`).join("")}</tr>
+      <tr><td>In the top 10% of stocks</td>${hs.map(k => `<td><b>${S[k].hit_pct}%</b></td>`).join("")}</tr>
+      <tr><td>Beat the median stock</td>${hs.map(k => `<td>${S[k].beat_median_pct}%</td>`).join("")}</tr>
+      <tr><td>Avg vs median stock</td>${hs.map(k => `<td>${sgn(S[k].excess_pct)}</td>`).join("")}</tr>
+      <tr><td>Picks judged</td>${hs.map(k => `<td>${S[k].picks}</td>`).join("")}</tr></table></div>
+      <p class="sub" style="margin:8px 0 0">Random picking lands 10% in the top 10%. Measured from the next morning's open against every liquid NSE stock.</p>`;
+  const last = sc.days.slice().reverse().find(d => d.eval && d.eval["1d"]);
+  if(last) h += `<div class="sub" style="margin:8px 0 0"><b>Picks of ${fmtDate(last.date)}, next day:</b> ` + last.eval["1d"].picks.map(p => `${esc(p.symbol)} ${p.ret_pct>0?"+":""}${p.ret_pct}% (rank ${p.rank} of ${last.eval["1d"].universe})`).join(" · ") + `</div>`;
+  return h + `</div>`;
+}
 // ---------------- Today's picks: live tracker ----------------
 function pickLive(p, live){
   const px = (live && live.prices && live.prices[p.symbol]) || ((live && live.watch) || []).find(w => w.symbol === p.symbol) || null;
@@ -657,6 +675,14 @@ function renderLab(d){
     `</table><p class="sub" style="margin:8px 0 0">Time in each regime: ${Object.entries(d.regime_share||{}).map(([k,v]) => `${k} ${v}%`).join(" · ")}</p></div>`;
   h += `<h2>Robustness (adaptive, settings nudged)</h2><div class="card scroll"><table class="mt"><tr><th>Change</th><th>CAGR</th><th>Max DD</th><th>PF</th><th>Trades</th></tr>` +
     (d.robustness||[]).map(r => `<tr><td>${esc(r.label)}</td><td>${pct(r.cagr_pct)}</td><td>${pct(r.max_drawdown_pct,false)}</td><td>${num(r.profit_factor)}</td><td>${num(r.trades)}</td></tr>`).join("") + `</table></div>`;
+  const fs = d.factor_study;
+  if(fs){
+    const cell = x => !x || x.hit_pct == null ? "–" : `<b>${x.hit_pct}%</b>${x.bottom_pct != null ? ` / ${x.bottom_pct}%` : ""}<br><span class="sub">${x.excess_pct>0?"+":""}${x.excess_pct}%</span>`;
+    h += `<h2>Which ranking finds the top performers?</h2><div class="card"><div class="sub" style="margin:0 0 8px">${(fs.summary||[]).map(esc).join(" ")}</div>
+      <div class="scroll"><table class="mt"><tr><th>Top ${fs.k} by…</th><th>1 week, design yrs</th><th>1 week, unseen</th><th>1 month, unseen</th></tr>` +
+      fs.rankings.map(r => `<tr><td style="white-space:normal">${esc(r.label)}</td><td>${cell(r.in_sample["5d"])}</td><td>${cell(r.out_of_sample["5d"])}</td><td>${cell(r.out_of_sample["20d"])}</td></tr>`).join("") +
+      `</table></div><p class="sub" style="margin:8px 0 0">Each cell: share of picks in the top 10% / bottom 10% of all liquid stocks (random = 10% / 10%), and the average return vs the median stock. Bought at the next open.</p></div>`;
+  }
   h += `<h2>How it was tested</h2><div class="card rules"><ul style="margin:0;padding-left:18px">${(d.assumptions||[]).map(a => `<li>${esc(a)}</li>`).join("")}</ul></div>`;
   h += `</div></div>`;
   $("#app").innerHTML = h;

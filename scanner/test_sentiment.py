@@ -121,6 +121,25 @@ def test_nse_parsers():
     assert f["fii"] == -1234.5 and f["dii"] == 2000
 
 
+def test_scorecard_ranks_the_best_stock_first():
+    import json as _j
+    from demo import make_long_history
+    from strategy import build_panel, features
+    import scorecard
+    cfg = _j.loads((Path(__file__).parent / "config.json").read_text())
+    hist, nifty = make_long_history(years=2, n_stocks=80)
+    P = build_panel(hist); f = features(P, nifty, cfg)
+    t = len(P["C"]) - 30
+    d = P["C"].index[t].date().isoformat()
+    r5 = (P["C"].iloc[t + 5] / P["O"].iloc[t + 1] - 1).where(f["avgturn20"].iloc[t] >= cfg["min_turnover_cr"]).dropna()
+    best, worst = r5.idxmax(), r5.idxmin()
+    ev = scorecard.evaluate(P, f, cfg, d, [best, worst])
+    rows = {x["symbol"]: x for x in ev["5d"]["picks"]}
+    assert rows[best]["rank"] == 1 and rows[best]["pctile"] == 100 and rows[worst]["pctile"] < 5
+    s = scorecard.summarize([{"date": d, "symbols": [best, worst], "eval": ev}])
+    assert s["5d"]["hit_pct"] == 50.0 and s["5d"]["in_top50"] >= 1
+
+
 def test_live_and_evening_demo_end_to_end():
     """Runs the evening demo scan and the live job in a scratch copy of the repo; checks live.json."""
     root = Path(__file__).resolve().parents[1]
@@ -133,6 +152,7 @@ def test_live_and_evening_demo_end_to_end():
     picks = json.loads((tmp / "docs/data/picks.json").read_text())
     assert picks["sentiment"]["mood"]["score"] is not None
     assert (tmp / "docs/data/universe.json").exists() and (tmp / "docs/data/ledger_sentiment.json").exists()
+    assert (tmp / "docs/data/scorecard.json").exists() and "scorecard" in picks
     live = json.loads((tmp / "docs/data/live.json").read_text())
     assert len(live["movers"]["gainers"]) == 10 and len(live["movers"]["losers"]) == 10
     assert all(g["reasons"] for g in live["movers"]["gainers"][:3])
