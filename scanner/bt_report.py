@@ -77,9 +77,11 @@ def verdict(rep: dict, cfg: dict) -> dict:
 MOMPORT = {"n_hold": 15, "universe": 200}
 
 
-def research_momentum_portfolio(P: dict, f: dict, cfg: dict, n: pd.Series, split) -> dict:
+def research_momentum_portfolio(P: dict, f: dict, cfg: dict, n: pd.Series, split, rid: str = "a_momentum_portfolio",
+                                label: str | None = None, extra: dict | None = None, notes: list | None = None) -> dict:
     t1 = time.time()
-    res = run_momentum_portfolio(P, f, cfg, **MOMPORT)
+    extra = extra or {}
+    res = run_momentum_portfolio(P, f, cfg, **MOMPORT, **extra)
     e = res.equity
     ne = n.reindex(e.index).ffill() / n.reindex(e.index).ffill().iloc[0] * cfg["bt_capital"]
     def side(s, t, a=None, b=None):
@@ -90,25 +92,47 @@ def research_momentum_portfolio(P: dict, f: dict, cfg: dict, n: pd.Series, split
             m &= ne.index < pd.Timestamp(b)
         nm = metrics(ne[m], None)
         nm.pop("trades", None)
-        return {"strategy": portfolio_metrics(s, t, a, b), "nifty": nm}
+        sm = portfolio_metrics(s, t, a, b)
+        sm["time_in_market_pct"] = round(float((res.exposure[m] > 0).mean() * 100), 1) if m.any() else None
+        return {"strategy": sm, "nifty": nm}
 
     ins, oos = side(e, res.trades, None, split), side(e, res.trades, split, None)
     beat = lambda x: (x["strategy"].get("cagr_pct") or -99) > (x["nifty"].get("cagr_pct") or 99)
     out = {
-        "id": "a_momentum_portfolio",
-        "label": f"Monthly top-{MOMPORT['n_hold']} momentum portfolio (Nifty200 Momentum style)",
+        "id": rid,
+        "label": label or f"Monthly top-{MOMPORT['n_hold']} momentum portfolio (Nifty200 Momentum style)",
         "status": "test only – not used live",
-        "settings": {**MOMPORT, "rebalance": "monthly", "weighting": "equal at entry",
+        "settings": {**MOMPORT, **extra, "rebalance": "monthly", "weighting": "equal at entry",
                      "universe_note": "200 most-traded stocks (no point-in-time market caps available)"},
         "all": side(e, res.trades),
         "in_sample": ins, "out_of_sample": oos,
         "beats_nifty_in_sample": beat(ins), "beats_nifty_out_of_sample": beat(oos),
         "yearly": yearly_returns(e), "nifty_yearly": yearly_returns(ne),
         "equity": {d.date().isoformat(): round(v) for d, v in e.resample("W").last().dropna().items()},
-        "notes": ["Nifty here is the price index (no dividends), which understates buy-and-hold by about 1–1.5% a year.",
-                  "Always invested: no market filter and no stop-losses, so drawdowns follow the market."],
+        "notes": ["Nifty here is the price index (no dividends), which understates buy-and-hold by about 1–1.5% a year."]
+                 + (notes or ["Always invested: no market filter and no stop-losses, so drawdowns follow the market."]),
     }
-    print(f"research momentum portfolio: IS {ins} | OOS {oos} ({time.time() - t1:.0f}s)")
+    print(f"research {rid}: IS {ins} | OOS {oos} ({time.time() - t1:.0f}s)")
+    return out
+
+
+# Research a2: same portfolio, out of the market (cash / liquid fund) while Nifty is below its 200-day
+# average at month end. 200 days and monthly checks are the textbook values; the 6% liquid-fund yield is
+# a round stand-in for Indian liquid funds, not fitted. A 0%-cash run is reported alongside.
+MOMFILTER_YIELD = 0.06
+
+
+def research_market_filter(P: dict, f: dict, cfg: dict, n: pd.Series, split) -> dict:
+    out = research_momentum_portfolio(
+        P, f, cfg, n, split, rid="a2_momentum_market_filter",
+        label=f"Monthly top-{MOMPORT['n_hold']} momentum + market filter (cash when Nifty < 200-day average)",
+        extra={"market_filter": True, "cash_yield": MOMFILTER_YIELD},
+        notes=[f"Checked at each month end: Nifty below its 200-day average → sell all, hold a liquid fund "
+               f"(assumed {MOMFILTER_YIELD*100:.0f}%/yr, before tax) for the month.",
+               "No stop-losses inside the month, so a fast crash can still hurt before the next check."])
+    zero = research_momentum_portfolio(P, f, cfg, n, split, rid="a2_zero_cash",
+                                       extra={"market_filter": True, "cash_yield": 0.0}, notes=["idle cash"])
+    out["idle_cash_variant"] = {k: zero[k]["strategy"] for k in ("all", "in_sample", "out_of_sample")}
     return out
 
 
@@ -172,7 +196,9 @@ def run(hist: pd.DataFrame, nifty: pd.Series, cfg: dict, demo: bool, exclude: se
         "yearly": yearly_returns(n),
     }
 
-    rep["research"] = research_momentum_portfolio(P, f, cfg, n, split)
+    rep["research_all"] = [research_momentum_portfolio(P, f, cfg, n, split),
+                           research_market_filter(P, f, cfg, n, split)]
+    rep["research"] = rep["research_all"][-1]          # the latest idea
     t2 = time.time()
     from bt_factors import factor_study
     rep["factor_study"] = factor_study(P, f, cfg, split, cfg["bt_warmup"])

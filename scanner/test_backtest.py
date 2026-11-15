@@ -219,6 +219,31 @@ def test_momentum_portfolio_no_lookahead():
     pd.testing.assert_series_equal(a.equity[a.equity.index <= cut], b.equity[b.equity.index <= cut])
 
 
+def test_momentum_market_filter_goes_to_cash():
+    hist, nifty = make_long_history(years=3, n_stocks=40)
+    P = build_panel(hist); f = features(P, nifty, CFG)
+    dates = P["C"].index
+    k = int(len(dates) * 0.6)
+    f2 = dict(f)
+    nf = f["nifty"].copy()
+    nf.iloc[k:] = f["nifty200"].iloc[k:] * 0.9                # Nifty below its 200-DMA from day k
+    f2["nifty"] = nf
+    res = bt.run_momentum_portfolio(P, f2, CFG, n_hold=10, universe=30, market_filter=True)
+    t = res.trades
+    assert abs(res.equity.iloc[-1] - (CFG["bt_capital"] + t["pnl"].sum())) < 1.0
+    later = res.exposure[res.exposure.index >= dates[k + 25]]
+    assert len(later) and later.max() == 0, "must hold no stocks once the filter is off"
+    assert res.exposure[res.exposure.index < dates[k]].max() > 0
+    assert (t["reason"] == "market filter").any()
+    paid = bt.run_momentum_portfolio(P, f2, CFG, n_hold=10, universe=30, market_filter=True, cash_yield=0.06)
+    gain = paid.equity.iloc[-1] - res.equity.iloc[-1]
+    assert gain > 0
+    # filter off → identical to the plain portfolio
+    a = bt.run_momentum_portfolio(P, f, CFG, n_hold=10, universe=30)
+    b = bt.run_momentum_portfolio(P, f, CFG, n_hold=10, universe=30, market_filter=False, cash_yield=0.06)
+    pd.testing.assert_series_equal(a.equity, b.equity)
+
+
 def test_factor_study_matches_signals_and_runs():
     """The vectorised funnel used by the factor study must select the same stocks as strategy.signals."""
     import bt_factors
@@ -238,6 +263,8 @@ def test_report_has_research_section():
     hist, nifty = make_long_history(years=3, n_stocks=40)
     rep = bt_report.run(hist, nifty, CFG, demo=True)
     r = rep["research"]
+    assert r["id"] == "a2_momentum_market_filter" and len(rep["research_all"]) == 2
+    assert "time_in_market_pct" in r["out_of_sample"]["strategy"] and r["idle_cash_variant"]["all"]
     assert r["in_sample"]["strategy"]["cagr_pct"] is not None and "cagr_pct" in r["out_of_sample"]["nifty"]
     s = json.dumps(rep, default=str)
     assert "NaN" not in s

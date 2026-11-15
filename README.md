@@ -81,8 +81,9 @@ The app has two modes: **📈 Stocks** (swing scanner, paper trading) and **🏦
    (only if the verdict recommends it). The app shows today's market regime either way.
 
 ### Research queue (test-only — never switched live without your approval)
-One idea a week is added to the backtest report under `research` in `docs/data/backtest.json`.
+One idea a week is added to the backtest report: the latest under `research`, all of them under `research_all` in `docs/data/backtest.json`.
 - [x] (a) Monthly-rebalanced top-15 volatility-adjusted momentum portfolio (Nifty200 Momentum 30 style) vs Nifty buy-and-hold — added 2026-11-12
+- [x] (a2) Same portfolio with a market filter: at each month end, if Nifty is below its 200-day average, sell all and hold a liquid fund (assumed 6%/yr; idle-cash run shown too) — added 2026-11-15
 - [ ] (b) Breakouts only, no pullbacks
 - [ ] (c) Wider trailing exit (close below the 50-day average) to let winners run
 

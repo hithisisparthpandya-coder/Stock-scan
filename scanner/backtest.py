@@ -259,13 +259,17 @@ def run_backtest(P: dict, f: dict, cfg: dict, strategy: str, start=None, end=Non
 
 
 def run_momentum_portfolio(P: dict, f: dict, cfg: dict, start=None, end=None,
-                           n_hold: int = 15, universe: int = 200) -> Result:
+                           n_hold: int = 15, universe: int = 200,
+                           market_filter: bool = False, cash_yield: float = 0.0) -> Result:
     """Research variant (not live): monthly-rebalanced, equal-weight portfolio of the top `n_hold`
     volatility-adjusted momentum stocks, always invested (no market filter, no stops).
       • Ranked on the last trading day of each month's close; trades at the next day's open.
       • Stocks that drop out of the top `n_hold` are sold; new entrants are bought with a slot of
         equity / n_hold each (whole shares; a stock whose one share costs more than a slot is skipped).
         Holdings that stay in the list are not resized (saves charges).
+      • market_filter (research a2): if Nifty closes the month below its 200-day average, sell
+        everything at the next open and hold cash for the month; while out of the market, cash earns
+        `cash_yield` a year (a liquid-fund stand-in; 0 = idle cash). Checked monthly only.
       • Same costs as the swing backtest. A stock with no price for 6 days exits at its last close."""
     from strategy import momentum_ranking
     C, O = P["C"], P["O"]
@@ -277,6 +281,8 @@ def run_momentum_portfolio(P: dict, f: dict, cfg: dict, start=None, end=None,
     pos: dict[str, dict] = {}
     trades, eq, expo = [], [], []
     target = None
+    risk_off = False
+    day_yield = (1 + cash_yield) ** (1 / 252) - 1
 
     def sell(sym, px, date, n, reason):
         nonlocal cash
@@ -293,10 +299,12 @@ def run_momentum_portfolio(P: dict, f: dict, cfg: dict, start=None, end=None,
     for i in range(i0, i1):
         d = dates[i].date().isoformat()
         o_row, c_row = O.iloc[i], C.iloc[i]
+        if risk_off and day_yield:
+            cash *= 1 + day_yield
         if target is not None:                                     # rebalance at today's open
             for sym in [s for s in pos if s not in target]:
                 o = o_row.get(sym, np.nan)
-                sell(sym, o if o > 0 else pos[sym]["last"], d, i, "rebalance")
+                sell(sym, o if o > 0 else pos[sym]["last"], d, i, "market filter" if risk_off else "rebalance")
             eq_now = cash + sum(p["qty"] * (o_row.get(s, np.nan) if o_row.get(s, np.nan) > 0 else p["last"])
                                 for s, p in pos.items())
             slot = eq_now / n_hold
@@ -324,10 +332,15 @@ def run_momentum_portfolio(P: dict, f: dict, cfg: dict, start=None, end=None,
         equity = cash + sum(p["qty"] * p["last"] for p in pos.values())
         eq.append(equity); expo.append(len(pos))
         if i + 1 < i1 and dates[i + 1].month != dates[i].month:   # month end → pick next month's list
-            slot = equity / n_hold
-            r = momentum_ranking(f, P, i, cfg, universe)
-            r = r[r["close"] <= slot * 0.95]
-            target = list(r.index[:n_hold])
+            n_c, n_200 = f["nifty"].iloc[i], f["nifty200"].iloc[i]
+            risk_off = bool(market_filter and n_200 > 0 and n_c < n_200)
+            if risk_off:
+                target = []                                        # out of the market next month
+            else:
+                slot = equity / n_hold
+                r = momentum_ranking(f, P, i, cfg, universe)
+                r = r[r["close"] <= slot * 0.95]
+                target = list(r.index[:n_hold])
     if eq:
         last_d = dates[i1 - 1].date().isoformat()
         for sym in list(pos):
