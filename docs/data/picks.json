@@ -135,12 +135,7 @@
  ],
  "paper": {
   "summary": "📒 Paper account: ₹34,447 (-1.58% since 2026-11-12) · 1 open · 2 closed · win 0.0% · avg -1.198R",
-  "events": [
-   "2026-11-16: BOUGHT IIFLCAPS 24 @ ₹355.00, stop ₹345.51",
-   "2026-11-16: BOUGHT GESHIP 2 @ ₹1,526.10, stop ₹1,402.45",
-   "2026-11-17: SOLD IIFLCAPS 24 @ ₹345.51 (stop) → −₹277 (-1.22R)",
-   "2026-11-18: SOLD APLAPOLLO 3 @ ₹2,155.77 (stop) → −₹281 (-1.18R)"
-  ],
+  "events": [],
   "queued": [
    {
     "symbol": "LGEINDIA",
@@ -172,7 +167,7 @@
  },
  "sentiment": {
   "mood": {
-   "score": 52.7,
+   "score": 53.4,
    "band": "neutral",
    "risk_mult": 1.0,
    "max_new": 3,
@@ -205,7 +200,7 @@
     {
      "key": "news",
      "label": "News tone",
-     "value": 48,
+     "value": 52,
      "weight": 0.2
     },
     {
@@ -217,10 +212,10 @@
    ]
   },
   "news_tone": {
-   "avg": -0.034,
-   "count": 19,
+   "avg": 0.044,
+   "count": 17,
    "positive": 9,
-   "negative": 10,
+   "negative": 8,
    "top_positive": [
     {
      "title": "PSU vs Private banks: Who is powering Nifty Bank's record-high rally after 5% surge? SBI, HDFC, AU, Canara target price",
@@ -235,16 +230,16 @@
      "score": 0.762
     },
     {
-     "title": "Market winners: Max Healthcare, Deepak Fertilisers among 10 stocks that surged up to 14% in last week",
-     "link": "https://economictimes.indiatimes.com/markets/stocks/news/market-winners-max-healthcare-deepak-fertilisers-among-10-stocks-that-surged-up-to-14-in-last-week/slideshow/136046616.cms",
-     "source": "Economic Times",
-     "score": 0.635
-    },
-    {
      "title": "Concurrent Gainers: These 13 stocks gained for 5 days in a row, all rose over 27%",
      "link": "https://economictimes.indiatimes.com/markets/stocks/news/concurrent-gainers-these-13-stocks-gained-for-5-days-in-a-row-all-rose-over-27/slideshow/136047969.cms",
      "source": "Economic Times",
      "score": 0.604
+    },
+    {
+     "title": "Nifty eyes 26,200 as rally strengthens; 6 sectors signal outperformance",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/news/nifty-eyes-26200-as-rally-strengthens-6-sectors-signal-outperformance/articleshow/136050218.cms",
+     "source": "Economic Times",
+     "score": 0.537
     }
    ],
    "top_negative": [
@@ -253,12 +248,6 @@
      "link": "https://www.livemint.com/market/cryptocurrency/bitcoin-price-crash-falls-to-lowest-level-in-two-years-what-s-behind-plunge-of-world-s-largest-cryptocurrency-11795267687216.html",
      "source": "Mint",
      "score": -0.973
-    },
-    {
-     "title": "Nvidia vs Anthropic shares: AI chip stock tanks 14% while Claude-maker falls 8.5% - See who wins in earnings, valuation?",
-     "link": "https://www.livemint.com/market/stock-market-news/nvidia-vs-anthropic-shares-ai-chip-stock-tanks-14-while-claude-maker-falls-8-5-see-who-wins-in-earnings-valuation-11795238170165.html",
-     "source": "Mint",
-     "score": -0.848
     },
     {
      "title": "Stock split reset: SanDisk stock crashes 87.5% overnight? Here's what investors need to know about its 8-for-1 split",
@@ -271,6 +260,12 @@
      "link": "https://www.livemint.com/market/taiwan-widens-short-sale-curbs-after-shares-plunge-on-ai-concern-11795255471195.html",
      "source": "Mint",
      "score": -0.716
+    },
+    {
+     "title": "GREED &amp; fear Report: Jefferies Chris Wood hikes India exposure for 2nd time in 3 weeks, cuts Taiwan| New Allocations",
+     "link": "https://www.livemint.com/market/stock-market-news/greed-fear-report-jefferies-chris-wood-hikes-india-exposure-for-2nd-time-in-3-weeks-cuts-taiwan-new-allocations-11795235087351.html",
+     "source": "Mint",
+     "score": -0.462
     }
    ]
   },
@@ -305,10 +300,35 @@
     "news_N": 0.0,
     "sector_chg": null,
     "reasons": [
-     "no recent news (neutral)"
+     "news neutral (+0.00, 3 headlines)"
     ],
     "veto": null,
-    "headlines": [],
+    "headlines": [
+     {
+      "title": "LG Electronics India announces cessation of two senior management personnel",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOam5JX2lxNmtZbGIxUTdCX1QxUzR0SERwRkM1b1VEYVR2VS12THZ4Mzk0TzlnbnJSTGFhTkF5a0M3UWVlNXVhb1BDazRYOVRyLWFpczBQUTdWTjZreng2ODRtUUZQSzRBNUFWNnBZX1dsaEtfOU1hbnZWOTJoNEVacW10TlpyM1U3ckVnc3hYeWdWR25ab1BFb3RYVWlmUXlIcWVWODBvMDJYS1ZfNl9fQ256UDNoNllpblpR?oc=5",
+      "source": "scanx.trade",
+      "age_h": 64.8,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "LG Electronics India announces cessation of senior executives",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQOXkyc0R2NlN3dTVlSVRRZUpkSnRUQS1ZMFF0MmVjTHNGTnJuUzd5Y0ZQMWF3cDJDZGFvdHFXV29zTzNHbkMzNVpuaUZlWlhiVWpUZHM3RjFZbHRpNXpnRFQ3RDB4ck9Lckx4SFhLVFU4cUc2Q1V5Z1VmSFFUQXRkZGYwRWRKeWFaVUZ2SGo0c1JxazY0clZUeVh3d0MwSW8?oc=5",
+      "source": "Business Upturn",
+      "age_h": 69.0,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "LG Electronics India LGEINDIA Senior Management Exit Dec 2026",
+      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNVXFoNlQ0blJfUjhQc1ozRnhCcm1RT29PN2tnSFNxMHdFa1N5RjhCdkZncmdXN2gzSWpKSXNlaUlLSVprRWUwQnB6M19ZU2R5OTEzMWNLTTFEcGRhZWpHYkRPdTZHUWZ0b2ZWUUJRa1I0TGdobkNybEhYSjhmbkxTWkZNZGpDNWh6alBxeWNOQ21NQ0k0Wk9RbWNJZGRFOE1QZjFNTHhjUEVadVpCOGowTVRESjB5cjZqNzU4TGJfQi10WHdxazlsSl9VWXNGMTFQX25J?oc=5",
+      "source": "Kalkine India",
+      "age_h": 69.2,
+      "score": 0.0,
+      "red_flag": false
+     }
+    ],
     "status": "suggested"
    }
   ],
@@ -344,7 +364,12 @@
    ]
   }
  },
- "generated_at": "2026-11-22T11:01+05:30",
+ "breakout_paper": {
+  "summary": "📒 Breakout paper account: ₹35,000 (+0.00% since 2026-11-20) · 0 open · 0 closed",
+  "picks": [],
+  "queued": []
+ },
+ "generated_at": "2026-11-22T11:44+05:30",
  "config": {
   "capital": 35000,
   "risk_pct": 0.01,

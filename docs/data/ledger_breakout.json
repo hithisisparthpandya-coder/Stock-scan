@@ -1,0 +1,30 @@
+{
+ "demo": false,
+ "strategy": "adaptive",
+ "started": "2026-11-20",
+ "last_date": "2026-11-20",
+ "capital": 35000,
+ "equity": 35000.0,
+ "return_pct": 0.0,
+ "metrics": {
+  "trades": 0
+ },
+ "open_positions": [],
+ "queued": [],
+ "recent_trades": [],
+ "events_latest": [],
+ "events_log": [],
+ "equity_curve": {
+  "2026-11-20": 35000.0
+ },
+ "sim": {
+  "cash": 35000.0,
+  "peak": 35000.0,
+  "halt_until": -1,
+  "n": -1,
+  "equity": 35000.0,
+  "positions": {},
+  "pending": [],
+  "trades": []
+ }
+}

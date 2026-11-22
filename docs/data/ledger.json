@@ -74,12 +74,7 @@
    "days": 1
   }
  ],
- "events_latest": [
-  "2026-11-16: BOUGHT IIFLCAPS 24 @ ₹355.00, stop ₹345.51",
-  "2026-11-16: BOUGHT GESHIP 2 @ ₹1,526.10, stop ₹1,402.45",
-  "2026-11-17: SOLD IIFLCAPS 24 @ ₹345.51 (stop) → −₹277 (-1.22R)",
-  "2026-11-18: SOLD APLAPOLLO 3 @ ₹2,155.77 (stop) → −₹281 (-1.18R)"
- ],
+ "events_latest": [],
  "events_log": [
   "2026-11-13: BOUGHT APLAPOLLO 3 @ ₹2,235.30, stop ₹2,155.77",
   "2026-11-16: BOUGHT IIFLCAPS 24 @ ₹355.00, stop ₹345.51",
