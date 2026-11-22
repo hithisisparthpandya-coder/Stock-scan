@@ -209,6 +209,24 @@ def main():
         import traceback
         traceback.print_exc()
         result.setdefault("warnings_internal", []).append(f"Sentiment layer failed: {type(e).__name__}")
+    try:   # research (b) paper test: adaptive funnel, breakouts only – its own ledger, never the live picks
+        bcfg = dict(cfg, breakout_only=True)
+        tight = {s for s, b in bands.items() if b in set(cfg.get("exclude_bands", [2, 5]))}
+        raw, _, brisk = signals(feat, P, len(P["C"]) - 1, bcfg, "adaptive", set(excluded) | tight)
+        bc = [c for c in (to_pick(c, cfg, brisk, names) for c in raw) if c["qty"] >= 1][: cfg["fundamentals_max"]]
+        if args.demo:
+            bfunds = funds_demo
+        else:
+            from fundamentals import fetch
+            bfunds = fetch([c["symbol"] for c in bc], CACHE / "fundamentals.json") if bc else {}
+        bpicks, _ = apply_quality(bc, bfunds, results, now.date(), cfg)
+        bled = update_ledger(OUT.parent / "ledger_breakout.json", hist, feat, bpicks, cfg, "adaptive", demo=args.demo)
+        result["breakout_paper"] = {"summary": summary_line(bled).replace("Paper account", "Breakout paper account"),
+                                    "picks": [p["symbol"] for p in bpicks], "queued": bled["queued"]}
+    except Exception as e:  # optional test ledger – never lose the main scan over it
+        import traceback
+        traceback.print_exc()
+        result.setdefault("warnings_internal", []).append(f"Breakout paper ledger failed: {type(e).__name__}")
     result["generated_at"] = now.isoformat(timespec="minutes")
     result["config"] = {k: cfg[k] for k in ("capital", "risk_pct", "max_position_pct", "reward_risk",
                                             "min_turnover_cr", "vol_mult", "max_stop_pct", "min_roe",

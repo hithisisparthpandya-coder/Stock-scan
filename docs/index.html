@@ -565,9 +565,10 @@ function renderMF(){
 }
 
 // ---------------- Paper record ----------------
-let SL = null;
+let SL = null, BL = null;
 async function loadPaper(){
   try{ SL = await getJSON("ledger_sentiment.json"); }catch(e){ SL = null; }
+  try{ BL = await getJSON("ledger_breakout.json"); }catch(e){ BL = null; }
   try{ renderPaper(await getJSON("ledger.json")); }
   catch(e){
     $("#asof").textContent = "Paper record";
@@ -600,6 +601,7 @@ function renderPaper(L){
     `</table><p class="sub" style="margin:8px 0 0">All four, plus a backtest verdict that isn't "no proven edge", before any real money.</p></div>`;
   h += `<h2>Paper stats</h2><div class="card">${mtable(SL ? [["Technical", m], ["Sentiment-adjusted", SL.metrics || {}]] : [["Paper", m]])}</div>`;
   if(SL) h += `<div class="card"><b>Sentiment paper account:</b> ₹${Math.round(SL.equity).toLocaleString("en-IN")} (${SL.return_pct >= 0 ? "+" : ""}${SL.return_pct}%) · ${(SL.open_positions||[]).length} open · ${(SL.metrics||{}).trades || 0} closed since ${esc(SL.started || "–")}. Same rules and capital as the main paper account, but it only takes the sentiment-adjusted picks, at the risk the Market Mood allows.</div>`;
+  if(BL) h += `<div class="card"><b>Breakout paper account (test):</b> ₹${Math.round(BL.equity).toLocaleString("en-IN")} (${BL.return_pct >= 0 ? "+" : ""}${BL.return_pct}%) · ${(BL.open_positions||[]).length} open · ${(BL.metrics||{}).trades || 0} closed since ${esc(BL.started || "–")}. Research (b): the adaptive funnel taking breakouts only, same capital and risk limits. In the backtest it had better trades than the live funnel on unseen years but earned far less than Nifty. Paper only.</div>`;
   const ev = L.events_log || L.events_latest || [];
   h += `<h2>Latest activity</h2><div class="card rules">${ev.length ? `<ul style="margin:0;padding-left:18px">${ev.slice().reverse().map(e => `<li>${esc(e)}</li>`).join("")}</ul>` : "No fills or exits yet."}</div>`;
   h += `</div></div>`;
