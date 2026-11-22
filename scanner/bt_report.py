@@ -136,6 +136,47 @@ def research_market_filter(P: dict, f: dict, cfg: dict, n: pd.Series, split) -> 
     return out
 
 
+# Research b: the same funnels, breakouts only (pullbacks switched off). Every other setting unchanged.
+def research_breakout_only(P: dict, f: dict, cfg: dict, n: pd.Series, split) -> dict:
+    t1 = time.time()
+    c2 = dict(cfg, breakout_only=True)
+    out = {"id": "b_breakout_only", "label": "Breakouts only, no pullbacks (baseline and adaptive funnels)",
+           "status": "test only – not used live", "settings": {"breakout_only": True, "other_settings": "unchanged"},
+           "variants": {}}
+    for name in ("baseline", "adaptive"):
+        res = run_backtest(P, f, c2, name)
+        e = res.equity
+        ne = n.reindex(e.index).ffill() / n.reindex(e.index).ffill().iloc[0] * cfg["bt_capital"]
+        def nif(a=None, b=None):
+            m = pd.Series(True, index=ne.index)
+            if a is not None:
+                m &= ne.index >= pd.Timestamp(a)
+            if b is not None:
+                m &= ne.index < pd.Timestamp(b)
+            nm = metrics(ne[m], None)
+            nm.pop("trades", None)
+            return nm
+        ins, oos = slice_metrics(res, end=split), slice_metrics(res, start=split)
+        out["variants"][name] = {
+            "label": LABELS[name] + " – breakouts only",
+            "all": metrics(e, res.trades),
+            "in_sample": {"strategy": ins, "nifty": nif(None, split)},
+            "out_of_sample": {"strategy": oos, "nifty": nif(split, None)},
+            "has_edge": has_edge(oos, ins, cfg),
+            "yearly": yearly_returns(e),
+            "by_exit": group_stats(res.trades, "reason"),
+        }
+        print(f"research b {name}: IS {ins} | OOS {oos}")
+    out["in_sample"] = out["variants"]["baseline"]["in_sample"]
+    out["out_of_sample"] = out["variants"]["baseline"]["out_of_sample"]
+    out["notes"] = ["Breakouts were only about 10% of trades in the full funnels, so samples are small – "
+                    "treat any result as weak evidence.",
+                    "Removing pullbacks frees position slots, so some breakouts appear here that the full "
+                    "funnel skipped for lack of room."]
+    print(f"research b done ({time.time() - t1:.0f}s)")
+    return out
+
+
 def run(hist: pd.DataFrame, nifty: pd.Series, cfg: dict, demo: bool, exclude: set | None = None) -> dict:
     t0 = time.time()
     if exclude:
@@ -197,7 +238,8 @@ def run(hist: pd.DataFrame, nifty: pd.Series, cfg: dict, demo: bool, exclude: se
     }
 
     rep["research_all"] = [research_momentum_portfolio(P, f, cfg, n, split),
-                           research_market_filter(P, f, cfg, n, split)]
+                           research_market_filter(P, f, cfg, n, split),
+                           research_breakout_only(P, f, cfg, n, split)]
     rep["research"] = rep["research_all"][-1]          # the latest idea
     t2 = time.time()
     from bt_factors import factor_study

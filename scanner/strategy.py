@@ -163,6 +163,9 @@ def signals(f: dict, P: dict, i: int, cfg: dict, strategy: str, excluded: set | 
         pullback = bounce & (s["vol_ratio"] >= cfg["pullback_vol_mult"])
         allowed = (breakout | pullback) if reg == "green" else pullback
 
+    if cfg.get("breakout_only"):        # research (b), backtest only – never set in config.json
+        pullback = pullback & False
+        allowed = allowed & breakout
     m &= allowed
     counts.append(("Setup", int(m.sum())))
     s["setup"] = np.where(breakout, "Breakout from base", np.where(pullback, "Pullback to support", ""))

@@ -262,9 +262,12 @@ def test_report_has_research_section():
     import bt_report
     hist, nifty = make_long_history(years=3, n_stocks=40)
     rep = bt_report.run(hist, nifty, CFG, demo=True)
-    r = rep["research"]
-    assert r["id"] == "a2_momentum_market_filter" and len(rep["research_all"]) == 2
+    r = rep["research_all"][1]
+    assert r["id"] == "a2_momentum_market_filter" and len(rep["research_all"]) == 3
     assert "time_in_market_pct" in r["out_of_sample"]["strategy"] and r["idle_cash_variant"]["all"]
+    b = rep["research"]
+    assert b["id"] == "b_breakout_only" and set(b["variants"]) == {"baseline", "adaptive"}
+    assert "cagr_pct" in b["variants"]["adaptive"]["out_of_sample"]["nifty"]
     assert r["in_sample"]["strategy"]["cagr_pct"] is not None and "cagr_pct" in r["out_of_sample"]["nifty"]
     s = json.dumps(rep, default=str)
     assert "NaN" not in s
