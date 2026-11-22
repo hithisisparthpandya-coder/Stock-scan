@@ -1,15 +1,72 @@
 {
  "demo": false,
- "updated": "2026-11-13",
+ "updated": "2026-11-20",
  "random_hit_pct": 10.0,
- "summary": {},
+ "summary": {
+  "1d": {
+   "picks": 6,
+   "hit_pct": 0.0,
+   "beat_median_pct": 66.7,
+   "avg_pctile": 57.4,
+   "excess_pct": 0.45,
+   "in_top50": 0
+  },
+  "5d": {
+   "picks": 6,
+   "hit_pct": 0.0,
+   "beat_median_pct": 33.3,
+   "avg_pctile": 36.4,
+   "excess_pct": -2.68,
+   "in_top50": 0
+  }
+ },
  "days": [
   {
    "date": "2026-11-12",
    "symbols": [
     "APLAPOLLO",
     "MARKSANS"
-   ]
+   ],
+   "eval": {
+    "1d": {
+     "universe": 1014,
+     "median_pct": -0.49,
+     "top10_cut_pct": 1.93,
+     "picks": [
+      {
+       "symbol": "APLAPOLLO",
+       "ret_pct": 0.73,
+       "pctile": 77.3,
+       "rank": 231
+      },
+      {
+       "symbol": "MARKSANS",
+       "ret_pct": -1.61,
+       "pctile": 21.7,
+       "rank": 795
+      }
+     ]
+    },
+    "5d": {
+     "universe": 1014,
+     "median_pct": -1.63,
+     "top10_cut_pct": 4.51,
+     "picks": [
+      {
+       "symbol": "APLAPOLLO",
+       "ret_pct": -3.91,
+       "pctile": 31.3,
+       "rank": 698
+      },
+      {
+       "symbol": "MARKSANS",
+       "ret_pct": -7.62,
+       "pctile": 10.9,
+       "rank": 904
+      }
+     ]
+    }
+   }
   },
   {
    "date": "2026-11-13",
@@ -18,7 +75,78 @@
     "GESHIP",
     "ABB",
     "ITDC"
-   ]
+   ],
+   "eval": {
+    "1d": {
+     "universe": 1021,
+     "median_pct": -1.1,
+     "top10_cut_pct": 1.53,
+     "picks": [
+      {
+       "symbol": "IIFLCAPS",
+       "ret_pct": -0.82,
+       "pctile": 57.8,
+       "rank": 432
+      },
+      {
+       "symbol": "GESHIP",
+       "ret_pct": 0.45,
+       "pctile": 80.3,
+       "rank": 202
+      },
+      {
+       "symbol": "ABB",
+       "ret_pct": -2.89,
+       "pctile": 17.5,
+       "rank": 843
+      },
+      {
+       "symbol": "ITDC",
+       "ret_pct": 1.47,
+       "pctile": 89.5,
+       "rank": 108
+      }
+     ]
+    },
+    "5d": {
+     "universe": 1020,
+     "median_pct": -1.89,
+     "top10_cut_pct": 5.01,
+     "picks": [
+      {
+       "symbol": "IIFLCAPS",
+       "ret_pct": -12.27,
+       "pctile": 1.9,
+       "rank": 1002
+      },
+      {
+       "symbol": "GESHIP",
+       "ret_pct": 0.36,
+       "pctile": 69.9,
+       "rank": 308
+      },
+      {
+       "symbol": "ABB",
+       "ret_pct": -2.33,
+       "pctile": 46.8,
+       "rank": 544
+      },
+      {
+       "symbol": "ITDC",
+       "ret_pct": -1.11,
+       "pctile": 57.4,
+       "rank": 436
+      }
+     ]
+    }
+   }
+  },
+  {
+   "date": "2026-11-20",
+   "symbols": [
+    "LGEINDIA"
+   ],
+   "eval": {}
   }
  ]
 }

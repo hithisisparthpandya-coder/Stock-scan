@@ -2,82 +2,116 @@
  "demo": false,
  "strategy": "baseline",
  "started": "2026-11-12",
- "last_date": "2026-11-13",
+ "last_date": "2026-11-20",
  "capital": 35000,
- "equity": 35035.49,
- "return_pct": 0.1,
+ "equity": 34446.58,
+ "return_pct": -1.58,
  "metrics": {
   "start": "2026-11-12",
-  "end": "2026-11-13",
-  "total_return_pct": 0.1,
-  "cagr_pct": 44.8,
-  "max_drawdown_pct": 0.0,
-  "sharpe": 0.0,
-  "trades": 0
+  "end": "2026-11-20",
+  "total_return_pct": -1.6,
+  "cagr_pct": -51.7,
+  "max_drawdown_pct": -1.7,
+  "sharpe": -10.01,
+  "trades": 2,
+  "trades_per_year": 91.3,
+  "win_rate_pct": 0.0,
+  "avg_r": -1.198,
+  "avg_win_r": 0.0,
+  "avg_loss_r": -1.2,
+  "profit_factor": 0.0,
+  "max_losing_streak": 2,
+  "avg_days_held": 2.0
  },
  "open_positions": [
   {
-   "symbol": "APLAPOLLO",
-   "qty": 3,
-   "entry": 2235.3,
-   "stop": 2155.77,
-   "last": 2251.6,
-   "entry_date": "2026-11-13",
+   "symbol": "GESHIP",
+   "qty": 2,
+   "entry": 1526.1,
+   "stop": 1402.45,
+   "last": 1531.6,
+   "entry_date": "2026-11-16",
    "setup": "Pullback to support",
    "partial_done": false,
-   "unrealized": 35.0,
-   "r": 0.15
+   "unrealized": 5.0,
+   "r": 0.02
   }
  ],
  "queued": [
   {
-   "symbol": "IIFLCAPS",
-   "limit": 357.69,
-   "stop": 345.51
-  },
-  {
-   "symbol": "GESHIP",
-   "limit": 1533.18,
-   "stop": 1402.45
-  },
-  {
-   "symbol": "ABB",
-   "limit": 7125.05,
-   "stop": 6809.78
-  },
-  {
-   "symbol": "ITDC",
-   "limit": 674.58,
-   "stop": 631.08
+   "symbol": "LGEINDIA",
+   "limit": 1758.11,
+   "stop": 1663.64
   }
  ],
- "recent_trades": [],
+ "recent_trades": [
+  {
+   "symbol": "APLAPOLLO",
+   "entry_date": "2026-11-13",
+   "exit_date": "2026-11-18",
+   "entry": 2235.3,
+   "exit": 2155.77,
+   "qty": 3,
+   "pnl": -280.94,
+   "r": -1.177,
+   "reason": "stop",
+   "setup": "Pullback to support",
+   "regime": "amber",
+   "days": 3
+  },
+  {
+   "symbol": "IIFLCAPS",
+   "entry_date": "2026-11-16",
+   "exit_date": "2026-11-17",
+   "entry": 355.0,
+   "exit": 345.51,
+   "qty": 24,
+   "pnl": -277.38,
+   "r": -1.218,
+   "reason": "stop",
+   "setup": "Breakout from base",
+   "regime": "amber",
+   "days": 1
+  }
+ ],
  "events_latest": [
-  "2026-11-13: BOUGHT APLAPOLLO 3 @ ₹2,235.30, stop ₹2,155.77"
+  "2026-11-16: BOUGHT IIFLCAPS 24 @ ₹355.00, stop ₹345.51",
+  "2026-11-16: BOUGHT GESHIP 2 @ ₹1,526.10, stop ₹1,402.45",
+  "2026-11-17: SOLD IIFLCAPS 24 @ ₹345.51 (stop) → −₹277 (-1.22R)",
+  "2026-11-18: SOLD APLAPOLLO 3 @ ₹2,155.77 (stop) → −₹281 (-1.18R)"
  ],
  "events_log": [
-  "2026-11-13: BOUGHT APLAPOLLO 3 @ ₹2,235.30, stop ₹2,155.77"
+  "2026-11-13: BOUGHT APLAPOLLO 3 @ ₹2,235.30, stop ₹2,155.77",
+  "2026-11-16: BOUGHT IIFLCAPS 24 @ ₹355.00, stop ₹345.51",
+  "2026-11-16: BOUGHT GESHIP 2 @ ₹1,526.10, stop ₹1,402.45",
+  "2026-11-17: SOLD IIFLCAPS 24 @ ₹345.51 (stop) → −₹277 (-1.22R)",
+  "2026-11-18: SOLD APLAPOLLO 3 @ ₹2,155.77 (stop) → −₹281 (-1.18R)"
  ],
  "equity_curve": {
   "2026-11-12": 35000.0,
-  "2026-11-13": 35035.49
+  "2026-11-13": 35035.49,
+  "2026-11-16": 34952.15,
+  "2026-11-17": 34607.5,
+  "2026-11-18": 34444.58,
+  "2026-11-19": 34493.58,
+  "2026-11-20": 34446.58
  },
  "sim": {
-  "cash": 28280.69,
+  "cash": 31383.38,
   "peak": 35035.49,
   "halt_until": -1,
-  "n": 0,
-  "equity": 35035.49,
+  "n": 5,
+  "equity": 34446.58,
   "positions": {
-   "APLAPOLLO": {
-    "sym": "APLAPOLLO",
-    "qty": 3,
-    "entry": 2235.3,
-    "stop": 2155.77,
-    "R": 79.5300000000002,
-    "risk_amt": 238.5900000000006,
-    "entry_n": 0,
-    "entry_date": "2026-11-13",
+   "GESHIP": {
+    "sym": "GESHIP",
+    "qty": 2,
+    "entry": 1526.1,
+    "stop": 1402.45,
+    "R": 123.64999999999986,
+    "risk_amt": 247.29999999999973,
+    "entry_n": 1,
+    "entry_date": "2026-11-16",
     "setup": "Pullback to support",
     "regime": "amber",
     "partial_R": 2.0,
@@ -85,52 +119,54 @@
     "trail_on": false,
     "be_next": false,
     "exit_next": null,
-    "mfe": 0.2728530114422201,
-    "last_close": 2251.6,
+    "mfe": 0.45208249090174,
+    "last_close": 1531.6,
     "missing": 0,
     "sold_value": 0.0,
     "sold_qty": 0,
-    "cost": 13.411800000000001
+    "cost": 6.1044
    }
   },
   "pending": [
    {
-    "symbol": "IIFLCAPS",
-    "stop": 345.51,
-    "setup": "Breakout from base",
-    "limit": 357.69149999999996,
-    "risk": 0.01,
-    "regime": "amber",
-    "partial_R": 2.0
-   },
-   {
-    "symbol": "GESHIP",
-    "stop": 1402.45,
+    "symbol": "LGEINDIA",
+    "stop": 1663.64,
     "setup": "Pullback to support",
-    "limit": 1533.18,
-    "risk": 0.01,
-    "regime": "amber",
-    "partial_R": 2.0
-   },
-   {
-    "symbol": "ABB",
-    "stop": 6809.78,
-    "setup": "Pullback to support",
-    "limit": 7125.045,
-    "risk": 0.01,
-    "regime": "amber",
-    "partial_R": 2.0
-   },
-   {
-    "symbol": "ITDC",
-    "stop": 631.08,
-    "setup": "Pullback to support",
-    "limit": 674.579,
+    "limit": 1758.107,
     "risk": 0.01,
     "regime": "amber",
     "partial_R": 2.0
    }
   ],
-  "trades": []
+  "trades": [
+   {
+    "symbol": "IIFLCAPS",
+    "entry_date": "2026-11-16",
+    "exit_date": "2026-11-17",
+    "entry": 355.0,
+    "exit": 345.51,
+    "qty": 24,
+    "pnl": -277.38,
+    "r": -1.218,
+    "reason": "stop",
+    "setup": "Breakout from base",
+    "regime": "amber",
+    "days": 1
+   },
+   {
+    "symbol": "APLAPOLLO",
+    "entry_date": "2026-11-13",
+    "exit_date": "2026-11-18",
+    "entry": 2235.3,
+    "exit": 2155.77,
+    "qty": 3,
+    "pnl": -280.94,
+    "r": -1.177,
+    "reason": "stop",
+    "setup": "Pullback to support",
+    "regime": "amber",
+    "days": 3
+   }
+  ]
  }
 }

@@ -2,73 +2,176 @@
  "demo": false,
  "strategy": "baseline",
  "started": "2026-11-13",
- "last_date": "2026-11-13",
+ "last_date": "2026-11-20",
  "capital": 35000,
- "equity": 35000.0,
- "return_pct": 0.0,
+ "equity": 34640.71,
+ "return_pct": -1.03,
  "metrics": {
-  "trades": 0
+  "start": "2026-11-13",
+  "end": "2026-11-20",
+  "total_return_pct": -1.0,
+  "cagr_pct": -41.6,
+  "max_drawdown_pct": -1.0,
+  "sharpe": -8.92,
+  "trades": 1,
+  "trades_per_year": 52.2,
+  "win_rate_pct": 0.0,
+  "avg_r": -1.218,
+  "avg_win_r": 0.0,
+  "avg_loss_r": -1.22,
+  "profit_factor": 0.0,
+  "max_losing_streak": 1,
+  "avg_days_held": 1.0
  },
- "open_positions": [],
- "queued": [
-  {
-   "symbol": "IIFLCAPS",
-   "limit": 357.69,
-   "stop": 345.51
-  },
+ "open_positions": [
   {
    "symbol": "GESHIP",
-   "limit": 1533.18,
-   "stop": 1402.45
+   "qty": 2,
+   "entry": 1526.1,
+   "stop": 1402.45,
+   "last": 1531.6,
+   "entry_date": "2026-11-16",
+   "setup": "Pullback to support",
+   "partial_done": false,
+   "unrealized": 5.0,
+   "r": 0.02
   },
   {
    "symbol": "ITDC",
-   "limit": 674.58,
-   "stop": 631.08
+   "qty": 10,
+   "entry": 665.0,
+   "stop": 631.08,
+   "last": 657.65,
+   "entry_date": "2026-11-16",
+   "setup": "Pullback to support",
+   "partial_done": false,
+   "unrealized": -87.0,
+   "r": -0.26
   }
  ],
- "recent_trades": [],
- "events_latest": [],
- "events_log": [],
+ "queued": [
+  {
+   "symbol": "LGEINDIA",
+   "limit": 1758.11,
+   "stop": 1663.64
+  }
+ ],
+ "recent_trades": [
+  {
+   "symbol": "IIFLCAPS",
+   "entry_date": "2026-11-16",
+   "exit_date": "2026-11-17",
+   "entry": 355.0,
+   "exit": 345.51,
+   "qty": 24,
+   "pnl": -277.38,
+   "r": -1.218,
+   "reason": "stop",
+   "setup": "Breakout from base",
+   "regime": "amber",
+   "days": 1
+  }
+ ],
+ "events_latest": [
+  "2026-11-16: BOUGHT IIFLCAPS 24 @ ₹355.00, stop ₹345.51",
+  "2026-11-16: BOUGHT GESHIP 2 @ ₹1,526.10, stop ₹1,402.45",
+  "2026-11-16: BOUGHT ITDC 10 @ ₹665.00, stop ₹631.08",
+  "2026-11-17: SOLD IIFLCAPS 24 @ ₹345.51 (stop) → −₹277 (-1.22R)"
+ ],
+ "events_log": [
+  "2026-11-16: BOUGHT IIFLCAPS 24 @ ₹355.00, stop ₹345.51",
+  "2026-11-16: BOUGHT GESHIP 2 @ ₹1,526.10, stop ₹1,402.45",
+  "2026-11-16: BOUGHT ITDC 10 @ ₹665.00, stop ₹631.08",
+  "2026-11-17: SOLD IIFLCAPS 24 @ ₹345.51 (stop) → −₹277 (-1.22R)"
+ ],
  "equity_curve": {
-  "2026-11-13": 35000.0
+  "2026-11-13": 35000.0,
+  "2026-11-16": 35005.56,
+  "2026-11-17": 34768.01,
+  "2026-11-18": 34690.21,
+  "2026-11-19": 34782.21,
+  "2026-11-20": 34640.71
  },
  "sim": {
-  "cash": 35000.0,
-  "peak": 35000.0,
+  "cash": 25001.01,
+  "peak": 35005.56,
   "halt_until": -1,
-  "n": -1,
-  "equity": 35000.0,
-  "positions": {},
+  "n": 4,
+  "equity": 34640.71,
+  "positions": {
+   "GESHIP": {
+    "sym": "GESHIP",
+    "qty": 2,
+    "entry": 1526.1,
+    "stop": 1402.45,
+    "R": 123.64999999999986,
+    "risk_amt": 247.29999999999973,
+    "entry_n": 0,
+    "entry_date": "2026-11-16",
+    "setup": "Pullback to support",
+    "regime": "amber",
+    "partial_R": 2.0,
+    "partial_done": false,
+    "trail_on": false,
+    "be_next": false,
+    "exit_next": null,
+    "mfe": 0.45208249090174,
+    "last_close": 1531.6,
+    "missing": 0,
+    "sold_value": 0.0,
+    "sold_qty": 0,
+    "cost": 6.1044
+   },
+   "ITDC": {
+    "sym": "ITDC",
+    "qty": 10,
+    "entry": 665.0,
+    "stop": 631.08,
+    "R": 33.91999999999996,
+    "risk_amt": 339.1999999999996,
+    "entry_n": 0,
+    "entry_date": "2026-11-16",
+    "setup": "Pullback to support",
+    "regime": "amber",
+    "partial_R": 2.0,
+    "partial_done": false,
+    "trail_on": false,
+    "be_next": false,
+    "exit_next": null,
+    "mfe": 0.5483490566037749,
+    "last_close": 657.65,
+    "missing": 0,
+    "sold_value": 0.0,
+    "sold_qty": 0,
+    "cost": 13.3
+   }
+  },
   "pending": [
    {
-    "symbol": "IIFLCAPS",
-    "stop": 345.51,
-    "setup": "Breakout from base",
-    "limit": 357.69149999999996,
-    "risk": 0.01,
-    "regime": "amber",
-    "partial_R": 2.0
-   },
-   {
-    "symbol": "GESHIP",
-    "stop": 1402.45,
+    "symbol": "LGEINDIA",
+    "stop": 1663.64,
     "setup": "Pullback to support",
-    "limit": 1533.18,
-    "risk": 0.01,
-    "regime": "amber",
-    "partial_R": 2.0
-   },
-   {
-    "symbol": "ITDC",
-    "stop": 631.08,
-    "setup": "Pullback to support",
-    "limit": 674.579,
+    "limit": 1758.107,
     "risk": 0.01,
     "regime": "amber",
     "partial_R": 2.0
    }
   ],
-  "trades": []
+  "trades": [
+   {
+    "symbol": "IIFLCAPS",
+    "entry_date": "2026-11-16",
+    "exit_date": "2026-11-17",
+    "entry": 355.0,
+    "exit": 345.51,
+    "qty": 24,
+    "pnl": -277.38,
+    "r": -1.218,
+    "reason": "stop",
+    "setup": "Breakout from base",
+    "regime": "amber",
+    "days": 1
+   }
+  ]
  }
 }
