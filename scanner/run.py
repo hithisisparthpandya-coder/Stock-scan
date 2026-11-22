@@ -105,6 +105,16 @@ def to_pick(c: dict, cfg: dict, risk: float, names: dict) -> dict:
             "turnover_cr": round(c["turnover_cr"], 1), "score": round(c["score"] * 100, 1)}
 
 
+def expected_session(now: dt.datetime, publish_hour: int = 18) -> dt.date:
+    """Latest weekday whose NSE bhavcopy should be out by `now` (IST). Before 6 pm the day's file
+    isn't expected yet, so a run that GitHub's scheduler starts late (e.g. 4 am the next day) still
+    scans the previous session instead of waiting for a file that can't exist yet."""
+    d = now.date() if now.hour >= publish_hour else now.date() - dt.timedelta(days=1)
+    while d.weekday() >= 5:
+        d -= dt.timedelta(days=1)
+    return d
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--demo", action="store_true")
@@ -134,8 +144,9 @@ def main():
         excluded = set(excluded) | funds_listed | {s for s in hist["symbol"].unique() if is_fund(s)}
 
     latest = hist["date"].max().date()
-    if not args.demo and latest < now.date() and not os.environ.get("FORCE"):
-        print(f"No NSE file for {now.date()} yet (latest {latest}). Holiday or not published; no alert.")
+    want = expected_session(now)
+    if not args.demo and latest < want and not os.environ.get("FORCE"):
+        print(f"No NSE file for {want} yet (latest {latest}). Holiday or not published; no alert.")
         return
     if not args.demo and OUT.exists() and not os.environ.get("FORCE"):
         prev = json.loads(OUT.read_text())

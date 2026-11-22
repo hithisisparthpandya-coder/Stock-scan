@@ -140,6 +140,18 @@ def test_message_builds():
     assert "BRKOUT" in msg and len(msg) < 4096
 
 
+def test_expected_session_handles_late_runs():
+    from zoneinfo import ZoneInfo
+    from run import expected_session
+    ist = ZoneInfo("Asia/Kolkata")
+    at = lambda *a: dt.datetime(*a, tzinfo=ist)
+    assert expected_session(at(2026, 11, 20, 19, 30)) == dt.date(2026, 11, 20)   # Fri evening, on time
+    assert expected_session(at(2026, 11, 21, 3, 56)) == dt.date(2026, 11, 20)    # Sat 4 am, late run
+    assert expected_session(at(2026, 11, 17, 4, 0)) == dt.date(2026, 11, 16)     # Tue 4 am
+    assert expected_session(at(2026, 11, 17, 12, 0)) == dt.date(2026, 11, 16)    # before publication
+    assert expected_session(at(2026, 11, 16, 2, 0)) == dt.date(2026, 11, 13)     # Mon 2 am -> Friday
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):
