@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-11-15T17:40+05:30",
+ "generated_at": "2026-11-22T11:04+05:30",
  "demo": false,
  "data": {
   "start": "2015-01-01",
-  "end": "2026-11-13",
-  "symbols": 1490,
-  "trading_days": 3017
+  "end": "2026-11-20",
+  "symbols": 1492,
+  "trading_days": 3022
  },
  "oos_start": "2021-01-01",
  "capital": 35000,
@@ -24,20 +24,20 @@
    "label": "Current funnel (baseline)",
    "all": {
     "start": "2016-01-20",
-    "end": "2026-11-13",
-    "total_return_pct": -11.2,
-    "cagr_pct": -1.1,
+    "end": "2026-11-20",
+    "total_return_pct": -13.1,
+    "cagr_pct": -1.3,
     "max_drawdown_pct": -30.2,
-    "sharpe": -0.06,
-    "trades": 262,
-    "trades_per_year": 24.2,
-    "win_rate_pct": 31.3,
-    "avg_r": -0.089,
-    "avg_win_r": 1.99,
+    "sharpe": -0.07,
+    "trades": 263,
+    "trades_per_year": 24.3,
+    "win_rate_pct": 30.8,
+    "avg_r": -0.098,
+    "avg_win_r": 2.02,
     "avg_loss_r": -1.04,
-    "profit_factor": 0.92,
+    "profit_factor": 0.9,
     "max_losing_streak": 13,
-    "avg_days_held": 23.0
+    "avg_days_held": 22.9
    },
    "in_sample": {
     "start": "2016-01-20",
@@ -58,18 +58,18 @@
    },
    "out_of_sample": {
     "start": "2021-01-01",
-    "end": "2026-11-13",
-    "total_return_pct": 3.8,
-    "cagr_pct": 0.6,
-    "max_drawdown_pct": -16.8,
-    "sharpe": 0.11,
-    "trades": 150,
-    "trades_per_year": 25.6,
-    "win_rate_pct": 31.3,
-    "avg_r": -0.018,
-    "avg_win_r": 1.93,
+    "end": "2026-11-20",
+    "total_return_pct": 1.6,
+    "cagr_pct": 0.3,
+    "max_drawdown_pct": -18.5,
+    "sharpe": 0.08,
+    "trades": 151,
+    "trades_per_year": 25.7,
+    "win_rate_pct": 30.5,
+    "avg_r": -0.034,
+    "avg_win_r": 1.97,
     "avg_loss_r": -0.91,
-    "profit_factor": 0.99,
+    "profit_factor": 0.97,
     "max_losing_streak": 13,
     "avg_days_held": 21.3
    },
@@ -84,14 +84,14 @@
     "2023": 11.3,
     "2024": 3.6,
     "2025": -5.8,
-    "2026": -5.0
+    "2026": -7.0
    },
    "by_regime": {
     "amber": {
-     "trades": 116,
-     "win_rate_pct": 24.1,
-     "avg_r": -0.32,
-     "pnl": -10305.0
+     "trades": 117,
+     "win_rate_pct": 23.9,
+     "avg_r": -0.335,
+     "pnl": -10881.0
     },
     "green": {
      "trades": 116,
@@ -101,9 +101,9 @@
     },
     "red": {
      "trades": 30,
-     "win_rate_pct": 43.3,
-     "avg_r": -0.139,
-     "pnl": 1860.0
+     "win_rate_pct": 40.0,
+     "avg_r": -0.149,
+     "pnl": 1774.0
     }
    },
    "by_setup": {
@@ -114,10 +114,10 @@
      "pnl": 1638.0
     },
     "Pullback to support": {
-     "trades": 236,
-     "win_rate_pct": 30.5,
-     "avg_r": -0.125,
-     "pnl": -5573.0
+     "trades": 237,
+     "win_rate_pct": 30.0,
+     "avg_r": -0.134,
+     "pnl": -6235.0
     }
    },
    "by_exit": {
@@ -125,13 +125,13 @@
      "trades": 66,
      "win_rate_pct": 24.2,
      "avg_r": -0.079,
-     "pnl": 1005.0
+     "pnl": 996.0
     },
     "end of test": {
-     "trades": 3,
-     "win_rate_pct": 33.3,
-     "avg_r": -0.227,
-     "pnl": -148.0
+     "trades": 2,
+     "win_rate_pct": 0.0,
+     "avg_r": -0.422,
+     "pnl": -180.0
     },
     "no data": {
      "trades": 2,
@@ -140,10 +140,10 @@
      "pnl": 130.0
     },
     "stop": {
-     "trades": 103,
+     "trades": 105,
      "win_rate_pct": 0.0,
-     "avg_r": -1.156,
-     "pnl": -31024.0
+     "avg_r": -1.155,
+     "pnl": -31646.0
     },
     "stop (gap)": {
      "trades": 20,
@@ -717,35 +717,22 @@
     "2026-08-02": 31213,
     "2026-08-09": 31645,
     "2026-08-16": 31625,
-    "2026-08-23": 31912,
-    "2026-08-30": 31810,
-    "2026-09-06": 31758,
-    "2026-09-13": 31898,
-    "2026-09-20": 31554,
-    "2026-09-27": 31532,
-    "2026-10-04": 31348,
-    "2026-10-11": 31348,
-    "2026-10-18": 31348,
-    "2026-10-25": 31348,
-    "2026-11-01": 31348,
-    "2026-11-08": 31419,
-    "2026-11-15": 31065
+    "2026-08-23": 31698,
+    "2026-08-30": 31671,
+    "2026-09-06": 31400,
+    "2026-09-13": 31598,
+    "2026-09-20": 31254,
+    "2026-09-27": 31233,
+    "2026-10-04": 31048,
+    "2026-10-11": 31048,
+    "2026-10-18": 31048,
+    "2026-10-25": 31048,
+    "2026-11-01": 31048,
+    "2026-11-08": 31120,
+    "2026-11-15": 30836,
+    "2026-11-22": 30403
    },
    "recent_trades": [
-    {
-     "symbol": "IIFLCAPS",
-     "entry_date": "2025-12-30",
-     "exit_date": "2026-01-23",
-     "entry": 298.36,
-     "exit": 307.93,
-     "qty": 26,
-     "pnl": 185.26,
-     "r": 0.745,
-     "reason": "breakeven/trail stop",
-     "setup": "Pullback to support",
-     "regime": "amber",
-     "days": 18
-    },
     {
      "symbol": "ALKEM",
      "entry_date": "2026-02-10",
@@ -985,18 +972,18 @@
      "days": 3
     },
     {
-     "symbol": "THELEELA",
+     "symbol": "GOKULAGRO",
      "entry_date": "2026-08-21",
-     "exit_date": "2026-09-08",
-     "entry": 571.58,
-     "exit": 571.58,
-     "qty": 7,
-     "pnl": -32.0,
-     "r": -0.111,
-     "reason": "breakeven/trail stop",
+     "exit_date": "2026-09-10",
+     "entry": 250.6,
+     "exit": 233.0,
+     "qty": 17,
+     "pnl": -331.62,
+     "r": -1.108,
+     "reason": "stop",
      "setup": "Pullback to support",
      "regime": "amber",
-     "days": 12
+     "days": 14
     },
     {
      "symbol": "AZAD",
@@ -1043,44 +1030,58 @@
     {
      "symbol": "MUFIN",
      "entry_date": "2026-11-03",
-     "exit_date": "2026-11-13",
+     "exit_date": "2026-11-19",
      "entry": 136.61,
-     "exit": 138.53,
+     "exit": 136.61,
      "qty": 45,
-     "pnl": 45.64,
-     "r": 0.148,
-     "reason": "end of test",
+     "pnl": -40.59,
+     "r": -0.131,
+     "reason": "breakeven/trail stop",
      "setup": "Pullback to support",
      "regime": "red",
-     "days": 8
+     "days": 12
     },
     {
      "symbol": "AKUMS",
      "entry_date": "2026-11-11",
-     "exit_date": "2026-11-13",
+     "exit_date": "2026-11-19",
      "entry": 772.9,
-     "exit": 741.05,
+     "exit": 707.37,
      "qty": 4,
-     "pnl": -155.51,
-     "r": -0.593,
-     "reason": "end of test",
+     "pnl": -289.96,
+     "r": -1.106,
+     "reason": "stop",
      "setup": "Pullback to support",
      "regime": "amber",
-     "days": 2
+     "days": 6
     },
     {
      "symbol": "BEML",
      "entry_date": "2026-11-12",
-     "exit_date": "2026-11-13",
+     "exit_date": "2026-11-20",
      "entry": 2112.0,
-     "exit": 2098.2,
+     "exit": 2052.4,
      "qty": 1,
-     "pnl": -38.22,
-     "r": -0.237,
+     "pnl": -83.93,
+     "r": -0.521,
      "reason": "end of test",
      "setup": "Pullback to support",
      "regime": "amber",
-     "days": 1
+     "days": 6
+    },
+    {
+     "symbol": "BBOX",
+     "entry_date": "2026-11-20",
+     "exit_date": "2026-11-20",
+     "entry": 902.85,
+     "exit": 896.4,
+     "qty": 8,
+     "pnl": -96.39,
+     "r": -0.324,
+     "reason": "end of test",
+     "setup": "Pullback to support",
+     "regime": "amber",
+     "days": 0
     }
    ]
   },
@@ -1088,15 +1089,15 @@
    "label": "Regime-adaptive momentum",
    "all": {
     "start": "2016-01-20",
-    "end": "2026-11-13",
+    "end": "2026-11-20",
     "total_return_pct": -25.1,
     "cagr_pct": -2.6,
     "max_drawdown_pct": -34.6,
     "sharpe": -0.27,
     "trades": 349,
-    "trades_per_year": 32.3,
+    "trades_per_year": 32.2,
     "win_rate_pct": 30.9,
-    "avg_r": -0.139,
+    "avg_r": -0.138,
     "avg_win_r": 1.73,
     "avg_loss_r": -0.97,
     "profit_factor": 0.74,
@@ -1122,20 +1123,20 @@
    },
    "out_of_sample": {
     "start": "2021-01-01",
-    "end": "2026-11-13",
+    "end": "2026-11-20",
     "total_return_pct": -11.9,
     "cagr_pct": -2.1,
     "max_drawdown_pct": -17.8,
-    "sharpe": -0.37,
+    "sharpe": -0.36,
     "trades": 220,
-    "trades_per_year": 37.5,
+    "trades_per_year": 37.4,
     "win_rate_pct": 27.7,
-    "avg_r": -0.098,
-    "avg_win_r": 1.92,
+    "avg_r": -0.097,
+    "avg_win_r": 1.93,
     "avg_loss_r": -0.87,
     "profit_factor": 0.77,
     "max_losing_streak": 13,
-    "avg_days_held": 14.2
+    "avg_days_held": 14.3
    },
    "yearly": {
     "2016": -3.8,
@@ -1148,14 +1149,14 @@
     "2023": 7.7,
     "2024": -4.5,
     "2025": -5.5,
-    "2026": -2.0
+    "2026": -1.9
    },
    "by_regime": {
     "amber": {
      "trades": 229,
      "win_rate_pct": 31.9,
-     "avg_r": -0.088,
-     "pnl": -2281.0
+     "avg_r": -0.087,
+     "pnl": -2269.0
     },
     "green": {
      "trades": 120,
@@ -1174,8 +1175,8 @@
     "Pullback to support": {
      "trades": 322,
      "win_rate_pct": 31.1,
-     "avg_r": -0.077,
-     "pnl": -1255.0
+     "avg_r": -0.075,
+     "pnl": -1243.0
     }
    },
    "by_exit": {
@@ -1188,8 +1189,8 @@
     "end of test": {
      "trades": 3,
      "win_rate_pct": 33.3,
-     "avg_r": -0.146,
-     "pnl": -15.0
+     "avg_r": -0.03,
+     "pnl": -3.0
     },
     "no data": {
      "trades": 2,
@@ -1787,7 +1788,8 @@
     "2026-10-25": 26219,
     "2026-11-01": 26219,
     "2026-11-08": 26168,
-    "2026-11-15": 26204
+    "2026-11-15": 26257,
+    "2026-11-22": 26216
    },
    "recent_trades": [
     {
@@ -2101,51 +2103,51 @@
     {
      "symbol": "NAZARA",
      "entry_date": "2026-11-05",
-     "exit_date": "2026-11-13",
+     "exit_date": "2026-11-20",
      "entry": 425.0,
-     "exit": 425.4,
+     "exit": 414.55,
      "qty": 2,
-     "pnl": -18.6,
-     "r": -0.306,
+     "pnl": -40.26,
+     "r": -0.661,
      "reason": "end of test",
      "setup": "Pullback to support",
      "regime": "amber",
-     "days": 6
+     "days": 11
     },
     {
      "symbol": "HONASA",
      "entry_date": "2026-11-06",
-     "exit_date": "2026-11-13",
+     "exit_date": "2026-11-20",
      "entry": 464.17,
-     "exit": 496.45,
+     "exit": 508.17,
      "qty": 2,
-     "pnl": 28.7,
-     "r": 0.536,
+     "pnl": 52.1,
+     "r": 0.973,
      "reason": "end of test",
      "setup": "Pullback to support",
      "regime": "amber",
-     "days": 5
+     "days": 10
     },
     {
      "symbol": "ZYDUSLIFE",
      "entry_date": "2026-11-06",
-     "exit_date": "2026-11-13",
+     "exit_date": "2026-11-20",
      "entry": 1194.5,
-     "exit": 1189.9,
+     "exit": 1200.0,
      "qty": 1,
-     "pnl": -25.37,
-     "r": -0.669,
+     "pnl": -15.29,
+     "r": -0.403,
      "reason": "end of test",
      "setup": "Pullback to support",
      "regime": "amber",
-     "days": 5
+     "days": 10
     }
    ]
   }
  },
  "regime_share": {
-  "green": 41.9,
-  "amber": 34.2,
+  "green": 41.8,
+  "amber": 34.4,
   "red": 23.9
  },
  "nifty": {
@@ -2714,15 +2716,16 @@
    "2026-10-25": 108218,
    "2026-11-01": 110388,
    "2026-11-08": 119856,
-   "2026-11-15": 120401
+   "2026-11-15": 120401,
+   "2026-11-22": 123544
   },
   "all": {
    "start": "2016-01-20",
-   "end": "2026-11-13",
-   "total_return_pct": 244.0,
-   "cagr_pct": 12.1,
+   "end": "2026-11-20",
+   "total_return_pct": 253.0,
+   "cagr_pct": 12.3,
    "max_drawdown_pct": -38.4,
-   "sharpe": 0.79,
+   "sharpe": 0.81,
    "trades": null
   },
   "yearly": {
@@ -2736,7 +2739,7 @@
    "2023": 20.0,
    "2024": 8.8,
    "2025": 10.5,
-   "2026": -3.8
+   "2026": -1.3
   }
  },
  "research_all": [
@@ -2754,26 +2757,26 @@
    "all": {
     "strategy": {
      "start": "2016-01-20",
-     "end": "2026-11-13",
-     "total_return_pct": 546.6,
-     "cagr_pct": 18.8,
+     "end": "2026-11-20",
+     "total_return_pct": 532.0,
+     "cagr_pct": 18.6,
      "max_drawdown_pct": -44.3,
-     "sharpe": 0.78,
+     "sharpe": 0.77,
      "holdings_closed": 879,
-     "closed_per_year": 81.3,
-     "win_rate_pct": 46.9,
-     "avg_ret_pct": 4.55,
-     "profit_factor": 1.47,
-     "avg_days_held": 45.7,
+     "closed_per_year": 81.1,
+     "win_rate_pct": 46.8,
+     "avg_ret_pct": 4.51,
+     "profit_factor": 1.45,
+     "avg_days_held": 45.8,
      "time_in_market_pct": 99.7
     },
     "nifty": {
      "start": "2016-01-20",
-     "end": "2026-11-13",
-     "total_return_pct": 244.0,
-     "cagr_pct": 12.1,
+     "end": "2026-11-20",
+     "total_return_pct": 253.0,
+     "cagr_pct": 12.3,
      "max_drawdown_pct": -38.4,
-     "sharpe": 0.79
+     "sharpe": 0.81
     }
    },
    "in_sample": {
@@ -2804,26 +2807,26 @@
    "out_of_sample": {
     "strategy": {
      "start": "2021-01-01",
-     "end": "2026-11-13",
-     "total_return_pct": 214.6,
-     "cagr_pct": 21.6,
+     "end": "2026-11-20",
+     "total_return_pct": 207.5,
+     "cagr_pct": 21.0,
      "max_drawdown_pct": -39.2,
-     "sharpe": 0.83,
+     "sharpe": 0.82,
      "holdings_closed": 509,
-     "closed_per_year": 86.8,
-     "win_rate_pct": 47.3,
-     "avg_ret_pct": 6.13,
-     "profit_factor": 1.51,
-     "avg_days_held": 45.3,
+     "closed_per_year": 86.5,
+     "win_rate_pct": 47.2,
+     "avg_ret_pct": 6.06,
+     "profit_factor": 1.49,
+     "avg_days_held": 45.4,
      "time_in_market_pct": 100.0
     },
     "nifty": {
      "start": "2021-01-01",
-     "end": "2026-11-13",
-     "total_return_pct": 79.4,
-     "cagr_pct": 10.5,
+     "end": "2026-11-20",
+     "total_return_pct": 84.0,
+     "cagr_pct": 10.9,
      "max_drawdown_pct": -17.2,
-     "sharpe": 0.77
+     "sharpe": 0.8
     }
    },
    "beats_nifty_in_sample": true,
@@ -2839,7 +2842,7 @@
     "2023": 54.0,
     "2024": 29.2,
     "2025": -24.2,
-    "2026": 8.3
+    "2026": 5.8
    },
    "nifty_yearly": {
     "2016": 12.0,
@@ -2852,7 +2855,7 @@
     "2023": 20.0,
     "2024": 8.8,
     "2025": 10.5,
-    "2026": -3.8
+    "2026": -1.3
    },
    "equity": {
     "2016-01-24": 35000,
@@ -3419,7 +3422,8 @@
     "2026-10-25": 203006,
     "2026-11-01": 217946,
     "2026-11-08": 220484,
-    "2026-11-15": 226311
+    "2026-11-15": 227005,
+    "2026-11-22": 221185
    },
    "notes": [
     "Nifty here is the price index (no dividends), which understates buy-and-hold by about 1–1.5% a year.",
@@ -3442,26 +3446,26 @@
    "all": {
     "strategy": {
      "start": "2016-01-20",
-     "end": "2026-11-13",
-     "total_return_pct": 500.2,
+     "end": "2026-11-20",
+     "total_return_pct": 500.9,
      "cagr_pct": 18.0,
      "max_drawdown_pct": -32.7,
      "sharpe": 0.87,
      "holdings_closed": 759,
-     "closed_per_year": 70.2,
+     "closed_per_year": 70.1,
      "win_rate_pct": 46.9,
      "avg_ret_pct": 4.56,
      "profit_factor": 1.65,
      "avg_days_held": 40.9,
-     "time_in_market_pct": 76.4
+     "time_in_market_pct": 76.2
     },
     "nifty": {
      "start": "2016-01-20",
-     "end": "2026-11-13",
-     "total_return_pct": 244.0,
-     "cagr_pct": 12.1,
+     "end": "2026-11-20",
+     "total_return_pct": 253.0,
+     "cagr_pct": 12.3,
      "max_drawdown_pct": -38.4,
-     "sharpe": 0.79
+     "sharpe": 0.81
     }
    },
    "in_sample": {
@@ -3492,26 +3496,26 @@
    "out_of_sample": {
     "strategy": {
      "start": "2021-01-01",
-     "end": "2026-11-13",
-     "total_return_pct": 266.3,
-     "cagr_pct": 24.8,
+     "end": "2026-11-20",
+     "total_return_pct": 266.7,
+     "cagr_pct": 24.7,
      "max_drawdown_pct": -22.9,
      "sharpe": 1.08,
      "holdings_closed": 412,
-     "closed_per_year": 70.3,
+     "closed_per_year": 70.0,
      "win_rate_pct": 50.0,
      "avg_ret_pct": 7.11,
      "profit_factor": 1.8,
      "avg_days_held": 42.1,
-     "time_in_market_pct": 73.9
+     "time_in_market_pct": 73.7
     },
     "nifty": {
      "start": "2021-01-01",
-     "end": "2026-11-13",
-     "total_return_pct": 79.4,
-     "cagr_pct": 10.5,
+     "end": "2026-11-20",
+     "total_return_pct": 84.0,
+     "cagr_pct": 10.9,
      "max_drawdown_pct": -17.2,
-     "sharpe": 0.77
+     "sharpe": 0.8
     }
    },
    "beats_nifty_in_sample": false,
@@ -3527,7 +3531,7 @@
     "2023": 32.6,
     "2024": 32.1,
     "2025": -3.2,
-    "2026": 7.0
+    "2026": 7.1
    },
    "nifty_yearly": {
     "2016": 12.0,
@@ -3540,7 +3544,7 @@
     "2023": 20.0,
     "2024": 8.8,
     "2025": 10.5,
-    "2026": -3.8
+    "2026": -1.3
    },
    "equity": {
     "2016-01-24": 35000,
@@ -4107,7 +4111,8 @@
     "2026-10-25": 209334,
     "2026-11-01": 209576,
     "2026-11-08": 209819,
-    "2026-11-15": 210061
+    "2026-11-15": 210061,
+    "2026-11-22": 210304
    },
    "notes": [
     "Nifty here is the price index (no dividends), which understates buy-and-hold by about 1–1.5% a year.",
@@ -4117,18 +4122,18 @@
    "idle_cash_variant": {
     "all": {
      "start": "2016-01-20",
-     "end": "2026-11-13",
+     "end": "2026-11-20",
      "total_return_pct": 374.2,
      "cagr_pct": 15.5,
      "max_drawdown_pct": -35.1,
      "sharpe": 0.77,
      "holdings_closed": 757,
-     "closed_per_year": 70.0,
+     "closed_per_year": 69.9,
      "win_rate_pct": 45.8,
      "avg_ret_pct": 4.32,
      "profit_factor": 1.6,
      "avg_days_held": 40.8,
-     "time_in_market_pct": 76.4
+     "time_in_market_pct": 76.2
     },
     "in_sample": {
      "start": "2016-01-20",
@@ -4147,75 +4152,646 @@
     },
     "out_of_sample": {
      "start": "2021-01-01",
-     "end": "2026-11-13",
+     "end": "2026-11-20",
      "total_return_pct": 209.8,
-     "cagr_pct": 21.3,
+     "cagr_pct": 21.2,
      "max_drawdown_pct": -22.9,
      "sharpe": 0.96,
      "holdings_closed": 412,
-     "closed_per_year": 70.3,
+     "closed_per_year": 70.0,
      "win_rate_pct": 48.3,
      "avg_ret_pct": 6.68,
      "profit_factor": 1.75,
      "avg_days_held": 41.9,
-     "time_in_market_pct": 73.9
+     "time_in_market_pct": 73.7
     }
    }
+  },
+  {
+   "id": "b_breakout_only",
+   "label": "Breakouts only, no pullbacks (baseline and adaptive funnels)",
+   "status": "test only – not used live",
+   "settings": {
+    "breakout_only": true,
+    "other_settings": "unchanged"
+   },
+   "variants": {
+    "baseline": {
+     "label": "Current funnel (baseline) – breakouts only",
+     "all": {
+      "start": "2016-01-20",
+      "end": "2026-11-20",
+      "total_return_pct": 6.1,
+      "cagr_pct": 0.5,
+      "max_drawdown_pct": -33.1,
+      "sharpe": 0.11,
+      "trades": 150,
+      "trades_per_year": 13.8,
+      "win_rate_pct": 32.0,
+      "avg_r": 0.04,
+      "avg_win_r": 2.3,
+      "avg_loss_r": -1.02,
+      "profit_factor": 1.07,
+      "max_losing_streak": 13,
+      "avg_days_held": 36.9
+     },
+     "in_sample": {
+      "strategy": {
+       "start": "2016-01-20",
+       "end": "2020-12-31",
+       "total_return_pct": -17.2,
+       "cagr_pct": -3.7,
+       "max_drawdown_pct": -27.6,
+       "sharpe": -0.37,
+       "trades": 63,
+       "trades_per_year": 12.7,
+       "win_rate_pct": 27.0,
+       "avg_r": -0.321,
+       "avg_win_r": 2.34,
+       "avg_loss_r": -1.31,
+       "profit_factor": 0.69,
+       "max_losing_streak": 11,
+       "avg_days_held": 40.3
+      },
+      "nifty": {
+       "start": "2016-01-20",
+       "end": "2020-12-31",
+       "total_return_pct": 91.3,
+       "cagr_pct": 14.0,
+       "max_drawdown_pct": -38.4,
+       "sharpe": 0.82
+      }
+     },
+     "out_of_sample": {
+      "strategy": {
+       "start": "2021-01-01",
+       "end": "2026-11-20",
+       "total_return_pct": 27.7,
+       "cagr_pct": 4.2,
+       "max_drawdown_pct": -14.0,
+       "sharpe": 0.74,
+       "trades": 87,
+       "trades_per_year": 14.8,
+       "win_rate_pct": 35.6,
+       "avg_r": 0.302,
+       "avg_win_r": 2.28,
+       "avg_loss_r": -0.79,
+       "profit_factor": 1.64,
+       "max_losing_streak": 13,
+       "avg_days_held": 34.5
+      },
+      "nifty": {
+       "start": "2021-01-01",
+       "end": "2026-11-20",
+       "total_return_pct": 84.0,
+       "cagr_pct": 10.9,
+       "max_drawdown_pct": -17.2,
+       "sharpe": 0.8
+      }
+     },
+     "has_edge": false,
+     "yearly": {
+      "2016": -1.1,
+      "2017": 13.8,
+      "2018": -10.6,
+      "2019": -11.8,
+      "2020": -6.8,
+      "2021": -1.1,
+      "2022": -5.2,
+      "2023": 10.1,
+      "2024": 15.5,
+      "2025": 1.4,
+      "2026": 5.9
+     },
+     "by_exit": {
+      "breakeven/trail stop": {
+       "trades": 23,
+       "win_rate_pct": 4.3,
+       "avg_r": -0.093,
+       "pnl": -628.0
+      },
+      "end of test": {
+       "trades": 2,
+       "win_rate_pct": 100.0,
+       "avg_r": 4.791,
+       "pnl": 2788.0
+      },
+      "no data": {
+       "trades": 2,
+       "win_rate_pct": 50.0,
+       "avg_r": 1.9,
+       "pnl": 890.0
+      },
+      "stop": {
+       "trades": 51,
+       "win_rate_pct": 0.0,
+       "avg_r": -1.116,
+       "pnl": -16517.0
+      },
+      "stop (gap)": {
+       "trades": 14,
+       "win_rate_pct": 7.1,
+       "avg_r": -2.755,
+       "pnl": -11327.0
+      },
+      "time stop": {
+       "trades": 15,
+       "win_rate_pct": 6.7,
+       "avg_r": -0.374,
+       "pnl": -1425.0
+      },
+      "trail": {
+       "trades": 43,
+       "win_rate_pct": 97.7,
+       "avg_r": 2.229,
+       "pnl": 28344.0
+      }
+     }
+    },
+    "adaptive": {
+     "label": "Regime-adaptive momentum – breakouts only",
+     "all": {
+      "start": "2016-01-20",
+      "end": "2026-11-20",
+      "total_return_pct": 16.8,
+      "cagr_pct": 1.4,
+      "max_drawdown_pct": -9.6,
+      "sharpe": 0.36,
+      "trades": 159,
+      "trades_per_year": 14.7,
+      "win_rate_pct": 37.1,
+      "avg_r": 0.147,
+      "avg_win_r": 1.48,
+      "avg_loss_r": -0.64,
+      "profit_factor": 1.5,
+      "max_losing_streak": 8,
+      "avg_days_held": 28.0
+     },
+     "in_sample": {
+      "strategy": {
+       "start": "2016-01-20",
+       "end": "2020-12-31",
+       "total_return_pct": 1.9,
+       "cagr_pct": 0.4,
+       "max_drawdown_pct": -9.6,
+       "sharpe": 0.1,
+       "trades": 67,
+       "trades_per_year": 13.5,
+       "win_rate_pct": 35.8,
+       "avg_r": -0.039,
+       "avg_win_r": 1.09,
+       "avg_loss_r": -0.67,
+       "profit_factor": 1.26,
+       "max_losing_streak": 7,
+       "avg_days_held": 30.7
+      },
+      "nifty": {
+       "start": "2016-01-20",
+       "end": "2020-12-31",
+       "total_return_pct": 91.3,
+       "cagr_pct": 14.0,
+       "max_drawdown_pct": -38.4,
+       "sharpe": 0.82
+      }
+     },
+     "out_of_sample": {
+      "strategy": {
+       "start": "2021-01-01",
+       "end": "2026-11-20",
+       "total_return_pct": 14.3,
+       "cagr_pct": 2.3,
+       "max_drawdown_pct": -6.8,
+       "sharpe": 0.63,
+       "trades": 92,
+       "trades_per_year": 15.6,
+       "win_rate_pct": 38.0,
+       "avg_r": 0.283,
+       "avg_win_r": 1.75,
+       "avg_loss_r": -0.62,
+       "profit_factor": 1.63,
+       "max_losing_streak": 8,
+       "avg_days_held": 26.0
+      },
+      "nifty": {
+       "start": "2021-01-01",
+       "end": "2026-11-20",
+       "total_return_pct": 84.0,
+       "cagr_pct": 10.9,
+       "max_drawdown_pct": -17.2,
+       "sharpe": 0.8
+      }
+     },
+     "has_edge": true,
+     "yearly": {
+      "2016": -3.4,
+      "2017": 7.0,
+      "2018": -1.5,
+      "2019": -0.2,
+      "2020": 0.3,
+      "2021": 4.1,
+      "2022": -1.1,
+      "2023": 5.3,
+      "2024": -0.8,
+      "2025": 5.7,
+      "2026": 0.7
+     },
+     "by_exit": {
+      "breakeven/trail stop": {
+       "trades": 66,
+       "win_rate_pct": 56.1,
+       "avg_r": 0.65,
+       "pnl": 8984.0
+      },
+      "end of test": {
+       "trades": 3,
+       "win_rate_pct": 66.7,
+       "avg_r": 0.339,
+       "pnl": 175.0
+      },
+      "no data": {
+       "trades": 1,
+       "win_rate_pct": 100.0,
+       "avg_r": 0.475,
+       "pnl": 74.0
+      },
+      "stop": {
+       "trades": 46,
+       "win_rate_pct": 0.0,
+       "avg_r": -1.016,
+       "pnl": -8644.0
+      },
+      "stop (gap)": {
+       "trades": 9,
+       "win_rate_pct": 11.1,
+       "avg_r": -0.522,
+       "pnl": -981.0
+      },
+      "time stop": {
+       "trades": 17,
+       "win_rate_pct": 5.9,
+       "avg_r": -0.428,
+       "pnl": -1200.0
+      },
+      "trail": {
+       "trades": 17,
+       "win_rate_pct": 100.0,
+       "avg_r": 2.218,
+       "pnl": 7456.0
+      }
+     }
+    }
+   },
+   "in_sample": {
+    "strategy": {
+     "start": "2016-01-20",
+     "end": "2020-12-31",
+     "total_return_pct": -17.2,
+     "cagr_pct": -3.7,
+     "max_drawdown_pct": -27.6,
+     "sharpe": -0.37,
+     "trades": 63,
+     "trades_per_year": 12.7,
+     "win_rate_pct": 27.0,
+     "avg_r": -0.321,
+     "avg_win_r": 2.34,
+     "avg_loss_r": -1.31,
+     "profit_factor": 0.69,
+     "max_losing_streak": 11,
+     "avg_days_held": 40.3
+    },
+    "nifty": {
+     "start": "2016-01-20",
+     "end": "2020-12-31",
+     "total_return_pct": 91.3,
+     "cagr_pct": 14.0,
+     "max_drawdown_pct": -38.4,
+     "sharpe": 0.82
+    }
+   },
+   "out_of_sample": {
+    "strategy": {
+     "start": "2021-01-01",
+     "end": "2026-11-20",
+     "total_return_pct": 27.7,
+     "cagr_pct": 4.2,
+     "max_drawdown_pct": -14.0,
+     "sharpe": 0.74,
+     "trades": 87,
+     "trades_per_year": 14.8,
+     "win_rate_pct": 35.6,
+     "avg_r": 0.302,
+     "avg_win_r": 2.28,
+     "avg_loss_r": -0.79,
+     "profit_factor": 1.64,
+     "max_losing_streak": 13,
+     "avg_days_held": 34.5
+    },
+    "nifty": {
+     "start": "2021-01-01",
+     "end": "2026-11-20",
+     "total_return_pct": 84.0,
+     "cagr_pct": 10.9,
+     "max_drawdown_pct": -17.2,
+     "sharpe": 0.8
+    }
+   },
+   "notes": [
+    "Breakouts were only about 10% of trades in the full funnels, so samples are small – treat any result as weak evidence.",
+    "Removing pullbacks frees position slots, so some breakouts appear here that the full funnel skipped for lack of room."
+   ]
   }
  ],
  "research": {
-  "id": "a2_momentum_market_filter",
-  "label": "Monthly top-15 momentum + market filter (cash when Nifty < 200-day average)",
+  "id": "b_breakout_only",
+  "label": "Breakouts only, no pullbacks (baseline and adaptive funnels)",
   "status": "test only – not used live",
   "settings": {
-   "n_hold": 15,
-   "universe": 200,
-   "market_filter": true,
-   "cash_yield": 0.06,
-   "rebalance": "monthly",
-   "weighting": "equal at entry",
-   "universe_note": "200 most-traded stocks (no point-in-time market caps available)"
+   "breakout_only": true,
+   "other_settings": "unchanged"
   },
-  "all": {
-   "strategy": {
-    "start": "2016-01-20",
-    "end": "2026-11-13",
-    "total_return_pct": 500.2,
-    "cagr_pct": 18.0,
-    "max_drawdown_pct": -32.7,
-    "sharpe": 0.87,
-    "holdings_closed": 759,
-    "closed_per_year": 70.2,
-    "win_rate_pct": 46.9,
-    "avg_ret_pct": 4.56,
-    "profit_factor": 1.65,
-    "avg_days_held": 40.9,
-    "time_in_market_pct": 76.4
+  "variants": {
+   "baseline": {
+    "label": "Current funnel (baseline) – breakouts only",
+    "all": {
+     "start": "2016-01-20",
+     "end": "2026-11-20",
+     "total_return_pct": 6.1,
+     "cagr_pct": 0.5,
+     "max_drawdown_pct": -33.1,
+     "sharpe": 0.11,
+     "trades": 150,
+     "trades_per_year": 13.8,
+     "win_rate_pct": 32.0,
+     "avg_r": 0.04,
+     "avg_win_r": 2.3,
+     "avg_loss_r": -1.02,
+     "profit_factor": 1.07,
+     "max_losing_streak": 13,
+     "avg_days_held": 36.9
+    },
+    "in_sample": {
+     "strategy": {
+      "start": "2016-01-20",
+      "end": "2020-12-31",
+      "total_return_pct": -17.2,
+      "cagr_pct": -3.7,
+      "max_drawdown_pct": -27.6,
+      "sharpe": -0.37,
+      "trades": 63,
+      "trades_per_year": 12.7,
+      "win_rate_pct": 27.0,
+      "avg_r": -0.321,
+      "avg_win_r": 2.34,
+      "avg_loss_r": -1.31,
+      "profit_factor": 0.69,
+      "max_losing_streak": 11,
+      "avg_days_held": 40.3
+     },
+     "nifty": {
+      "start": "2016-01-20",
+      "end": "2020-12-31",
+      "total_return_pct": 91.3,
+      "cagr_pct": 14.0,
+      "max_drawdown_pct": -38.4,
+      "sharpe": 0.82
+     }
+    },
+    "out_of_sample": {
+     "strategy": {
+      "start": "2021-01-01",
+      "end": "2026-11-20",
+      "total_return_pct": 27.7,
+      "cagr_pct": 4.2,
+      "max_drawdown_pct": -14.0,
+      "sharpe": 0.74,
+      "trades": 87,
+      "trades_per_year": 14.8,
+      "win_rate_pct": 35.6,
+      "avg_r": 0.302,
+      "avg_win_r": 2.28,
+      "avg_loss_r": -0.79,
+      "profit_factor": 1.64,
+      "max_losing_streak": 13,
+      "avg_days_held": 34.5
+     },
+     "nifty": {
+      "start": "2021-01-01",
+      "end": "2026-11-20",
+      "total_return_pct": 84.0,
+      "cagr_pct": 10.9,
+      "max_drawdown_pct": -17.2,
+      "sharpe": 0.8
+     }
+    },
+    "has_edge": false,
+    "yearly": {
+     "2016": -1.1,
+     "2017": 13.8,
+     "2018": -10.6,
+     "2019": -11.8,
+     "2020": -6.8,
+     "2021": -1.1,
+     "2022": -5.2,
+     "2023": 10.1,
+     "2024": 15.5,
+     "2025": 1.4,
+     "2026": 5.9
+    },
+    "by_exit": {
+     "breakeven/trail stop": {
+      "trades": 23,
+      "win_rate_pct": 4.3,
+      "avg_r": -0.093,
+      "pnl": -628.0
+     },
+     "end of test": {
+      "trades": 2,
+      "win_rate_pct": 100.0,
+      "avg_r": 4.791,
+      "pnl": 2788.0
+     },
+     "no data": {
+      "trades": 2,
+      "win_rate_pct": 50.0,
+      "avg_r": 1.9,
+      "pnl": 890.0
+     },
+     "stop": {
+      "trades": 51,
+      "win_rate_pct": 0.0,
+      "avg_r": -1.116,
+      "pnl": -16517.0
+     },
+     "stop (gap)": {
+      "trades": 14,
+      "win_rate_pct": 7.1,
+      "avg_r": -2.755,
+      "pnl": -11327.0
+     },
+     "time stop": {
+      "trades": 15,
+      "win_rate_pct": 6.7,
+      "avg_r": -0.374,
+      "pnl": -1425.0
+     },
+     "trail": {
+      "trades": 43,
+      "win_rate_pct": 97.7,
+      "avg_r": 2.229,
+      "pnl": 28344.0
+     }
+    }
    },
-   "nifty": {
-    "start": "2016-01-20",
-    "end": "2026-11-13",
-    "total_return_pct": 244.0,
-    "cagr_pct": 12.1,
-    "max_drawdown_pct": -38.4,
-    "sharpe": 0.79
+   "adaptive": {
+    "label": "Regime-adaptive momentum – breakouts only",
+    "all": {
+     "start": "2016-01-20",
+     "end": "2026-11-20",
+     "total_return_pct": 16.8,
+     "cagr_pct": 1.4,
+     "max_drawdown_pct": -9.6,
+     "sharpe": 0.36,
+     "trades": 159,
+     "trades_per_year": 14.7,
+     "win_rate_pct": 37.1,
+     "avg_r": 0.147,
+     "avg_win_r": 1.48,
+     "avg_loss_r": -0.64,
+     "profit_factor": 1.5,
+     "max_losing_streak": 8,
+     "avg_days_held": 28.0
+    },
+    "in_sample": {
+     "strategy": {
+      "start": "2016-01-20",
+      "end": "2020-12-31",
+      "total_return_pct": 1.9,
+      "cagr_pct": 0.4,
+      "max_drawdown_pct": -9.6,
+      "sharpe": 0.1,
+      "trades": 67,
+      "trades_per_year": 13.5,
+      "win_rate_pct": 35.8,
+      "avg_r": -0.039,
+      "avg_win_r": 1.09,
+      "avg_loss_r": -0.67,
+      "profit_factor": 1.26,
+      "max_losing_streak": 7,
+      "avg_days_held": 30.7
+     },
+     "nifty": {
+      "start": "2016-01-20",
+      "end": "2020-12-31",
+      "total_return_pct": 91.3,
+      "cagr_pct": 14.0,
+      "max_drawdown_pct": -38.4,
+      "sharpe": 0.82
+     }
+    },
+    "out_of_sample": {
+     "strategy": {
+      "start": "2021-01-01",
+      "end": "2026-11-20",
+      "total_return_pct": 14.3,
+      "cagr_pct": 2.3,
+      "max_drawdown_pct": -6.8,
+      "sharpe": 0.63,
+      "trades": 92,
+      "trades_per_year": 15.6,
+      "win_rate_pct": 38.0,
+      "avg_r": 0.283,
+      "avg_win_r": 1.75,
+      "avg_loss_r": -0.62,
+      "profit_factor": 1.63,
+      "max_losing_streak": 8,
+      "avg_days_held": 26.0
+     },
+     "nifty": {
+      "start": "2021-01-01",
+      "end": "2026-11-20",
+      "total_return_pct": 84.0,
+      "cagr_pct": 10.9,
+      "max_drawdown_pct": -17.2,
+      "sharpe": 0.8
+     }
+    },
+    "has_edge": true,
+    "yearly": {
+     "2016": -3.4,
+     "2017": 7.0,
+     "2018": -1.5,
+     "2019": -0.2,
+     "2020": 0.3,
+     "2021": 4.1,
+     "2022": -1.1,
+     "2023": 5.3,
+     "2024": -0.8,
+     "2025": 5.7,
+     "2026": 0.7
+    },
+    "by_exit": {
+     "breakeven/trail stop": {
+      "trades": 66,
+      "win_rate_pct": 56.1,
+      "avg_r": 0.65,
+      "pnl": 8984.0
+     },
+     "end of test": {
+      "trades": 3,
+      "win_rate_pct": 66.7,
+      "avg_r": 0.339,
+      "pnl": 175.0
+     },
+     "no data": {
+      "trades": 1,
+      "win_rate_pct": 100.0,
+      "avg_r": 0.475,
+      "pnl": 74.0
+     },
+     "stop": {
+      "trades": 46,
+      "win_rate_pct": 0.0,
+      "avg_r": -1.016,
+      "pnl": -8644.0
+     },
+     "stop (gap)": {
+      "trades": 9,
+      "win_rate_pct": 11.1,
+      "avg_r": -0.522,
+      "pnl": -981.0
+     },
+     "time stop": {
+      "trades": 17,
+      "win_rate_pct": 5.9,
+      "avg_r": -0.428,
+      "pnl": -1200.0
+     },
+     "trail": {
+      "trades": 17,
+      "win_rate_pct": 100.0,
+      "avg_r": 2.218,
+      "pnl": 7456.0
+     }
+    }
    }
   },
   "in_sample": {
    "strategy": {
     "start": "2016-01-20",
     "end": "2020-12-31",
-    "total_return_pct": 62.6,
-    "cagr_pct": 10.3,
-    "max_drawdown_pct": -32.7,
-    "sharpe": 0.58,
-    "holdings_closed": 347,
-    "closed_per_year": 70.1,
-    "win_rate_pct": 43.2,
-    "avg_ret_pct": 1.54,
-    "profit_factor": 1.09,
-    "avg_days_held": 39.5,
-    "time_in_market_pct": 79.3
+    "total_return_pct": -17.2,
+    "cagr_pct": -3.7,
+    "max_drawdown_pct": -27.6,
+    "sharpe": -0.37,
+    "trades": 63,
+    "trades_per_year": 12.7,
+    "win_rate_pct": 27.0,
+    "avg_r": -0.321,
+    "avg_win_r": 2.34,
+    "avg_loss_r": -1.31,
+    "profit_factor": 0.69,
+    "max_losing_streak": 11,
+    "avg_days_held": 40.3
    },
    "nifty": {
     "start": "2016-01-20",
@@ -4229,675 +4805,34 @@
   "out_of_sample": {
    "strategy": {
     "start": "2021-01-01",
-    "end": "2026-11-13",
-    "total_return_pct": 266.3,
-    "cagr_pct": 24.8,
-    "max_drawdown_pct": -22.9,
-    "sharpe": 1.08,
-    "holdings_closed": 412,
-    "closed_per_year": 70.3,
-    "win_rate_pct": 50.0,
-    "avg_ret_pct": 7.11,
-    "profit_factor": 1.8,
-    "avg_days_held": 42.1,
-    "time_in_market_pct": 73.9
+    "end": "2026-11-20",
+    "total_return_pct": 27.7,
+    "cagr_pct": 4.2,
+    "max_drawdown_pct": -14.0,
+    "sharpe": 0.74,
+    "trades": 87,
+    "trades_per_year": 14.8,
+    "win_rate_pct": 35.6,
+    "avg_r": 0.302,
+    "avg_win_r": 2.28,
+    "avg_loss_r": -0.79,
+    "profit_factor": 1.64,
+    "max_losing_streak": 13,
+    "avg_days_held": 34.5
    },
    "nifty": {
     "start": "2021-01-01",
-    "end": "2026-11-13",
-    "total_return_pct": 79.4,
-    "cagr_pct": 10.5,
+    "end": "2026-11-20",
+    "total_return_pct": 84.0,
+    "cagr_pct": 10.9,
     "max_drawdown_pct": -17.2,
-    "sharpe": 0.77
+    "sharpe": 0.8
    }
-  },
-  "beats_nifty_in_sample": false,
-  "beats_nifty_out_of_sample": true,
-  "yearly": {
-   "2016": -15.7,
-   "2017": 78.6,
-   "2018": -15.8,
-   "2019": 3.6,
-   "2020": 23.9,
-   "2021": 78.6,
-   "2022": 14.0,
-   "2023": 32.6,
-   "2024": 32.1,
-   "2025": -3.2,
-   "2026": 7.0
-  },
-  "nifty_yearly": {
-   "2016": 12.0,
-   "2017": 28.6,
-   "2018": 3.2,
-   "2019": 12.0,
-   "2020": 14.9,
-   "2021": 24.1,
-   "2022": 4.3,
-   "2023": 20.0,
-   "2024": 8.8,
-   "2025": 10.5,
-   "2026": -3.8
-  },
-  "equity": {
-   "2016-01-24": 35000,
-   "2016-01-31": 35000,
-   "2016-02-07": 33293,
-   "2016-02-14": 30130,
-   "2016-02-21": 30674,
-   "2016-02-28": 29716,
-   "2016-03-06": 31649,
-   "2016-03-13": 32003,
-   "2016-03-20": 31698,
-   "2016-03-27": 29405,
-   "2016-04-03": 29942,
-   "2016-04-10": 29545,
-   "2016-04-17": 30139,
-   "2016-04-24": 30072,
-   "2016-05-01": 29720,
-   "2016-05-08": 29447,
-   "2016-05-15": 29506,
-   "2016-05-22": 29101,
-   "2016-05-29": 29625,
-   "2016-06-05": 29916,
-   "2016-06-12": 30650,
-   "2016-06-19": 30638,
-   "2016-06-26": 30366,
-   "2016-07-03": 31960,
-   "2016-07-10": 32019,
-   "2016-07-17": 31920,
-   "2016-07-24": 33160,
-   "2016-07-31": 34704,
-   "2016-08-07": 34893,
-   "2016-08-14": 33803,
-   "2016-08-21": 35985,
-   "2016-08-28": 35242,
-   "2016-09-04": 35579,
-   "2016-09-11": 35663,
-   "2016-09-18": 35136,
-   "2016-09-25": 36613,
-   "2016-10-02": 35058,
-   "2016-10-09": 35956,
-   "2016-10-16": 35878,
-   "2016-10-23": 36534,
-   "2016-10-30": 37052,
-   "2016-11-06": 33814,
-   "2016-11-13": 31615,
-   "2016-11-20": 29271,
-   "2016-11-27": 30028,
-   "2016-12-04": 29902,
-   "2016-12-11": 31160,
-   "2016-12-18": 30351,
-   "2016-12-25": 28559,
-   "2017-01-01": 29494,
-   "2017-01-08": 29336,
-   "2017-01-15": 29370,
-   "2017-01-22": 29404,
-   "2017-01-29": 29431,
-   "2017-02-05": 29916,
-   "2017-02-12": 29795,
-   "2017-02-19": 29878,
-   "2017-02-26": 29903,
-   "2017-03-05": 29612,
-   "2017-03-12": 28758,
-   "2017-03-19": 29401,
-   "2017-03-26": 29510,
-   "2017-04-02": 30509,
-   "2017-04-09": 30109,
-   "2017-04-16": 30403,
-   "2017-04-23": 30857,
-   "2017-04-30": 30971,
-   "2017-05-07": 30865,
-   "2017-05-14": 31963,
-   "2017-05-21": 30902,
-   "2017-05-28": 30485,
-   "2017-06-04": 31228,
-   "2017-06-11": 31988,
-   "2017-06-18": 32436,
-   "2017-06-25": 31611,
-   "2017-07-02": 30993,
-   "2017-07-09": 32427,
-   "2017-07-16": 33013,
-   "2017-07-23": 32560,
-   "2017-07-30": 32851,
-   "2017-08-06": 33061,
-   "2017-08-13": 30741,
-   "2017-08-20": 33222,
-   "2017-08-27": 33621,
-   "2017-09-03": 35105,
-   "2017-09-10": 36296,
-   "2017-09-17": 38649,
-   "2017-09-24": 39016,
-   "2017-10-01": 38960,
-   "2017-10-08": 42415,
-   "2017-10-15": 43896,
-   "2017-10-22": 43772,
-   "2017-10-29": 44754,
-   "2017-11-05": 48220,
-   "2017-11-12": 49559,
-   "2017-11-19": 48333,
-   "2017-11-26": 48396,
-   "2017-12-03": 49136,
-   "2017-12-10": 51245,
-   "2017-12-17": 51641,
-   "2017-12-24": 51390,
-   "2017-12-31": 52683,
-   "2018-01-07": 54996,
-   "2018-01-14": 58154,
-   "2018-01-21": 56757,
-   "2018-01-28": 55995,
-   "2018-02-04": 47919,
-   "2018-02-11": 52071,
-   "2018-02-18": 51671,
-   "2018-02-25": 51690,
-   "2018-03-04": 52634,
-   "2018-03-11": 50404,
-   "2018-03-18": 54067,
-   "2018-03-25": 52658,
-   "2018-04-01": 52367,
-   "2018-04-08": 52409,
-   "2018-04-15": 52470,
-   "2018-04-22": 52530,
-   "2018-04-29": 52591,
-   "2018-05-06": 50541,
-   "2018-05-13": 51500,
-   "2018-05-20": 51646,
-   "2018-05-27": 52812,
-   "2018-06-03": 52534,
-   "2018-06-10": 52697,
-   "2018-06-17": 52967,
-   "2018-06-24": 50241,
-   "2018-07-01": 50452,
-   "2018-07-08": 50967,
-   "2018-07-15": 53335,
-   "2018-07-22": 53333,
-   "2018-07-29": 53352,
-   "2018-08-05": 54881,
-   "2018-08-12": 54548,
-   "2018-08-19": 55790,
-   "2018-08-26": 56029,
-   "2018-09-02": 57126,
-   "2018-09-09": 54288,
-   "2018-09-16": 52631,
-   "2018-09-23": 50056,
-   "2018-09-30": 46774,
-   "2018-10-07": 44311,
-   "2018-10-14": 44581,
-   "2018-10-21": 44512,
-   "2018-10-28": 42864,
-   "2018-11-04": 44568,
-   "2018-11-11": 44610,
-   "2018-11-18": 44661,
-   "2018-11-25": 44703,
-   "2018-12-02": 44754,
-   "2018-12-09": 43992,
-   "2018-12-16": 44471,
-   "2018-12-23": 44053,
-   "2018-12-30": 44282,
-   "2019-01-06": 43419,
-   "2019-01-13": 44208,
-   "2019-01-20": 44530,
-   "2019-01-27": 44501,
-   "2019-02-03": 44294,
-   "2019-02-10": 44345,
-   "2019-02-17": 44396,
-   "2019-02-24": 44447,
-   "2019-03-03": 44499,
-   "2019-03-10": 44540,
-   "2019-03-17": 44592,
-   "2019-03-24": 44633,
-   "2019-03-31": 44685,
-   "2019-04-07": 44346,
-   "2019-04-14": 44380,
-   "2019-04-21": 44778,
-   "2019-04-28": 44238,
-   "2019-05-05": 44202,
-   "2019-05-12": 42801,
-   "2019-05-19": 43371,
-   "2019-05-26": 44888,
-   "2019-06-02": 45040,
-   "2019-06-09": 45070,
-   "2019-06-16": 45117,
-   "2019-06-23": 44787,
-   "2019-06-30": 45827,
-   "2019-07-07": 45334,
-   "2019-07-14": 43190,
-   "2019-07-21": 41771,
-   "2019-07-28": 41526,
-   "2019-08-04": 40888,
-   "2019-08-11": 40935,
-   "2019-08-18": 40963,
-   "2019-08-25": 41011,
-   "2019-09-01": 41058,
-   "2019-09-08": 41096,
-   "2019-09-15": 41134,
-   "2019-09-22": 41182,
-   "2019-09-29": 41229,
-   "2019-10-06": 39662,
-   "2019-10-13": 40563,
-   "2019-10-20": 41845,
-   "2019-10-27": 42380,
-   "2019-11-03": 43174,
-   "2019-11-10": 41955,
-   "2019-11-17": 42874,
-   "2019-11-24": 42664,
-   "2019-12-01": 43877,
-   "2019-12-08": 43137,
-   "2019-12-15": 43920,
-   "2019-12-22": 44015,
-   "2019-12-29": 45436,
-   "2020-01-05": 46854,
-   "2020-01-12": 47955,
-   "2020-01-19": 48409,
-   "2020-01-26": 48649,
-   "2020-02-02": 48212,
-   "2020-02-09": 49899,
-   "2020-02-16": 49111,
-   "2020-02-23": 49119,
-   "2020-03-01": 45516,
-   "2020-03-08": 45726,
-   "2020-03-15": 45779,
-   "2020-03-22": 45832,
-   "2020-03-29": 45885,
-   "2020-04-05": 45938,
-   "2020-04-12": 45991,
-   "2020-04-19": 46034,
-   "2020-04-26": 46087,
-   "2020-05-03": 46140,
-   "2020-05-10": 46194,
-   "2020-05-17": 46247,
-   "2020-05-24": 46301,
-   "2020-05-31": 46354,
-   "2020-06-07": 46408,
-   "2020-06-14": 46462,
-   "2020-06-21": 46515,
-   "2020-06-28": 46569,
-   "2020-07-05": 46623,
-   "2020-07-12": 46677,
-   "2020-07-19": 46731,
-   "2020-07-26": 46785,
-   "2020-08-02": 46839,
-   "2020-08-09": 47756,
-   "2020-08-16": 47934,
-   "2020-08-23": 48794,
-   "2020-08-30": 50034,
-   "2020-09-06": 50757,
-   "2020-09-13": 50803,
-   "2020-09-20": 54600,
-   "2020-09-27": 52202,
-   "2020-10-04": 47652,
-   "2020-10-11": 47071,
-   "2020-10-18": 47324,
-   "2020-10-25": 47437,
-   "2020-11-01": 48292,
-   "2020-11-08": 48388,
-   "2020-11-15": 49428,
-   "2020-11-22": 52434,
-   "2020-11-29": 54454,
-   "2020-12-06": 56974,
-   "2020-12-13": 55514,
-   "2020-12-20": 55291,
-   "2020-12-27": 56096,
-   "2021-01-03": 57354,
-   "2021-01-10": 58772,
-   "2021-01-17": 57935,
-   "2021-01-24": 58117,
-   "2021-01-31": 56057,
-   "2021-02-07": 60322,
-   "2021-02-14": 62539,
-   "2021-02-21": 63020,
-   "2021-02-28": 63987,
-   "2021-03-07": 66072,
-   "2021-03-14": 66034,
-   "2021-03-21": 64821,
-   "2021-03-28": 65474,
-   "2021-04-04": 72456,
-   "2021-04-11": 75775,
-   "2021-04-18": 75229,
-   "2021-04-25": 75357,
-   "2021-05-02": 78806,
-   "2021-05-09": 85634,
-   "2021-05-16": 81401,
-   "2021-05-23": 85758,
-   "2021-05-30": 85106,
-   "2021-06-06": 91249,
-   "2021-06-13": 93639,
-   "2021-06-20": 89397,
-   "2021-06-27": 91381,
-   "2021-07-04": 91997,
-   "2021-07-11": 92147,
-   "2021-07-18": 93821,
-   "2021-07-25": 93460,
-   "2021-08-01": 95120,
-   "2021-08-08": 95732,
-   "2021-08-15": 93617,
-   "2021-08-22": 92363,
-   "2021-08-29": 93382,
-   "2021-09-05": 95275,
-   "2021-09-12": 96733,
-   "2021-09-19": 97336,
-   "2021-09-26": 97663,
-   "2021-10-03": 96069,
-   "2021-10-10": 103729,
-   "2021-10-17": 111075,
-   "2021-10-24": 102472,
-   "2021-10-31": 95860,
-   "2021-11-07": 100166,
-   "2021-11-14": 105612,
-   "2021-11-21": 107123,
-   "2021-11-28": 104951,
-   "2021-12-05": 98370,
-   "2021-12-12": 102805,
-   "2021-12-19": 98551,
-   "2021-12-26": 97971,
-   "2022-01-02": 101596,
-   "2022-01-09": 101915,
-   "2022-01-16": 106744,
-   "2022-01-23": 103981,
-   "2022-01-30": 100552,
-   "2022-02-06": 104143,
-   "2022-02-13": 100595,
-   "2022-02-20": 99070,
-   "2022-02-27": 94474,
-   "2022-03-06": 93628,
-   "2022-03-13": 93736,
-   "2022-03-20": 93844,
-   "2022-03-27": 93953,
-   "2022-04-03": 94661,
-   "2022-04-10": 100012,
-   "2022-04-17": 98188,
-   "2022-04-24": 96969,
-   "2022-05-01": 92645,
-   "2022-05-08": 91264,
-   "2022-05-15": 91370,
-   "2022-05-22": 91476,
-   "2022-05-29": 91581,
-   "2022-06-05": 91687,
-   "2022-06-12": 91793,
-   "2022-06-19": 91900,
-   "2022-06-26": 92006,
-   "2022-07-03": 92112,
-   "2022-07-10": 92219,
-   "2022-07-17": 92326,
-   "2022-07-24": 92432,
-   "2022-07-31": 92539,
-   "2022-08-07": 94794,
-   "2022-08-14": 96815,
-   "2022-08-21": 98639,
-   "2022-08-28": 102313,
-   "2022-09-04": 107702,
-   "2022-09-11": 108497,
-   "2022-09-18": 104050,
-   "2022-09-25": 103114,
-   "2022-10-02": 100462,
-   "2022-10-09": 108393,
-   "2022-10-16": 105744,
-   "2022-10-23": 106865,
-   "2022-10-30": 109013,
-   "2022-11-06": 113513,
-   "2022-11-13": 114293,
-   "2022-11-20": 113062,
-   "2022-11-27": 114946,
-   "2022-12-04": 118507,
-   "2022-12-11": 119202,
-   "2022-12-18": 119980,
-   "2022-12-25": 103800,
-   "2023-01-01": 115796,
-   "2023-01-08": 115221,
-   "2023-01-15": 113870,
-   "2023-01-22": 112152,
-   "2023-01-29": 102548,
-   "2023-02-05": 104552,
-   "2023-02-12": 103438,
-   "2023-02-19": 102580,
-   "2023-02-26": 98867,
-   "2023-03-05": 97851,
-   "2023-03-12": 97964,
-   "2023-03-19": 98077,
-   "2023-03-26": 98191,
-   "2023-04-02": 98304,
-   "2023-04-09": 98418,
-   "2023-04-16": 98532,
-   "2023-04-23": 98646,
-   "2023-04-30": 98760,
-   "2023-05-07": 104407,
-   "2023-05-14": 98958,
-   "2023-05-21": 98156,
-   "2023-05-28": 99026,
-   "2023-06-04": 100455,
-   "2023-06-11": 101750,
-   "2023-06-18": 103652,
-   "2023-06-25": 101691,
-   "2023-07-02": 106331,
-   "2023-07-09": 107315,
-   "2023-07-16": 110496,
-   "2023-07-23": 113527,
-   "2023-07-30": 115415,
-   "2023-08-06": 113315,
-   "2023-08-13": 114148,
-   "2023-08-20": 119505,
-   "2023-08-27": 120446,
-   "2023-09-03": 124699,
-   "2023-09-10": 136038,
-   "2023-09-17": 135170,
-   "2023-09-24": 132027,
-   "2023-10-01": 136095,
-   "2023-10-08": 138060,
-   "2023-10-15": 138414,
-   "2023-10-22": 136994,
-   "2023-10-29": 128755,
-   "2023-11-05": 128566,
-   "2023-11-12": 133550,
-   "2023-11-19": 140430,
-   "2023-11-26": 138235,
-   "2023-12-03": 145730,
-   "2023-12-10": 146771,
-   "2023-12-17": 150388,
-   "2023-12-24": 149303,
-   "2023-12-31": 153570,
-   "2024-01-07": 155639,
-   "2024-01-14": 152148,
-   "2024-01-21": 159235,
-   "2024-01-28": 161920,
-   "2024-02-04": 174947,
-   "2024-02-11": 171308,
-   "2024-02-18": 171805,
-   "2024-02-25": 170117,
-   "2024-03-03": 166248,
-   "2024-03-10": 170751,
-   "2024-03-17": 158835,
-   "2024-03-24": 163968,
-   "2024-03-31": 169513,
-   "2024-04-07": 175413,
-   "2024-04-14": 175134,
-   "2024-04-21": 170713,
-   "2024-04-28": 183712,
-   "2024-05-05": 187296,
-   "2024-05-12": 176442,
-   "2024-05-19": 184860,
-   "2024-05-26": 189650,
-   "2024-06-02": 185885,
-   "2024-06-09": 181315,
-   "2024-06-16": 194724,
-   "2024-06-23": 194884,
-   "2024-06-30": 198905,
-   "2024-07-07": 207084,
-   "2024-07-14": 209959,
-   "2024-07-21": 198884,
-   "2024-07-28": 200724,
-   "2024-08-04": 197322,
-   "2024-08-11": 193300,
-   "2024-08-18": 196692,
-   "2024-08-25": 197805,
-   "2024-09-01": 201388,
-   "2024-09-08": 197177,
-   "2024-09-15": 201193,
-   "2024-09-22": 202692,
-   "2024-09-29": 203851,
-   "2024-10-06": 197798,
-   "2024-10-13": 203556,
-   "2024-10-20": 198643,
-   "2024-10-27": 187890,
-   "2024-11-03": 191289,
-   "2024-11-10": 189277,
-   "2024-11-17": 182112,
-   "2024-11-24": 187631,
-   "2024-12-01": 195816,
-   "2024-12-08": 203403,
-   "2024-12-15": 199728,
-   "2024-12-22": 197191,
-   "2024-12-29": 198759,
-   "2025-01-05": 202249,
-   "2025-01-12": 202483,
-   "2025-01-19": 202717,
-   "2025-01-26": 202952,
-   "2025-02-02": 203186,
-   "2025-02-09": 203421,
-   "2025-02-16": 203657,
-   "2025-02-23": 203892,
-   "2025-03-02": 204081,
-   "2025-03-09": 204317,
-   "2025-03-16": 204506,
-   "2025-03-23": 204743,
-   "2025-03-30": 204979,
-   "2025-04-06": 205169,
-   "2025-04-13": 205359,
-   "2025-04-20": 205501,
-   "2025-04-27": 205739,
-   "2025-05-04": 205331,
-   "2025-05-11": 204956,
-   "2025-05-18": 208862,
-   "2025-05-25": 199540,
-   "2025-06-01": 201221,
-   "2025-06-08": 204512,
-   "2025-06-15": 201431,
-   "2025-06-22": 194769,
-   "2025-06-29": 198512,
-   "2025-07-06": 197449,
-   "2025-07-13": 193687,
-   "2025-07-20": 194221,
-   "2025-07-27": 194889,
-   "2025-08-03": 192893,
-   "2025-08-10": 194328,
-   "2025-08-17": 199006,
-   "2025-08-24": 204483,
-   "2025-08-31": 194952,
-   "2025-09-07": 201458,
-   "2025-09-14": 199586,
-   "2025-09-21": 193287,
-   "2025-09-28": 183663,
-   "2025-10-05": 191676,
-   "2025-10-12": 190041,
-   "2025-10-19": 181757,
-   "2025-10-26": 183199,
-   "2025-11-02": 187995,
-   "2025-11-09": 188309,
-   "2025-11-16": 188303,
-   "2025-11-23": 181737,
-   "2025-11-30": 188449,
-   "2025-12-07": 187045,
-   "2025-12-14": 186768,
-   "2025-12-21": 188480,
-   "2025-12-28": 190550,
-   "2026-01-04": 194470,
-   "2026-01-11": 189698,
-   "2026-01-18": 198552,
-   "2026-01-25": 189005,
-   "2026-02-01": 193475,
-   "2026-02-08": 198545,
-   "2026-02-15": 202062,
-   "2026-02-22": 204916,
-   "2026-03-01": 207822,
-   "2026-03-08": 201498,
-   "2026-03-15": 201731,
-   "2026-03-22": 201964,
-   "2026-03-29": 202198,
-   "2026-04-05": 202432,
-   "2026-04-12": 202666,
-   "2026-04-19": 202901,
-   "2026-04-26": 203135,
-   "2026-05-03": 203370,
-   "2026-05-10": 203606,
-   "2026-05-17": 203841,
-   "2026-05-24": 204077,
-   "2026-05-31": 204313,
-   "2026-06-07": 204549,
-   "2026-06-14": 204786,
-   "2026-06-21": 205023,
-   "2026-06-28": 205260,
-   "2026-07-05": 205497,
-   "2026-07-12": 205735,
-   "2026-07-19": 205973,
-   "2026-07-26": 206211,
-   "2026-08-02": 206450,
-   "2026-08-09": 206689,
-   "2026-08-16": 206928,
-   "2026-08-23": 207167,
-   "2026-08-30": 207407,
-   "2026-09-06": 207647,
-   "2026-09-13": 207887,
-   "2026-09-20": 208127,
-   "2026-09-27": 208368,
-   "2026-10-04": 208609,
-   "2026-10-11": 208851,
-   "2026-10-18": 209092,
-   "2026-10-25": 209334,
-   "2026-11-01": 209576,
-   "2026-11-08": 209819,
-   "2026-11-15": 210061
   },
   "notes": [
-   "Nifty here is the price index (no dividends), which understates buy-and-hold by about 1–1.5% a year.",
-   "Checked at each month end: Nifty below its 200-day average → sell all, hold a liquid fund (assumed 6%/yr, before tax) for the month.",
-   "No stop-losses inside the month, so a fast crash can still hurt before the next check."
-  ],
-  "idle_cash_variant": {
-   "all": {
-    "start": "2016-01-20",
-    "end": "2026-11-13",
-    "total_return_pct": 374.2,
-    "cagr_pct": 15.5,
-    "max_drawdown_pct": -35.1,
-    "sharpe": 0.77,
-    "holdings_closed": 757,
-    "closed_per_year": 70.0,
-    "win_rate_pct": 45.8,
-    "avg_ret_pct": 4.32,
-    "profit_factor": 1.6,
-    "avg_days_held": 40.8,
-    "time_in_market_pct": 76.4
-   },
-   "in_sample": {
-    "start": "2016-01-20",
-    "end": "2020-12-31",
-    "total_return_pct": 51.8,
-    "cagr_pct": 8.8,
-    "max_drawdown_pct": -35.1,
-    "sharpe": 0.51,
-    "holdings_closed": 345,
-    "closed_per_year": 69.7,
-    "win_rate_pct": 42.9,
-    "avg_ret_pct": 1.5,
-    "profit_factor": 1.09,
-    "avg_days_held": 39.6,
-    "time_in_market_pct": 79.3
-   },
-   "out_of_sample": {
-    "start": "2021-01-01",
-    "end": "2026-11-13",
-    "total_return_pct": 209.8,
-    "cagr_pct": 21.3,
-    "max_drawdown_pct": -22.9,
-    "sharpe": 0.96,
-    "holdings_closed": 412,
-    "closed_per_year": 70.3,
-    "win_rate_pct": 48.3,
-    "avg_ret_pct": 6.68,
-    "profit_factor": 1.75,
-    "avg_days_held": 41.9,
-    "time_in_market_pct": 73.9
-   }
-  }
+   "Breakouts were only about 10% of trades in the full funnels, so samples are small – treat any result as weak evidence.",
+   "Removing pullbacks frees position slots, so some breakouts appear here that the full funnel skipped for lack of room."
+  ]
  },
  "factor_study": {
   "k": 15,
@@ -4939,23 +4874,23 @@
     },
     "out_of_sample": {
      "1d": {
-      "picks": 8744,
-      "days_with_picks": 932,
-      "hit_pct": 12.5,
+      "picks": 8768,
+      "days_with_picks": 937,
+      "hit_pct": 12.4,
       "bottom_pct": 11.9,
       "beat_median_pct": 49.0,
       "excess_pct": 0.25
      },
      "5d": {
-      "picks": 8735,
-      "days_with_picks": 928,
+      "picks": 8746,
+      "days_with_picks": 933,
       "hit_pct": 12.0,
       "bottom_pct": 11.6,
       "beat_median_pct": 50.0,
-      "excess_pct": 0.62
+      "excess_pct": 0.61
      },
      "20d": {
-      "picks": 8675,
+      "picks": 8677,
       "days_with_picks": 922,
       "hit_pct": 10.6,
       "bottom_pct": 9.5,
@@ -4995,25 +4930,25 @@
     },
     "out_of_sample": {
      "1d": {
-      "picks": 8672,
-      "days_with_picks": 931,
+      "picks": 8696,
+      "days_with_picks": 936,
       "hit_pct": 12.5,
       "bottom_pct": 11.6,
       "beat_median_pct": 49.1,
       "excess_pct": 0.26
      },
      "5d": {
-      "picks": 8663,
-      "days_with_picks": 927,
+      "picks": 8674,
+      "days_with_picks": 932,
       "hit_pct": 12.0,
       "bottom_pct": 11.4,
       "beat_median_pct": 50.6,
       "excess_pct": 0.63
      },
      "20d": {
-      "picks": 8602,
+      "picks": 8604,
       "days_with_picks": 921,
-      "hit_pct": 10.5,
+      "hit_pct": 10.4,
       "bottom_pct": 9.5,
       "beat_median_pct": 52.1,
       "excess_pct": 1.57
@@ -5051,23 +4986,23 @@
     },
     "out_of_sample": {
      "1d": {
-      "picks": 10259,
-      "days_with_picks": 932,
+      "picks": 10283,
+      "days_with_picks": 937,
       "hit_pct": 12.2,
       "bottom_pct": 11.3,
       "beat_median_pct": 49.4,
       "excess_pct": 0.27
      },
      "5d": {
-      "picks": 10250,
-      "days_with_picks": 928,
-      "hit_pct": 11.7,
-      "bottom_pct": 11.0,
+      "picks": 10261,
+      "days_with_picks": 933,
+      "hit_pct": 11.6,
+      "bottom_pct": 11.1,
       "beat_median_pct": 50.6,
       "excess_pct": 0.65
      },
      "20d": {
-      "picks": 10184,
+      "picks": 10186,
       "days_with_picks": 922,
       "hit_pct": 10.6,
       "bottom_pct": 9.3,
@@ -5107,28 +5042,28 @@
     },
     "out_of_sample": {
      "1d": {
-      "picks": 22710,
-      "days_with_picks": 1518,
+      "picks": 22785,
+      "days_with_picks": 1523,
       "hit_pct": 15.2,
       "bottom_pct": 17.4,
-      "beat_median_pct": 49.4,
+      "beat_median_pct": 49.3,
       "excess_pct": 0.14
      },
      "5d": {
-      "picks": 22417,
-      "days_with_picks": 1514,
+      "picks": 22492,
+      "days_with_picks": 1519,
       "hit_pct": 16.3,
       "bottom_pct": 17.0,
       "beat_median_pct": 51.4,
       "excess_pct": 0.6
      },
      "20d": {
-      "picks": 21547,
-      "days_with_picks": 1499,
+      "picks": 21622,
+      "days_with_picks": 1504,
       "hit_pct": 17.7,
       "bottom_pct": 17.5,
       "beat_median_pct": 51.7,
-      "excess_pct": 1.58
+      "excess_pct": 1.57
      }
     }
    },
@@ -5163,28 +5098,28 @@
     },
     "out_of_sample": {
      "1d": {
-      "picks": 22765,
-      "days_with_picks": 1518,
+      "picks": 22840,
+      "days_with_picks": 1523,
       "hit_pct": 14.5,
       "bottom_pct": 15.6,
       "beat_median_pct": 50.5,
-      "excess_pct": 0.23
+      "excess_pct": 0.22
      },
      "5d": {
-      "picks": 22637,
-      "days_with_picks": 1514,
+      "picks": 22713,
+      "days_with_picks": 1519,
       "hit_pct": 13.3,
       "bottom_pct": 15.0,
-      "beat_median_pct": 50.3,
-      "excess_pct": 0.43
+      "beat_median_pct": 50.4,
+      "excess_pct": 0.44
      },
      "20d": {
-      "picks": 22247,
-      "days_with_picks": 1499,
+      "picks": 22323,
+      "days_with_picks": 1504,
       "hit_pct": 12.2,
       "bottom_pct": 13.0,
       "beat_median_pct": 51.3,
-      "excess_pct": 1.18
+      "excess_pct": 1.16
      }
     }
    },
@@ -5219,28 +5154,28 @@
     },
     "out_of_sample": {
      "1d": {
-      "picks": 22749,
-      "days_with_picks": 1518,
+      "picks": 22824,
+      "days_with_picks": 1523,
       "hit_pct": 15.3,
       "bottom_pct": 17.0,
       "beat_median_pct": 50.1,
       "excess_pct": 0.2
      },
      "5d": {
-      "picks": 22516,
-      "days_with_picks": 1514,
+      "picks": 22591,
+      "days_with_picks": 1519,
       "hit_pct": 15.1,
-      "bottom_pct": 16.5,
-      "beat_median_pct": 50.8,
+      "bottom_pct": 16.4,
+      "beat_median_pct": 50.9,
       "excess_pct": 0.54
      },
      "20d": {
-      "picks": 21902,
-      "days_with_picks": 1499,
+      "picks": 21977,
+      "days_with_picks": 1504,
       "hit_pct": 14.7,
       "bottom_pct": 15.0,
-      "beat_median_pct": 52.8,
-      "excess_pct": 1.48
+      "beat_median_pct": 52.9,
+      "excess_pct": 1.46
      }
     }
    },
@@ -5275,28 +5210,28 @@
     },
     "out_of_sample": {
      "1d": {
-      "picks": 22759,
-      "days_with_picks": 1518,
+      "picks": 22834,
+      "days_with_picks": 1523,
       "hit_pct": 19.1,
       "bottom_pct": 21.6,
       "beat_median_pct": 47.8,
       "excess_pct": 0.29
      },
      "5d": {
-      "picks": 22649,
-      "days_with_picks": 1514,
+      "picks": 22724,
+      "days_with_picks": 1519,
       "hit_pct": 14.8,
       "bottom_pct": 19.0,
-      "beat_median_pct": 46.0,
+      "beat_median_pct": 45.9,
       "excess_pct": 0.27
      },
      "20d": {
-      "picks": 22257,
-      "days_with_picks": 1499,
-      "hit_pct": 12.3,
+      "picks": 22332,
+      "days_with_picks": 1504,
+      "hit_pct": 12.2,
       "bottom_pct": 14.6,
-      "beat_median_pct": 47.3,
-      "excess_pct": 0.77
+      "beat_median_pct": 47.2,
+      "excess_pct": 0.74
      }
     }
    },
@@ -5331,35 +5266,35 @@
     },
     "out_of_sample": {
      "1d": {
-      "picks": 22735,
-      "days_with_picks": 1518,
+      "picks": 22810,
+      "days_with_picks": 1523,
       "hit_pct": 14.4,
       "bottom_pct": 17.5,
       "beat_median_pct": 47.1,
-      "excess_pct": 0.07
+      "excess_pct": 0.06
      },
      "5d": {
-      "picks": 22580,
-      "days_with_picks": 1514,
+      "picks": 22655,
+      "days_with_picks": 1519,
       "hit_pct": 12.8,
-      "bottom_pct": 15.3,
+      "bottom_pct": 15.4,
       "beat_median_pct": 48.3,
-      "excess_pct": 0.2
+      "excess_pct": 0.19
      },
      "20d": {
-      "picks": 22220,
-      "days_with_picks": 1499,
+      "picks": 22296,
+      "days_with_picks": 1504,
       "hit_pct": 11.4,
       "bottom_pct": 14.0,
       "beat_median_pct": 46.6,
-      "excess_pct": 0.52
+      "excess_pct": 0.51
      }
     }
    }
   ],
   "best": null,
   "summary": [
-   "Current picks, 1 week later: 12.0% land in the top 10% (random ≈ 10%), 0.62% vs the median stock (unseen years).",
+   "Current picks, 1 week later: 12.0% land in the top 10% (random ≈ 10%), 0.61% vs the median stock (unseen years).",
    "No alternative ranking beat the current one on both design and unseen years.",
    "Next day: the best ranking put 19.1% of its picks in the top 10% (random ≈ 10%). One-day moves are mostly news and noise; the 1-week and 1-month columns matter for swing trades."
   ]
@@ -5370,25 +5305,25 @@
    "cagr_pct": -3.8,
    "max_drawdown_pct": -42.8,
    "win_rate_pct": 27.6,
-   "avg_r": -0.229,
+   "avg_r": -0.228,
    "profit_factor": 0.66,
    "trades": 355
   },
   {
    "label": "Volume surge 1.8×",
-   "cagr_pct": -3.6,
+   "cagr_pct": -3.5,
    "max_drawdown_pct": -39.0,
    "win_rate_pct": 29.3,
-   "avg_r": -0.148,
+   "avg_r": -0.147,
    "profit_factor": 0.69,
    "trades": 345
   },
   {
    "label": "Max stop 2 ATR",
-   "cagr_pct": -3.6,
+   "cagr_pct": -3.5,
    "max_drawdown_pct": -38.8,
-   "win_rate_pct": 31.4,
-   "avg_r": -0.297,
+   "win_rate_pct": 31.7,
+   "avg_r": -0.296,
    "profit_factor": 0.69,
    "trades": 350
   },
@@ -5397,7 +5332,7 @@
    "cagr_pct": -1.5,
    "max_drawdown_pct": -24.1,
    "win_rate_pct": 30.6,
-   "avg_r": -0.124,
+   "avg_r": -0.123,
    "profit_factor": 0.85,
    "trades": 363
   },
@@ -5406,7 +5341,7 @@
    "cagr_pct": -1.5,
    "max_drawdown_pct": -25.4,
    "win_rate_pct": 28.1,
-   "avg_r": -0.081,
+   "avg_r": -0.08,
    "profit_factor": 0.82,
    "trades": 345
   }
