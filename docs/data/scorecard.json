@@ -1,14 +1,14 @@
 {
  "demo": false,
- "updated": "2026-11-20",
+ "updated": "2026-11-23",
  "random_hit_pct": 10.0,
  "summary": {
   "1d": {
-   "picks": 6,
-   "hit_pct": 0.0,
-   "beat_median_pct": 66.7,
-   "avg_pctile": 57.4,
-   "excess_pct": 0.45,
+   "picks": 7,
+   "hit_pct": 14.3,
+   "beat_median_pct": 71.4,
+   "avg_pctile": 62.7,
+   "excess_pct": 0.89,
    "in_top50": 0
   },
   "5d": {
@@ -145,6 +145,31 @@
    "date": "2026-11-20",
    "symbols": [
     "LGEINDIA"
+   ],
+   "eval": {
+    "1d": {
+     "universe": 1027,
+     "median_pct": -1.38,
+     "top10_cut_pct": 1.27,
+     "picks": [
+      {
+       "symbol": "LGEINDIA",
+       "ret_pct": 2.16,
+       "pctile": 94.7,
+       "rank": 55
+      }
+     ]
+    }
+   }
+  },
+  {
+   "date": "2026-11-23",
+   "symbols": [
+    "LGEINDIA",
+    "KARURVYSYA",
+    "LALPATHLAB",
+    "TORNTPHARM",
+    "THYROCARE"
    ],
    "eval": {}
   }

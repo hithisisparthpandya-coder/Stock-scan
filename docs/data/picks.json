@@ -1,41 +1,41 @@
 {
- "as_of": "2026-11-20",
+ "as_of": "2026-11-23",
  "funnel": [
   {
    "stage": "Universe (NSE EQ stocks traded today)",
-   "count": 2760
+   "count": 2773
   },
   {
    "stage": "Not on ASM/GSM or a 2%/5% circuit band",
-   "count": 2160
+   "count": 2172
   },
   {
    "stage": "Liquid (≥ ₹10 cr/day; 2× that below ₹50)",
-   "count": 825
+   "count": 828
   },
   {
    "stage": "Uptrend (price > 50 DMA > rising 200 DMA)",
-   "count": 217
+   "count": 211
   },
   {
    "stage": "Volume ≥ 1.5× 20-day average",
-   "count": 32
+   "count": 30
   },
   {
    "stage": "Valid setup (breakout or pullback bounce)",
-   "count": 15
+   "count": 16
   },
   {
    "stage": "Stop 1.5–8% away, ≥ 1 share fits",
-   "count": 5
+   "count": 8
   },
   {
    "stage": "No results due in next 7 days",
-   "count": 5
+   "count": 8
   },
   {
    "stage": "Fundamentals OK or unverified (failures dropped)",
-   "count": 1
+   "count": 5
   }
  ],
  "picks": [
@@ -44,19 +44,19 @@
    "name": "LG Electronics India Limited",
    "setup": "Pullback to support",
    "low_priced": false,
-   "entry": 1740.7,
-   "stop": 1663.64,
-   "target": 1894.82,
-   "qty": 4,
-   "capital": 6963.0,
-   "max_loss": 308.0,
-   "risk_pct": 4.43,
-   "vol_ratio": 2.82,
-   "ret63_pct": 3.0,
-   "sma50": 1708.8,
-   "sma200": 1595.6,
-   "turnover_cr": 110.9,
-   "score": 46.0,
+   "entry": 1777.5,
+   "stop": 1671.3,
+   "target": 1989.9,
+   "qty": 3,
+   "capital": 5332.0,
+   "max_loss": 319.0,
+   "risk_pct": 5.97,
+   "vol_ratio": 2.68,
+   "ret63_pct": 6.1,
+   "sma50": 1711.62,
+   "sma200": 1596.9,
+   "turnover_cr": 123.7,
+   "score": 67.5,
    "next_results": null,
    "fund_status": "pass",
    "fund_notes": [],
@@ -64,94 +64,215 @@
    "de": 0.05,
    "mcap_cr": 117529,
    "sector": "Technology"
+  },
+  {
+   "symbol": "KARURVYSYA",
+   "name": "Karur Vysya Bank Limited",
+   "setup": "Pullback to support",
+   "low_priced": false,
+   "entry": 384.1,
+   "stop": 369.14,
+   "target": 414.01,
+   "qty": 22,
+   "capital": 8450.0,
+   "max_loss": 329.0,
+   "risk_pct": 3.89,
+   "vol_ratio": 1.61,
+   "ret63_pct": 8.4,
+   "sma50": 348.84,
+   "sma200": 317.06,
+   "turnover_cr": 113.2,
+   "score": 66.2,
+   "next_results": "2026-10-15",
+   "fund_status": "pass",
+   "fund_notes": [],
+   "roe_pct": 21.0,
+   "de": null,
+   "mcap_cr": 37130,
+   "sector": "Financial Services"
+  },
+  {
+   "symbol": "LALPATHLAB",
+   "name": "Dr. Lal Path Labs Ltd.",
+   "setup": "Pullback to support",
+   "low_priced": false,
+   "entry": 2040.5,
+   "stop": 1930.3,
+   "target": 2260.9,
+   "qty": 3,
+   "capital": 6122.0,
+   "max_loss": 331.0,
+   "risk_pct": 5.4,
+   "vol_ratio": 1.86,
+   "ret63_pct": 5.3,
+   "sma50": 1939.19,
+   "sma200": 1691.66,
+   "turnover_cr": 62.3,
+   "score": 56.2,
+   "next_results": "2027-02-05",
+   "fund_status": "pass",
+   "fund_notes": [],
+   "roe_pct": 22.6,
+   "de": 0.08,
+   "mcap_cr": 34119,
+   "sector": "Healthcare"
+  },
+  {
+   "symbol": "TORNTPHARM",
+   "name": "Torrent Pharmaceuticals Limited",
+   "setup": "Pullback to support",
+   "low_priced": false,
+   "entry": 4763.7,
+   "stop": 4569.64,
+   "target": 5151.83,
+   "qty": 1,
+   "capital": 4764.0,
+   "max_loss": 194.0,
+   "risk_pct": 4.07,
+   "vol_ratio": 1.71,
+   "ret63_pct": -2.6,
+   "sma50": 4715.94,
+   "sma200": 4588.33,
+   "turnover_cr": 158.4,
+   "score": 42.5,
+   "next_results": "2026-10-23",
+   "fund_status": "pass",
+   "fund_notes": [],
+   "roe_pct": 15.7,
+   "de": 0.77,
+   "mcap_cr": 181196,
+   "sector": "Healthcare"
+  },
+  {
+   "symbol": "THYROCARE",
+   "name": "Thyrocare Technologies Limited",
+   "setup": "Pullback to support",
+   "low_priced": false,
+   "entry": 542.2,
+   "stop": 500.53,
+   "target": 625.53,
+   "qty": 8,
+   "capital": 4338.0,
+   "max_loss": 333.0,
+   "risk_pct": 7.68,
+   "vol_ratio": 2.46,
+   "ret63_pct": -10.4,
+   "sma50": 511.29,
+   "sma200": 492.38,
+   "turnover_cr": 67.1,
+   "score": 28.7,
+   "next_results": null,
+   "fund_status": "pass",
+   "fund_notes": [],
+   "roe_pct": 26.4,
+   "de": 0.1,
+   "mcap_cr": 8640,
+   "sector": "Healthcare"
   }
  ],
  "market": {
   "ok": true,
-  "close": 25800.6,
-  "sma50": 23485.81,
+  "close": 25349.65,
+  "sma50": 23520.1,
   "note": "Nifty above its 50 DMA: new trades allowed."
  },
  "regime": {
   "regime": "amber",
   "note": "Mixed market – pullbacks only, in the strongest stocks, at half risk.",
-  "breadth": 0.453,
-  "nifty": 25800.6,
-  "nifty_sma50": 23482.031,
-  "nifty_sma200": 23873.148,
-  "vol_percentile": 0.603
+  "breadth": 0.431,
+  "nifty": 25349.65,
+  "nifty_sma50": 23521.062,
+  "nifty_sma200": 23871.483,
+  "vol_percentile": 0.817
  },
  "strategy": "baseline",
  "surveillance_checked": true,
  "circulars": [
   {
    "source": "NSE",
-   "title": "Reminder for submission of Risk Based Supervision data for the period April 01, 2026 - September 30, 2026",
-   "link": "https://nsearchives.nseindia.com/content/circulars/INSP77560.pdf",
-   "date": "2026-11-20"
+   "title": "Revised list of Cross Margin Eligible Exchange Traded Funds (ETFs)",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CMPT77579.pdf",
+   "date": "2026-11-23"
   },
   {
    "source": "NSE",
-   "title": "Compliance with the guidelines on 'Safer participation of Retail Investors in Algorithmic trading' issued by SEBI and Exchanges - Tech-savvy Retail Investors",
-   "link": "https://nsearchives.nseindia.com/content/circulars/INSP77559.pdf",
-   "date": "2026-11-20"
+   "title": "Applicable MWPL, TM, FII/FPI & MF limits for Introduction of Two Individual Securities",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CMPT77578.pdf",
+   "date": "2026-11-23"
   },
   {
    "source": "NSE",
-   "title": "Revised list of Approved Securities and Banks",
-   "link": "https://nsearchives.nseindia.com/content/circulars/CMPT77558.zip",
-   "date": "2026-11-20"
+   "title": "Listing of further issues of securities",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CML77577.pdf",
+   "date": "2026-11-23"
   },
   {
    "source": "NSE",
-   "title": "Revised list of Approved Securities and Banks",
-   "link": "https://nsearchives.nseindia.com/content/circulars/CMPT77557.zip",
-   "date": "2026-11-20"
+   "title": "Listing of Equity Shares of Oneclick Logistics India Limited on Capital Market Segment (Main Board) pursuant to migration from SME Emerge platform",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CML77576.zip",
+   "date": "2026-11-23"
   },
   {
    "source": "NSE",
-   "title": "Revised list of Approved Securities and Banks",
-   "link": "https://nsearchives.nseindia.com/content/circulars/DS77556.zip",
-   "date": "2026-11-20"
+   "title": "Listing of further issues of securities",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CML77575.pdf",
+   "date": "2026-11-23"
   },
   {
    "source": "NSE",
-   "title": "Revised list of Approved Securities and Banks",
-   "link": "https://nsearchives.nseindia.com/content/circulars/COM77555.zip",
-   "date": "2026-11-20"
+   "title": "Listing of privately placed securities on the debt market segment of the Exchange",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CML77574.pdf",
+   "date": "2026-11-23"
   },
   {
    "source": "NSE",
-   "title": "Revised list of Approved Securities and Banks",
-   "link": "https://nsearchives.nseindia.com/content/circulars/CMPT77554.zip",
-   "date": "2026-11-20"
+   "title": "Trade for Trade",
+   "link": "https://nsearchives.nseindia.com/content/circulars/SURV77573.zip",
+   "date": "2026-11-23"
   },
   {
    "source": "NSE",
-   "title": "Revised list of Approved Securities and Banks",
-   "link": "https://nsearchives.nseindia.com/content/circulars/CD77553.zip",
-   "date": "2026-11-20"
+   "title": "Settlement Calendar for Buyback Offer under Tender Offer scheme by Jullundur Motor Agency (Delhi) Limited",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CMPT77572.pdf",
+   "date": "2026-11-23"
   }
  ],
  "paper": {
-  "summary": "📒 Paper account: ₹34,447 (-1.58% since 2026-11-12) · 1 open · 2 closed · win 0.0% · avg -1.198R",
-  "events": [],
+  "summary": "📒 Paper account: ₹34,596 (-1.15% since 2026-11-12) · 2 open · 2 closed · win 0.0% · avg -1.198R",
+  "events": [
+   "2026-11-23: BOUGHT LGEINDIA 4 @ ₹1,740.00, stop ₹1,663.64"
+  ],
   "queued": [
    {
-    "symbol": "LGEINDIA",
-    "limit": 1758.11,
-    "stop": 1663.64
+    "symbol": "KARURVYSYA",
+    "limit": 387.94,
+    "stop": 369.14
+   },
+   {
+    "symbol": "LALPATHLAB",
+    "limit": 2060.91,
+    "stop": 1930.3
+   },
+   {
+    "symbol": "TORNTPHARM",
+    "limit": 4811.34,
+    "stop": 4569.64
+   },
+   {
+    "symbol": "THYROCARE",
+    "limit": 547.62,
+    "stop": 500.53
    }
   ]
  },
  "scorecard": {
   "summary": {
    "1d": {
-    "picks": 6,
-    "hit_pct": 0.0,
-    "beat_median_pct": 66.7,
-    "avg_pctile": 57.4,
-    "excess_pct": 0.45,
+    "picks": 7,
+    "hit_pct": 14.3,
+    "beat_median_pct": 71.4,
+    "avg_pctile": 62.7,
+    "excess_pct": 0.89,
     "in_top50": 0
    },
    "5d": {
@@ -167,7 +288,7 @@
  },
  "sentiment": {
   "mood": {
-   "score": 53.4,
+   "score": 51.2,
    "band": "neutral",
    "risk_mult": 1.0,
    "max_new": 3,
@@ -176,19 +297,19 @@
     {
      "key": "breadth",
      "label": "Breadth (stocks above 50-DMA)",
-     "value": 45,
+     "value": 43,
      "weight": 0.25
     },
     {
      "key": "advance",
      "label": "Advancers today",
-     "value": 40,
+     "value": 28,
      "weight": 0.2
     },
     {
      "key": "calm",
      "label": "Calm volatility (India VIX)",
-     "value": 21,
+     "value": 18,
      "weight": 0.2
     },
     {
@@ -200,72 +321,72 @@
     {
      "key": "news",
      "label": "News tone",
-     "value": 52,
+     "value": 62,
      "weight": 0.2
     },
     {
      "key": "flows",
      "label": "FII + DII flows",
-     "value": 97,
+     "value": 87,
      "weight": 0.1
     }
    ]
   },
   "news_tone": {
-   "avg": 0.044,
-   "count": 17,
-   "positive": 9,
-   "negative": 8,
+   "avg": 0.244,
+   "count": 55,
+   "positive": 41,
+   "negative": 14,
    "top_positive": [
     {
-     "title": "PSU vs Private banks: Who is powering Nifty Bank's record-high rally after 5% surge? SBI, HDFC, AU, Canara target price",
-     "link": "https://www.livemint.com/market/stock-market-news/psu-vs-private-banks-who-is-powering-nifty-banks-record-high-rally-after-5-surge-sbi-hdfc-au-canara-target-price-11795255387777.html",
-     "source": "Mint",
+     "title": "Nasdaq surges 6%, Dow soars 1,400 pts as markets rebound on Huang’s return: Stock Market Live Updates",
+     "link": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/stock-market-live-updates-dow-jones-nasdaq-sp-500-nvidia-meta-anthropic-amd-micron-tesla-ai-chip-earnings-fed-rate-treasury-yield-news-23rd-november-2026/liveblog/136104474.cms",
+     "source": "Economic Times",
+     "score": 0.964
+    },
+    {
+     "title": "Bernstein upgrades Nvidia stock to outperform as Jensen Huang returns",
+     "link": "https://www.business-standard.com/markets/news/bernstein-upgrades-nvidia-stock-to-outperform-as-jensen-huang-returns-126112301402_1.html",
+     "source": "Business Standard",
+     "score": 0.922
+    },
+    {
+     "title": "Ratnaveer Precision surges 10% on huge volume; zooms 215% thus far in FY27",
+     "link": "https://www.business-standard.com/markets/news/ratnaveer-precision-surges-10-on-huge-volume-zooms-215-thus-far-in-fy27-126112300644_1.html",
+     "source": "Business Standard",
+     "score": 0.905
+    },
+    {
+     "title": "Multibagger stock: SG Mart surges 13% to record high on fundraise buzz",
+     "link": "https://www.business-standard.com/markets/news/multibagger-stock-sg-mart-surges-13-to-record-high-on-fundraise-buzz-126112300224_1.html",
+     "source": "Business Standard",
      "score": 0.874
-    },
-    {
-     "title": "Stocks to buy: HSBC lists 19 Indian stocks that saw FY27 earnings upgrades, check target prices",
-     "link": "https://economictimes.indiatimes.com/markets/stocks/news/stocks-to-buy-hsbc-lists-19-indian-stocks-that-saw-fy27-earnings-upgrades-check-target-prices/slideshow/136048231.cms",
-     "source": "Economic Times",
-     "score": 0.762
-    },
-    {
-     "title": "Concurrent Gainers: These 13 stocks gained for 5 days in a row, all rose over 27%",
-     "link": "https://economictimes.indiatimes.com/markets/stocks/news/concurrent-gainers-these-13-stocks-gained-for-5-days-in-a-row-all-rose-over-27/slideshow/136047969.cms",
-     "source": "Economic Times",
-     "score": 0.604
-    },
-    {
-     "title": "Nifty eyes 26,200 as rally strengthens; 6 sectors signal outperformance",
-     "link": "https://economictimes.indiatimes.com/markets/stocks/news/nifty-eyes-26200-as-rally-strengthens-6-sectors-signal-outperformance/articleshow/136050218.cms",
-     "source": "Economic Times",
-     "score": 0.537
     }
    ],
    "top_negative": [
     {
-     "title": "Bitcoin price crash: ​Falls to lowest level in two years - What’s behind plunge of world’s largest cryptocurrency",
-     "link": "https://www.livemint.com/market/cryptocurrency/bitcoin-price-crash-falls-to-lowest-level-in-two-years-what-s-behind-plunge-of-world-s-largest-cryptocurrency-11795267687216.html",
+     "title": "Manic Monday for Bank Nifty as index crashes over 2000 points — Check worst hit shares and reasons behind mega plunge",
+     "link": "https://www.livemint.com/market/stock-market-news/manic-monday-for-bank-nifty-as-index-crashes-over-2000-points-check-worst-hit-shares-and-reasons-behind-mega-plunge-11795430223849.html",
      "source": "Mint",
-     "score": -0.973
+     "score": -0.947
     },
     {
-     "title": "Stock split reset: SanDisk stock crashes 87.5% overnight? Here's what investors need to know about its 8-for-1 split",
-     "link": "https://www.livemint.com/market/stock-market-news/stock-split-reset-sandisk-stock-crashes-87-5-overnight-heres-what-investors-need-to-know-about-its-8-for-1-split-11795267376660.html",
+     "title": "PSU bank stocks tumble up to 5% after five-day rally, Nifty PSU Bank index crashes 3.2%; what's behind the sell-off?",
+     "link": "https://www.livemint.com/market/stock-market-news/psu-bank-stocks-tumble-up-to-5-after-five-day-rally-nifty-psu-bank-index-crashes-3-2-whats-behind-the-selloff-11795427367855.html",
      "source": "Mint",
-     "score": -0.716
+     "score": -0.947
     },
     {
-     "title": "Taiwan Widens Short Sale Curbs After Shares Plunge on AI Concern",
-     "link": "https://www.livemint.com/market/taiwan-widens-short-sale-curbs-after-shares-plunge-on-ai-concern-11795255471195.html",
-     "source": "Mint",
-     "score": -0.716
+     "title": "Oil prices fall amid equity selloff though Iran war attacks limit losses",
+     "link": "https://www.business-standard.com/markets/commodities/oil-prices-fall-amid-equity-selloff-though-iran-war-attacks-limit-losses-126112300089_1.html",
+     "source": "Business Standard",
+     "score": -0.922
     },
     {
-     "title": "GREED &amp; fear Report: Jefferies Chris Wood hikes India exposure for 2nd time in 3 weeks, cuts Taiwan| New Allocations",
-     "link": "https://www.livemint.com/market/stock-market-news/greed-fear-report-jefferies-chris-wood-hikes-india-exposure-for-2nd-time-in-3-weeks-cuts-taiwan-new-allocations-11795235087351.html",
-     "source": "Mint",
-     "score": -0.462
+     "title": "NSEL releases Rs 1,950 crore in one-time settlement, ends 14-year payment default",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/news/nsel-releases-rs-1950-crore-in-one-time-settlement-ends-14-year-payment-default/articleshow/136104164.cms",
+     "source": "Economic Times",
+     "score": -0.848
     }
    ]
   },
@@ -275,19 +396,19 @@
     "name": "LG Electronics India Limited",
     "setup": "Pullback to support",
     "low_priced": false,
-    "entry": 1740.7,
-    "stop": 1663.64,
-    "target": 1894.82,
-    "qty": 4,
-    "capital": 6963.0,
-    "max_loss": 308.0,
-    "risk_pct": 4.43,
-    "vol_ratio": 2.82,
-    "ret63_pct": 3.0,
-    "sma50": 1708.8,
-    "sma200": 1595.6,
-    "turnover_cr": 110.9,
-    "score": 46.0,
+    "entry": 1777.5,
+    "stop": 1671.3,
+    "target": 1989.9,
+    "qty": 3,
+    "capital": 5332.0,
+    "max_loss": 319.0,
+    "risk_pct": 5.97,
+    "vol_ratio": 2.68,
+    "ret63_pct": 6.1,
+    "sma50": 1711.62,
+    "sma200": 1596.9,
+    "turnover_cr": 123.7,
+    "score": 67.5,
     "next_results": null,
     "fund_status": "pass",
     "fund_notes": [],
@@ -296,49 +417,177 @@
     "mcap_cr": 117529,
     "sector": "Technology",
     "industry": "Consumer Durables",
-    "adj_score": 46.0,
+    "adj_score": 67.5,
     "news_N": 0.0,
     "sector_chg": null,
     "reasons": [
-     "news neutral (+0.00, 3 headlines)"
+     "news neutral (+0.00, 1 headline)"
     ],
     "veto": null,
     "headlines": [
      {
-      "title": "LG Electronics India announces cessation of two senior management personnel",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOam5JX2lxNmtZbGIxUTdCX1QxUzR0SERwRkM1b1VEYVR2VS12THZ4Mzk0TzlnbnJSTGFhTkF5a0M3UWVlNXVhb1BDazRYOVRyLWFpczBQUTdWTjZreng2ODRtUUZQSzRBNUFWNnBZX1dsaEtfOU1hbnZWOTJoNEVacW10TlpyM1U3ckVnc3hYeWdWR25ab1BFb3RYVWlmUXlIcWVWODBvMDJYS1ZfNl9fQ256UDNoNllpblpR?oc=5",
-      "source": "scanx.trade",
-      "age_h": 64.8,
-      "score": 0.0,
-      "red_flag": false
-     },
-     {
-      "title": "LG Electronics India announces cessation of senior executives",
-      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQOXkyc0R2NlN3dTVlSVRRZUpkSnRUQS1ZMFF0MmVjTHNGTnJuUzd5Y0ZQMWF3cDJDZGFvdHFXV29zTzNHbkMzNVpuaUZlWlhiVWpUZHM3RjFZbHRpNXpnRFQ3RDB4ck9Lckx4SFhLVFU4cUc2Q1V5Z1VmSFFUQXRkZGYwRWRKeWFaVUZ2SGo0c1JxazY0clZUeVh3d0MwSW8?oc=5",
-      "source": "Business Upturn",
-      "age_h": 69.0,
-      "score": 0.0,
-      "red_flag": false
-     },
-     {
-      "title": "LG Electronics India LGEINDIA Senior Management Exit Dec 2026",
-      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNVXFoNlQ0blJfUjhQc1ozRnhCcm1RT29PN2tnSFNxMHdFa1N5RjhCdkZncmdXN2gzSWpKSXNlaUlLSVprRWUwQnB6M19ZU2R5OTEzMWNLTTFEcGRhZWpHYkRPdTZHUWZ0b2ZWUUJRa1I0TGdobkNybEhYSjhmbkxTWkZNZGpDNWh6alBxeWNOQ21NQ0k0Wk9RbWNJZGRFOE1QZjFNTHhjUEVadVpCOGowTVRESjB5cjZqNzU4TGJfQi10WHdxazlsSl9VWXNGMTFQX25J?oc=5",
-      "source": "Kalkine India",
-      "age_h": 69.2,
+      "title": "LG Electronics Inc. (066570.KS) Stock Price, News, Quote & History",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9YVWg1NTdqYktfUEZmOU1EcTVDYkx0WkpGMmVlLVY0SlUwcjFNREtWUmR0c1VwZzBYamlqSVlNS2gwYl9wbDV4aFZnWW5zbFQ1NmxNX25RUkU?oc=5",
+      "source": "Yahoo! Finance Canada",
+      "age_h": 23.3,
       "score": 0.0,
       "red_flag": false
      }
     ],
     "status": "suggested"
+   },
+   {
+    "symbol": "KARURVYSYA",
+    "name": "Karur Vysya Bank Limited",
+    "setup": "Pullback to support",
+    "low_priced": false,
+    "entry": 384.1,
+    "stop": 369.14,
+    "target": 414.01,
+    "qty": 22,
+    "capital": 8450.0,
+    "max_loss": 329.0,
+    "risk_pct": 3.89,
+    "vol_ratio": 1.61,
+    "ret63_pct": 8.4,
+    "sma50": 348.84,
+    "sma200": 317.06,
+    "turnover_cr": 113.2,
+    "score": 66.2,
+    "next_results": "2026-10-15",
+    "fund_status": "pass",
+    "fund_notes": [],
+    "roe_pct": 21.0,
+    "de": null,
+    "mcap_cr": 37130,
+    "sector": "Financial Services",
+    "industry": "Financial Services",
+    "adj_score": 66.2,
+    "news_N": 0.0,
+    "sector_chg": null,
+    "reasons": [
+     "no recent news (neutral)"
+    ],
+    "veto": null,
+    "headlines": [],
+    "status": "suggested"
+   },
+   {
+    "symbol": "LALPATHLAB",
+    "name": "Dr. Lal Path Labs Ltd.",
+    "setup": "Pullback to support",
+    "low_priced": false,
+    "entry": 2040.5,
+    "stop": 1930.3,
+    "target": 2260.9,
+    "qty": 3,
+    "capital": 6122.0,
+    "max_loss": 331.0,
+    "risk_pct": 5.4,
+    "vol_ratio": 1.86,
+    "ret63_pct": 5.3,
+    "sma50": 1939.19,
+    "sma200": 1691.66,
+    "turnover_cr": 62.3,
+    "score": 56.2,
+    "next_results": "2027-02-05",
+    "fund_status": "pass",
+    "fund_notes": [],
+    "roe_pct": 22.6,
+    "de": 0.08,
+    "mcap_cr": 34119,
+    "sector": "Healthcare",
+    "industry": "Healthcare",
+    "adj_score": 56.2,
+    "news_N": 0.0,
+    "sector_chg": null,
+    "reasons": [
+     "no recent news (neutral)"
+    ],
+    "veto": null,
+    "headlines": [],
+    "status": "suggested"
+   },
+   {
+    "symbol": "TORNTPHARM",
+    "name": "Torrent Pharmaceuticals Limited",
+    "setup": "Pullback to support",
+    "low_priced": false,
+    "entry": 4763.7,
+    "stop": 4569.64,
+    "target": 5151.83,
+    "qty": 1,
+    "capital": 4764.0,
+    "max_loss": 194.0,
+    "risk_pct": 4.07,
+    "vol_ratio": 1.71,
+    "ret63_pct": -2.6,
+    "sma50": 4715.94,
+    "sma200": 4588.33,
+    "turnover_cr": 158.4,
+    "score": 42.5,
+    "next_results": "2026-10-23",
+    "fund_status": "pass",
+    "fund_notes": [],
+    "roe_pct": 15.7,
+    "de": 0.77,
+    "mcap_cr": 181196,
+    "sector": "Healthcare",
+    "industry": "Healthcare",
+    "adj_score": 42.5,
+    "news_N": 0.0,
+    "sector_chg": null,
+    "reasons": [
+     "no recent news (neutral)"
+    ],
+    "veto": null,
+    "headlines": [],
+    "status": "waitlist"
+   },
+   {
+    "symbol": "THYROCARE",
+    "name": "Thyrocare Technologies Limited",
+    "setup": "Pullback to support",
+    "low_priced": false,
+    "entry": 542.2,
+    "stop": 500.53,
+    "target": 625.53,
+    "qty": 8,
+    "capital": 4338.0,
+    "max_loss": 333.0,
+    "risk_pct": 7.68,
+    "vol_ratio": 2.46,
+    "ret63_pct": -10.4,
+    "sma50": 511.29,
+    "sma200": 492.38,
+    "turnover_cr": 67.1,
+    "score": 28.7,
+    "next_results": null,
+    "fund_status": "pass",
+    "fund_notes": [],
+    "roe_pct": 26.4,
+    "de": 0.1,
+    "mcap_cr": 8640,
+    "sector": "Healthcare",
+    "industry": "",
+    "adj_score": 28.7,
+    "news_N": 0.0,
+    "sector_chg": null,
+    "reasons": [
+     "no recent news (neutral)"
+    ],
+    "veto": null,
+    "headlines": [],
+    "status": "waitlist"
    }
   ],
   "flows": {
-   "dii": -4859.8,
-   "date": "20-Nov-2026",
-   "fii": 10308.42
+   "dii": -2760.12,
+   "date": "23-Nov-2026",
+   "fii": 5672.99
   },
   "sources": {
-   "vix_history": 246,
+   "vix_history": 244,
    "nifty500_snapshot": 0,
    "indices": true,
    "fii_dii": true,
@@ -350,16 +599,26 @@
    ],
    "industries": 501
   },
-  "vix": 17.33,
-  "advances": 411,
-  "declines": 612,
+  "vix": 17.86,
+  "advances": 287,
+  "declines": 732,
   "paper": {
-   "summary": "📒 Sentiment paper account: ₹34,641 (-1.03% since 2026-11-13) · 2 open · 1 closed · win 0.0% · avg -1.218R",
+   "summary": "📒 Sentiment paper account: ₹34,702 (-0.85% since 2026-11-13) · 2 open · 1 closed · win 0.0% · avg -1.218R",
    "queued": [
     {
      "symbol": "LGEINDIA",
-     "limit": 1758.11,
-     "stop": 1663.64
+     "limit": 1795.28,
+     "stop": 1671.3
+    },
+    {
+     "symbol": "KARURVYSYA",
+     "limit": 387.94,
+     "stop": 369.14
+    },
+    {
+     "symbol": "LALPATHLAB",
+     "limit": 2060.91,
+     "stop": 1930.3
     }
    ]
   }
@@ -369,7 +628,7 @@
   "picks": [],
   "queued": []
  },
- "generated_at": "2026-11-22T11:44+05:30",
+ "generated_at": "2026-11-24T07:00+05:30",
  "config": {
   "capital": 35000,
   "risk_pct": 0.01,
@@ -388,7 +647,7 @@
   "surveillance": true,
   "price_bands": true,
   "results_calendar": true,
-  "fundamentals_covered": 5,
-  "fundamentals_checked": 5
+  "fundamentals_covered": 8,
+  "fundamentals_checked": 8
  }
 }

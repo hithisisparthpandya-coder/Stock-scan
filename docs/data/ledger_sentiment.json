@@ -2,19 +2,19 @@
  "demo": false,
  "strategy": "baseline",
  "started": "2026-11-13",
- "last_date": "2026-11-20",
+ "last_date": "2026-11-23",
  "capital": 35000,
- "equity": 34640.71,
- "return_pct": -1.03,
+ "equity": 34702.11,
+ "return_pct": -0.85,
  "metrics": {
   "start": "2026-11-13",
-  "end": "2026-11-20",
-  "total_return_pct": -1.0,
-  "cagr_pct": -41.6,
+  "end": "2026-11-23",
+  "total_return_pct": -0.9,
+  "cagr_pct": -26.8,
   "max_drawdown_pct": -1.0,
-  "sharpe": -8.92,
+  "sharpe": -6.21,
   "trades": 1,
-  "trades_per_year": 52.2,
+  "trades_per_year": 36.5,
   "win_rate_pct": 0.0,
   "avg_r": -1.218,
   "avg_win_r": 0.0,
@@ -29,31 +29,41 @@
    "qty": 2,
    "entry": 1526.1,
    "stop": 1402.45,
-   "last": 1531.6,
+   "last": 1538.3,
    "entry_date": "2026-11-16",
    "setup": "Pullback to support",
    "partial_done": false,
-   "unrealized": 5.0,
-   "r": 0.02
+   "unrealized": 18.0,
+   "r": 0.07
   },
   {
    "symbol": "ITDC",
    "qty": 10,
    "entry": 665.0,
    "stop": 631.08,
-   "last": 657.65,
+   "last": 662.45,
    "entry_date": "2026-11-16",
    "setup": "Pullback to support",
    "partial_done": false,
-   "unrealized": -87.0,
-   "r": -0.26
+   "unrealized": -39.0,
+   "r": -0.11
   }
  ],
  "queued": [
   {
    "symbol": "LGEINDIA",
-   "limit": 1758.11,
-   "stop": 1663.64
+   "limit": 1795.28,
+   "stop": 1671.3
+  },
+  {
+   "symbol": "KARURVYSYA",
+   "limit": 387.94,
+   "stop": 369.14
+  },
+  {
+   "symbol": "LALPATHLAB",
+   "limit": 2060.91,
+   "stop": 1930.3
   }
  ],
  "recent_trades": [
@@ -85,14 +95,15 @@
   "2026-11-17": 34768.01,
   "2026-11-18": 34690.21,
   "2026-11-19": 34782.21,
-  "2026-11-20": 34640.71
+  "2026-11-20": 34640.71,
+  "2026-11-23": 34702.11
  },
  "sim": {
   "cash": 25001.01,
   "peak": 35005.56,
   "halt_until": -1,
-  "n": 4,
-  "equity": 34640.71,
+  "n": 5,
+  "equity": 34702.11,
   "positions": {
    "GESHIP": {
     "sym": "GESHIP",
@@ -111,7 +122,7 @@
     "be_next": false,
     "exit_next": null,
     "mfe": 0.45208249090174,
-    "last_close": 1531.6,
+    "last_close": 1538.3,
     "missing": 0,
     "sold_value": 0.0,
     "sold_qty": 0,
@@ -133,8 +144,8 @@
     "trail_on": false,
     "be_next": false,
     "exit_next": null,
-    "mfe": 0.5483490566037749,
-    "last_close": 657.65,
+    "mfe": 0.884433962264152,
+    "last_close": 662.45,
     "missing": 0,
     "sold_value": 0.0,
     "sold_qty": 0,
@@ -144,9 +155,27 @@
   "pending": [
    {
     "symbol": "LGEINDIA",
-    "stop": 1663.64,
+    "stop": 1671.3,
     "setup": "Pullback to support",
-    "limit": 1758.107,
+    "limit": 1795.275,
+    "risk": 0.01,
+    "regime": "amber",
+    "partial_R": 2.0
+   },
+   {
+    "symbol": "KARURVYSYA",
+    "stop": 369.14,
+    "setup": "Pullback to support",
+    "limit": 387.94100000000003,
+    "risk": 0.01,
+    "regime": "amber",
+    "partial_R": 2.0
+   },
+   {
+    "symbol": "LALPATHLAB",
+    "stop": 1930.3,
+    "setup": "Pullback to support",
+    "limit": 2060.905,
     "risk": 0.01,
     "regime": "amber",
     "partial_R": 2.0
