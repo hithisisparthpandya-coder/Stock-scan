@@ -2,19 +2,19 @@
  "demo": false,
  "strategy": "baseline",
  "started": "2026-11-13",
- "last_date": "2026-11-23",
+ "last_date": "2026-11-24",
  "capital": 35000,
  "equity": 34702.11,
  "return_pct": -0.85,
  "metrics": {
   "start": "2026-11-13",
-  "end": "2026-11-23",
+  "end": "2026-11-24",
   "total_return_pct": -0.9,
-  "cagr_pct": -26.8,
+  "cagr_pct": -24.7,
   "max_drawdown_pct": -1.0,
-  "sharpe": -6.21,
+  "sharpe": -5.75,
   "trades": 1,
-  "trades_per_year": 36.5,
+  "trades_per_year": 33.2,
   "win_rate_pct": 0.0,
   "avg_r": -1.218,
   "avg_win_r": 0.0,
@@ -49,23 +49,7 @@
    "r": -0.11
   }
  ],
- "queued": [
-  {
-   "symbol": "LGEINDIA",
-   "limit": 1795.28,
-   "stop": 1671.3
-  },
-  {
-   "symbol": "KARURVYSYA",
-   "limit": 387.94,
-   "stop": 369.14
-  },
-  {
-   "symbol": "LALPATHLAB",
-   "limit": 2060.91,
-   "stop": 1930.3
-  }
- ],
+ "queued": [],
  "recent_trades": [
   {
    "symbol": "IIFLCAPS",
@@ -96,13 +80,14 @@
   "2026-11-18": 34690.21,
   "2026-11-19": 34782.21,
   "2026-11-20": 34640.71,
-  "2026-11-23": 34702.11
+  "2026-11-23": 34702.11,
+  "2026-11-24": 34702.11
  },
  "sim": {
   "cash": 25001.01,
   "peak": 35005.56,
   "halt_until": -1,
-  "n": 5,
+  "n": 6,
   "equity": 34702.11,
   "positions": {
    "GESHIP": {
@@ -152,35 +137,7 @@
     "cost": 13.3
    }
   },
-  "pending": [
-   {
-    "symbol": "LGEINDIA",
-    "stop": 1671.3,
-    "setup": "Pullback to support",
-    "limit": 1795.275,
-    "risk": 0.01,
-    "regime": "amber",
-    "partial_R": 2.0
-   },
-   {
-    "symbol": "KARURVYSYA",
-    "stop": 369.14,
-    "setup": "Pullback to support",
-    "limit": 387.94100000000003,
-    "risk": 0.01,
-    "regime": "amber",
-    "partial_R": 2.0
-   },
-   {
-    "symbol": "LALPATHLAB",
-    "stop": 1930.3,
-    "setup": "Pullback to support",
-    "limit": 2060.905,
-    "risk": 0.01,
-    "regime": "amber",
-    "partial_R": 2.0
-   }
-  ],
+  "pending": [],
   "trades": [
    {
     "symbol": "IIFLCAPS",

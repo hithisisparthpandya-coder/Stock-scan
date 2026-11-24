@@ -1,14 +1,14 @@
 {
  "demo": false,
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "random_hit_pct": 10.0,
  "summary": {
   "1d": {
-   "picks": 7,
-   "hit_pct": 14.3,
-   "beat_median_pct": 71.4,
-   "avg_pctile": 62.7,
-   "excess_pct": 0.89,
+   "picks": 12,
+   "hit_pct": 33.3,
+   "beat_median_pct": 83.3,
+   "avg_pctile": 74.7,
+   "excess_pct": 1.76,
    "in_top50": 0
   },
   "5d": {
@@ -171,7 +171,49 @@
     "TORNTPHARM",
     "THYROCARE"
    ],
-   "eval": {}
+   "eval": {
+    "1d": {
+     "universe": 1025,
+     "median_pct": -1.38,
+     "top10_cut_pct": 1.29,
+     "picks": [
+      {
+       "symbol": "LGEINDIA",
+       "ret_pct": 2.16,
+       "pctile": 94.5,
+       "rank": 57
+      },
+      {
+       "symbol": "KARURVYSYA",
+       "ret_pct": 1.08,
+       "pctile": 88.4,
+       "rank": 120
+      },
+      {
+       "symbol": "LALPATHLAB",
+       "ret_pct": 1.58,
+       "pctile": 91.9,
+       "rank": 84
+      },
+      {
+       "symbol": "TORNTPHARM",
+       "ret_pct": 1.15,
+       "pctile": 89.4,
+       "rank": 110
+      },
+      {
+       "symbol": "THYROCARE",
+       "ret_pct": 1.98,
+       "pctile": 94.0,
+       "rank": 62
+      }
+     ]
+    }
+   }
+  },
+  {
+   "date": "2026-11-24",
+   "symbols": []
   }
  ]
 }
