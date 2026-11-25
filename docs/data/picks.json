@@ -1,13 +1,13 @@
 {
- "as_of": "2026-11-24",
+ "as_of": "2026-11-25",
  "funnel": [
   {
    "stage": "Universe (NSE EQ stocks traded today)",
-   "count": 2773
+   "count": 2774
   },
   {
    "stage": "Not on ASM/GSM or a 2%/5% circuit band",
-   "count": 2172
+   "count": 2179
   },
   {
    "stage": "Liquid (≥ ₹10 cr/day; 2× that below ₹50)",
@@ -15,59 +15,191 @@
   },
   {
    "stage": "Uptrend (price > 50 DMA > rising 200 DMA)",
-   "count": 211
+   "count": 199
   },
   {
    "stage": "Volume ≥ 1.5× 20-day average",
-   "count": 28
+   "count": 26
   },
   {
    "stage": "Valid setup (breakout or pullback bounce)",
-   "count": 0
+   "count": 17
   },
   {
    "stage": "Stop 1.5–8% away, ≥ 1 share fits",
-   "count": 0
+   "count": 11
   },
   {
    "stage": "No results due in next 7 days",
-   "count": 0
+   "count": 11
   },
   {
    "stage": "Fundamentals OK or unverified (failures dropped)",
-   "count": 0
+   "count": 3
   }
  ],
- "picks": [],
+ "picks": [
+  {
+   "symbol": "ADANIPORTS",
+   "name": "Adani Ports and Special Economic Zone Limited",
+   "setup": "Pullback to support",
+   "low_priced": false,
+   "entry": 1926.3,
+   "stop": 1897.07,
+   "target": 1984.77,
+   "qty": 4,
+   "capital": 7705.0,
+   "max_loss": 117.0,
+   "risk_pct": 1.52,
+   "vol_ratio": 1.52,
+   "ret63_pct": 12.8,
+   "sma50": 1820.27,
+   "sma200": 1701.03,
+   "turnover_cr": 555.5,
+   "score": 61.8,
+   "next_results": "2027-01-28",
+   "fund_status": "pass",
+   "fund_notes": [],
+   "roe_pct": 15.6,
+   "de": 0.63,
+   "mcap_cr": 443812,
+   "sector": "Industrials"
+  },
+  {
+   "symbol": "LGEINDIA",
+   "name": "LG Electronics India Limited",
+   "setup": "Pullback to support",
+   "low_priced": false,
+   "entry": 1818.4,
+   "stop": 1726.33,
+   "target": 2002.55,
+   "qty": 3,
+   "capital": 5455.0,
+   "max_loss": 276.0,
+   "risk_pct": 5.06,
+   "vol_ratio": 2.08,
+   "ret63_pct": 7.5,
+   "sma50": 1718.38,
+   "sma200": 1599.32,
+   "turnover_cr": 149.6,
+   "score": 54.5,
+   "next_results": null,
+   "fund_status": "pass",
+   "fund_notes": [],
+   "roe_pct": 24.5,
+   "de": 0.05,
+   "mcap_cr": 117529,
+   "sector": "Technology"
+  },
+  {
+   "symbol": "KAJARIACER",
+   "name": "Kajaria Ceramics Limited",
+   "setup": "Pullback to support",
+   "low_priced": false,
+   "entry": 1206.0,
+   "stop": 1166.64,
+   "target": 1284.72,
+   "qty": 7,
+   "capital": 8442.0,
+   "max_loss": 276.0,
+   "risk_pct": 3.26,
+   "vol_ratio": 2.59,
+   "ret63_pct": -0.8,
+   "sma50": 1190.99,
+   "sma200": 1138.49,
+   "turnover_cr": 41.5,
+   "score": 51.8,
+   "next_results": "2027-01-23",
+   "fund_status": "pass",
+   "fund_notes": [],
+   "roe_pct": 20.0,
+   "de": 0.13,
+   "mcap_cr": 18951,
+   "sector": "Industrials"
+  }
+ ],
  "market": {
   "ok": true,
-  "close": 25349.65,
-  "sma50": 23520.1,
+  "close": 25819.25,
+  "sma50": 23567.85,
   "note": "Nifty above its 50 DMA: new trades allowed."
  },
  "regime": {
   "regime": "amber",
   "note": "Mixed market – pullbacks only, in the strongest stocks, at half risk.",
-  "breadth": 0.419,
-  "nifty": 25349.65,
-  "nifty_sma50": 23565.683,
+  "breadth": 0.417,
+  "nifty": 25819.25,
+  "nifty_sma50": 23617.716,
   "nifty_sma200": 23869.604,
-  "vol_percentile": 0.81
+  "vol_percentile": 0.833
  },
  "strategy": "baseline",
  "surveillance_checked": true,
  "circulars": [
   {
    "source": "NSE",
-   "title": "Streamlining EOD information dissemination related to Bhavcopy - Update",
-   "link": "https://nsearchives.nseindia.com/content/circulars/MSD77581.pdf",
-   "date": "2026-11-24"
+   "title": "Listing of further issues of securities",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CML77614.pdf",
+   "date": "2026-11-25"
+  },
+  {
+   "source": "NSE",
+   "title": "Listing of Equity Shares of HEG Limited (formerly known as HEG Graphite Limited) pursuant to the Scheme of Arrangement",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CML77613.zip",
+   "date": "2026-11-25"
+  },
+  {
+   "source": "NSE",
+   "title": "Listing of Equity Shares of Crystal Crop Protection Limited (IPO)",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CML77612.zip",
+   "date": "2026-11-25"
+  },
+  {
+   "source": "NSE",
+   "title": "Listing of units issued by Motilal Oswal Asset Management Company Limited (Motilal Oswal Nifty PSU Bank ETF, Motilal Oswal Nifty500 Growth 50 ETF, Motilal Oswal Nifty Private Bank ETF, Motilal Oswal Nifty REITs & Realty ETF and Motilal Oswal Nifty 10 yr Benchmark G-Sec ETF)",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CML77611.pdf",
+   "date": "2026-11-25"
+  },
+  {
+   "source": "NSE",
+   "title": "BONUS: Adjustment of Futures and Options contracts in the security TECHM",
+   "link": "https://nsearchives.nseindia.com/content/circulars/FAOP77610.pdf",
+   "date": "2026-11-25"
+  },
+  {
+   "source": "NSE",
+   "title": "Listing of further issue of Lloyds Engineering Works Limited",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CML77609.pdf",
+   "date": "2026-11-25"
+  },
+  {
+   "source": "NSE",
+   "title": "Listing of privately placed securities on the debt market segment of the Exchange",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CML77608.pdf",
+   "date": "2026-11-25"
+  },
+  {
+   "source": "NSE",
+   "title": "Listing of privately placed securities on capital market segment",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CML77607.pdf",
+   "date": "2026-11-25"
   }
  ],
  "paper": {
-  "summary": "📒 Paper account: ₹34,596 (-1.15% since 2026-11-12) · 2 open · 2 closed · win 0.0% · avg -1.198R",
+  "summary": "📒 Paper account: ₹34,779 (-0.63% since 2026-11-12) · 2 open · 2 closed · win 0.0% · avg -1.198R",
   "events": [],
-  "queued": []
+  "queued": [
+   {
+    "symbol": "ADANIPORTS",
+    "limit": 1945.56,
+    "stop": 1897.07
+   },
+   {
+    "symbol": "KAJARIACER",
+    "limit": 1218.06,
+    "stop": 1166.64
+   }
+  ]
  },
  "scorecard": {
   "summary": {
@@ -92,11 +224,11 @@
  },
  "sentiment": {
   "mood": {
-   "score": 49.6,
-   "band": "cautious",
-   "risk_mult": 0.5,
-   "max_new": 2,
-   "note": "Cautious – at most 2 new ideas, at half the usual risk.",
+   "score": 53.9,
+   "band": "neutral",
+   "risk_mult": 1.0,
+   "max_new": 3,
+   "note": "Neutral – normal rules.",
    "components": [
     {
      "key": "breadth",
@@ -107,13 +239,13 @@
     {
      "key": "advance",
      "label": "Advancers today",
-     "value": 22,
+     "value": 46,
      "weight": 0.2
     },
     {
      "key": "calm",
      "label": "Calm volatility (India VIX)",
-     "value": 18,
+     "value": 20,
      "weight": 0.2
     },
     {
@@ -125,83 +257,243 @@
     {
      "key": "news",
      "label": "News tone",
-     "value": 61,
+     "value": 54,
      "weight": 0.2
     },
     {
      "key": "flows",
      "label": "FII + DII flows",
-     "value": 87,
+     "value": 100,
      "weight": 0.1
     }
    ]
   },
   "news_tone": {
-   "avg": 0.223,
-   "count": 38,
-   "positive": 26,
-   "negative": 12,
+   "avg": 0.085,
+   "count": 49,
+   "positive": 28,
+   "negative": 21,
    "top_positive": [
     {
-     "title": "Poonawalla Fincorp share price: After 25% jump in 1 month, JM Financial sees 21% further upside, raises target",
-     "link": "https://www.livemint.com/market/stock-market-news/poonawalla-fincorp-share-price-after-25-jump-in-1-month-jm-financial-sees-21-further-upside-raises-target-11795515723611.html",
+     "title": "Thomas Cook shares rally 14%, soar 62% in a month; what's driving gains?",
+     "link": "https://www.business-standard.com/markets/news/thomas-cook-shares-rally-14-soar-62-in-a-month-what-s-driving-gains-126112500294_1.html",
+     "source": "Business Standard",
+     "score": 0.935
+    },
+    {
+     "title": "Top Nifty Bank gainer today: HDFC Bank shares jump 4% as index soars 2%— Should you buy or book profit? Experts advice",
+     "link": "https://www.livemint.com/market/stock-market-news/top-nifty-bank-gainer-today-hdfc-bank-shares-jump-4-as-index-soars-2-should-you-buy-or-book-profit-experts-advice-11795580304968.html",
      "source": "Mint",
      "score": 0.874
     },
     {
-     "title": "Nvidia shares soar 31% as Jensen Huang's return sparks Wall Street rally",
-     "link": "https://www.business-standard.com/markets/news/nvidia-shares-soar-31-as-jensen-huang-s-return-sparks-wall-street-rally-126112400047_1.html",
+     "title": "Nifty FMCG index soars 3%; Dabur, Godrej Consumer, HUL rally up to 8%",
+     "link": "https://www.business-standard.com/markets/news/nifty-fmcg-index-soars-3-dabur-godrej-consumer-hul-rally-up-to-8-126112500621_1.html",
      "source": "Business Standard",
      "score": 0.874
     },
     {
-     "title": "Asian markets follow Wall Street: Nikkei, Kospi jump up to 8% as Jensen Huang’s return sparks rally in AI stocks",
-     "link": "https://www.livemint.com/market/stock-market-news/asian-markets-follow-wall-street-nikkei-kospi-jump-up-to-8-as-jensen-huang-s-return-sparks-rally-in-ai-stocks-11795485047635.html",
-     "source": "Mint",
-     "score": 0.834
-    },
-    {
-     "title": "Wall Street soars on Huang's return to Nvidia, Treasury yields rise",
-     "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-markets-wall-street-soars-on-huangs-return-to-nvidia-treasury-yields-rise/articleshow/136116751.cms",
-     "source": "Economic Times",
-     "score": 0.8
+     "title": "ICICI Bank rallies 4%, hits all-time high; market cap nears ₹12 trillion",
+     "link": "https://www.business-standard.com/markets/news/icici-bank-rallies-4-hits-all-time-high-market-cap-nears-12-trillion-126112500224_1.html",
+     "source": "Business Standard",
+     "score": 0.874
     }
    ],
    "top_negative": [
     {
-     "title": "Hewlett Packard Enterprise shares crash 16%, set for biggest 1-day fall in 18 months; what went wrong?",
-     "link": "https://www.livemint.com/market/stock-market-news/hewlett-packard-enterprise-shares-crash-16-set-for-biggest-1-day-fall-in-18-months-what-went-wrong-11795542211868.html",
+     "title": "Why APL Apollo Tubes shares crashed 15% today to plunge at 52-week low; downgrade from brokerages after Tata Steel deal",
+     "link": "https://www.livemint.com/market/stock-market-news/why-apl-apollo-tubes-shares-crashed-15-today-to-plunge-at-52-week-low-downgrade-from-brokerages-after-tata-steel-deal-11795579639211.html",
      "source": "Mint",
-     "score": -0.848
+     "score": -0.998
     },
     {
-     "title": "Anthropic shares crash below IPO price of $83 after record Nasdaq debut, down 31% from peak. What is spooking investors?",
-     "link": "https://www.livemint.com/market/stock-market-news/anthropic-shares-crash-below-ipo-price-of-83-after-record-nasdaq-debut-down-31-from-peak-what-is-spooking-investors-11795533362689.html",
+     "title": "MCX rates: Gold crashes 13%, silver plunges 20% in Nov 2026; is worst over? What should precious metals investors do?",
+     "link": "https://www.livemint.com/market/commodities/mcx-rates-gold-crashes-13-silver-plunges-20-in-nov-2026-is-worst-over-what-should-precious-metals-investors-do-11795589063705.html",
      "source": "Mint",
-     "score": -0.716
+     "score": -0.947
     },
     {
-     "title": "Of 30 Sensex stocks, 22 closed in the red - These 8 shares defied stock market crash | Full list of 22 red and 8 green",
-     "link": "https://www.livemint.com/market/stock-market-news/of-30-sensex-stocks-22-closed-in-the-red-these-8-shares-defied-stock-market-crash-full-list-of-22-red-and-8-green-11795496983398.html",
+     "title": "Nasdaq 100 plunges nearly 5%, briefly enters bear-market zone as AI fears and fresh tariffs hit sentiment",
+     "link": "https://www.livemint.com/market/stock-market-news/nasdaq-100-plunges-nearly-5-briefly-enters-bear-market-zone-as-ai-fears-and-fresh-tariffs-hit-sentiment-11795626875336.html",
      "source": "Mint",
-     "score": -0.716
+     "score": -0.935
     },
     {
-     "title": "Silver price crash: Rates today in India down  ₹1 lakh in 3 months! Recovery or more fall ahead for MCX silver futures?",
-     "link": "https://www.livemint.com/market/commodities/silver-price-crash-rates-today-in-india-down-rs-1-lakh-in-3-months-recovery-or-more-fall-ahead-for-mcx-silver-futures-11795511561513.html",
+     "title": "MCX gold plunges  ₹4,420/10g, silver sheds nearly  ₹8,800/kg as PCE data fuels December Fed rate hike bets",
+     "link": "https://www.livemint.com/market/commodities/mcx-gold-plunges-rs-4-500-10g-silver-sheds-nearly-rs-8-800-kg-as-pce-data-fuels-december-fed-rate-hike-fears-11795621934097.html",
      "source": "Mint",
-     "score": -0.635
+     "score": -0.885
     }
    ]
   },
-  "list": [],
+  "list": [
+   {
+    "symbol": "ADANIPORTS",
+    "name": "Adani Ports and Special Economic Zone Limited",
+    "setup": "Pullback to support",
+    "low_priced": false,
+    "entry": 1926.3,
+    "stop": 1897.07,
+    "target": 1984.77,
+    "qty": 4,
+    "capital": 7705.0,
+    "max_loss": 117.0,
+    "risk_pct": 1.52,
+    "vol_ratio": 1.52,
+    "ret63_pct": 12.8,
+    "sma50": 1820.27,
+    "sma200": 1701.03,
+    "turnover_cr": 555.5,
+    "score": 61.8,
+    "next_results": "2027-01-28",
+    "fund_status": "pass",
+    "fund_notes": [],
+    "roe_pct": 15.6,
+    "de": 0.63,
+    "mcap_cr": 443812,
+    "sector": "Industrials",
+    "industry": "Services",
+    "adj_score": 65.2,
+    "news_N": 0.227,
+    "sector_chg": null,
+    "reasons": [
+     "news positive (+0.23, 2 headlines)"
+    ],
+    "veto": null,
+    "headlines": [
+     {
+      "title": "Cyril Amarchand Mangaldas Advised Adani Ports and Special Economic Zone Limited on its proposed acquisition of 100% of Evos B.V. through a competitive global auction process",
+      "link": "https://news.google.com/rss/articles/CBMizAJBVV95cUxNNkI0VnB3TEtsV19iSnpQX3JibW03S2tzWlFkT29Ba0xqczU5ZkxtbDFoaGFUSHQ0SFJobmxvOVY1WE9RMVBzZTI2QkxjQjZVckpVbWNWMHNNRjF0Tk9QY05YYXFFUFE0endneEtINXdHYXdEeW9EaGUyN2ZUeVBEenY3dE9JNGQyeC1YVVQxRFM1NFRSX1Zmek5HQzlLSHcwc3RCMWJLdTVPV1FhV2dpZHh1WVBNeGx6MWV1bURPRXNnWWRiYnQtbV9uUmo2LW5nZ25hdkRqV05WQS11MFBqTkJqNDZld3lQQ20yTlBfUG4xUmhaU0hIcWgtQ25KMHc4TmlkclNNazF1MnZqdE5HWlhpNzBzVF9ib2d0UGxUSkxxMFpZWS1ycWZLRnp1alpDc2l3Y3lxdHN0NTJ2aHFWd3RRVFRiRjZQZHo2ag?oc=5",
+      "source": "TradingView",
+      "age_h": 7.4,
+      "score": 0.245,
+      "red_flag": false
+     },
+     {
+      "title": "Cyril Amarchand Mangaldas, Linklaters advise Adani Ports on acquisition of Evos",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOcF9xY3pvU3RKZVNwSF9UbmlvYkRweU5uWktJYUJKeFAySXJndW1iVTFPVnFDVlI4ZGVCNGRDa0xJOTA0b0UyU2ZkTkp0T1UtQy14QWZnS1BYV0RxTzR2YjRkMFlsTDUtbFRvOGdUckFBbExrNVNDRHdjQVByTXlpSmZ5QmFBM2Jvdy10eUF0N0x5MV9XSWRBOE1PNmhNbG1HRFkyVkhULXl6X1k1cERkRWlSdlpNZEdsV2phSjRVS3FLZGtwZ0HSAdMBQVVfeXFMT0wyUDFNRDlXaFFvdkpmTUpMWUVuT004SVQ5WGhqcTFHYUdNOURQV3lZX1R3Q1pYa09qUmhNclFQV3FRU0RlaU1TTnJVblc2OFVyUFVlTlNxNXgyVmozV3dYWjNfMXZEdmlNX1c2RHVCOTJYXzU0dUpGNTlMRXQ2ODc1Y2stSzN2NHZJWHRMaFAyWTcwNk15Y1BsMEZ0UTJiXzAxZnBUVDgwbkhIaWs1X3hWamtJR2Zya052RWRZYTJwNjE1dF9JT2doejVoUVd4VWdxNA?oc=5",
+      "source": "Bar and Bench",
+      "age_h": 17.1,
+      "score": 0.245,
+      "red_flag": false
+     }
+    ],
+    "status": "suggested"
+   },
+   {
+    "symbol": "KAJARIACER",
+    "name": "Kajaria Ceramics Limited",
+    "setup": "Pullback to support",
+    "low_priced": false,
+    "entry": 1206.0,
+    "stop": 1166.64,
+    "target": 1284.72,
+    "qty": 7,
+    "capital": 8442.0,
+    "max_loss": 276.0,
+    "risk_pct": 3.26,
+    "vol_ratio": 2.59,
+    "ret63_pct": -0.8,
+    "sma50": 1190.99,
+    "sma200": 1138.49,
+    "turnover_cr": 41.5,
+    "score": 51.8,
+    "next_results": "2027-01-23",
+    "fund_status": "pass",
+    "fund_notes": [],
+    "roe_pct": 20.0,
+    "de": 0.13,
+    "mcap_cr": 18951,
+    "sector": "Industrials",
+    "industry": "Consumer Durables",
+    "adj_score": 51.8,
+    "news_N": 0.0,
+    "sector_chg": null,
+    "reasons": [
+     "news neutral (+0.00, 1 headline)"
+    ],
+    "veto": null,
+    "headlines": [
+     {
+      "title": "Kajaria Ceramics IEPF Share Transfer Notice 2026",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOaVRKVllIOUxPQ0VPaHZ6bDYtTTJiM0NYblF5TGRsd0tuYWxJR0tzX1AxMW9Gc3V2bU5yRUhuWlRJOW16LXJFS085TU1Lcm9wRUpCbTBvcU8xZlFzNWJseUtCWktzWmd4TWxTMS14ZmNqNHdpRmstZHZ4SF9yYm45c3VHNjE1N3hCQ01fTFlheU4tWEtlWEVWZ3pwWDA4eG1Pc0ZTVGRtSV92ZVpsR0VycnNBTFROdjQ5cTVISExpVUJQTzcw?oc=5",
+      "source": "Kalkine India",
+      "age_h": 14.8,
+      "score": 0.0,
+      "red_flag": false
+     }
+    ],
+    "status": "suggested"
+   },
+   {
+    "symbol": "LGEINDIA",
+    "name": "LG Electronics India Limited",
+    "setup": "Pullback to support",
+    "low_priced": false,
+    "entry": 1818.4,
+    "stop": 1726.33,
+    "target": 2002.55,
+    "qty": 3,
+    "capital": 5455.0,
+    "max_loss": 276.0,
+    "risk_pct": 5.06,
+    "vol_ratio": 2.08,
+    "ret63_pct": 7.5,
+    "sma50": 1718.38,
+    "sma200": 1599.32,
+    "turnover_cr": 149.6,
+    "score": 54.5,
+    "next_results": null,
+    "fund_status": "pass",
+    "fund_notes": [],
+    "roe_pct": 24.5,
+    "de": 0.05,
+    "mcap_cr": 117529,
+    "sector": "Technology",
+    "industry": "Consumer Durables",
+    "adj_score": 50.7,
+    "news_N": -0.256,
+    "sector_chg": null,
+    "reasons": [
+     "news negative (-0.26, 9 headlines)"
+    ],
+    "veto": null,
+    "headlines": [
+     {
+      "title": "LG Electronics shares to be in focus as promoter to sell 2% stake to meet public float norms; check details",
+      "link": "https://www.livemint.com/market/lg-electronics-shares-to-be-in-focus-as-promoter-to-sell-2-stake-to-meet-public-float-norms-check-details-11795612944008.html",
+      "source": "Mint",
+      "age_h": 8.9,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "LG Electronics India promoter may offload 2% stake for ₹2,320.5 crore",
+      "link": "https://www.business-standard.com/companies/news/lg-electronics-india-promoter-may-offload-2-stake-for-2-320-5-crore-126112501137_1.html",
+      "source": "Business Standard",
+      "age_h": 9.2,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "LG Electronics India parent launches up to $251 mn block deal to comply with MPS norms",
+      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQOUVoWlMyclhFUHJOdHlwU0lNM3Y3MDQyMXNsSkcxalJZQzNLZm8tVDdyeG5kR3dxZDYxMmpBNGtkYXlUMUY5cTlRRnBvck13UWNNX2JNcVJaTXFKRTBtZ19lU2NkcjZkZmJLOHdQaXJ4aTZfekgwaHJ5M29FWTNjTDcxVndTd0o5NVhUcGcyN01IZEI2bUlNb0tObUR2Z2dkWmtsaTY1MDBfOVF1dXkyWkp0b1JnVTZmMWdCR1hrc2xGZ2w4S0h1Q21RQnZWZDZqUDJ2ZUhBd2JLeERGMDlLVU9VTGxZMFU?oc=5",
+      "source": "Moneycontrol.com",
+      "age_h": 9.7,
+      "score": 0.0,
+      "red_flag": false
+     }
+    ],
+    "status": "suggested"
+   }
+  ],
   "flows": {
-   "dii": -2760.12,
-   "date": "23-Nov-2026",
-   "fii": 5672.99
+   "dii": 4018.72,
+   "date": "25-Nov-2026",
+   "fii": 4479.08
   },
   "sources": {
-   "vix_history": 245,
+   "vix_history": 244,
    "nifty500_snapshot": 0,
    "indices": true,
    "fii_dii": true,
@@ -212,12 +504,28 @@
    ],
    "industries": 501
   },
-  "vix": 17.86,
-  "advances": 82,
-  "declines": 291,
+  "vix": 17.69,
+  "advances": 463,
+  "declines": 551,
   "paper": {
-   "summary": "📒 Sentiment paper account: ₹34,702 (-0.85% since 2026-11-13) · 2 open · 1 closed · win 0.0% · avg -1.218R",
-   "queued": []
+   "summary": "📒 Sentiment paper account: ₹34,739 (-0.75% since 2026-11-13) · 2 open · 1 closed · win 0.0% · avg -1.218R",
+   "queued": [
+    {
+     "symbol": "ADANIPORTS",
+     "limit": 1945.56,
+     "stop": 1897.07
+    },
+    {
+     "symbol": "KAJARIACER",
+     "limit": 1218.06,
+     "stop": 1166.64
+    },
+    {
+     "symbol": "LGEINDIA",
+     "limit": 1836.58,
+     "stop": 1726.33
+    }
+   ]
   }
  },
  "breakout_paper": {
@@ -225,7 +533,7 @@
   "picks": [],
   "queued": []
  },
- "generated_at": "2026-11-25T04:53+05:30",
+ "generated_at": "2026-11-26T04:27+05:30",
  "config": {
   "capital": 35000,
   "risk_pct": 0.01,
@@ -244,7 +552,7 @@
   "surveillance": true,
   "price_bands": true,
   "results_calendar": true,
-  "fundamentals_covered": 0,
-  "fundamentals_checked": 0
+  "fundamentals_covered": 11,
+  "fundamentals_checked": 11
  }
 }

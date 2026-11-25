@@ -2,19 +2,19 @@
  "demo": false,
  "strategy": "baseline",
  "started": "2026-11-12",
- "last_date": "2026-11-24",
+ "last_date": "2026-11-25",
  "capital": 35000,
- "equity": 34596.06,
- "return_pct": -1.15,
+ "equity": 34779.06,
+ "return_pct": -0.63,
  "metrics": {
   "start": "2026-11-12",
-  "end": "2026-11-24",
-  "total_return_pct": -1.2,
-  "cagr_pct": -29.8,
+  "end": "2026-11-25",
+  "total_return_pct": -0.6,
+  "cagr_pct": -16.3,
   "max_drawdown_pct": -1.7,
-  "sharpe": -5.27,
+  "sharpe": -2.37,
   "trades": 2,
-  "trades_per_year": 60.9,
+  "trades_per_year": 56.2,
   "win_rate_pct": 0.0,
   "avg_r": -1.198,
   "avg_win_r": 0.0,
@@ -29,27 +29,38 @@
    "qty": 2,
    "entry": 1526.1,
    "stop": 1402.45,
-   "last": 1538.3,
+   "last": 1548.0,
    "entry_date": "2026-11-16",
    "setup": "Pullback to support",
    "partial_done": false,
-   "unrealized": 18.0,
-   "r": 0.07
+   "unrealized": 38.0,
+   "r": 0.15
   },
   {
    "symbol": "LGEINDIA",
    "qty": 4,
    "entry": 1703.98,
-   "stop": 1629.2,
-   "last": 1777.5,
+   "stop": 1703.98,
+   "last": 1818.4,
    "entry_date": "2026-11-23",
    "setup": "Pullback to support",
    "partial_done": false,
-   "unrealized": 280.0,
-   "r": 0.92
+   "unrealized": 444.0,
+   "r": 1.45
   }
  ],
- "queued": [],
+ "queued": [
+  {
+   "symbol": "ADANIPORTS",
+   "limit": 1945.56,
+   "stop": 1897.07
+  },
+  {
+   "symbol": "KAJARIACER",
+   "limit": 1218.06,
+   "stop": 1166.64
+  }
+ ],
  "recent_trades": [
   {
    "symbol": "APLAPOLLO",
@@ -98,14 +109,15 @@
   "2026-11-19": 34493.58,
   "2026-11-20": 34446.58,
   "2026-11-23": 34596.06,
-  "2026-11-24": 34596.06
+  "2026-11-24": 34596.06,
+  "2026-11-25": 34779.06
  },
  "sim": {
   "cash": 24409.46,
   "peak": 35035.49,
   "halt_until": -1,
-  "n": 7,
-  "equity": 34596.06,
+  "n": 8,
+  "equity": 34779.06,
   "positions": {
    "GESHIP": {
     "sym": "GESHIP",
@@ -124,7 +136,7 @@
     "be_next": false,
     "exit_next": null,
     "mfe": 0.45208249090174,
-    "last_close": 1538.3,
+    "last_close": 1548.0,
     "missing": 0,
     "sold_value": 0.0,
     "sold_qty": 0,
@@ -134,7 +146,7 @@
     "sym": "LGEINDIA",
     "qty": 4,
     "entry": 1703.976371308017,
-    "stop": 1629.1972703234883,
+    "stop": 1703.976371308017,
     "R": 74.77910098452874,
     "risk_amt": 305.4399999999996,
     "entry_n": 6,
@@ -146,15 +158,34 @@
     "trail_on": true,
     "be_next": true,
     "exit_next": null,
-    "mfe": 1.3442743676843705,
-    "last_close": 1777.5,
+    "mfe": 1.732083255705101,
+    "last_close": 1818.4,
     "missing": 0,
     "sold_value": 0.0,
     "sold_qty": 0,
     "cost": 13.92
    }
   },
-  "pending": [],
+  "pending": [
+   {
+    "symbol": "ADANIPORTS",
+    "stop": 1897.07,
+    "setup": "Pullback to support",
+    "limit": 1945.5629999999999,
+    "risk": 0.01,
+    "regime": "amber",
+    "partial_R": 2.0
+   },
+   {
+    "symbol": "KAJARIACER",
+    "stop": 1166.64,
+    "setup": "Pullback to support",
+    "limit": 1218.06,
+    "risk": 0.01,
+    "regime": "amber",
+    "partial_R": 2.0
+   }
+  ],
   "trades": [
    {
     "symbol": "IIFLCAPS",

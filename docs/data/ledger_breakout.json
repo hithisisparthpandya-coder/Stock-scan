@@ -2,13 +2,13 @@
  "demo": false,
  "strategy": "adaptive",
  "started": "2026-11-20",
- "last_date": "2026-11-24",
+ "last_date": "2026-11-25",
  "capital": 35000,
  "equity": 35000.0,
  "return_pct": 0.0,
  "metrics": {
   "start": "2026-11-20",
-  "end": "2026-11-24",
+  "end": "2026-11-25",
   "total_return_pct": 0.0,
   "cagr_pct": 0.0,
   "max_drawdown_pct": 0.0,
@@ -23,13 +23,14 @@
  "equity_curve": {
   "2026-11-20": 35000.0,
   "2026-11-23": 35000.0,
-  "2026-11-24": 35000.0
+  "2026-11-24": 35000.0,
+  "2026-11-25": 35000.0
  },
  "sim": {
   "cash": 35000.0,
   "peak": 35000.0,
   "halt_until": -1,
-  "n": 1,
+  "n": 2,
   "equity": 35000.0,
   "positions": {},
   "pending": [],

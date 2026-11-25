@@ -2,19 +2,19 @@
  "demo": false,
  "strategy": "baseline",
  "started": "2026-11-13",
- "last_date": "2026-11-24",
+ "last_date": "2026-11-25",
  "capital": 35000,
- "equity": 34702.11,
- "return_pct": -0.85,
+ "equity": 34739.01,
+ "return_pct": -0.75,
  "metrics": {
   "start": "2026-11-13",
-  "end": "2026-11-24",
-  "total_return_pct": -0.9,
-  "cagr_pct": -24.7,
+  "end": "2026-11-25",
+  "total_return_pct": -0.7,
+  "cagr_pct": -20.4,
   "max_drawdown_pct": -1.0,
-  "sharpe": -5.75,
+  "sharpe": -4.61,
   "trades": 1,
-  "trades_per_year": 33.2,
+  "trades_per_year": 30.4,
   "win_rate_pct": 0.0,
   "avg_r": -1.218,
   "avg_win_r": 0.0,
@@ -29,27 +29,43 @@
    "qty": 2,
    "entry": 1526.1,
    "stop": 1402.45,
-   "last": 1538.3,
+   "last": 1548.0,
    "entry_date": "2026-11-16",
    "setup": "Pullback to support",
    "partial_done": false,
-   "unrealized": 18.0,
-   "r": 0.07
+   "unrealized": 38.0,
+   "r": 0.15
   },
   {
    "symbol": "ITDC",
    "qty": 10,
    "entry": 665.0,
    "stop": 631.08,
-   "last": 662.45,
+   "last": 664.2,
    "entry_date": "2026-11-16",
    "setup": "Pullback to support",
    "partial_done": false,
-   "unrealized": -39.0,
-   "r": -0.11
+   "unrealized": -21.0,
+   "r": -0.06
   }
  ],
- "queued": [],
+ "queued": [
+  {
+   "symbol": "ADANIPORTS",
+   "limit": 1945.56,
+   "stop": 1897.07
+  },
+  {
+   "symbol": "KAJARIACER",
+   "limit": 1218.06,
+   "stop": 1166.64
+  },
+  {
+   "symbol": "LGEINDIA",
+   "limit": 1836.58,
+   "stop": 1726.33
+  }
+ ],
  "recent_trades": [
   {
    "symbol": "IIFLCAPS",
@@ -81,14 +97,15 @@
   "2026-11-19": 34782.21,
   "2026-11-20": 34640.71,
   "2026-11-23": 34702.11,
-  "2026-11-24": 34702.11
+  "2026-11-24": 34702.11,
+  "2026-11-25": 34739.01
  },
  "sim": {
   "cash": 25001.01,
   "peak": 35005.56,
   "halt_until": -1,
-  "n": 6,
-  "equity": 34702.11,
+  "n": 7,
+  "equity": 34739.01,
   "positions": {
    "GESHIP": {
     "sym": "GESHIP",
@@ -107,7 +124,7 @@
     "be_next": false,
     "exit_next": null,
     "mfe": 0.45208249090174,
-    "last_close": 1538.3,
+    "last_close": 1548.0,
     "missing": 0,
     "sold_value": 0.0,
     "sold_qty": 0,
@@ -130,14 +147,42 @@
     "be_next": false,
     "exit_next": null,
     "mfe": 0.884433962264152,
-    "last_close": 662.45,
+    "last_close": 664.2,
     "missing": 0,
     "sold_value": 0.0,
     "sold_qty": 0,
     "cost": 13.3
    }
   },
-  "pending": [],
+  "pending": [
+   {
+    "symbol": "ADANIPORTS",
+    "stop": 1897.07,
+    "setup": "Pullback to support",
+    "limit": 1945.5629999999999,
+    "risk": 0.01,
+    "regime": "amber",
+    "partial_R": 2.0
+   },
+   {
+    "symbol": "KAJARIACER",
+    "stop": 1166.64,
+    "setup": "Pullback to support",
+    "limit": 1218.06,
+    "risk": 0.01,
+    "regime": "amber",
+    "partial_R": 2.0
+   },
+   {
+    "symbol": "LGEINDIA",
+    "stop": 1726.33,
+    "setup": "Pullback to support",
+    "limit": 1836.584,
+    "risk": 0.01,
+    "regime": "amber",
+    "partial_R": 2.0
+   }
+  ],
   "trades": [
    {
     "symbol": "IIFLCAPS",

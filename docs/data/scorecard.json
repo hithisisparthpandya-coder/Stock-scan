@@ -1,6 +1,6 @@
 {
  "demo": false,
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "random_hit_pct": 10.0,
  "summary": {
   "1d": {
@@ -214,6 +214,15 @@
   {
    "date": "2026-11-24",
    "symbols": []
+  },
+  {
+   "date": "2026-11-25",
+   "symbols": [
+    "ADANIPORTS",
+    "LGEINDIA",
+    "KAJARIACER"
+   ],
+   "eval": {}
   }
  ]
 }
