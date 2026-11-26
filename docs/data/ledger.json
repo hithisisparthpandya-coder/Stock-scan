@@ -2,26 +2,26 @@
  "demo": false,
  "strategy": "baseline",
  "started": "2026-11-12",
- "last_date": "2026-11-25",
+ "last_date": "2026-11-26",
  "capital": 35000,
- "equity": 34779.06,
- "return_pct": -0.63,
+ "equity": 34337.95,
+ "return_pct": -1.89,
  "metrics": {
   "start": "2026-11-12",
-  "end": "2026-11-25",
-  "total_return_pct": -0.6,
-  "cagr_pct": -16.3,
-  "max_drawdown_pct": -1.7,
-  "sharpe": -2.37,
-  "trades": 2,
-  "trades_per_year": 56.2,
+  "end": "2026-11-26",
+  "total_return_pct": -1.9,
+  "cagr_pct": -39.2,
+  "max_drawdown_pct": -2.0,
+  "sharpe": -5.19,
+  "trades": 3,
+  "trades_per_year": 78.3,
   "win_rate_pct": 0.0,
-  "avg_r": -1.198,
+  "avg_r": -1.261,
   "avg_win_r": 0.0,
-  "avg_loss_r": -1.2,
+  "avg_loss_r": -1.26,
   "profit_factor": 0.0,
-  "max_losing_streak": 2,
-  "avg_days_held": 2.0
+  "max_losing_streak": 3,
+  "avg_days_held": 1.3
  },
  "open_positions": [
   {
@@ -29,39 +29,48 @@
    "qty": 2,
    "entry": 1526.1,
    "stop": 1402.45,
-   "last": 1548.0,
+   "last": 1531.2,
    "entry_date": "2026-11-16",
    "setup": "Pullback to support",
    "partial_done": false,
-   "unrealized": 38.0,
-   "r": 0.15
+   "unrealized": 4.0,
+   "r": 0.02
   },
   {
    "symbol": "LGEINDIA",
    "qty": 4,
    "entry": 1703.98,
    "stop": 1703.98,
-   "last": 1818.4,
+   "last": 1758.1,
    "entry_date": "2026-11-23",
    "setup": "Pullback to support",
    "partial_done": false,
-   "unrealized": 444.0,
-   "r": 1.45
+   "unrealized": 203.0,
+   "r": 0.66
   }
  ],
  "queued": [
   {
-   "symbol": "ADANIPORTS",
-   "limit": 1945.56,
-   "stop": 1897.07
-  },
-  {
-   "symbol": "KAJARIACER",
-   "limit": 1218.06,
-   "stop": 1166.64
+   "symbol": "LODHA",
+   "limit": 1273.81,
+   "stop": 1168.63
   }
  ],
  "recent_trades": [
+  {
+   "symbol": "ADANIPORTS",
+   "entry_date": "2026-11-26",
+   "exit_date": "2026-11-26",
+   "entry": 1927.0,
+   "exit": 1897.07,
+   "qty": 4,
+   "pnl": -166.31,
+   "r": -1.389,
+   "reason": "stop",
+   "setup": "Pullback to support",
+   "regime": "amber",
+   "days": 0
+  },
   {
    "symbol": "APLAPOLLO",
    "entry_date": "2026-11-13",
@@ -91,14 +100,19 @@
    "days": 1
   }
  ],
- "events_latest": [],
+ "events_latest": [
+  "2026-11-26: BOUGHT ADANIPORTS 4 @ ₹1,927.00, stop ₹1,897.07",
+  "2026-11-26: SOLD ADANIPORTS 4 @ ₹1,897.07 (stop) → −₹166 (-1.39R)"
+ ],
  "events_log": [
   "2026-11-13: BOUGHT APLAPOLLO 3 @ ₹2,235.30, stop ₹2,155.77",
   "2026-11-16: BOUGHT IIFLCAPS 24 @ ₹355.00, stop ₹345.51",
   "2026-11-16: BOUGHT GESHIP 2 @ ₹1,526.10, stop ₹1,402.45",
   "2026-11-17: SOLD IIFLCAPS 24 @ ₹345.51 (stop) → −₹277 (-1.22R)",
   "2026-11-18: SOLD APLAPOLLO 3 @ ₹2,155.77 (stop) → −₹281 (-1.18R)",
-  "2026-11-23: BOUGHT LGEINDIA 4 @ ₹1,740.00, stop ₹1,663.64"
+  "2026-11-23: BOUGHT LGEINDIA 4 @ ₹1,740.00, stop ₹1,663.64",
+  "2026-11-26: BOUGHT ADANIPORTS 4 @ ₹1,927.00, stop ₹1,897.07",
+  "2026-11-26: SOLD ADANIPORTS 4 @ ₹1,897.07 (stop) → −₹166 (-1.39R)"
  ],
  "equity_curve": {
   "2026-11-12": 35000.0,
@@ -110,14 +124,15 @@
   "2026-11-20": 34446.58,
   "2026-11-23": 34596.06,
   "2026-11-24": 34596.06,
-  "2026-11-25": 34779.06
+  "2026-11-25": 34779.06,
+  "2026-11-26": 34337.95
  },
  "sim": {
-  "cash": 24409.46,
+  "cash": 24243.15,
   "peak": 35035.49,
   "halt_until": -1,
-  "n": 8,
-  "equity": 34779.06,
+  "n": 9,
+  "equity": 34337.95,
   "positions": {
    "GESHIP": {
     "sym": "GESHIP",
@@ -136,7 +151,7 @@
     "be_next": false,
     "exit_next": null,
     "mfe": 0.45208249090174,
-    "last_close": 1548.0,
+    "last_close": 1531.2,
     "missing": 0,
     "sold_value": 0.0,
     "sold_qty": 0,
@@ -159,7 +174,7 @@
     "be_next": true,
     "exit_next": null,
     "mfe": 1.732083255705101,
-    "last_close": 1818.4,
+    "last_close": 1758.1,
     "missing": 0,
     "sold_value": 0.0,
     "sold_qty": 0,
@@ -168,19 +183,10 @@
   },
   "pending": [
    {
-    "symbol": "ADANIPORTS",
-    "stop": 1897.07,
-    "setup": "Pullback to support",
-    "limit": 1945.5629999999999,
-    "risk": 0.01,
-    "regime": "amber",
-    "partial_R": 2.0
-   },
-   {
-    "symbol": "KAJARIACER",
-    "stop": 1166.64,
-    "setup": "Pullback to support",
-    "limit": 1218.06,
+    "symbol": "LODHA",
+    "stop": 1168.63,
+    "setup": "Breakout from base",
+    "limit": 1273.8120000000001,
     "risk": 0.01,
     "regime": "amber",
     "partial_R": 2.0
@@ -214,6 +220,20 @@
     "setup": "Pullback to support",
     "regime": "amber",
     "days": 3
+   },
+   {
+    "symbol": "ADANIPORTS",
+    "entry_date": "2026-11-26",
+    "exit_date": "2026-11-26",
+    "entry": 1927.0,
+    "exit": 1897.07,
+    "qty": 4,
+    "pnl": -166.31,
+    "r": -1.389,
+    "reason": "stop",
+    "setup": "Pullback to support",
+    "regime": "amber",
+    "days": 0
    }
   ]
  }

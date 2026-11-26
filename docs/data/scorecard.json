@@ -1,14 +1,14 @@
 {
  "demo": false,
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "random_hit_pct": 10.0,
  "summary": {
   "1d": {
-   "picks": 12,
-   "hit_pct": 33.3,
-   "beat_median_pct": 83.3,
-   "avg_pctile": 74.7,
-   "excess_pct": 1.76,
+   "picks": 15,
+   "hit_pct": 26.7,
+   "beat_median_pct": 73.3,
+   "avg_pctile": 69.1,
+   "excess_pct": 1.41,
    "in_top50": 0
   },
   "5d": {
@@ -221,6 +221,39 @@
     "ADANIPORTS",
     "LGEINDIA",
     "KAJARIACER"
+   ],
+   "eval": {
+    "1d": {
+     "universe": 1017,
+     "median_pct": -0.06,
+     "top10_cut_pct": 2.7,
+     "picks": [
+      {
+       "symbol": "ADANIPORTS",
+       "ret_pct": -0.81,
+       "pctile": 30.6,
+       "rank": 707
+      },
+      {
+       "symbol": "LGEINDIA",
+       "ret_pct": -0.78,
+       "pctile": 31.3,
+       "rank": 700
+      },
+      {
+       "symbol": "KAJARIACER",
+       "ret_pct": 1.44,
+       "pctile": 77.6,
+       "rank": 229
+      }
+     ]
+    }
+   }
+  },
+  {
+   "date": "2026-11-26",
+   "symbols": [
+    "LODHA"
    ],
    "eval": {}
   }
