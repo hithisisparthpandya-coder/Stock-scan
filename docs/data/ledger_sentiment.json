@@ -2,19 +2,19 @@
  "demo": false,
  "strategy": "baseline",
  "started": "2026-11-13",
- "last_date": "2026-11-26",
+ "last_date": "2026-11-27",
  "capital": 35000,
- "equity": 34616.41,
- "return_pct": -1.1,
+ "equity": 34842.21,
+ "return_pct": -0.45,
  "metrics": {
   "start": "2026-11-13",
-  "end": "2026-11-26",
-  "total_return_pct": -1.1,
-  "cagr_pct": -26.6,
+  "end": "2026-11-27",
+  "total_return_pct": -0.5,
+  "cagr_pct": -11.1,
   "max_drawdown_pct": -1.1,
-  "sharpe": -6.2,
+  "sharpe": -1.85,
   "trades": 1,
-  "trades_per_year": 28.1,
+  "trades_per_year": 26.1,
   "win_rate_pct": 0.0,
   "avg_r": -1.218,
   "avg_win_r": 0.0,
@@ -29,31 +29,36 @@
    "qty": 2,
    "entry": 1526.1,
    "stop": 1402.45,
-   "last": 1531.2,
+   "last": 1550.6,
    "entry_date": "2026-11-16",
    "setup": "Pullback to support",
    "partial_done": false,
-   "unrealized": 4.0,
-   "r": 0.02
+   "unrealized": 43.0,
+   "r": 0.17
   },
   {
    "symbol": "ITDC",
    "qty": 10,
    "entry": 665.0,
    "stop": 631.08,
-   "last": 655.3,
+   "last": 674.0,
    "entry_date": "2026-11-16",
    "setup": "Pullback to support",
    "partial_done": false,
-   "unrealized": -110.0,
-   "r": -0.33
+   "unrealized": 77.0,
+   "r": 0.23
   }
  ],
  "queued": [
   {
-   "symbol": "LODHA",
-   "limit": 1273.81,
-   "stop": 1168.63
+   "symbol": "HAL",
+   "limit": 5124.74,
+   "stop": 4767.74
+  },
+  {
+   "symbol": "CDSL",
+   "limit": 1467.53,
+   "stop": 1391.81
   }
  ],
  "recent_trades": [
@@ -89,14 +94,15 @@
   "2026-11-23": 34702.11,
   "2026-11-24": 34702.11,
   "2026-11-25": 34739.01,
-  "2026-11-26": 34616.41
+  "2026-11-26": 34616.41,
+  "2026-11-27": 34842.21
  },
  "sim": {
   "cash": 25001.01,
   "peak": 35005.56,
   "halt_until": -1,
-  "n": 8,
-  "equity": 34616.41,
+  "n": 9,
+  "equity": 34842.21,
   "positions": {
    "GESHIP": {
     "sym": "GESHIP",
@@ -115,7 +121,7 @@
     "be_next": false,
     "exit_next": null,
     "mfe": 0.45208249090174,
-    "last_close": 1531.2,
+    "last_close": 1550.6,
     "missing": 0,
     "sold_value": 0.0,
     "sold_qty": 0,
@@ -138,7 +144,7 @@
     "be_next": false,
     "exit_next": null,
     "mfe": 0.884433962264152,
-    "last_close": 655.3,
+    "last_close": 674.0,
     "missing": 0,
     "sold_value": 0.0,
     "sold_qty": 0,
@@ -147,10 +153,19 @@
   },
   "pending": [
    {
-    "symbol": "LODHA",
-    "stop": 1168.63,
-    "setup": "Breakout from base",
-    "limit": 1273.8120000000001,
+    "symbol": "HAL",
+    "stop": 4767.74,
+    "setup": "Pullback to support",
+    "limit": 5124.74,
+    "risk": 0.01,
+    "regime": "amber",
+    "partial_R": 2.0
+   },
+   {
+    "symbol": "CDSL",
+    "stop": 1391.81,
+    "setup": "Pullback to support",
+    "limit": 1467.53,
     "risk": 0.01,
     "regime": "amber",
     "partial_R": 2.0

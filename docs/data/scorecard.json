@@ -1,22 +1,22 @@
 {
  "demo": false,
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "random_hit_pct": 10.0,
  "summary": {
   "1d": {
-   "picks": 15,
-   "hit_pct": 26.7,
-   "beat_median_pct": 73.3,
-   "avg_pctile": 69.1,
-   "excess_pct": 1.41,
+   "picks": 16,
+   "hit_pct": 25.0,
+   "beat_median_pct": 68.8,
+   "avg_pctile": 66.0,
+   "excess_pct": 1.24,
    "in_top50": 0
   },
   "5d": {
-   "picks": 6,
+   "picks": 7,
    "hit_pct": 0.0,
-   "beat_median_pct": 33.3,
-   "avg_pctile": 36.4,
-   "excess_pct": -2.68,
+   "beat_median_pct": 42.9,
+   "avg_pctile": 43.7,
+   "excess_pct": -1.59,
    "in_top50": 0
   }
  },
@@ -159,6 +159,19 @@
        "rank": 55
       }
      ]
+    },
+    "5d": {
+     "universe": 1027,
+     "median_pct": -1.0,
+     "top10_cut_pct": 4.78,
+     "picks": [
+      {
+       "symbol": "LGEINDIA",
+       "ret_pct": 3.93,
+       "pctile": 87.8,
+       "rank": 126
+      }
+     ]
     }
    }
   },
@@ -254,6 +267,29 @@
    "date": "2026-11-26",
    "symbols": [
     "LODHA"
+   ],
+   "eval": {
+    "1d": {
+     "universe": 1013,
+     "median_pct": 0.2,
+     "top10_cut_pct": 2.69,
+     "picks": [
+      {
+       "symbol": "LODHA",
+       "ret_pct": -1.04,
+       "pctile": 19.3,
+       "rank": 818
+      }
+     ]
+    }
+   }
+  },
+  {
+   "date": "2026-11-27",
+   "symbols": [
+    "HAL",
+    "CDSL",
+    "IGIL"
    ],
    "eval": {}
   }

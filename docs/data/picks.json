@@ -1,218 +1,223 @@
 {
- "as_of": "2026-11-26",
+ "as_of": "2026-11-27",
  "funnel": [
   {
    "stage": "Universe (NSE EQ stocks traded today)",
-   "count": 2782
+   "count": 2783
   },
   {
    "stage": "Not on ASM/GSM or a 2%/5% circuit band",
-   "count": 2177
+   "count": 2178
   },
   {
    "stage": "Liquid (≥ ₹10 cr/day; 2× that below ₹50)",
-   "count": 818
+   "count": 815
   },
   {
    "stage": "Uptrend (price > 50 DMA > rising 200 DMA)",
-   "count": 209
+   "count": 221
   },
   {
    "stage": "Volume ≥ 1.5× 20-day average",
-   "count": 21
+   "count": 26
   },
   {
    "stage": "Valid setup (breakout or pullback bounce)",
-   "count": 15
+   "count": 19
   },
   {
    "stage": "Stop 1.5–8% away, ≥ 1 share fits",
-   "count": 2
+   "count": 6
   },
   {
    "stage": "No results due in next 7 days",
-   "count": 2
+   "count": 6
   },
   {
    "stage": "Fundamentals OK or unverified (failures dropped)",
-   "count": 1
+   "count": 3
   }
  ],
  "picks": [
   {
-   "symbol": "LODHA",
-   "name": "Lodha Developers Limited",
-   "setup": "Breakout from base",
+   "symbol": "HAL",
+   "name": "Hindustan Aeronautics Limited",
+   "setup": "Pullback to support",
    "low_priced": false,
-   "entry": 1261.2,
-   "stop": 1168.63,
-   "target": 1446.35,
-   "qty": 3,
-   "capital": 3784.0,
-   "max_loss": 278.0,
-   "risk_pct": 7.34,
-   "vol_ratio": 1.93,
-   "ret63_pct": 5.2,
-   "sma50": 1118.45,
-   "sma200": 1026.33,
-   "turnover_cr": 175.6,
-   "score": 55.0,
-   "next_results": "2027-01-28",
+   "entry": 5074.0,
+   "stop": 4767.74,
+   "target": 5686.52,
+   "qty": 1,
+   "capital": 5074.0,
+   "max_loss": 306.0,
+   "risk_pct": 6.04,
+   "vol_ratio": 2.94,
+   "ret63_pct": 5.5,
+   "sma50": 4830.63,
+   "sma200": 4501.49,
+   "turnover_cr": 445.5,
+   "score": 61.7,
+   "next_results": "2027-02-11",
    "fund_status": "pass",
    "fund_notes": [],
-   "roe_pct": 18.6,
-   "de": 0.41,
-   "mcap_cr": 126026,
-   "sector": "Real Estate"
+   "roe_pct": 23.6,
+   "de": 0.0,
+   "mcap_cr": 339336,
+   "sector": "Industrials"
+  },
+  {
+   "symbol": "CDSL",
+   "name": "Central Depository Services (India) Limited",
+   "setup": "Pullback to support",
+   "low_priced": false,
+   "entry": 1453.0,
+   "stop": 1391.81,
+   "target": 1575.39,
+   "qty": 5,
+   "capital": 7265.0,
+   "max_loss": 306.0,
+   "risk_pct": 4.21,
+   "vol_ratio": 1.8,
+   "ret63_pct": 4.5,
+   "sma50": 1318.7,
+   "sma200": 1300.62,
+   "turnover_cr": 283.8,
+   "score": 46.7,
+   "next_results": null,
+   "fund_status": "pass",
+   "fund_notes": [],
+   "roe_pct": 26.4,
+   "de": 0.0,
+   "mcap_cr": 30368,
+   "sector": "Financial Services"
+  },
+  {
+   "symbol": "IGIL",
+   "name": "International Gemological Institute Limited",
+   "setup": "Pullback to support",
+   "low_priced": false,
+   "entry": 429.65,
+   "stop": 411.18,
+   "target": 466.58,
+   "qty": 18,
+   "capital": 7734.0,
+   "max_loss": 332.0,
+   "risk_pct": 4.3,
+   "vol_ratio": 2.12,
+   "ret63_pct": 26.5,
+   "sma50": 371.47,
+   "sma200": 350.41,
+   "turnover_cr": 49.3,
+   "score": 78.3,
+   "next_results": null,
+   "fund_status": "unknown",
+   "fund_notes": [
+    "missing: ROE"
+   ],
+   "roe_pct": null,
+   "de": 0.09,
+   "mcap_cr": 18568,
+   "sector": "Basic Materials"
   }
  ],
  "market": {
   "ok": true,
-  "close": 25884.5,
-  "sma50": 23615.99,
+  "close": 25607.2,
+  "sma50": 23660.17,
   "note": "Nifty above its 50 DMA: new trades allowed."
  },
  "regime": {
   "regime": "amber",
   "note": "Mixed market – pullbacks only, in the strongest stocks, at half risk.",
-  "breadth": 0.441,
-  "nifty": 25884.5,
-  "nifty_sma50": 23669.994,
-  "nifty_sma200": 23871.754,
-  "vol_percentile": 0.829
+  "breadth": 0.45,
+  "nifty": 25607.2,
+  "nifty_sma50": 23715.21,
+  "nifty_sma200": 23871.934,
+  "vol_percentile": 0.857
  },
  "strategy": "baseline",
  "surveillance_checked": true,
  "circulars": [
   {
-   "source": "SEBI",
-   "title": "Ex-Parte Interim Order in the matter of Le Lavoir Limited and Others",
-   "link": "https://www.sebi.gov.in/enforcement/orders/nov-2026/ex-parte-interim-order-in-the-matter-of-le-lavoir-limited-and-others_105966.html",
-   "date": "2026-11-26"
-  },
-  {
-   "source": "SEBI",
-   "title": "Adjudication Order in the matter of Vanita Krishnakant Gandhi",
-   "link": "https://www.sebi.gov.in/enforcement/orders/nov-2026/adjudication-order-in-the-matter-of-vanita-krishnakant-gandhi_105859.html",
-   "date": "2026-11-25"
-  },
-  {
-   "source": "SEBI",
-   "title": "Adjudication Order in the matter of investigation in the Financial Statements of Lloyds Enterprises Limited",
-   "link": "https://www.sebi.gov.in/enforcement/orders/nov-2026/adjudication-order-in-the-matter-of-investigation-in-the-financial-statements-of-lloyds-enterprises-limited_105858.html",
-   "date": "2026-11-25"
-  },
-  {
-   "source": "SEBI",
-   "title": "Half-yearly review of -Significant Indices- under SEBI (Index Providers) Regulations, 2024",
-   "link": "https://www.sebi.gov.in/legal/circulars/nov-2026/half-yearly-review-of-significant-indices-under-sebi-index-providers-regulations-2024_105853.html",
-   "date": "2026-11-25"
-  },
-  {
-   "source": "SEBI",
-   "title": "Simplification of client on-boarding and rationalisation of risk management framework at KYC Registration Agencies",
-   "link": "https://www.sebi.gov.in/legal/circulars/nov-2026/simplification-of-client-on-boarding-and-rationalisation-of-risk-management-framework-at-kyc-registration-agencies_105839.html",
-   "date": "2026-11-25"
-  },
-  {
-   "source": "SEBI",
-   "title": "Caution to investors regarding impersonation of SEBI registered intermediaries on closed user groups of social media platforms",
-   "link": "https://www.sebi.gov.in/media-and-notifications/press-releases/nov-2026/caution-to-investors-regarding-impersonation-of-sebi-registered-intermediaries-on-closed-user-groups-of-social-media-platforms_105944.html",
-   "date": "2026-11-23"
-  },
-  {
-   "source": "SEBI",
-   "title": "Advisory Regarding Unregulated Pre-listing Premium often called as Grey Market Premium (GMP) for Upcoming Initial Public Offers (IPOs)",
-   "link": "https://www.sebi.gov.in/media-and-notifications/press-releases/nov-2026/advisory-regarding-unregulated-pre-listing-premium-often-called-as-grey-market-premium-gmp-for-upcoming-initial-public-offers-ipos-_105942.html",
-   "date": "2026-11-23"
+   "source": "NSE",
+   "title": "Revised MWPL, TM, FII/FPI & MF limits for TECH MAHINDRA LIMITED",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CMPT77661.pdf",
+   "date": "2026-11-27"
   },
   {
    "source": "NSE",
-   "title": "Listing of Equity Shares of Mafatlal Industries Limited (New Listing)",
-   "link": "https://nsearchives.nseindia.com/content/circulars/CML77634.zip",
-   "date": "2026-11-26"
+   "title": "Order in respect of Raj Kumar Yadav in the matter of M/s Real Sunshine Corp Limited",
+   "link": "https://nsearchives.nseindia.com/content/circulars/INVG77660.zip",
+   "date": "2026-11-27"
   },
   {
    "source": "NSE",
-   "title": "Reporting of Client level pay-in shortages for SLBS first leg & Reverse Leg securities pay-in",
-   "link": "https://nsearchives.nseindia.com/content/circulars/CMPT77633.zip",
-   "date": "2026-11-26"
+   "title": "Trade for Trade - Watrana Rentals Limited (SME IPO)",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CML77659.pdf",
+   "date": "2026-11-27"
   },
   {
    "source": "NSE",
-   "title": "Listing of further issues of securities",
-   "link": "https://nsearchives.nseindia.com/content/circulars/CML77632.pdf",
-   "date": "2026-11-26"
+   "title": "Listing of further issues of Magson Retail and Distribution Limited and Veekayem Fashion and Apparels Limited",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CML77658.pdf",
+   "date": "2026-11-27"
   },
   {
    "source": "NSE",
-   "title": "Liquidity Enhancement Scheme (LES) - Dated Brent Crude oil (Platts) Futures.",
-   "link": "https://nsearchives.nseindia.com/content/circulars/COM77631.pdf",
-   "date": "2026-11-26"
+   "title": "Listing of further Issues of securities",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CML77657.pdf",
+   "date": "2026-11-27"
   },
   {
    "source": "NSE",
-   "title": "Listing of Equity Shares of Mahanadi Coalfields Limited (IPO)",
-   "link": "https://nsearchives.nseindia.com/content/circulars/CML77630.zip",
-   "date": "2026-11-26"
-  },
-  {
-   "source": "NSE",
-   "title": "Applicability of Enhanced Surveillance Measure (ESM)",
-   "link": "https://nsearchives.nseindia.com/content/circulars/SURV77629.zip",
-   "date": "2026-11-26"
-  },
-  {
-   "source": "NSE",
-   "title": "Listing & Trading of Equity Shares pursuant to Bonus Issue of Tech Mahindra Limited",
-   "link": "https://nsearchives.nseindia.com/content/circulars/CML77628.pdf",
-   "date": "2026-11-26"
+   "title": "BONUS: Adjustment of Futures and Options contracts in the security TECHM",
+   "link": "https://nsearchives.nseindia.com/content/circulars/FAOP77656.pdf",
+   "date": "2026-11-27"
   },
   {
    "source": "NSE",
    "title": "Listing of privately placed securities on the debt market segment of the Exchange",
-   "link": "https://nsearchives.nseindia.com/content/circulars/CML77627.pdf",
-   "date": "2026-11-26"
+   "link": "https://nsearchives.nseindia.com/content/circulars/CML77655.pdf",
+   "date": "2026-11-27"
+  },
+  {
+   "source": "NSE",
+   "title": "Discontinuation of weekly trading in Securities",
+   "link": "https://nsearchives.nseindia.com/content/circulars/CML77654.pdf",
+   "date": "2026-11-27"
   }
  ],
  "paper": {
-  "summary": "📒 Paper account: ₹34,338 (-1.89% since 2026-11-12) · 2 open · 3 closed · win 0.0% · avg -1.261R",
+  "summary": "📒 Paper account: ₹34,381 (-1.77% since 2026-11-12) · 3 open · 3 closed · win 0.0% · avg -1.261R",
   "events": [
-   "2026-11-26: BOUGHT ADANIPORTS 4 @ ₹1,927.00, stop ₹1,897.07",
-   "2026-11-26: SOLD ADANIPORTS 4 @ ₹1,897.07 (stop) → −₹166 (-1.39R)"
+   "2026-11-27: BOUGHT LODHA 3 @ ₹1,265.00, stop ₹1,168.63"
   ],
-  "queued": [
-   {
-    "symbol": "LODHA",
-    "limit": 1273.81,
-    "stop": 1168.63
-   }
-  ]
+  "queued": []
  },
  "scorecard": {
   "summary": {
    "1d": {
-    "picks": 15,
-    "hit_pct": 26.7,
-    "beat_median_pct": 73.3,
-    "avg_pctile": 69.1,
-    "excess_pct": 1.41,
+    "picks": 16,
+    "hit_pct": 25.0,
+    "beat_median_pct": 68.8,
+    "avg_pctile": 66.0,
+    "excess_pct": 1.24,
     "in_top50": 0
    },
    "5d": {
-    "picks": 6,
+    "picks": 7,
     "hit_pct": 0.0,
-    "beat_median_pct": 33.3,
-    "avg_pctile": 36.4,
-    "excess_pct": -2.68,
+    "beat_median_pct": 42.9,
+    "avg_pctile": 43.7,
+    "excess_pct": -1.59,
     "in_top50": 0
    }
   },
-  "line": "🎯 Pick scorecard (1 week): 0.0% of 6 picks landed in the top 10% (random 10%) · avg -2.68% vs the median stock"
+  "line": "🎯 Pick scorecard (1 week): 0.0% of 7 picks landed in the top 10% (random 10%) · avg -1.59% vs the median stock"
  },
  "sentiment": {
   "mood": {
-   "score": 58.1,
+   "score": 56.1,
    "band": "neutral",
    "risk_mult": 1.0,
    "max_new": 3,
@@ -221,19 +226,19 @@
     {
      "key": "breadth",
      "label": "Breadth (stocks above 50-DMA)",
-     "value": 44,
+     "value": 45,
      "weight": 0.25
     },
     {
      "key": "advance",
      "label": "Advancers today",
-     "value": 53,
+     "value": 59,
      "weight": 0.2
     },
     {
      "key": "calm",
      "label": "Calm volatility (India VIX)",
-     "value": 25,
+     "value": 26,
      "weight": 0.2
     },
     {
@@ -245,70 +250,70 @@
     {
      "key": "news",
      "label": "News tone",
-     "value": 62,
+     "value": 59,
      "weight": 0.2
     },
     {
      "key": "flows",
      "label": "FII + DII flows",
-     "value": 100,
+     "value": 67,
      "weight": 0.1
     }
    ]
   },
   "news_tone": {
-   "avg": 0.233,
+   "avg": 0.178,
    "count": 52,
-   "positive": 35,
-   "negative": 17,
+   "positive": 32,
+   "negative": 20,
    "top_positive": [
     {
-     "title": "Buyback alert! Supriya Lifescience sets December 2 board meeting to consider share buyback; details here",
-     "link": "https://www.livemint.com/market/stock-market-news/buyback-alert-supriya-lifescience-sets-december-2-board-meeting-to-consider-share-buyback-details-here-11795714356991.html",
+     "title": "Small-cap, big jump! Waaree Renewable shares rise 14% on this order win; energy stock still 35% below 52-week high",
+     "link": "https://www.livemint.com/market/stock-market-news/smallcap-big-jump-waaree-renewable-shares-rise-14-on-this-order-win-energy-stock-still-35-below-52-week-high-11795756038934.html",
      "source": "Mint",
+     "score": 0.914
+    },
+    {
+     "title": "Angel One surges 7% on huge volume; stock nears record high in weak market",
+     "link": "https://www.business-standard.com/markets/news/angel-one-surges-7-on-huge-volume-stock-nears-record-high-in-weak-market-126112700640_1.html",
+     "source": "Business Standard",
      "score": 0.905
     },
     {
-     "title": "Spike in oil prices partly reverses rupee rally, forward premiums surge",
-     "link": "https://economictimes.indiatimes.com/markets/forex/forex-news/spike-in-oil-prices-partly-reverses-rupee-rally-forward-premiums-surge/articleshow/136188127.cms",
-     "source": "Economic Times",
-     "score": 0.874
+     "title": "Supriya Lifescience shares soar 9% as firm to mull first-ever buyback",
+     "link": "https://www.business-standard.com/markets/news/supriya-lifescience-share-price-soar-9-as-firm-to-mull-first-ever-buyback-126112700350_1.html",
+     "source": "Business Standard",
+     "score": 0.905
     },
     {
-     "title": "BSE shares gain 3%, hit 4-month high on HDFC Securities' upgrade to 'Buy'",
-     "link": "https://www.business-standard.com/markets/news/bse-shares-gain-3-hit-4-month-high-on-hdfc-securities-upgrade-to-buy-126112600196_1.html",
+     "title": "Defence index surges 3%; BEML, Data Patterns, Solar, Paras soar up to 11%",
+     "link": "https://www.business-standard.com/markets/news/defence-index-surges-3-beml-data-patterns-solar-paras-soar-up-to-11-126112700305_1.html",
      "source": "Business Standard",
-     "score": 0.874
-    },
-    {
-     "title": "Dhampur, Balrampur, Renuka zoom up to 14%; here's why sugar stocks rallied",
-     "link": "https://www.business-standard.com/markets/news/dhampur-balrampur-renuka-zoom-up-to-14-here-s-why-sugar-stocks-rallied-today-126112600164_1.html",
-     "source": "Business Standard",
-     "score": 0.874
+     "score": 0.905
     }
    ],
    "top_negative": [
     {
-     "title": "Cement stocks still face earnings downgrade risk: BNP's Nirransh Jain",
-     "link": "https://www.livemint.com/market/mark-to-market/cement-stocks-still-face-earnings-downgrade-risk-bnps-nirransh-jain-11795682286557.html",
+     "title": "Stock market today: Sensex tumbles 1,000 points, Nifty drops 277 points as TCS, Infosys, Shriram Finance lead losses",
+     "link": "https://www.livemint.com/market/stock-market-news/stock-market-today-sensex-tumbles-1-000-points-nifty-drops-277-points-as-tcs-infosys-shriram-finance-lead-losses-11795774138976.html",
      "source": "Mint",
-     "score": -0.762
+     "score": -0.8
     },
     {
-     "title": "LG Electronics India falls 3% as parent launches ₹2,320-cr stake sale",
-     "link": "https://www.business-standard.com/markets/news/lg-electronics-india-falls-3-as-parent-launches-2-320-cr-stake-sale-126112600116_1.html",
-     "source": "Business Standard",
+     "title": "Ion Exchange India among 6 stocks hitting 52-week low; shares slipped up to 20% in a month",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/news/ion-exchange-india-among-6-stocks-hitting-52-week-low-shares-slipped-up-to-20-in-a-month/slideshow/136219516.cms",
+     "source": "Economic Times",
      "score": -0.74
     },
     {
-     "title": "Gold prices crash  ₹22,000 in a month: Is this the right time to buy to make profits when prices go up? Experts' advice",
-     "link": "https://www.livemint.com/market/commodities/gold-prices-crash-rs-22-000-in-a-month-is-this-the-right-time-to-buy-to-make-profits-when-prices-go-up-experts-advice-11795679163869.html",
+     "title": "Silver price prediction: After 67% crash from peak, is the white metal finally close to a bottom? Key levels to watch",
+     "link": "https://www.livemint.com/market/commodities/silver-price-prediction-after-67-crash-from-peak-is-the-white-metal-finally-close-to-a-bottom-key-levels-to-watch-11795768037657.html",
      "source": "Mint",
      "score": -0.716
     },
     {
-     "title": "Tanla Platforms shares plunge 12% in 6 days amid SC's setback for subsidiary Karix Mobile; details about  ₹375 cr dispute",
-     "link": "https://www.livemint.com/market/stock-market-news/tanla-platforms-shares-plunge-12-in-6-days-amid-scs-setback-for-subsidiary-karix-mobile-details-about-375-cr-dispute-11795678641223.html",
+     "title": "Up 57% YTD! Healthcare stock shows resilience against the Indian stock market crash; should you buy? Target, stop-loss",
+     "link": "https://www.livemint.com/market/stock-market-news/up-55-ytd-healthcare-stock-park-medi-world-shows-resilience-against-the-indian-stock-market-crash-should-you-buy-11795765259630.html",
      "source": "Mint",
      "score": -0.716
     }
@@ -316,32 +321,93 @@
   },
   "list": [
    {
-    "symbol": "LODHA",
-    "name": "Lodha Developers Limited",
-    "setup": "Breakout from base",
+    "symbol": "HAL",
+    "name": "Hindustan Aeronautics Limited",
+    "setup": "Pullback to support",
     "low_priced": false,
-    "entry": 1261.2,
-    "stop": 1168.63,
-    "target": 1446.35,
-    "qty": 3,
-    "capital": 3784.0,
-    "max_loss": 278.0,
-    "risk_pct": 7.34,
-    "vol_ratio": 1.93,
-    "ret63_pct": 5.2,
-    "sma50": 1118.45,
-    "sma200": 1026.33,
-    "turnover_cr": 175.6,
-    "score": 55.0,
-    "next_results": "2027-01-28",
+    "entry": 5074.0,
+    "stop": 4767.74,
+    "target": 5686.52,
+    "qty": 1,
+    "capital": 5074.0,
+    "max_loss": 306.0,
+    "risk_pct": 6.04,
+    "vol_ratio": 2.94,
+    "ret63_pct": 5.5,
+    "sma50": 4830.63,
+    "sma200": 4501.49,
+    "turnover_cr": 445.5,
+    "score": 61.7,
+    "next_results": "2027-02-11",
     "fund_status": "pass",
     "fund_notes": [],
-    "roe_pct": 18.6,
-    "de": 0.41,
-    "mcap_cr": 126026,
-    "sector": "Real Estate",
-    "industry": "Realty",
-    "adj_score": 55.0,
+    "roe_pct": 23.6,
+    "de": 0.0,
+    "mcap_cr": 339336,
+    "sector": "Industrials",
+    "industry": "Capital Goods",
+    "adj_score": 67.8,
+    "news_N": 0.408,
+    "sector_chg": null,
+    "reasons": [
+     "news positive (+0.41, 3 headlines)"
+    ],
+    "veto": null,
+    "headlines": [
+     {
+      "title": "Defence Stocks Rally on November 27, 2026: BEML, HAL, Data Patterns, Mazagon Dock, GRSE and Suzlon Share News – Telangana NavaNirmana Sena",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOamRpVElwR09SaG9ycHlob09zbzFKaVVBNlhYM3pQdF9jSkNOTzRYOGg5SVF3S2VRRllxcFU2aEJ0ajNudXk4WTk2VXhxYkZMT28wRkZyREpadHRmSi02NlJMUFdQSFhWWFFvWTVuWFBWZzR0YkdhV1hQaGx4LUF2RjY0X19vZllYaVF0ekRucEdwc0wwbVZSajZJUzh1eUdrb3hSQTlKb1hTeG8yVndwN2xoWGZ3MWFmUEQtUE91TQ?oc=5",
+      "source": "Telangana NavaNirmana Sena",
+      "age_h": 10.4,
+      "score": 0.537,
+      "red_flag": false
+     },
+     {
+      "title": "HAL Share Price, Earnings and Weekly Resistance Breakout",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPdmRFaHA3VWxSODFkdXhkY3A2V3BkYkJ2c3hBVm5pOC1rRU1YNHU4NWhfeGlWdzIyOWcwbjlrNk96UHVBS3BqNzVxMHFsemY0dXFlR2MwVFZpSmRBQjA5bjEycHIxMUgwb2xvOWNwVUU5bERqVzZZdEJKQ2l6aW5GQThXTVlXanpKUEhHeUNteU5nZmhFbm1JU2ZuSkVKQmtqVldKcV9DX0xWcUpWdlpQaTlLbG1kbEJJMW9z?oc=5",
+      "source": "Kalkine India",
+      "age_h": 12.8,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "HAL, Schneider Electric and 3 Others With Bullish MACD Crossovers to Keep on Your Radar",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNdE9HTG8yeW1JX3RLb3dJS0Flbnh6VTF6SGQwdW16ZXJOTXRJdXllQ2JRQzk4RGlBVXhmZFI5cVQ0YnEyaXJVanA4ZkppdFUzTkc5QkhDNGJxaU1XTUtWenNTdXNpUlBjNjR2NWZZUlE3bnlaZi1yUzFYand3MktkdWRDYzNuMEdDNlMtRlJfcnVwUElQc0FzUmxZZUxkQUFvX3dUOUItNDQ4UWt4SmNlLXZ3QnREWDIxcXJKYjY4U2ttRXNSYkt4V04xNTNQdw?oc=5",
+      "source": "Trade Brains",
+      "age_h": 21.0,
+      "score": 0.462,
+      "red_flag": false
+     }
+    ],
+    "status": "suggested"
+   },
+   {
+    "symbol": "CDSL",
+    "name": "Central Depository Services (India) Limited",
+    "setup": "Pullback to support",
+    "low_priced": false,
+    "entry": 1453.0,
+    "stop": 1391.81,
+    "target": 1575.39,
+    "qty": 5,
+    "capital": 7265.0,
+    "max_loss": 306.0,
+    "risk_pct": 4.21,
+    "vol_ratio": 1.8,
+    "ret63_pct": 4.5,
+    "sma50": 1318.7,
+    "sma200": 1300.62,
+    "turnover_cr": 283.8,
+    "score": 46.7,
+    "next_results": null,
+    "fund_status": "pass",
+    "fund_notes": [],
+    "roe_pct": 26.4,
+    "de": 0.0,
+    "mcap_cr": 30368,
+    "sector": "Financial Services",
+    "industry": "Financial Services",
+    "adj_score": 46.7,
     "news_N": 0.0,
     "sector_chg": null,
     "reasons": [
@@ -350,21 +416,84 @@
     "veto": null,
     "headlines": [
      {
-      "title": "Lodha Developers Shares: Volume, Earnings and Technical Readings",
-      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNeGdpbC14ek0zWVdiZVoxRHZNNU5xcU5lY3FXUnRuUHdDd2RqNk9fT2JpVFJsUElobFE1VDNHYnZ0TWdOMmxoeXBkc2NhZ3k0UWVrMy1fYUJGQ0tSQ2ZTWW5mZkVJNEJGRHA5Zkt5bE9QQnllOWFvSVdtdkVfc2pOMTZ2TVlyUkx3TW91c3ZkdVk4Ni1XdFZVamdmcU1KeEphS0lJbl9ZZlBMdG5oSFpSWEIxWHJTTUJmbHcwMkZBSUh5V2pGeFlYaWw2Vk1zLUZCZ0Z1VEJmcHlObF9ERGFMaGppQQ?oc=5",
-      "source": "Kalkine India",
-      "age_h": 57.1,
+      "title": "NSDL Vs CDSL: One leads in profits, the other in custody value – mapping Q2 performance",
+      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOLUtzY0ljanE1OE11SDVRanZyWFphejB3U3BYLW5DUnNNcmJjSllEOWNsSW9hU3lDYVRzY1NpX3F3SEduTUNkVXFVYjhRWHlQYlIzejBpY2ZQeUJlbnlVNjlYb2ZzRmtiZEQtbi0zRlpRTHVqc1Axb2tMVmZoNVgwaGFsRGV0b09qN1V5VjZzbjdlTzFFcXUwRzFWd2dRQy1LNnlTQ3drc1VRWW9GRlg5dFhCTHV4bkQtSmloM3NtRDdvejRWUHZKVmM1Rl9OUFNxTG4w0gHTAUFVX3lxTE4tS3NjSWNqcTU4TXVINVFqdnJYWmF6MHdTcFgtbkNSc01yYmNKWUQ5Y2xJb2FTeUNhVHNjU2lfcXdIR25NQ2RVcVViOFFYeVBiUjN6MGljZlB5QmVueVU2OVhvZnNGa2JkRC1uLTNGWlFMdWpzUDFva0xWZmg1WDBoYWxEZXRvT2o3VXlWNnNuN2VPMUVxdTBHMVZ3Z1FDLUs2eVNDd2tzVVFZb0ZGWDl0WEJMdXhuRC1KaWgzc21EN296NFZQdkpWYzVGX05QU3FMbjA?oc=5",
+      "source": "The Financial Express",
+      "age_h": 40.2,
       "score": 0.0,
       "red_flag": false
      }
     ],
     "status": "suggested"
+   },
+   {
+    "symbol": "IGIL",
+    "name": "International Gemological Institute Limited",
+    "setup": "Pullback to support",
+    "low_priced": false,
+    "entry": 429.65,
+    "stop": 411.18,
+    "target": 466.58,
+    "qty": 18,
+    "capital": 7734.0,
+    "max_loss": 332.0,
+    "risk_pct": 4.3,
+    "vol_ratio": 2.12,
+    "ret63_pct": 26.5,
+    "sma50": 371.47,
+    "sma200": 350.41,
+    "turnover_cr": 49.3,
+    "score": 78.3,
+    "next_results": null,
+    "fund_status": "unknown",
+    "fund_notes": [
+     "missing: ROE"
+    ],
+    "roe_pct": null,
+    "de": 0.09,
+    "mcap_cr": 18568,
+    "sector": "Basic Materials",
+    "industry": "Services",
+    "adj_score": 71.2,
+    "news_N": -0.474,
+    "sector_chg": null,
+    "reasons": [
+     "news negative (-0.47, 5 headlines)"
+    ],
+    "veto": "strongly negative news",
+    "headlines": [
+     {
+      "title": "IGI (NSE:IGIL) Promoter Plans Block Deal Sale of Up to 1.55% Stake",
+      "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNRV84TXNMaDdQY0hoLU5BQnZqNkZGVm5FU3NGVXV4M2RTY3ZXc3EwWi1qakJ0cGxhUjJFNzN6aTBLMHVGNGpsTzE4eEliS3ZzM0lJaEt1anF3VHhWS3lxSUViQUZoUXlIRTNMY3RHVDlSY3gzSWh3Ymo4R3FwV29ULWsyRzBaT0hBQ1k1bkNBdUpNMGNfQjJJQm5YZlo3RkhYV2VDOTduNHZVWWhncjMyWENkcHNsRFRsckpGTnJCX3MzM0NSRnl4Qjd5ekgyRFdEaUN6R3BWMjd0a1IzaWxXYm4zTEJTVFZOd2lvLW83NFQtY1pHTEZjeU9OOA?oc=5",
+      "source": "Kalkine India",
+      "age_h": 8.3,
+      "score": 0.0,
+      "red_flag": false
+     },
+     {
+      "title": "IGIL promoter stake sale and public shareholding",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNeU9WdkZMdzBsLU5CNWZUb2NnRmM4dXVfakNjUTQ0eHJhbTlTM0ZtaXJsRDB2UFBIQTYzNWdrYjRPQnJES0x4YmZHZGpRVjVPRGtNRFZtYXNab3JGLVV3SVVGendiWGlMcEtzazljRGVWYjlsckktUGJ5alBGYzN6T3NiVXhBMGU2VEFIZ2xFQmp2akNCZ3Y4OVk1dkJlTk82MHpyUTE5c2N5aDVwUWxPbU5YbFFON25wRlVyTVhhVUs4dEhLSkNMeGlfbFEwUQ?oc=5",
+      "source": "Kalkine India",
+      "age_h": 11.1,
+      "score": -0.537,
+      "red_flag": false
+     },
+     {
+      "title": "Why International Gemological Institute (NSE: IGIL) Faces a Promoter Stake Sale",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNSWhVWm9CRlpaRzd6a09kNmdoWmdZU19zOGZ1bUJwZmxlS3RGLVAyMFd6ckY3cENEbkZpZmVuOXJuVE1WbmpWU2h3aHZhdUc5NFV4eGxyM2pVOVZFcDRObkJadnJaU0Z6Tlk0TmhHcnUtWjJMR2N2UFJSZU9uTUpiSW9Rbk9xT09RRGVwQ0ptLWZEaU1LTlBXVk1IRFM2eXhZMzRvODc1Zk9DTENoQUl5MVhKU29qS2J1MmZRbENicw?oc=5",
+      "source": "Kalkine India",
+      "age_h": 11.7,
+      "score": -0.537,
+      "red_flag": false
+     }
+    ],
+    "status": "vetoed"
    }
   ],
   "flows": {
-   "dii": 5630.72,
-   "date": "26-Nov-2026",
-   "fii": 5843.33
+   "dii": -556.42,
+   "date": "27-Nov-2026",
+   "fii": 1634.33
   },
   "sources": {
    "vix_history": 244,
@@ -378,16 +507,21 @@
    ],
    "industries": 501
   },
-  "vix": 16.81,
-  "advances": 530,
-  "declines": 478,
+  "vix": 16.68,
+  "advances": 593,
+  "declines": 415,
   "paper": {
-   "summary": "📒 Sentiment paper account: ₹34,616 (-1.10% since 2026-11-13) · 2 open · 1 closed · win 0.0% · avg -1.218R",
+   "summary": "📒 Sentiment paper account: ₹34,842 (-0.45% since 2026-11-13) · 2 open · 1 closed · win 0.0% · avg -1.218R",
    "queued": [
     {
-     "symbol": "LODHA",
-     "limit": 1273.81,
-     "stop": 1168.63
+     "symbol": "HAL",
+     "limit": 5124.74,
+     "stop": 4767.74
+    },
+    {
+     "symbol": "CDSL",
+     "limit": 1467.53,
+     "stop": 1391.81
     }
    ]
   }
@@ -397,7 +531,7 @@
   "picks": [],
   "queued": []
  },
- "generated_at": "2026-11-27T04:20+05:30",
+ "generated_at": "2026-11-28T04:00+05:30",
  "config": {
   "capital": 35000,
   "risk_pct": 0.01,
@@ -416,7 +550,7 @@
   "surveillance": true,
   "price_bands": true,
   "results_calendar": true,
-  "fundamentals_covered": 2,
-  "fundamentals_checked": 2
+  "fundamentals_covered": 6,
+  "fundamentals_checked": 6
  }
 }
